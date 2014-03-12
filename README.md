@@ -34,5 +34,5 @@ Welcome to F.I.S, FIS is the front-end integrated solutions which included autom
 
 ##Optimize
 
-##Struct
+##Structure
 ![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
