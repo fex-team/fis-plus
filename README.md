@@ -20,7 +20,7 @@ Welcome to F.I.S, FIS is the front-end integrated solutions which included autom
 ##Environmental requirements
 * node version >= v0.8.0
 * jre version >= v1.5.0 [If you do not use the local debug server, you can ignore it]
-* php-cgi版本：>= v5.0.0 [If you do not use the local debug server, you can ignore it]
+* php-cgi version：>= v5.0.0 [If you do not use the local debug server, you can ignore it]
 
 ##Getting started
 
