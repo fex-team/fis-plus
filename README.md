@@ -24,11 +24,15 @@ Welcome to F.I.S, FIS is the front-end integrated solutions which included autom
 
 ##Getting started
 
-##Develop and Debug
+##Develop
 
-##Release and Deploy
+##Debug
 
-##Monitor and optimize
+##Release
+
+##Deploy
+
+##Optimize
 
 ##Struct
 ![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
