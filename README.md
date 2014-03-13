@@ -21,11 +21,22 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 * Enable greater speed and frequency for the delivery of project.
 
 ##Environmental requirements
-* node version >= v0.8.0
-* jre version >= v1.5.0 [**If you do not use the local debug server, you can ignore it**]
-* php-cgi version：>= v5.0.0 [**If you do not use the local debug server, you can ignore it**]
+* [nodeJS(comes with npm)](http://nodejs.org/) version >= v0.8.0
+* [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) version >= v1.5.0 **[If you do not use the local debug server, you can ignore it]**
+* php-cgi version：>= v5.0.0 **[If you do not use the local debug server, you can ignore it]**
 
 ##Getting started
+Install FIS via npm:
+
+```
+npm install fisp -g
+```
+
+then wo can run fisp -v:
+
+[fisp version])(./images/v.png);
+
+
 
 ##How to develop
 
@@ -61,7 +72,7 @@ These are just a few companies and projects that are using FIS.
 ###[Tencent](http://www.qq.com/)
 ### [UC](http://www.uc.cn/)
 ### [Funshion](http://www.funshion.com/)
-### [Womai](http://www.womai.com/index-0-0.htm)
+### [B5M](http://www.b5m.com/)
 ### [7k7k](http://www.7k7k.com/)
 ### [Rong360](http://rong360.com/)
 

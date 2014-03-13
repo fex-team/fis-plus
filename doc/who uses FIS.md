@@ -41,7 +41,7 @@ If you've used FIS in a project and would like it listed on this page,
 - [qq music](http://m.y.qq.com/) 
 
 ### [UC](http://www.uc.cn/)
-### [funshion](http://www.funshion.com/)
-### [womai](http://www.womai.com/index-0-0.htm)
+### [Funshion](http://www.funshion.com/)
+### [B5M](http://www.b5m.com/)
 ### [7k7k](http://www.7k7k.com/)
-### [rong360](http://rong360.com/)
+### [Rong360](http://rong360.com/)
