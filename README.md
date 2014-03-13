@@ -32,7 +32,7 @@ Install FIS via npm:
 npm install fisp -g
 ```
 
-then wo can run
+then wo can check the fisp version
 
 ```
 fisp -v
@@ -40,7 +40,9 @@ fisp -v
 
 ![fisp version](./doc/images/v.png)
 
-Below is the output from fisp --help
+##Command Line
+
+We can run command with --help to see detail,below is the output from fisp --help
 
 ```
 Usage: fis-plus <command>
@@ -48,7 +50,6 @@ Usage: fis-plus <command>
   Commands:
 
     release     build and deploy your project
-    install     install components and demos
     server      launch a php-cgi server
 
   Options:
@@ -58,13 +59,33 @@ Usage: fis-plus <command>
     --no-color     disable colored output
 
  ```
-Start the built-in debug server
+
+ below is the output from fisp release --help
+
+ ```
+  Usage: release [options]
+
+  Options:
+
+    -h, --help             output usage information
+    -d, --dest <names>     release output destination
+    -m, --md5 [level]      md5 release option
+    -D, --domains          add domain name
+    -l, --lint             with lint
+    -t, --test             with unit testing
+    -o, --optimize         with optimizing
+    -p, --pack             with package
+    -w, --watch            monitor the changes of project
+    -L, --live             automatically reload your browser
+    -c, --clean            clean compile cache
+    -r, --root <path>      set project root
+    -f, --file <filename>  set fis-conf file
+    -u, --unique           use unique compile caching
+    --verbose              enable verbose output
 
 ```
-fisp server start
-```
 
-then fis starts a smarty jetty server and open a browser to access the http://127.0.0.1:8080, we can also run fisp server --help
+below is the output from fisp server --help
 
 ```
   Usage: server <command> [options]
@@ -97,40 +118,6 @@ then fis starts a smarty jetty server and open a browser to access the http://12
     --exclude <glob>               clean exclude filter
 
 ```
-
-then we can run
-
-```
-fisp release
-```
-
-Refresh your browser to view our project.
-
-we can also run fisp release --help
-
-```
-  Usage: release [options]
-
-  Options:
-
-    -h, --help             output usage information
-    -d, --dest <names>     release output destination
-    -m, --md5 [level]      md5 release option
-    -D, --domains          add domain name
-    -l, --lint             with lint
-    -t, --test             with unit testing
-    -o, --optimize         with optimizing
-    -p, --pack             with package
-    -w, --watch            monitor the changes of project
-    -L, --live             automatically reload your browser
-    -c, --clean            clean compile cache
-    -r, --root <path>      set project root
-    -f, --file <filename>  set fis-conf file
-    -u, --unique           use unique compile caching
-    --verbose              enable verbose output
-    
-```
-
 
 ##Configuration
 
