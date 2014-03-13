@@ -32,7 +32,11 @@ Install FIS via npm:
 npm install fisp -g
 ```
 
-then wo can run fisp -v:
+then wo can run
+
+```
+fisp -v
+```
 
 ![fisp version](./doc/images/v.png)
 
