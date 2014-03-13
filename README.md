@@ -484,7 +484,7 @@ fis.config.merge({...});
     });
     ```
 
-### settings
+## settings
 
 * explanation：plugins detail settings
 * type：``Object``
