@@ -119,7 +119,7 @@ below is the output from fisp server --help
 
 ```
 
-##Configuration
+##Project configuration
 
 Create a **fis-conf.js** file in the project directory, we can do all kinds of fis build system customized configurations through：
 
@@ -261,6 +261,8 @@ fis.config.merge({...});
         }
     });
     ```
+
+##Plugins
 
 ### modules.parser
 
@@ -484,7 +486,7 @@ fis.config.merge({...});
     });
     ```
 
-## settings
+## Settings
 
 * explanation：plugins detail settings
 * type：``Object``
@@ -828,7 +830,6 @@ fis.config.merge({...});
 
 ## Deploy
 
-### deploy
 * explanation：deploy。
 * type：``Object``
 * default：empty
@@ -887,7 +888,6 @@ fis.config.merge({...});
 
 ## Pack
 
-### pack
 * explanation：Configuration files to be packaged。
 * type：``Object``
 * default：empty
