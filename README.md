@@ -56,17 +56,83 @@ Usage: fis-plus <command>
     -h, --help     output usage information
     -v, --version  output the version number
     --no-color     disable colored output
+
  ```
+Start the built-in debug server
 
-##How to develop
+```
+fisp server start
+```
 
-##How to Debug
+then fis starts a smarty jetty server and open a browser to access the http://127.0.0.1:8080, we can also run fisp server --help
 
-##How to Release
+```
+  Usage: server <command> [options]
 
-##How to Deploy
+  Commands:
 
-##How to Optimize
+    start                  start server
+    stop                   shutdown server
+    restart                restart server
+    info                   output server info
+    open                   open document root directory
+    clean                  clean files in document root
+    install <name>         install server framework
+    init                   initialize server framework
+
+  Options:
+
+    -h, --help                     output usage information
+    -p, --port <int>               server listen port
+    --root <path>                  document root
+    --type <php|java|node>         process language
+    --rewrite [script]             enable rewrite mode
+    --repos <url>                  install repository
+    --timeout <seconds>            start timeout
+    --php_exec <path>              path to php-cgi executable file
+    --php_exec_args <args>         php-cgi arguments
+    --php_fcgi_children <int>      the number of php-cgi processes
+    --php_fcgi_max_requests <int>  the max number of requests
+    --include <glob>               clean include filter
+    --exclude <glob>               clean exclude filter
+
+```
+
+then we can run
+
+```
+fisp release
+```
+
+Refresh your browser to view our project.
+
+we can also run fisp release --help
+
+```
+  Usage: release [options]
+
+  Options:
+
+    -h, --help             output usage information
+    -d, --dest <names>     release output destination
+    -m, --md5 [level]      md5 release option
+    -D, --domains          add domain name
+    -l, --lint             with lint
+    -t, --test             with unit testing
+    -o, --optimize         with optimizing
+    -p, --pack             with package
+    -w, --watch            monitor the changes of project
+    -L, --live             automatically reload your browser
+    -c, --clean            clean compile cache
+    -r, --root <path>      set project root
+    -f, --file <filename>  set fis-conf file
+    -u, --unique           use unique compile caching
+    --verbose              enable verbose output
+    
+```
+
+
+##Configuration
 
 ##Available plugins
 
