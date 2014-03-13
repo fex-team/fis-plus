@@ -37,6 +37,8 @@ If you've used FIS in a project and would like it listed on this page,
 - [baidu hao123 ar](http://ar.hao123.com/)
 - [baidu hao123 portuguese](http://image.hao123.com.br/s?f=0&ie=utf-8&cl=0&tn=SE_gbrimage_wq712w5a&wd=t)
 
+###[Tencent](http://m.y.qq.com/)
+- [qq music](http://m.y.qq.com/) 
 
 ### [UC](http://www.uc.cn/)
 ### [funshion](http://www.funshion.com/)

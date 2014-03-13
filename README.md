@@ -39,9 +39,6 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 
 ##Available plugins
 
-##Architecture
-![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
-
 ##Who uses FIS?
 These are just a few companies and projects that are using FIS.
 ### [Baidu](http://www.baidu.com/)
@@ -61,13 +58,17 @@ These are just a few companies and projects that are using FIS.
 - [baidu licai](http://8.baidu.com/)
 - [baidu tuan](http://tuan.baidu.com/)
 
+###[Tencent](http://www.qq.com/)
 ### [UC](http://www.uc.cn/)
-### [funshion](http://www.funshion.com/)
-### [womai](http://www.womai.com/index-0-0.htm)
+### [Funshion](http://www.funshion.com/)
+### [Womai](http://www.womai.com/index-0-0.htm)
 ### [7k7k](http://www.7k7k.com/)
-### [rong360](http://rong360.com/)
+### [Rong360](http://rong360.com/)
 
 This is just a short list of companies and projects that use FIS. See more [here](./doc/who uses FIS.md)..
+
+##Architecture
+![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
 
 ##License
 [F.I.S](http://fis.baidu.com) is available under the terms of the MIT License.
