@@ -1,8 +1,7 @@
-This is just a short list of companies and projects that use FIS.
 If you've used FIS in a project and would like it listed on this page,
-[please edit this page](https://github.com/fex-team/fis-plus/doc/Who uses FIS.md).
+[please edit this page](./FIS.md).
 
-### [Baidu]
+### [Baidu](http://www.baidu.com/)
 ####PC
 - [baidu page search](http://www.baidu.com/) 
 - [baidu map](http://ditu.baidu.com/)
