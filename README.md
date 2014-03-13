@@ -37,8 +37,13 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 
 ##How to Optimize
 
+##Available plugins
+
 ##Architecture
 ![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
+
+##Who uses FIS?
+These are just a few companies and projects that are using FIS. See more [here]().
 
 ##License
 [F.I.S](http://fis.baidu.com) is available under the terms of the MIT License.
