@@ -65,7 +65,7 @@ These are just a few companies and projects that are using FIS.
 ### [7k7k](http://www.7k7k.com/)
 ### [Rong360](http://rong360.com/)
 
-This is just a short list of companies and projects that use FIS. See more [here](./doc/who uses FIS.md)..
+This is just a short list of companies and projects that use FIS. [See more here](./doc/who uses FIS.md)..
 
 ##Architecture
 ![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
