@@ -18,12 +18,12 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 * Convenient local debugging environment, built-in debugging servers, supporting data and the request simulation, file monitoring.
 * Effectively monitor resource loading conditions and automatically optimize site performance.
 * Flexible and scalable, plug-in system mechanisms
-* enable greater speed and frequency for the delivery of project.
+* Enable greater speed and frequency for the delivery of project.
 
 ##Environmental requirements
 * node version >= v0.8.0
-* jre version >= v1.5.0 [If you do not use the local debug server, you can ignore it]
-* php-cgi version：>= v5.0.0 [If you do not use the local debug server, you can ignore it]
+* jre version >= v1.5.0 [**If you do not use the local debug server, you can ignore it**]
+* php-cgi version：>= v5.0.0 [**If you do not use the local debug server, you can ignore it**]
 
 ##Getting started
 
