@@ -44,7 +44,7 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 
 ##Who uses FIS?
 These are just a few companies and projects that are using FIS. See more [here](./doc/who uses FIS.md).
-### [Baidu]
+### [Baidu](http://www.baidu.com/)
 - [baidu page search](http://www.baidu.com/) 
 - [baidu map](http://ditu.baidu.com/)
 - [baidu tieba](http://tieba.baidu.com/)
@@ -60,6 +60,7 @@ These are just a few companies and projects that are using FIS. See more [here](
 - [baidu baifubao](https://www.baifubao.com/)
 - [baidu licai](http://8.baidu.com/)
 - [baidu tuan](http://tuan.baidu.com/)
+
 ### [UC](http://www.uc.cn/)
 ### [funshion](http://www.funshion.com/)
 ### [womai](http://www.womai.com/index-0-0.htm)
