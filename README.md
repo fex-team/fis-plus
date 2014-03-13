@@ -186,7 +186,7 @@ fis.config.merge({...});
 
 ### project.include
 
-* explanation：设置项目源码文件include过滤器。只有命中include的文件才被视为源码，其他文件则忽略。
+* explanation：set the file include filter of project source
 * type：``string`` | ``RegExp``
 * default：empty
 * usage：
@@ -573,7 +573,7 @@ fis.config.merge({...});
 * explanation：clean-css
 * type：``Object``
 * default：empty
-* options：[文档](https://github.com/GoalSmashers/clean-css#how-to-use-clean-css-programmatically)
+* options：[doc](https://github.com/GoalSmashers/clean-css#how-to-use-clean-css-programmatically)
 * usage：
     ```javascript
     fis.config.set('settings.optimizer.clean-css.keepBreaks', true);
@@ -748,10 +748,9 @@ fis.config.merge({...});
 
 ### roadmap.ext
 
-* explanation：指定后缀名与标准化语言的映射关系。
+* explanation：Specify the mapping between the extension and standardization of the language
 * type：``Object``
 * default：empty
-* notice：fis允许在前端开发中使用less、coffee、utc等非标准语言，并能利用插件将它们编译成标准的js、css语言。这个过程是由modules.parser配置的插件处理的。编译之后，less会变成css文件，那么，后续对于css的处理应该同样可以适用于less的生成文件，因此，这个时候需要通过配置告诉fis，less文件会编译为css文件，并在后续的处理过程中当做css文件对待。
 * usage：
 
     ```javascript
@@ -759,14 +758,11 @@ fis.config.merge({...});
     fis.config.merge({
         roadmap : {
             ext : {
-                //less后缀的文件将输出为css后缀
-                //并且在parser之后的其他处理流程中被当做css文件处理
+                //convert less suffix to css suffix
                 less : 'css',
-                //coffee后缀的文件将输出为js文件
-                //并且在parser之后的其他处理流程中被当做js文件处理
+                //convert coffee suffix to js
                 coffee : 'js',
-                //md后缀的文件将输出为html文件
-                //并且在parser之后的其他处理流程中被当做html文件处理
+                //convert md suffix to html
                 md : 'html'
             }
         }
@@ -775,34 +771,33 @@ fis.config.merge({...});
 
 ### roadmap.domain
 
-* explanation：设置静态资源的域名前缀。
+* explanation：config domain
 * type：``Object`` | ``string``
 * default：empty
-* notice：fis扩展了html、js、css的[三种语言能力](https://github.com/fis-dev/fis/wiki/三种语言能力)，并支持对资源的定位，定位包括 **开发路径与发布路径的映射关系** 以及 **静态资源服务器域名设置**。roadmap.domain节点就是用于控制该能力的配置。
-* 注意：domain的值如果不是特殊需要，请 **不要以"/"结尾**。
 * usage：
     ```javascript
     //fis-conf.js
-    //usage一
+    //usage
     fis.config.merge({
         roadmap : {
-            //所有静态资源文件都使用 http://s1.example.com or http://s2.example.com 作为域名
+            //All static resource files use as a domain name http://s1.example.com or http://s2.example.com
             domain : 'http://s1.example.com, http://s2.example.com'
         }
     });
-    //usage二
+    //usage
     fis.config.merge({
         roadmap : {
             domain : {
-                //widget目录下的所有css文件使用 http://css1.example.com 作为域名
+                //All css files in widget directory use as a domain name http://css1.example.com
                 'widget/**.css' : 'http://css1.example.com',
-                //所有的js文件使用 http://js1.example.com or  http://js2.example.com 作为域名
+                //All js files in widget directory use as a domain name http://css1.example.com
                 '**.js' : ['http://js1.example.com', 'http://js2.example.com']
             }
         }
     });
     ```
-    编译时使用fis release的 ``--domains`` 参数来控制是否添加domain
+
+	Use fis release with `` - domains `` parameter to control whether to add domain
 
     ```bash
     $ fis release --domains --dest ../output
@@ -810,78 +805,74 @@ fis.config.merge({...});
 
 ### roadmap.domain.image
 
-* explanation：设置图片资源的域名前缀。
+* explanation：set image domain
 * type：``Array`` | ``string``
 * default：empty
-* notice：由于使用配置roadmap.domain.ext方式来配置图片资源太麻烦，fis提供了image字段，对于符合 [project.fileType.image](https://github.com/fis-dev/fis/wiki/%E9%85%8D%E7%BD%AEAPI#projectfiletypeimage) 规则的文件，设置相应domain配置。
 * usage：
     ```javascript
     //fis-conf.js
     fis.config.merge({
         roadmap : {
             domain : {
-                //所有图片文件，使用 http://img.example.com 作为域名
+                //All images use as a domain name http://img.example.com
                 'image' : ['http://img.example.com']
             }
         }
     });
     ```
-    编译时使用fis release的 ``--domains`` 参数来控制是否添加domain
+    Use fis release with `` - domains `` parameter to control whether to add domain
 
     ```bash
     $ fis release --domains --dest ../output
     ```
 
-## 部署配置
+## Deploy
 
 ### deploy
-* explanation：设置项目的发布方式。
+* explanation：deploy。
 * type：``Object``
 * default：empty
-* notice：当使用 fis release 命令时，参数 **--dest &lt;name&gt;** 可以指定项目发布配置。deploy配置是一个key-value的object对象，--dest参数的值如果与配置的key相同，则执行该配置的部署设置。fis支持使用post请求向http服务器发送文件，服务器端可以使用php、java等后端逻辑进行接收，[fis-command-release](https://github.com/fis-dev/fis-command-release)插件中提供了一个这样的 [php版示例](https://github.com/fis-dev/fis-command-release/blob/master/tools/receiver.php)，用户可以直接部署此文件于接收端服务器上。
 * usage：
     ```javascript
     //fis-conf.js
     fis.config.merge({
         deploy : {
-            //使用fis release --dest remote来使用这个配置
+            //through fis release --dest remote
             remote : {
-                //如果配置了receiver，fis会把文件逐个post到接收端上
+                //the receiver url
                 receiver : 'http://www.example.com/path/to/receiver.php',
-                //从产出的结果的static目录下找文件
+                //Find the file from the static directory
                 from : '/static',
-                //保存到远端机器的/home/fis/www/static目录下
-                //这个参数会跟随post请求一起发送
+                //Saved to the remote machine / home / fis / www static directory /
                 to : '/home/fis/www/',
-                //通配或正则过滤文件，表示只上传所有的js文件
+                //Wildcard or regular filter files, which means that all the js file uploads only
                 include : '**.js',
-                //widget目录下的那些文件就不要发布了
+                //do not release files in widget directory
                 exclude : /\/widget\//i,
-                //支持对文件进行字符串替换
+                //Support for file string replacement
                 replace : {
                     from : 'http://www.online.com',
                     to : 'http://www.offline.com'
                 }
             },
-            //名字随便取的，没有特殊含义
+            //Just take the name, there is no special meaning
             local : {
-                //from参数省略，表示从发布后的根目录开始上传
-                //发布到当前项目的上一级的output目录中
+                //from parameter is omitted, which means that after the release from the root directory to start uploading
+                //Posted on the current project output directory level in
                 to : '../output'
             },
-            //也可以是一个数组
+            //Array
             remote2 : [
                 {
-                    //将static目录上传到/home/fis/www/webroot下
-                    //上传文件路径为/home/fis/www/webroot/static/xxxx
+                    //Upload the static directory to / home / fis / www / webroot under
+                    //Upload file path is / home / fis / www / webroot / static / xxxx
                     receiver : 'http://www.example.com/path/to/receiver.php',
                     from : '/static',
                     to : '/home/fis/www/webroot'
                 },
                 {
-                    //将template目录内的文件（不包括template一级）
-                    //上传到/home/fis/www/tpl下
-                    //上传文件路径为/home/fis/www/tpl/xxxx
+                    //Upload the template directory to /home/fis/www/tpl\
+                    //Upload file path is /home/fis/www/tpl/xxxx
                     receiver : 'http://www.example.com/path/to/receiver.php',
                     from : '/template',
                     to : '/home/fis/www/tpl',
@@ -892,31 +883,30 @@ fis.config.merge({...});
     });
     ```
 
-* 小贴士：--dest参数支持使用逗号（,）分割多个发布配置，比如上面的例子，我们可以使用fis release --dest **remote,local,remote2** 命令在一次编译中同时发布多个目标。
+* Tips: - dest parameter supports the use of a comma (,) to separate multiple release configuration, such as the above example, we can use the fis release - dest ** remote, local, remote2 ** command compilation released simultaneously in more than one goals.
 
-## 打包配置
+## Pack
 
 ### pack
-* explanation：配置要打包合并的文件。
+* explanation：Configuration files to be packaged。
 * type：``Object``
 * default：empty
-* notice：fis内置的 [打包策略](https://github.com/fis-dev/fis/wiki/运行原理#----1) 与传统的打包概念不同，fis的打包实际上是在建立一个资源表，并将其描述并产出为一份map.json文件，用户应该围绕着这份描述文件来设计前后端运行框架，从而实现运行时判断打包输出策略的架构。
 * usage：
     ```javascript
     //fis-conf.js
     fis.config.merge({
         pack : {
-            //打包所有的demo.js, script.js文件
-            //将内容输出为static/pkg/aio.js文件
+            //pack all demo.js, script.js
+            //The contents of the output is static / pkg / aio.js file
             'pkg/aio.js' : ['**/demo.js', /\/script\.js$/i],
-            //打包所有的css文件
-            //将内容输出为static/pkg/aio.css文件
+            //package all the css files
+            //The contents of the output is static/pkg/aio.css file
             'pkg/aio.css' : '**.css'
         }
     });
     ```
 
-* 输出结果：使用命令 fis release **--pack** --md5 --dest ./output 编译项目，然后到output目录下查看产出的map.json内容得到：
+* Output: Use the command fis release ** - pack ** - md5 - dest / output compile the project, and then to the output directory to see the contents of output map.json get.：
     ```json
     {
         "res": {
@@ -975,7 +965,6 @@ fis.config.merge({...});
         }
     }
     ```
-
 
 ##Available plugins
 
