@@ -34,7 +34,7 @@ npm install fisp -g
 
 then wo can run fisp -v:
 
-[fisp version])(./images/v.png);
+![fisp version])(./doc/images/v.png)
 
 
 
