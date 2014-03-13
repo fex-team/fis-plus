@@ -21,7 +21,7 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 * Enable greater speed and frequency for the delivery of project.
 
 ##Environmental requirements
-* [nodeJS(comes with npm)](http://nodejs.org/) version >= v0.8.0
+* [nodeJS](http://nodejs.org/) (comes with npm) version >= v0.8.0
 * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) version >= v1.5.0 **[If you do not use the local debug server, you can ignore it]**
 * php-cgi version：>= v5.0.0 **[If you do not use the local debug server, you can ignore it]**
 
@@ -40,6 +40,23 @@ fisp -v
 
 ![fisp version](./doc/images/v.png)
 
+Below is the output from fisp --help
+
+```
+Usage: fis-plus <command>
+
+  Commands:
+
+    release     build and deploy your project
+    install     install components and demos
+    server      launch a php-cgi server
+
+  Options:
+
+    -h, --help     output usage information
+    -v, --version  output the version number
+    --no-color     disable colored output
+ ```
 
 ##How to develop
 
