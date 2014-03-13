@@ -1,11 +1,15 @@
-##F.I.S
+##[F.I.S](http://fis.baidu.com)
 [![NPM version](https://badge.fury.io/js/fis-plus.png)](http://badge.fury.io/js/fis-plus)
 ![fis](./doc/images/logo.png)
 
+The official site: http://fis.baidu.com
+
 ##Introduction
-Welcome to F.I.S, FIS is the front-end integrated solutions which included automation tools, development framework, development environment. Our mission is to give you an advanced tool for developing web sites and applications without worrying about framework and performance.
+Welcome to [F.I.S](http://fis.baidu.com), it is the front-end integrated solution which included automation tool, development framework, development environment. Our mission is to give you an advanced solution for developing web sites and applications without worrying about framework and performance.
 
+##Questions
 
+Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the quality and grammar of this documentation. If you have any questions, please feel free to ask through [New Issue](https://github.com/fex-team/fis-plus/issues/new).
 
 ##Features
 * Scaffolds out project, pages, modules, plug-ins and other resources.
@@ -16,7 +20,6 @@ Welcome to F.I.S, FIS is the front-end integrated solutions which included autom
 * Flexible and scalable, plug-in system mechanisms
 * enable greater speed and frequency for the delivery of project.
 
-
 ##Environmental requirements
 * node version >= v0.8.0
 * jre version >= v1.5.0 [If you do not use the local debug server, you can ignore it]
@@ -24,15 +27,18 @@ Welcome to F.I.S, FIS is the front-end integrated solutions which included autom
 
 ##Getting started
 
-##Develop
+##How to develop
 
-##Debug
+##How to Debug
 
-##Release
+##How to Release
 
-##Deploy
+##How to Deploy
 
-##Optimize
+##How to Optimize
 
-##Structure
+##Architecture
 ![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
+
+##License
+[F.I.S](http://fis.baidu.com) is available under the terms of the MIT License.
