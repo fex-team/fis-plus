@@ -79,32 +79,14 @@ These are just some plugins, [See more on npm](https://www.npmjs.org/search?q=fi
 - [fis-postpackager-inlinemap](https://www.npmjs.org/package/fis-postpackager-inlinemap)
 
 ##Who uses FIS?
-These are just a few companies and projects that are using FIS.
-### [Baidu](http://www.baidu.com/)
-- [baidu page search](http://www.baidu.com/) 
-- [baidu map](http://ditu.baidu.com/)
-- [baidu tieba](http://tieba.baidu.com/)
-- [baidu zhidao](http://zhidao.baidu.com/)
-- [baidu image](http://image.baidu.com/)
-- [baidu wenku](http://wenku.baidu.com/)
-- [baidu baike](http://baike.baidu.com/)
-- [baidu lvyou](http://lvyou.baidu.com/)
-- [baidu news](http://news.baidu.com/)
-- [baidu wangpan](http://wangpan.baidu.com/disk/home)
-- [baidu xiangce](http://xiangce.baidu.com/)
-- [baidu yuedu](http://yuedu.baidu.com/)
-- [baidu baifubao](https://www.baifubao.com/)
-- [baidu licai](http://8.baidu.com/)
-- [baidu tuan](http://tuan.baidu.com/)
-
-###[Tencent](http://www.qq.com/)
-### [UC](http://www.uc.cn/)
-### [Funshion](http://www.funshion.com/)
-### [B5M](http://www.b5m.com/)
-### [7k7k](http://www.7k7k.com/)
-### [Rong360](http://rong360.com/)
-
-This is just a short list of companies and projects that use FIS. [See more here](./doc/who uses FIS.md).
+These are just a few companies and projects that are using FIS. [See more here](./doc/who uses FIS.md).
+- [Baidu](http://www.baidu.com/)
+- [Tencent](http://www.qq.com/)
+- [UC](http://www.uc.cn/)
+- [Funshion](http://www.funshion.com/)
+- [B5M](http://www.b5m.com/)
+- [7k7k](http://www.7k7k.com/)
+- [Rong360](http://rong360.com/)
 
 ##Architecture
 ![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
