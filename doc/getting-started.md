@@ -2,6 +2,12 @@
 
 We provide a small demo for you to exprience how to use fis, make sure you have installed nodejs, java, php, php-cgi, fis-plus and lights
 
+how to install lights, it's easy
+
+$npm install lights -g
+
+lights officila site: http://lightjs.duapp.com
+
 Firstly，Initiate fis local environment and use lights to install demo to your machine
 
 $ fisp server init
@@ -9,6 +15,7 @@ $ lights install pc-demo
 
 *  fis local environment includes Samrty3, fis-data, fis-rewrite, index.php
 
+```bash
 Let's take a look at the demo's directory.
 
 ├── common   //common module
@@ -16,10 +23,38 @@ Let's take a look at the demo's directory.
 │   ├── page     //page tpl directory
 │   ├── plugin   //smarty plugin directory
 │   ├── static   //static resource directory
-│   └── widget   //模块化组件目录
-└── home    //业务模块
+│   └── widget   //widget directory
+└── home    //business module
     ├── fis-conf.js
     ├── page
     ├── static
-    ├── test    //测试数据目录
+    ├── test    //test directory
     └── widget
+```
+
+common module includes basic libraries like jquery, bootstrap, layout template so that the other business can use。
+business module is more likely to change with the business requirements。With the requirements explosion, you may have lots of business modules。
+FIS directory specifications make parallel developments easily and your applications come online safer.
+
+secondly, let's release the demo and launch FIS server to preview the page
+
+$ cd common
+$ fisp release -c
+
+$ cd ../home
+$ fisp release -c
+
+$ fisp server start
+
+//open your internet explorer
+http://localhost:8080/home/page/index
+
+you should see this page
+<img src=""></img>
+
+
+
+At last, you can try to edit the demo's content and release them again to see your changes.
+
+
+
