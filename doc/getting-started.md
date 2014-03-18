@@ -67,7 +67,10 @@ you should see this page
 <img src=""></img>
 
 
-* At last, you can try to edit the demo's content and release them again to see your changes.
+you can try to edit the demo's content and release them again to see your changes.
+
+### At last
+
 * Congratulations, you have your first FIS project.
 * You will see more fantastic and powerful FIS functions afterwards.
 
