@@ -1,7 +1,9 @@
 ## get started
 
-    We provide a small demo for you to exprience how to use fis.
-    make sure you have installed nodejs, java, php, php-cgi, fis-plus and lights
+We provide a small demo for you to exprience how to use fis.
+make sure you have installed nodejs, java, php, php-cgi, fis-plus and lights
+
+### install lights 
 
 how to install lights, it's easy
 
@@ -11,6 +13,8 @@ $npm install lights -g
 
 lights officila site: http://lightjs.duapp.com
 
+### Initiate local environment
+
 Firstly，Initiate fis local environment and use lights to install demo to your machine
 
 ```bash
@@ -19,6 +23,8 @@ $ lights install pc-demo
 ```
 
 *  fis local environment includes Samrty3, fis-data, fis-rewrite, index.php
+
+### FIS directory specifications 
 
 Let's take a look at the demo's directory.
 ```bash
@@ -39,6 +45,8 @@ Let's take a look at the demo's directory.
 * common module includes basic libraries like jquery, bootstrap, layout template so that the other business can use。
 * business module is more likely to change with the business requirements。With the requirements explosion, you may have lots of business modules。
 * FIS directory specifications make parallel developments easily and your applications come online safer.
+
+### preview demo
 
 secondly, let's release the demo and launch FIS server to preview the page
 
