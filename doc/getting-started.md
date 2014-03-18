@@ -1,7 +1,7 @@
 ## get started
 
-We provide a small demo for you to exprience how to use fis.
-make sure you have installed nodejs, java, php, php-cgi, fis-plus and lights
+* We provide a small demo for you to exprience how to use fis.
+* make sure you have installed nodejs, java, php, php-cgi, fis-plus and lights
 
 ### install lights 
 
@@ -15,7 +15,7 @@ lights officila site: http://lightjs.duapp.com
 
 ### Initiate local environment
 
-Firstly，Initiate fis local environment and use lights to install demo to your machine
+Initiate fis local environment and use lights to install demo to your machine
 
 ```bash
 $ fisp server init
@@ -48,7 +48,7 @@ Let's take a look at the demo's directory.
 
 ### preview demo
 
-secondly, let's release the demo and launch FIS server to preview the page
+let's release the demo and launch FIS server to preview the page
 
 ```bash
 $ cd common
@@ -67,8 +67,7 @@ you should see this page
 <img src=""></img>
 
 
-
-At last, you can try to edit the demo's content and release them again to see your changes.
-Congratulations, you have your first FIS project.
-You will see more fantastic and powerful FIS functions afterwards.
+* At last, you can try to edit the demo's content and release them again to see your changes.
+* Congratulations, you have your first FIS project.
+* You will see more fantastic and powerful FIS functions afterwards.
 
