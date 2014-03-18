@@ -64,7 +64,7 @@ http://localhost:8080/home/page/index
 ```
 
 you should see this page
-![](./doc/images/fis-demo.png)
+![](./images/fis-demo.png)
 
 you can try to edit the demo's content and release them again to see your changes.
 
