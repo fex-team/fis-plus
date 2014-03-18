@@ -10,14 +10,15 @@ lights officila site: http://lightjs.duapp.com
 
 Firstly，Initiate fis local environment and use lights to install demo to your machine
 
+```bash
 $ fisp server init
 $ lights install pc-demo
+```
 
 *  fis local environment includes Samrty3, fis-data, fis-rewrite, index.php
 
-```bash
 Let's take a look at the demo's directory.
-
+```bash
 ├── common   //common module
 │   ├── fis-conf.js  //config gile
 │   ├── page     //page tpl directory
@@ -32,12 +33,13 @@ Let's take a look at the demo's directory.
     └── widget
 ```
 
-common module includes basic libraries like jquery, bootstrap, layout template so that the other business can use。
-business module is more likely to change with the business requirements。With the requirements explosion, you may have lots of business modules。
-FIS directory specifications make parallel developments easily and your applications come online safer.
+* common module includes basic libraries like jquery, bootstrap, layout template so that the other business can use。
+* business module is more likely to change with the business requirements。With the requirements explosion, you may have lots of business modules。
+* FIS directory specifications make parallel developments easily and your applications come online safer.
 
 secondly, let's release the demo and launch FIS server to preview the page
 
+```bash
 $ cd common
 $ fisp release -c
 
@@ -48,6 +50,7 @@ $ fisp server start
 
 //open your internet explorer
 http://localhost:8080/home/page/index
+```
 
 you should see this page
 <img src=""></img>
@@ -55,6 +58,6 @@ you should see this page
 
 
 At last, you can try to edit the demo's content and release them again to see your changes.
-
-
+Congratulations, you have your first FIS project.
+You will see more fantastic and powerful FIS functions afterwards.
 
