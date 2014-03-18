@@ -1,10 +1,13 @@
 ## get started
 
-We provide a small demo for you to exprience how to use fis, make sure you have installed nodejs, java, php, php-cgi, fis-plus and lights
+    We provide a small demo for you to exprience how to use fis.
+    make sure you have installed nodejs, java, php, php-cgi, fis-plus and lights
 
 how to install lights, it's easy
 
+```bash
 $npm install lights -g
+```
 
 lights officila site: http://lightjs.duapp.com
 
