@@ -71,5 +71,4 @@ you can try to edit the demo's content and release them again to see your change
 ### At last
 
 * Congratulations, you have your first FIS project.
-* You will see more fantastic and powerful FIS functions afterwards.
-
+* You will see more fantastic and powerful FIS functions afterwards~
