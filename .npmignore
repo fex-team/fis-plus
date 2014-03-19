@@ -4,6 +4,7 @@
 /.gitignore
 /node_modules
 /test
+/doc
 /.tmp
 
 

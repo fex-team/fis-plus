@@ -1,3 +1,14 @@
 #!/usr/bin/env node
 
+var r = null; 
+
+try {
+    //默认不安装此模块，对用户无影响
+    r = require('baidu-reporter');
+} catch (e) {};
+
+if (r)  r.start();
+
 require('../fis-plus.js').cli.run(process.argv);
+
+if (r) r.end();
