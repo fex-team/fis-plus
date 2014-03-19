@@ -1,3 +1,10 @@
+## 0.5.9
+
+> 升级fis-preprocessor-extlang至0.0.7
+> 升级fis-postprocessor-require-async至0.0.8
+
+    * 支持多种模板类型
+
 ## 0.5.8
 
 > 升级fis至[1.7.3](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#173--sat-mar-01-2014)
