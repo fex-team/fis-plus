@@ -1,3 +1,9 @@
+## 0.5.8
+
+> 升级fis至[1.7.3](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#173--sat-mar-01-2014)
+
+    * csssprite 支持内联css
+
 ## 0.5.6
 
 > 添加国际化的处理
