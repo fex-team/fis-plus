@@ -20,10 +20,13 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 * Flexible and scalable, plug-in system mechanisms
 * Enable greater speed and frequency for the delivery of project.
 
-##Usage
+##Getting Started
+- [What is FIS](./doc/what is FIS.md) 
 - [Installation](./doc/installation.md) 
+- [Hello world](./doc/getting-started.md)
+
+##Usage
 - [Command Line](./doc/command-line.md)
-- [Getting Started](./doc/getting-started.md)
 
 ##Customizing FIS
 - [Project configuration](./doc/project-configuration.md) 
