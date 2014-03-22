@@ -35,6 +35,9 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 - [Deploy configuration](./doc/deploy-configuration.md)
 - [Pack configuration](./doc/pack-configuration.md)
 
+##How does FIS work
+- [the architecture of fis](./doc/architecture.md) 
+
 ##Who uses FIS?
 These are just a few companies and projects that are using FIS. [See more here](./doc/who uses FIS.md).
 - [Baidu](http://www.baidu.com/)
@@ -75,9 +78,6 @@ These are just some plugins, [See more on npm](https://www.npmjs.org/search?q=fi
 - [fis-postpackager-b5min](https://www.npmjs.org/package/fis-postpackager-b5min)
 - [fis-parser-jade-inline](https://www.npmjs.org/package/fis-parser-jade-inline)
 - [fis-parser-ejs](https://www.npmjs.org/package/fis-parser-ejs)
-
-##Architecture
-![](https://raw.github.com/fis-dev/fis-plus/gh-pages/images/struct.png)
 
 ##Related on github
 - [fis](https://github.com/fex-team/fis)
