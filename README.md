@@ -12,18 +12,17 @@ Welcome to [F.I.S](http://fis.baidu.com), it is the front-end integrated solutio
 Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the quality and grammar of this documentation. If you have any questions, please feel free to ask through [New Issue](https://github.com/fex-team/fis-plus/issues/new).
 
 ##Features
-* Scaffolds out project, pages, modules, plug-ins and other resources.
-* Performing repetitive tasks like minification, compilation, unit testing, linting, etc
-* Automatic processing of embedded static resources, replacing the path, md5 timestamp.
-* Convenient local debugging environment, built-in debugging servers, supporting data and the request simulation, file monitoring.
-* Effectively monitor resource loading conditions and automatically optimize site performance.
-* Flexible and scalable, plug-in system mechanisms
+* Providing a flexible scaffolding tools, can scaffolds project, pages, modules, plug-ins, etc.
+* Performing repetitive tasks like compilation, minification, adding md5 timestamp, linting, etc
+* Built-in server, supporting data and request simulation, file monitoring.
+* High-performance module development framework, efficiently control the loading of static resources
+* Flexible and scalable, plug-in system mechanisms.
 * Enable greater speed and frequency for the delivery of project.
 
 ##Getting Started
 - [What is FIS](./doc/what is FIS.md) 
-- [Installation](./doc/installation.md) 
-- [Hello world](./doc/getting-started.md)
+- [How to Install](./doc/installation.md) 
+- [Let's start Hello world](./doc/getting-started.md)
 
 ##Usage
 - [Command Line](./doc/command-line.md)
