@@ -21,8 +21,8 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 
 ##Getting Started
 - [What is FIS](./doc/what is FIS.md) 
-- [How to Install](./doc/installation.md) 
-- [Let's start Hello world](./doc/getting-started.md)
+- [How to Install FIS](./doc/installation.md) 
+- [Let's start a fis Hello world](./doc/getting-started.md)
 
 ##Usage
 - [Command Line](./doc/command-line.md)
