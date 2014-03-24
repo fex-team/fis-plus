@@ -24,28 +24,6 @@ $ lights install pc-demo
 
 *  fis local environment includes Samrty3, fis-data, fis-rewrite, index.php
 
-### FIS directory specifications 
-
-Let's take a look at the demo's directory.
-```bash
-├── common   //common module
-│   ├── fis-conf.js  //config gile
-│   ├── page     //page tpl directory
-│   ├── plugin   //smarty plugin directory
-│   ├── static   //static resource directory
-│   └── widget   //widget directory
-└── home    //business module
-    ├── fis-conf.js
-    ├── page
-    ├── static
-    ├── test    //test directory
-    └── widget
-```
-
-* common module includes basic libraries like jquery, bootstrap, layout template so that the other business can use。
-* business module is more likely to change with the business requirements。With the requirements explosion, you may have lots of business modules。
-* FIS directory specifications make parallel developments easily and your applications come online safer.
-
 ### preview demo
 
 let's release the demo and launch FIS server to preview the page
@@ -70,5 +48,5 @@ you can try to edit the demo's content and release them again to see your change
 
 ### At last
 
-* Congratulations, you have your first FIS project.
+* Congratulations, you have your first FIS project, you can continue to see [the command line](./command-line.md), [devlop and debug](./develop and debug.md), [release and deploy](./release and deploy.md), [monitor and optimize](./monitor and optimize.md).
 * You will see more fantastic and powerful FIS functions afterwards~
