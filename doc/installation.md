@@ -32,14 +32,17 @@ lights officila site: http://lightjs.duapp.com
 
 ###High-performance module development framework
 
-Includes front-end module loader, back-end smarty plugins, etc. It can efficiently control the loading of static resources. There are alse other back-end solutions coming soon. We can install them via lights:
+Includes front-end module loader, back-end smarty plugins, etc. It can efficiently control the loading of static resources. We can install them via lights:
 
 ```bash
 //download front-end module loader
 $lights install modjs
+
 //download back-end smarty plugins
 $ligths install pc-plugin
 ```
+
+There are alse other back-end solutions coming soon, like java, go, etc.
 
 ###Development environment
 
