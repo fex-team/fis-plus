@@ -26,6 +26,9 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 
 ##Usage
 - [Command Line](./doc/command-line.md)
+- [Develop and debug](./doc/develop and debug.md)
+- [Release and deploy](./doc/release and deploy.md)
+- [Monitor and optimize](./doc/monitor and optimize.md)
 
 ##Customizing FIS
 - [Project configuration](./doc/project-configuration.md) 
