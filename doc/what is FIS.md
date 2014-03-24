@@ -7,7 +7,7 @@ So, is there a way to simplify this process, so that the front-end team can quic
 
 The answer is yes!
 
-By the end of 2011 at Baidu, we set up a team brings together elite engineers from various product R&D team, the team's task is to find the solutions to enhance the level of developer ergonomics. After much effort, we finally abstract a set of solutions from project development process. We call it FIS(Front-end Integrated Solution)for short.
+By the end of 2011 at Baidu, we set up a team brings together elite engineers from various product R&D team, the team's task is to find the solutions to enhance the level of developer ergonomics. After much effort, we finally abstract a set of solutions from project development process, referred to as FIS(Front-end Integrated Solution).
 
 ![devops cycle](./images/what.png)
 
