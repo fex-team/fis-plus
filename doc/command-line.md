@@ -21,9 +21,7 @@ Usage: fis-plus <command>
 
 ###fisp release
 
-fisp release is a very powerful command which can compile and deploy your code. It can meet a variety of front-end development needs with the appropriate parameter.
-
- below is the output from fisp release --help
+fisp release is a very powerful command which can compile and deploy your code. It can meet a variety of front-end development needs with the appropriate parameter. Below is the output from fisp release --help
 
  ```
   Usage: release [options]
@@ -50,7 +48,7 @@ fisp release is a very powerful command which can compile and deploy your code. 
 
 ###fisp server
 
-fisp server command can start a small built-in server which can monitor your file changes. If you run php/smarty on your pc, make sure you have installed [Java](http://java.com/en/) and [php](http://cn2.php.net/downloads.php). After install Java and php, we can start the debug server
+fisp server command can start a small built-in server which can monitor your file changes. If you run php/smarty on your pc, make sure you have installed [Java](http://java.com/en/) and [php](http://cn2.php.net/downloads.php). After install Java and php, we can start the debug server, after the server starts, it automatically checks the environment, and finally tell you that port it is listening on:
 
 ```
 $ fisp server start
@@ -59,9 +57,7 @@ checking php-cgi support : version 5.2.11
 starting fis-server on port : 8080
 ```
 
-After the server starts, it automatically checks the environment, and finally tell you that it is listening on port 8080.
-
-below is the output from fisp server --help
+Below is the output from fisp server --help
 
 ```
   Usage: server <command> [options]
@@ -97,9 +93,7 @@ below is the output from fisp server --help
 
 ###lights install
 
-Lights is a front end package management tool which can make it exceedingly simple to find, install and keep packages up-to-date. You can install fis demo, modules and other resources through lights.
-
-below is the output from lights --help
+Lights is a front end package management tool which can make it exceedingly simple to find, install and keep packages up-to-date. You can install fis demo, modules and other resources through lights. Below is the output from lights --help
 
 ```
 Usage: lights <command>
