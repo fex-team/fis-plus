@@ -48,7 +48,7 @@ fisp release is a very powerful command which can compile and deploy your code. 
 
 ###fisp server
 
-fisp server command can start a small built-in server which can monitor your file changes. If you run php/smarty on your pc, make sure you have installed [Java](http://java.com/en/) and [php](http://cn2.php.net/downloads.php). After install Java and php, we can start the debug server, after the server starts, it automatically checks the environment, and finally tell you that port it is listening on:
+fisp server command can start a small built-in server which can monitor your file changes. If you run php/smarty on your pc, make sure you have installed [Java version >= 1.6](http://java.com/en/) and [php](http://cn2.php.net/downloads.php). After install Java and php, we can start the debug server, after the server starts, it automatically checks the environment, and finally tell you that port it is listening on:
 
 ```
 $ fisp server start

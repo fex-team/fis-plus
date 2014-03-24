@@ -6,7 +6,7 @@ Before starting the installation, first you need to know what do you want to use
 
 ###Automation tool
 
-Performing repetitive tasks like compilation, minification, adding md5 timestamp, linting, etc. FIS automation tool depends on [Node](http://nodejs.org/) and [npm](https://www.npmjs.org/). You need to [install nodejs](http://nodejs.org/) first, then you can install fis via npm:
+Performing repetitive tasks like compilation, minification, adding md5 timestamp, linting, etc. FIS automation tool depends on [Node version>= 0.8](http://nodejs.org/) and [npm](https://www.npmjs.org/). You need to [install nodejs](http://nodejs.org/) first, then you can install fis via npm:
 
 ```
 npm install fisp -g
@@ -46,7 +46,7 @@ There are alse other back-end solutions coming soon, like java, go, etc.
 
 ###Development environment
 
-In case of setting up the server and php on your own computer, you need [Java](http://java.com/en/) and [php](http://cn2.php.net/downloads.php). After install Java and php, you can init you fis development enviroment:
+In case of setting up the server and php on your own computer, you need [Java version >= 1.6](http://java.com/en/) and [php](http://cn2.php.net/downloads.php). After install Java and php, you can init you fis development enviroment:
 
 ```
 $ fisp server init
