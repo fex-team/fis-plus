@@ -4,7 +4,7 @@
 
 Recommended Project Directory Structure
 
-When you create an ASP.NET MVC Web application project, MVC components are separated based on the project folders shown in the following illustration:
+When you create an  MVC Web application project, MVC components are separated based on the project folders shown in the following illustration:
 
 
 
