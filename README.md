@@ -20,9 +20,9 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 * Enable greater speed and frequency for the delivery of project.
 
 ##Getting Started
-- [What is FIS](./doc/what is FIS.md) 
-- [How to Install FIS](./doc/installation.md) 
-- [Let's start a fis Hello world](./doc/getting-started.md)
+- [What is F.I.S](./doc/what is FIS.md) 
+- [Installation and Download](./doc/installation.md) 
+- [A simple fis tutorial](./doc/getting-started.md)
 
 ##Usage
 - [Command Line](./doc/command-line.md)
