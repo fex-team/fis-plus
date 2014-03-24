@@ -1,14 +1,15 @@
 ##Command Line
 
-We can run command with --help to see detail,below is the output from fisp --help
+There are three commands you have to know which can meet all you needs.
 
 ```
 Usage: fis-plus <command>
 
   Commands:
 
-    release     build and deploy your project
-    server      launch a php-cgi server
+    release            build and deploy your project
+    server             launch a php-cgi server
+    lights install     install components and demos
 
   Options:
 
@@ -18,7 +19,9 @@ Usage: fis-plus <command>
 
  ```
 
- below is the output from fisp release --help
+###fisp release
+
+fisp release is a very powerful command which can compile and deploy your code. It can meet a variety of front-end development needs with the appropriate parameter. Below is the output from fisp release --help
 
  ```
   Usage: release [options]
@@ -41,6 +44,17 @@ Usage: fis-plus <command>
     -u, --unique           use unique compile caching
     --verbose              enable verbose output
 
+```
+
+###fisp server
+
+fisp server command can start a small built-in server which can monitor your file changes. If you run php/smarty on your pc, make sure you have installed [Java version >= 1.6](http://java.com/en/) and [php](http://cn2.php.net/downloads.php). After install Java and php, we can start the debug server, after the server starts, it automatically checks the environment, and finally tell you that port it is listening on:
+
+```
+$ fisp server start
+checking java support : version 1.6.0
+checking php-cgi support : version 5.2.11
+starting fis-server on port : 8080
 ```
 
 below is the output from fisp server --help
@@ -76,3 +90,28 @@ below is the output from fisp server --help
     --exclude <glob>               clean exclude filter
 
 ```
+
+###lights install
+
+Lights is a front end package management tool which can make it exceedingly simple to find, install and keep packages up-to-date. You can install fis demo, modules and other resources through lights. Below is the output from lights --help
+
+```
+Usage: lights <command>
+
+Commands:
+
+      install      install resource from lights
+      search       search resource of lights
+      adduser      add user of lights
+      publish      publish resource to lights
+      unpublish    remove resource to lights
+      owner        change ownership of resource
+      config       set or get config if lights
+
+Options:
+
+  -h, --help     output usage information
+  -v, --version  output the version number
+```
+
+[View all packages available through Lights's registry](http://lightjs.duapp.com).
