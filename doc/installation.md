@@ -28,7 +28,7 @@ Make it exceedingly simple to find, install and keep packages up-to-date. Lights
 $npm install lights -g
 ```
 
-View all packages available through Lights's registry(http://lightjs.duapp.com).
+[View all packages available through Lights's registry](http://lightjs.duapp.com).
 
 ###High-performance module development framework
 

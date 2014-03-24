@@ -57,7 +57,7 @@ checking php-cgi support : version 5.2.11
 starting fis-server on port : 8080
 ```
 
-Below is the output from fisp server --help
+below is the output from fisp server --help
 
 ```
   Usage: server <command> [options]
@@ -114,4 +114,4 @@ Options:
   -v, --version  output the version number
 ```
 
-View all packages available through Lights's registry(http://lightjs.duapp.com).
+[View all packages available through Lights's registry](http://lightjs.duapp.com).
