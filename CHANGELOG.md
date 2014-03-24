@@ -1,3 +1,7 @@
+## 0.6.0
+
+> 升级fis至1.7.4
+
 ## 0.5.9
 
 > 升级fis-preprocessor-extlang至0.0.7
