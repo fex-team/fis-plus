@@ -5,7 +5,7 @@
 The FIS recommended project structure which consists of four levels:
 
 - site, which consists of several subsystem.
-- subsystem, which groups a set of related business logic feature into a logically organized group, multiple subsystems constitute a site.
+- subsystem, which groups a set of related business logic feature into a organized group, several subsystems constitute a site.
 - page, which use smarty(jsp coming later) rending the widgets and model into a web page suitable for interaction with ther user.
 - widget, which are encapsulated and reusable components for the web which can be executed within a web page. 
 
