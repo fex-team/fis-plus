@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiangshouding/fis-pc.git"
+    "url": "https://github.com/fex-team/fis-plus.git"
   },
   "dependencies": {
     "fis": "1.7.4",
