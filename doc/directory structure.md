@@ -56,18 +56,18 @@ The reason we isolate the subsystem is to result in greater maintainability whic
 
 ###Widget
 
-There are three types of widget, smarty widget, JavaScript widget, CSS widget, Template widget(smarty for now) can invoke JS widget and CSS widget.
+There are three types of widget, Template widget, JavaScript widget, CSS widget, Template widget(smarty for now) can invoke JS widget and CSS widget.
 
 ####CSS widget
 
-In general, CSS widgets are the most simple components, the css files in widget directory are css widgets. Each css widget contains at least one css file which has the same name width the css widget directory, while the css directory also contains some pictures which are referenced in the css. 
+In general, CSS widgets are the most simple components, the css files in widget directory are css widgets. Each css widget contains at least one css file which has the same name with the css widget directory, while the css directory also can contains some pictures which are referenced in the css. 
 
 ```
 css: path_to_widget/widget/ui/widget name/widget name.css
 ```
 ####JavaScript widget
 
-The JavaScript files in widget directory are JavaScript widgets. Each JavaScript widget contains at least one JavaScript file which has the same name width the JavaScript widget directory, the JavaScript widget also can have the same name css file which is for the widget. The new JavaScript widget enables developers to create their own hidden implementations of HTML elements. For example, instead of pasting (and re-pasting) a script and a css into a web page, you only need call the JavaScript widget through require, the fis framework will auto load all the resources needed. 
+The new JavaScript widget enables developers to create their own hidden implementations of HTML elements. For example, instead of pasting (and re-pasting) a script and a css into a web page, you only need call the JavaScript widget through require, the fis framework will auto load all the resources needed. The JavaScript files in widget directory are JavaScript widgets. Each JavaScript widget contains at least one JavaScript file which has the same name with the JavaScript widget directory, the JavaScript widget also can have the same name css file for the widget. 
 
 ```
 js:  path_to_widget/widget/ui/widget name/widget name.js
@@ -76,7 +76,7 @@ css: path_to_widget/widget/ui/widget name/widget name.css
 
 ####Template widget
 
-Template widget can build anything from a button to a complete application as an encapsulated, reusable element. Each Smarty widget contains at least one tpl(smarty) file which has the same name width the Smarty widget directory, the template provides a method for declaring document fragments in HTML. the Smarty widget also can have the same name js and css file which is for the widget. The reason of why the tpl, js and css must have the same name is that if you do that then you don't need to explicitly import resources. When you call the widget the fis framework will auto find and load all the resources the widget need. 
+Template widget can build anything from a button to a complete application as an encapsulated, reusable element. Each Smarty widget contains at least one tpl(smarty) file which has the same name width the Smarty widget directory, the template provides a method for declaring document fragments in HTML. The Smarty widget also can have the same name js and css file for the widget. **The reason of why the tpl, js and css must have the same name is that if you do that then you don't need to explicitly import resources.** When you call the widget the fis framework will auto find and load all the resources the widget need. 
 
 ```
 tpl: path_to_widget/widget/ui/widget name/widget name.tpl
