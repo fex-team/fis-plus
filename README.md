@@ -27,19 +27,19 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 ##Usage
 - [Command Line](./doc/command-line.md)
 - [Recommended Directory Structure](./doc/directory structure.md)
-- [Pages and Layout Based On Smarty](./doc/smarty framework.md)
+- [Pages and Layout Based On Smarty](./doc/smarty framework.md) 
 - [How to Develop With Widgets](./doc/widget.md)
-- [Develop and Debug](./doc/develop and debug.md)
-- [Release and Deploy](./doc/release and deploy.md)
+- [How to Use The Necessary Compilation Plugins](./doc/compilation plugin.md)
+- [How to Concat Files With Pack Plugin](./doc/pack-configuration.md)
+- [How to Config url Rewrite and Redirect In FIS](./doc/rewrite and redirect.md)
+- [One-Click Deployment From Your PC To Server](./doc/deploy-configuration.md)
 - [Monitor and Optimize](./doc/monitor and optimize.md)
 
 ##Customizing FIS
-- [Project configuration](./doc/project-configuration.md) 
-- [Plugins configuration](./doc/plugins-configuration.md)
-- [Built-ins configuration](./doc/built-ins-configuration.md)
-- [Roadmap and Domain configuration](./doc/roadmap-and-domain-configuration.md)
-- [Deploy configuration](./doc/deploy-configuration.md)
-- [Pack configuration](./doc/pack-configuration.md)
+- [Project Configuration](./doc/project-configuration.md) 
+- [Plugins Configuration](./doc/plugins-configuration.md)
+- [Built-ins Configuration](./doc/built-ins-configuration.md)
+- [Roadmap and Domain Configuration](./doc/roadmap-and-domain-configuration.md)
 
 ##How does FIS work
 - [the architecture of fis](./doc/architecture.md) 
