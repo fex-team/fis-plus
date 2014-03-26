@@ -83,3 +83,5 @@ tpl: path_to_widget/widget/ui/widget name/widget name.tpl
 js:  path_to_widget/widget/ui/widget name/widget name.js
 css: path_to_widget/widget/ui/widget name/widget name.css
 ```
+
+You can find more in [How to Develop With Widgets](./doc/widget.md); 

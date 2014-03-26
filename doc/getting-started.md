@@ -38,5 +38,14 @@ you can try to edit the demo's content and release them again to see your change
 
 ### At last
 
-* Congratulations, you have your first FIS project, you can continue to see [the command line](./command-line.md), [devlop and debug](./develop and debug.md), [release and deploy](./release and deploy.md), [monitor and optimize](./monitor and optimize.md).
-* You will see more fantastic and powerful FIS functions afterwards~
+Congratulations, you have your first FIS project, you can continue to see:
+
+- [Command Line](./doc/command-line.md)
+- [Recommended Directory Structure](./doc/directory structure.md)
+- [Pages and Layout Based On Smarty](./doc/smarty framework.md)
+- [How to Develop With Widgets](./doc/widget.md)
+- [Develop and Debug](./doc/develop and debug.md)
+- [Release and Deploy](./doc/release and deploy.md)
+- [Monitor and Optimize](./doc/monitor and optimize.md)
+
+**You will see more fantastic and powerful FIS functions afterwards~**

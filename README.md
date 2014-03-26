@@ -27,6 +27,8 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 ##Usage
 - [Command Line](./doc/command-line.md)
 - [Recommended Directory Structure](./doc/directory structure.md)
+- [Pages and Layout Based On Smarty](./doc/smarty framework.md)
+- [How to Develop With Widgets](./doc/widget.md)
 - [Develop and Debug](./doc/develop and debug.md)
 - [Release and Deploy](./doc/release and deploy.md)
 - [Monitor and Optimize](./doc/monitor and optimize.md)
@@ -35,7 +37,7 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 - [Project configuration](./doc/project-configuration.md) 
 - [Plugins configuration](./doc/plugins-configuration.md)
 - [Built-ins configuration](./doc/built-ins-configuration.md)
-- [Directory specification and domain configuration](./doc/directory-specification-and-domain-configuration.md)
+- [Roadmap and Domain configuration](./doc/roadmap-and-domain-configuration.md)
 - [Deploy configuration](./doc/deploy-configuration.md)
 - [Pack configuration](./doc/pack-configuration.md)
 
