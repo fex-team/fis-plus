@@ -5,7 +5,7 @@ The FIS recommended project directory structure which consists of four levels:
 - site, which consists of several subsystem.
 - subsystem, which groups a set of related business logic feature into a organized group, several subsystems constitute a site.
 - page, which use smarty(jsp coming later) rending the widgets and model into a web page suitable for interaction with ther user.
-- widget, which are encapsulated and reusable components for the web which can be executed within a web page. 
+- widget, is a set of specs which let web developers leverage their HTML, CSS and JavaScript knowledge to build widgets that can be reused easily and reliably.
 
 By default, the projects include the following folders:
 
