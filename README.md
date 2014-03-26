@@ -22,14 +22,14 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 ##Getting Started
 - [What is F.I.S](./doc/what is FIS.md) 
 - [Installation and Download](./doc/installation.md) 
-- [A simple fis tutorial](./doc/getting-started.md)
+- [A Simple FIS Tutorial](./doc/getting-started.md)
 
 ##Usage
 - [Command Line](./doc/command-line.md)
-- [Recommended directory structure](./doc/directory structure.md)
-- [Develop and debug](./doc/develop and debug.md)
-- [Release and deploy](./doc/release and deploy.md)
-- [Monitor and optimize](./doc/monitor and optimize.md)
+- [Recommended Directory Structure](./doc/directory structure.md)
+- [Develop and Debug](./doc/develop and debug.md)
+- [Release and Deploy](./doc/release and deploy.md)
+- [Monitor and Optimize](./doc/monitor and optimize.md)
 
 ##Customizing FIS
 - [Project configuration](./doc/project-configuration.md) 

@@ -1,4 +1,4 @@
-## get started
+## Get Started
 
 * we provide a small demo for you to exprience how to use fis.
 * make sure you have read [fis installation](./installation.md)
