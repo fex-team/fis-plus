@@ -101,7 +101,7 @@ define('common:widget/menu/menu.js', function(require, exports, module){
 
 ####Load a Module
 
-- FIS framework will ensure that all dependent modules are loaded before your module execution. So when we need a module, simply provide a module name to require anywhere. 
+FIS framework will ensure that all dependent modules are loaded before your module execution. So when we need a module, simply provide a module name to require anywhere. 
 
 ```
 //sybsystem name: path
@@ -111,7 +111,7 @@ require("common:widget/ui/a/a.js");
 
 Because the dependency are pre-loaded, therefore the module can return immediately and synchronously.
 
-- The framework also provides an runtime asynchronous interface to load the modules that do not need to be loaded at startup.
+The framework also provides an runtime asynchronous interface to load the modules that do not need to be loaded at startup.
 
 ```
 //names can be string or array
