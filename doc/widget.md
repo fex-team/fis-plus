@@ -1,18 +1,14 @@
 ##How to Develop With Widgets
 
-**Widget** is a set of specs which let web developers leverage their HTML, CSS and JavaScript knowledge to build widgets that can be reused easily and reliably. It can build anything from a button to a complete application as an encapsulated, reusable element.When you call the widget the fis framework will auto find and load all the resources the widget need. 
-
-There are three types of widget, Template widget, JavaScript widget, CSS widget, Template widget(smarty for now) can invoke JS widget and CSS widget.
+Widget is a set of specs which let web developers leverage their HTML, CSS and JavaScript knowledge to build widgets that can be reused easily and reliably. It can build anything from a button to a complete application as an encapsulated, reusable element. The fis framework will find and load all the resources for the widget when the widget is called. There are three types of widget, Template widget, JavaScript widget, CSS widget, Template widget(smarty for now) can invoke JavaScript widget and CSS widget.
 
 ###CSS
 
-In general, CSS widgets are the most simple components, **the css files in widget directory are css widgets**, files and widgets are in one-to-one correspondence. CSS widgets offers several extensions to the CSS @import to provide more flexibility over what you can do with external files.
+In general, CSS widgets are the most simple components, the css files in widget directory are css widgets, files and widgets are in one-to-one correspondence. CSS widgets offers several extensions to the CSS @import to provide more flexibility over what you can do with external files.
 
 ####Reference in CSS
 
-Use @require (reference) to import external files, but without adding the imported styles to the compiled output. Widget takes a different approach to loading than traditional @import tags. While it can also run fast and optimize well. 
-
-Use a css file but do not output it, we can declare dependencies through **import**,
+Use @require to import external files, but without adding the imported styles to the compiled output. FIS takes a different approach to loading than traditional @import tags, while it can also run fast and optimize well.
 
 ```
 /**
@@ -21,7 +17,7 @@ Use a css file but do not output it, we can declare dependencies through **impor
  */
 ```
 
-fis compiler can record dependencies by identifying @require in css comments, after compilation, check map.json file, you can see,
+We declare dependencies through **require**, so fis compiler can record dependencies by identifying @require in css comments. After compilation, you can see map.json file,
 
 ```
 {
@@ -61,12 +57,13 @@ Use {%require%} to import external files in Smarty, but without adding the impor
 {%require name="home:static/index/index.css"%}
 ```
 
+![require](./images/require.jpg)
+
 the fis framework will find and load all the resources the widget need fast and optimize well.
 
 ####CSS Preprocessor
 
 By default, the css preprocessor compile LESS files to CSS. There are also some other css preprocessor plug-ins which you can install and config to use. 
-
 
 ###JavaScript
 
