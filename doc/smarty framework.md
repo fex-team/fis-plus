@@ -43,7 +43,7 @@ The smarty widget tag is used to dynamic control the output of widget static res
 
 ![widget](./images/widget.jpg)
 
-You can find more in [How to Develop With Widgets](./doc/widget.md); 
+You can find more in [How to Develop With Widgets](./doc/widget.md).
 
 ###layout and page demo
 
