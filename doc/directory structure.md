@@ -82,7 +82,7 @@ css: path_to_widget/widget/ui/widget name/widget name.css
 
 ####Template widget
 
-Template widget can build anything from a button to a complete application as an encapsulated, reusable element. Each Smarty widget contains at least one tpl(smarty) file which has the same name width the Smarty widget directory, the template provides a method for declaring document fragments in HTML. The Smarty widget also can have the same name js and css file for the widget. **The reason of why the tpl, js and css must have the same name is that if you do that then you don't need to explicitly import resources.** When you call the widget the fis framework will auto find and load all the resources the widget need. 
+Template widget can build anything from a button to a complete application as an encapsulated, reusable element. Each Smarty widget contains at least one tpl(smarty) file which has the same name width the Smarty widget directory, the template provides a method for declaring document fragments in HTML. The Smarty widget also can have the same name js and css file for the widget. **The reason of why the tpl, js and css must have the same name is that if you do that then you don't need to explicitly import resources.** The fis framework will automatically find and load all the js and css files that the widget need when the widget rendering. 
 
 ```
 tpl: path_to_widget/widget/ui/widget name/widget name.tpl
