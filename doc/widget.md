@@ -1,12 +1,10 @@
 ##How to Develop With Widgets
 
-Widget is a set of specs which let web developers leverage their HTML, CSS and JavaScript knowledge to build widgets that can be reused easily and reliably. It can build anything from a button to a complete application as an encapsulated, reusable element. The fis framework will find and load all the resources for the widget when the widget is called. There are three types of widget, Template widget, JavaScript widget, CSS widget, Template widget(smarty for now) can invoke JavaScript widget and CSS widget.
+Widget is a set of specs which let web developers leverage their HTML, CSS and JavaScript knowledge to build widgets that can be reused easily and reliably.
 
 ###Why Widget
 
-To understand why widget(components) are so important, we need look no further than how we’ve hacked around the lack of components.
-
-As an example, let’s run through the process of consuming a typical third-party widget.
+To understand why widget(components) are so important, we need look no further than how we’ve hacked around the lack of components. As an example, let’s run through the process of consuming a typical third-party widget.
 
 First, we include the widget’s CSS and JavaScript:
 
@@ -31,12 +29,12 @@ $(function() {
 });
 ```
 
-Can we get a way to avoid this constant three-step process to achieve simple, consistent, reusable, encapsulated and composable widgets, the answer is yes, but we’re only just getting started. It’s a great time to start experimenting.
+Can we get a way to avoid this constant three-step process to achieve simple, consistent, reusable, encapsulated and composable widgets, the answer is yes, but we’re only just getting started. There are three types of widget, Template widget, JavaScript widget, CSS widget, Template widget(smarty for now) can invoke JavaScript widget and CSS widget. It’s a great time to start experimenting.
 
 
-###Usage Of Template Widget
+###Template Widget
 
-Template widget can build anything from a button to a complete application as an encapsulated, reusable element. Each Smarty widget contains at least one tpl(smarty) file which has the same name width the Smarty widget directory, the template provides a method for declaring document fragments in HTML. The Smarty widget also can have the same name js and css file for the widget. **The reason of why the tpl, js and css must have the same name is that if you do that then you don't need to explicitly import resources.** The fis framework will automatically find and load all the js and css files that the widget need when the widget rendering. 
+Template widget can build anything from a button to a complete application as an encapsulated, reusable element. Each Smarty widget contains at least one tpl(smarty) file which has the same name width the Smarty widget directory, it also can have the same name js and css file for the widget. **The reason of why the tpl, js and css must have the same name is that if you do that then you don't need to explicitly import resources.** The fis framework will automatically find and load all the js and css files that the widget need when the widget rendering. 
 
 ```
 tpl: path_to_widget/widget/ui/widget name/widget name.tpl
@@ -50,7 +48,7 @@ css: path_to_widget/widget/ui/widget name/widget name.css
 
 ####Call Template Widget
 
-Use {%widget%} to call template widget with a widget name(path).
+Use {%widget%} to call template widget with a widget a name(path).
 
 ```
 {%widget name="home:widget/section/section.tpl" %}
@@ -58,9 +56,9 @@ Use {%widget%} to call template widget with a widget name(path).
 
 The smarty widget tag is used to dynamic control the output of widget static resources and html, usage:
 
-![require](./images/require.jpg)
+![widget](./images/widget.jpg)
 
-###Usage Of JavaScript Widget
+###JavaScript Widget
 
 JavaScript widget can make you write like modular commonjs components that include their own css, images, etc, with fis framework(loader) you get automatic dependency resolution. Achieve faster load times with asynchronous loading and the ability to optimize downloads.
 
@@ -106,7 +104,7 @@ FIS framework will ensure that all dependent modules are loaded before your modu
 require("common:widget/ui/a/a.js");
 ```
 
-Because the dependency are pre-loaded, therefore the module can return immediately and synchronously.
+The module can return immediately and synchronously because the dependency are pre-loaded.
 
 The framework also provides an runtime asynchronous interface to load the modules that do not need to be loaded at startup.
 
@@ -133,7 +131,7 @@ The corresponding css file will be automatically loaded in the page.
 
 FIS loader is a subset of AMD, **does not fully comply with AMD** for a better experience and higher performance.
 
-###Usage Of CSS Widget
+###CSS Widget
 
 In general, CSS widgets are the most simple components, the css files in widget directory are css widgets, files and widgets are in one-to-one correspondence. CSS widgets offers several extensions to the CSS @import to provide more flexibility over what you can do with external files.
 

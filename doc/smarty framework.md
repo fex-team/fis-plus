@@ -41,7 +41,9 @@ The smarty require tag is used to dynamic control the output of static resources
 
 The smarty widget tag is used to dynamic control the output of widget static resources and html, usage:
 
-![require](./images/require.jpg)
+![widget](./images/widget.jpg)
+
+You can find more in [How to Develop With Widgets](./doc/widget.md); 
 
 ###layout and page demo
 
