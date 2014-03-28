@@ -1,5 +1,7 @@
 ## Deploy
 
+Build your application on your machine and just upload public/directory to the directory that is served by a webserver. Only changed files are deployed to servers. Updating servers was never this quick and easy.
+
 * explanation：deploy。
 * type：``Object``
 * default：empty
