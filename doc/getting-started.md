@@ -42,10 +42,12 @@ Congratulations, you have your first FIS project, you can continue to see:
 
 - [Command Line](./doc/command-line.md)
 - [Recommended Directory Structure](./doc/directory structure.md)
-- [Pages and Layout Based On Smarty](./doc/smarty framework.md)
+- [Pages and Layout Based On Smarty](./doc/smarty framework.md) 
 - [How to Develop With Widgets](./doc/widget.md)
-- [Develop and Debug](./doc/develop and debug.md)
-- [Release and Deploy](./doc/release and deploy.md)
+- [A Toolset For Production](./doc/compilation plugin.md)
+- [Concat Files With Pack Plugin](./doc/pack-configuration.md)
+- [URL Rewriting for Beginners](./doc/rewrite and redirect.md)
+- [One-Click Upload From Your PC To Server](./doc/deploy-configuration.md)
 - [Monitor and Optimize](./doc/monitor and optimize.md)
 
 **You will see more fantastic and powerful FIS functions afterwards~**
