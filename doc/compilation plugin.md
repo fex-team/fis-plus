@@ -215,7 +215,7 @@ Prevent Smarty from XSS.
 
 ###Concat
 
-Concatenate files. See more in [Concat Files With Pack Plugin](./doc/pack-configuration.md);
+Concatenate files. See more in [Concat Files With Pack Plugin](./pack-configuration.md).
 
 ###CSS Sprites
 

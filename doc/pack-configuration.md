@@ -1,10 +1,10 @@
-## Pack
+###Concat-sourcemap
 
-* explanation：Configuration files to be packaged。
-* type：``Object``
-* default：empty
-* usage：
-    ```javascript
+Concatenate files and generate a source map file.
+
+####Concat
+
+```javascript
     //fis-conf.js
     fis.config.merge({
         pack : {
@@ -16,9 +16,18 @@
             'pkg/aio.css' : '**.css'
         }
     });
-    ```
+```
 
-* Output: Use the command fis release ** - pack ** - md5 - dest / output compile the project, and then to the output directory to see the contents of output map.json get.：
+Use fis release with `` -- pack `` parameter
+
+```bash
+$ fisp release --pack --dest ../output
+``` 
+
+####Sourcemap
+
+In this example, it will concatenate the specified source files(in order), joining files with default separator and writing the output to dest/map.json.
+
     ```json
     {
         "res": {
@@ -77,3 +86,7 @@
         }
     }
     ```
+
+####How to use sourcemap
+
+The [framework](./widget.md) can efficiently control the loading of static resources with sourcemap. we can get automatic dependency resolution and the ability to optimize downloads.
