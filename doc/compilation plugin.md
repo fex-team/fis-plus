@@ -196,19 +196,18 @@ define('common:widget/menu/menu.js', function(require, exports, module){
 
 ###Uglify-js
 
-Minify JavaScript files with UglifyJS.
-
+Minify JavaScript files with UglifyJS. Use fisp release with `` --optimize `` parameter to compress.
 ###Clean-css
 
-Minify CSS files with clean-css.
+Minify CSS files with clean-css. Use fisp release with `` --optimize `` parameter to compress.
 
 ###Html-compress
 
-Minify html files with html-compress.
+Minify html files with html-compress. Use fisp release with `` --optimize `` parameter to compress.
 
 ###Png-compressor
 
-Compress png images with pngquant.
+Compress png images with pngquant. Use fisp release with `` --optimize `` parameter to compress.
 
 ###Smarty-xss
 
