@@ -6,19 +6,16 @@ FIS automation tool is not just a task runner, more precisely speaking, it is a 
 
 Listed below are some of the built-in plugins enabled by default. 
 
-###Pareser
 
-####less
+###Less
 
 Compile less files to CSS.
 
-###Standard
+###Hashres
 
-####hashres
+Revision static file through content hashing and rename the src that refer to them in your html/js/css/etc files.
 
-Revision static file asset through content hashing and rename the src declarations that refer to them in your html/js/css/etc files.
-
-- In Html
+####In Html
 
 ```
 before:
@@ -31,7 +28,7 @@ after:
 <link rel="stylesheet" type="text/css" href="/demo_7defa41.css">
 <script type="text/javascript" src="/demo_33c5143.js"></script>
 ```
-- In JavaScript
+####In JavaScript
 
 ```
 //before:
@@ -64,7 +61,7 @@ var js = __uri('demo.js');
 var js = '/static/js/demo_33c5143.js';
 ```
 
-- In CSS
+####In CSS
 
 ```
 //before:
@@ -76,7 +73,7 @@ background: url('/images/body-bg_1b8c3e0.png');
 _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/body-bg_1b8c3e0.png');
 ```
 
-####CDN
+###CDN
 
 Properly prepends a CDN url to those assets referenced with absolute paths.
 
@@ -109,11 +106,11 @@ Use fis release with `` -- domains `` parameter to control whether to add domain
 $ fisp release --domains --dest ../output
 ```	
 
-####Inline/Embedded
+###Inline/Embedded
 
 Embedding js, css, images as base64 data URIs inside your files with `` ?__inline `` parameter.
 
-- In HTML
+####In HTML
 
 ```
 //before:
@@ -129,7 +126,7 @@ Embedding js, css, images as base64 data URIs inside your files with `` ?__inlin
 <script type="text/javascript">console.log('inline file');</script>
 ```
 
-- In JavaScript
+####In JavaScript
 
 ```
 源码：
@@ -146,7 +143,7 @@ var img = 'data:image/gif;base64,R0lGODlhDgGBALMAAGBn6eYxLvvy9PnKyfO...Jzna6853w
 var css = "body \n{    color: red;\n}";
 ```
 
-- In CSS
+####In CSS
 
 ```
 //before:
@@ -165,14 +162,7 @@ img { border: 5px solid #ccc; }
 }
 ```
 
-- processing of embedded static resources
-- replacing the path
-- md5 timestamp
-- dependces
-
-###Postprocessor
-
-####amd-wrap
+###Amd-wrap
 
 Wrap CommonJS files in `define(function (require, exports, module) { ... })`.
 
@@ -204,25 +194,23 @@ define('common:widget/menu/menu.js', function(require, exports, module){
 });
 ```
 
-###Optimizer
-
-####uglify-js
+###Uglify-js
 
 Minify JavaScript files with UglifyJS.
 
-####clean-css
+###Clean-css
 
 Minify CSS files with clean-css.
 
-####html-compress
+###Html-compress
 
 Minify html files with html-compress.
 
-####png-compressor
+###Png-compressor
 
 Compress png images with pngquant.
 
-####smarty-xss
+###Smarty-xss
 
 Prevent Smarty from XSS.
 
