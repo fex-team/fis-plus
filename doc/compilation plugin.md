@@ -226,6 +226,10 @@ Compress png images with pngquant.
 
 Prevent Smarty from XSS.
 
+###Concat
+
+Concatenate files. See more in [Concat Files With Pack Plugin](./doc/pack-configuration.md);
+
 ###CSS Sprites
 
 Generates a sprite from images referenced in a stylesheet and then updates the references with the new sprite image and positions.
