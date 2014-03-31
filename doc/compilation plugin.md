@@ -228,19 +228,6 @@ Use image src with `` __sprite `` parameter
 
 ![background](https://raw.github.com/fex-team/fis-spriter-csssprites/master/doc/image/background.png)
 
-
-####background-position
-
-|usage|demo|
-|:------|:----|:--------|
-|background-position: \d+px \d+px;|background-position: -9px -1px;|
-|background-position: left  \d+px;|background-position: left -11px;|
-|background-position: right \d+px;|background-position: right -1px;|
-|background-position: left top;|background-position: left top;|
-|background-position: right top;|background-position: right top;|
-
-####demo
-
 **before:**
 
 ```css
@@ -327,5 +314,16 @@ Use image src with `` __sprite `` parameter
 ```
 
 As shown above, `1px_bg.png` is merged into `aio_x.png` , `nav_bg.png`  is merged into `aio_y.png`, `add.jpg` and `mul.jpg` are merged into `aio_z.png`.
+
+
+####background-position
+
+|usage|demo|
+|:------|:----|:--------|
+|background-position: \d+px \d+px;|background-position: -9px -1px;|
+|background-position: left  \d+px;|background-position: left -11px;|
+|background-position: right \d+px;|background-position: right -1px;|
+|background-position: left top;|background-position: left top;|
+|background-position: right top;|background-position: right top;|
 
 Use fis release with `` - p `` parameter to generate a sprite.
