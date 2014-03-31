@@ -1,21 +1,21 @@
-###Concat-sourcemap
+###Concat-Sourcemap
 
 Concatenate files and generate a source map file.
 
-####Concat
+####Usage
 
 ```javascript
-    //fis-conf.js
-    fis.config.merge({
-        pack : {
-            //pack all demo.js, script.js
-            //The contents of the output is static / pkg / aio.js file
-            'pkg/aio.js' : ['**/demo.js', /\/script\.js$/i],
-            //package all the css files
-            //The contents of the output is static/pkg/aio.css file
-            'pkg/aio.css' : '**.css'
-        }
-    });
+//fis-conf.js
+fis.config.merge({
+    pack : {
+        //pack all demo.js, script.js
+        //The contents of the output is static / pkg / aio.js file
+        'pkg/aio.js' : ['**/demo.js', /\/script\.js$/i],
+        //package all the css files
+        //The contents of the output is static/pkg/aio.css file
+        'pkg/aio.css' : '**.css'
+    }
+});
 ```
 
 Use fis release with `` -- pack `` parameter
@@ -24,11 +24,9 @@ Use fis release with `` -- pack `` parameter
 $ fisp release --pack --dest ../output
 ``` 
 
-####Sourcemap
-
 In this example, it will concatenate the specified source files(in order), joining files with default separator and writing the output to dest/map.json.
 
-    ```json
+```
     {
         "res": {
             "demo.css": {
@@ -85,7 +83,7 @@ In this example, it will concatenate the specified source files(in order), joini
             }
         }
     }
-    ```
+```
 
 ####How to use sourcemap
 
