@@ -146,7 +146,7 @@
 	Use fis release with `` - domains `` parameter to control whether to add domain
 
     ```bash
-    $ fis release --domains --dest ../output
+    $ fisp release --domains --dest ../output
     ```
 
 ### roadmap.domain.image
