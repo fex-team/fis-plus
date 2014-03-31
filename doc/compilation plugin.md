@@ -326,4 +326,4 @@ As shown above, `1px_bg.png` is merged into `aio_x.png` , `nav_bg.png`  is merge
 |background-position: left top;|background-position: left top;|
 |background-position: right top;|background-position: right top;|
 
-Use fis release with `` - p `` parameter to generate a sprite.
+**Use fis release with `` - p `` parameter to generate a sprite**.
