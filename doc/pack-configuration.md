@@ -88,3 +88,5 @@ In this example, it will concatenate the specified source files(in order), joini
 ####How to use sourcemap
 
 The [framework](./widget.md) can efficiently control the loading of static resources with sourcemap. we can get automatic dependency resolution and the ability to optimize downloads.
+
+![framework](./images/framework.png)
