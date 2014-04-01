@@ -1,3 +1,3 @@
-##Automatic Generation of Concat Config Based On Production Data.
+##Automatic Generation of Concat Config.
 
 The biggest frontend performance killer in most cases is the raw number of HTTP requests, and the biggest hammer for addressing it is to package related JS and CSS into larger files, so you send down all the core JS code in one big file instead of a lot of smaller ones. Once the other groundwork is in place, this is a relatively easy change. We started with manual package definitions and eventually moved to automatic generation based on production data.

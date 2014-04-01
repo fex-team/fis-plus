@@ -2,10 +2,10 @@
 
 As many websites started growing, the old way of managing the CSS & JS files needed to be changed because of following reasons:
 
-- Management nightmare, it was difficult to manage all the CSS & JS files in various web pages as it was required to include right files in right web pages in right order. The error started to get in, in form of many not-needed resource files found in one or more web pages.
+- Management nightmare, it was difficult to manage all the CSS & JS files in various web pages as it was required to include right files in right web pages in right order. The error started to get in, in form of many unneeded resource files found in one or more web pages.
 - Performance issue, the performance issue was related with large number of HTTP requests that was required to be made for every CSS & JS files.
 
-The CSS & JS files started getting managed by concat-sourcemap.It is used to scan the directories, read the fis-config.js file for configuration, concatenate files, gather the dependencies and update a map of static resources for the given webpage. This solved the issue of manually. Following represents sample code on how concat-sourcemap use to manage the dependencies and bundle them in form of updating the map with the bundled data.
+The CSS & JS files started getting managed by concat-sourcemap.It is used to scan the directories, read the fis-config.js file for configuration, concatenate files, gather the dependencies and update a map of static resources for the given webpage. This solved the issue of manual. Following represents sample code on how concat-sourcemap use to manage the dependencies and bundle them in form of updating the map with the bundled data.
 
 ###Concat-Sourcemap
 
