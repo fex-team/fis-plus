@@ -211,7 +211,9 @@ Compress png images with pngquant. Use fisp release with `` --optimize `` parame
 
 ###Smarty-xss
 
-Prevent Smarty from XSS.
+Prevent Smarty from XSS. FIS smarty plugin of xss attempts to prevent XSS by treating strings as default-unsafe when rendering, the string will be escaped by the rendering pipeline, and the browser will treat it as plain text, not HTML.
+
+This document describes the right way to build HTML components so they are safe from XSS and render correctly. 
 
 ###Concat
 
