@@ -1,8 +1,13 @@
 ###Concat-Sourcemap
 
-Concatenate files and generate a source map file.
+As many websites started growing, the old way of managing the CSS & JS files needed to be changed because of following reasons:
 
-####Usage
+- Management nightmare: It was difficult to manage all the CSS & JS files in various web pages as it was required to include right files in right web pages in right order. The error started to get in, in form of many not-needed resource files found in one or more web pages.
+- Performance issue: The performance issue was related with large number of HTTP requests that was required to be made for every CSS & JS files.
+
+The CSS & JS files started getting managed by concat-sourcemap.It is used to scan the directories, read the fis-config.js file for configuration, concatenate files, gather the dependencies and update a map of static resources for the given webpage. This solved the issue of manually. Following represents sample code on how concat-sourcemap use to manage the dependencies and bundle them in form of updating the map with the bundled data.
+
+###Concatenate files and generate Sourcemap
 
 ```javascript
 //fis-conf.js
@@ -85,7 +90,17 @@ In this example, it will concatenate the specified source files(in order), joini
     }
 ```
 
-####How to use sourcemap
+The sourcemap contains the static files info as below for delivery mechanisms,
+
+- Dependencies: gather the dependencies in the map of static resources for the given webpage
+- Localization: good interface frees the engineers and provides high leverage opportunities for global optimizations;
+- Async loading: loading the resources file at the end of page rendering
+- Packaging Info: adapts its optimization strategies adaptively
+- Version management of these static resources: domain, hash
+
+This gives us the ability to release static resources (CSS, JS, Images) on these 1000s servers with all the users having the latest copies. We can manage the version of these static resources easily, have users always get the fresh/latest copies of static resources without the need for clearing their browser cache. 
+
+###Manage Dependencies Automatically
 
 The [framework](./widget.md) can efficiently control the loading of static resources with sourcemap. we can get automatic dependency resolution and the ability to optimize downloads.
 

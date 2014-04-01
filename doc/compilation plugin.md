@@ -217,7 +217,7 @@ Prevent Smarty from XSS.
 
 Concatenate files. See more in [Concat Files With Pack Plugin](./pack-configuration.md).
 
-###CSS Sprites
+###Adaptive Image Spriting
 
 Generates a sprite from images referenced in a stylesheet and then updates the references with the new sprite image and positions.
 

@@ -30,10 +30,10 @@ Thank you for interesting of [F.I.S](http://fis.baidu.com). We are improving the
 - [Pages and Layout Based On Smarty](./doc/smarty framework.md) 
 - [How to Develop With Widgets](./doc/widget.md)
 - [A Toolset For Production](./doc/compilation plugin.md)
-- [Concat Files With Pack Plugin](./doc/pack-configuration.md)
+- [Concat Files And Manage Dependencies Automatically](./doc/pack-configuration.md)
 - [URL Rewriting for Beginners](./doc/rewrite and redirect.md)
-- [One-Click Upload From Your PC To Server](./doc/deploy-configuration.md)
-- [Monitor and Optimize](./doc/monitor and optimize.md)
+- [One-Click Deploy From Your PC To Server](./doc/deploy-configuration.md)
+- [Automatic Generation of Concat Config Based On Production Data](./doc/monitor and optimize.md)
 
 ##Customizing FIS
 - [Project Configuration](./doc/project-configuration.md) 
