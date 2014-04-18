@@ -1,4 +1,6 @@
-![fis](./doc/images/logo.png)
+**Productivity for developers, performance for users**
+
+![![FIS](http://fis.baidu.com)](./doc/images/logo.png)
 
 The official site: http://fis.baidu.com
 
