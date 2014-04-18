@@ -1,5 +1,3 @@
-##Productivity for developers, Performance for users
-
 ![[FIS](http://fis.baidu.com)](./doc/images/logo.png)
 
 The official site: http://fis.baidu.com
@@ -7,7 +5,7 @@ The official site: http://fis.baidu.com
 [![NPM version](https://badge.fury.io/js/fis-plus.png)](http://badge.fury.io/js/fis-plus)
 
 ##Introduction
-Welcome to [F.I.S](http://fis.baidu.com), it is the front-end integrated solution which included automation tool, development framework, development environment. Our mission is to give you an advanced solution for developing web sites and applications without worrying about framework and performance.
+Welcome to [F.I.S](http://fis.baidu.com), it is the front-end integrated solution which included automation tool, development framework, development environment. Our mission is **productivity for developers, erformance for users** , to give you an advanced solution for developing web sites and applications without worrying about framework and performance.
 
 ##Questions
 
