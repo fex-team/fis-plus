@@ -1,6 +1,6 @@
-**Productivity for developers, performance for users**
+##Productivity for developers, Performance for users
 
-![![FIS](http://fis.baidu.com)](./doc/images/logo.png)
+![[FIS](http://fis.baidu.com)](./doc/images/logo.png)
 
 The official site: http://fis.baidu.com
 
