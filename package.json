@@ -1,6 +1,6 @@
 {
   "name": "fis-plus",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Front End Integrated Solution for PC",
   "main": "fis-plus.js",
   "bin": {
@@ -25,7 +25,8 @@
     "fis-parser-bdtmpl": "0.0.3",
     "fis-parser-less": "0.0.9",
     "fis-parser-po": "0.0.1",
-    "fis-prepackager-js-i18n": "0.0.2"
+    "fis-prepackager-js-i18n": "0.0.2",
+    "fisp-command-install": "*"
   },
   "keywords": [
     "fis",

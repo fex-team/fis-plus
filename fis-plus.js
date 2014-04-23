@@ -3,6 +3,8 @@ var fis = module.exports = require('fis');
 fis.cli.name = "fis-plus";
 fis.cli.info = fis.util.readJSON(__dirname + '/package.json');
 
+fis.require.prefixes = ['fisp', 'fis'];
+
 fis.config.merge({
     statics: '/static',
     server: {
