@@ -1,3 +1,7 @@
+##0.6.3
+
+> 升级fis至1.7.9(https://github.com/fex-team/fis/blob/master/CHANGELOG.md#179--mon-may-12-2014)
+
 ## 0.6.2
 
 > 添加脚手架功能
