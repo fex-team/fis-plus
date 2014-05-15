@@ -9,7 +9,7 @@ Before starting the installation, first you need to know what do you want to use
 Performing repetitive tasks like compilation, minification, adding md5 timestamp, linting, etc. FIS automation tool depends on [Node version>= 0.8](http://nodejs.org/) and [npm](https://www.npmjs.org/). You need to [install nodejs](http://nodejs.org/) first, then you can install fis via npm:
 
 ```
-npm install fisp -g
+npm install fis-plus -g
 ```
 
 check the fisp version
