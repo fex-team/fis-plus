@@ -1,6 +1,6 @@
 ##Pages and Layout Based On Smarty
 
-We provide a framework based on Smarty3/PHP for template, there are alse other back-end solutions coming soon, like java, go, etc. The framework provide some smarty html tag for use so we can efficiently control the loading of static resources. 
+We provide a framework based on Smarty3/PHP for template, there are also other back-end solutions coming soon, like java, go, etc. The framework provide some smarty html tag for use so we can efficiently control the loading of static resources. 
 
 ####{%html%}
 
