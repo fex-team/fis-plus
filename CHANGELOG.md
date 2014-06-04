@@ -1,4 +1,8 @@
-##0.6.3
+## 0.6.4
+
+> 升级fis至[1.7.10](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#1710--wed-jun-04-2014)
+
+## 0.6.3
 
 > 升级fis至[1.7.9](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#179--mon-may-12-2014)
 
