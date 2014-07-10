@@ -1,3 +1,7 @@
+## 0.6.8
+
+> 升级fis至[1.7.14](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#1714--tue-jul-02-2014)
+
 ## 0.6.5
 
 > 升级fis-optimizer-smarty-xss至v0.1.2
