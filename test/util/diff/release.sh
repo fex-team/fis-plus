@@ -52,7 +52,7 @@ then
 	#tieba
 	#rm -rf ${TIEBA_OUTPUT_PATH}/output_new
 	#cd ${TIEBA_CODE_PATH}
-	#node ${FISP_PATH}/bin/fis-plus release -copd ${TIEBA_OUTPUT_PATH}/output_new --no-color
+	#node ${FISP_PATH}/bin/fis-plus release -cpd ${TIEBA_OUTPUT_PATH}/output_new --no-color
 	#echo $v > ${TIEBA_OUTPUT_PATH}/output_new/fis_version.txt
     #chmod 777 ${TIEBA_OUTPUT_PATH}
 	
@@ -61,7 +61,7 @@ then
 	for module in ${BATMAN_MODULES[@]} 
 	do
 	    cd ${BATMAN_CODE_PATH}/$module 
-	    node ${FISP_PATH}/bin/fis-plus release -copd ${BATMAN_OUTPUT_PATH}/output_new --no-color
+	    node ${FISP_PATH}/bin/fis-plus release -cpd ${BATMAN_OUTPUT_PATH}/output_new --no-color
 	done
 	echo $v > ${BATMAN_OUTPUT_PATH}/output_new/fis_version.txt
     chmod 777 ${BATMAN_OUTPUT_PATH}	
@@ -71,7 +71,7 @@ then
 	for module in ${PLACE_MODULES[@]}
 	do
 	    cd ${PLACE_CODE_PATH}/$module
-	    node ${FISP_PATH}/bin/fis-plus release -copd ${PLACE_OUTPUT_PATH}/output_new --no-color
+	    node ${FISP_PATH}/bin/fis-plus release -cpd ${PLACE_OUTPUT_PATH}/output_new --no-color
 	done
 	echo $v > ${PLACE_OUTPUT_PATH}/output_new/fis_version.txt
     chmod 777 ${PLACE_OUTPUT_PATH}
@@ -81,7 +81,7 @@ then
     for module in ${HAO123_MODULES[@]}
     do
         cd ${HAO123_CODE_PATH}/$module
-        node ${FISP_PATH}/bin/fis-plus release -copd ${HAO123_OUTPUT_PATH}/output_new --no-color
+        node ${FISP_PATH}/bin/fis-plus release -cpd ${HAO123_OUTPUT_PATH}/output_new --no-color
     done
     echo $v > ${HAO123_OUTPUT_PATH}/output_new/fis_version.txt
     chmod 777 ${HAO123_OUTPUT_PATH}
@@ -91,7 +91,7 @@ then
     for module in ${SUPERMAN_MODULES[@]}
     do
         cd ${SUPERMAN_CODE_PATH}/$module
-        node ${FISP_PATH}/bin/fis-plus release -copd ${SUPERMAN_OUTPUT_PATH}/output_new --no-color
+        node ${FISP_PATH}/bin/fis-plus release -cpd ${SUPERMAN_OUTPUT_PATH}/output_new --no-color
     done
     echo $v > ${SUPERMAN_OUTPUT_PATH}/output_new/fis_version.txt
     chmod 777 ${SUPERMAN_OUTPUT_PATH}
@@ -106,7 +106,7 @@ else
 	#tieba
 	#rm -rf ${TIEBA_OUTPUT_PATH}/output_old
 	#cd ${TIEBA_CODE_PATH}
-	#fisp release -copd ${TIEBA_OUTPUT_PATH}/output_old --no-color
+	#fisp release -cpd ${TIEBA_OUTPUT_PATH}/output_old --no-color
 	#echo $v > ${TIEBA_OUTPUT_PATH}/output_old/fis_version.txt
     #chmod 777 -R ${TIEBA_OUTPUT_PATH}/output_old
 	
@@ -115,7 +115,7 @@ else
 	for module in ${BATMAN_MODULES[@]}
 	do
 		cd ${BATMAN_CODE_PATH}/$module
-		fisp release -copd ${BATMAN_OUTPUT_PATH}/output_old --no-color
+		fisp release -cpd ${BATMAN_OUTPUT_PATH}/output_old --no-color
 	done
 	echo $v > ${BATMAN_OUTPUT_PATH}/output_old/fis_version.txt
     chmod 777 -R ${BATMAN_OUTPUT_PATH}/output_old	
@@ -125,7 +125,7 @@ else
 	for module in ${PLACE_MODULES[@]}
 	do
 		cd ${PLACE_CODE_PATH}/$module
-		fisp release -copd ${PLACE_OUTPUT_PATH}/output_old --no-color
+		fisp release -cpd ${PLACE_OUTPUT_PATH}/output_old --no-color
 	done
 	echo $v > ${PLACE_OUTPUT_PATH}/output_old/fis_version.txt
     chmod 777 -R ${PLACE_OUTPUT_PATH}/output_old
@@ -135,7 +135,7 @@ else
     for module in ${HAO123_MODULES[@]}
     do
         cd ${HAO123_CODE_PATH}/$module
-        fisp release -copd ${HAO123_OUTPUT_PATH}/output_old --no-color
+        fisp release -cpd ${HAO123_OUTPUT_PATH}/output_old --no-color
     done
     echo $v > ${HAO123_OUTPUT_PATH}/output_old/fis_version.txt
     chmod 777 -R ${HAO123_OUTPUT_PATH}/output_old
@@ -145,7 +145,7 @@ else
     for module in ${SUPERMAN_MODULES[@]}
     do
         cd ${SUPERMAN_CODE_PATH}/$module
-        fisp release -copd ${SUPERMAN_OUTPUT_PATH}/output_old --no-color
+        fisp release -cpd ${SUPERMAN_OUTPUT_PATH}/output_old --no-color
     done
     echo $v > ${SUPERMAN_OUTPUT_PATH}/output_old/fis_version.txt
     chmod 777 -R ${SUPERMAN_OUTPUT_PATH}/output_old

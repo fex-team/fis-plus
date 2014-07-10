@@ -1,8 +1,10 @@
 #!/home/work/.jumbo/bin/expect
 
-set timeout 250
-spawn su - fis -c "sh /home/work/repos/fis_plus/test/util/diff/release.sh old"
+set timeout 360
+set p [lindex $argv 0]
+set o [lindex $argv 1]
+spawn su - fis -c "sh /home/work/repos/fis_plus/test/util/diff/release$o.sh old"
 expect "Password:"
-send cqmyg123\r
+send $p\r
 expect eof
 exit

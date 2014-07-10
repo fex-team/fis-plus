@@ -40,7 +40,7 @@ class Diff{
     public function __construct($productName){
         self::$rootPath = File::normalize(dirname(__FILE__));
 //        FILE::delete(self::$rootPath."/".$productName);
-        self::loadConfig(self::$rootPath.'/config.php');
+        self::loadConfig(self::$rootPath.'/config'.$_SESSION['o'].'.php');
         $product = self::getConfig('product');
         $this->proInfo = $product[$productName];
 //        $this->analyze = new Analyze();
@@ -303,14 +303,15 @@ class Diff{
      */
     public function DisplayDetails(){
         $smartyConfig = self::getConfig('smarty');
-		$diffdatas = array();
+        $outputConfig = self::getConfig('output');
+        $diffdatas = array();
         $this->proInfo['files'] = array();
 
         $this->getFiles($this->proInfo['oldoutputdir']);
 
         foreach($this->proInfo['files'] as $path){
             $old = $path;
-            $new = str_replace("output_old","output_new",$old);
+            $new = str_replace($outputConfig['oldoutputdir'],$outputConfig['newoutputdir'],$old);
             if(filesize($old) != filesize($new) && !preg_match("/fis_version.txt$/", $old)){
                 $this->smarty->assign('new',$new);
                 $this->smarty->assign('old',$old);
@@ -322,13 +323,13 @@ class Diff{
                 //文件内容diff的结果展示
                 $this->smarty->assign('diffdata',mb_convert_encoding($diffdata,'utf-8', 'gbk'));
                 $html = $this->smarty->fetch($smartyConfig['templatedir']."diffdetails.tpl");
-                $htmlpath = $smartyConfig['templatedir'].$this->proInfo['name']."_".str_replace("/", "_",substr($old,strrpos($old,'output_old') + 11)).".html";
+                $htmlpath = $smartyConfig['templatedir'].$this->proInfo['name']."_".str_replace("/", "_",substr($old,strrpos($old,$outputConfig['oldoutputdir']) + 13)).".html";
                 $fileurl = self::getConfig('url').str_replace("/home/work/repos/","",$htmlpath);
                 $diff = array(
                     'url' => $fileurl,
-                    'name' => str_replace("/", "_",substr($old,strrpos($old,'output_old') + 11)),
-                    'old' => substr($old,strrpos($old,'output_old') + 11),
-                    'new' => substr($old,strrpos($new,'output_new') + 11)
+                    'name' => str_replace("/", "_",substr($old,strrpos($old,$outputConfig['oldoutputdir']) + 13)),
+                    'old' => substr($old,strrpos($old,$outputConfig['oldoutputdir']) + 13),
+                    'new' => substr($old,strrpos($new,$outputConfig['newoutputdir']) + 13)
                 );
                 array_push($this->Diff, $diff);
                 File::write($htmlpath,$html);
@@ -378,7 +379,7 @@ class Diff{
 //            $this->proInfo['name'] =>$this->buildtimeinfo
 //        );
 //        $this->createDiffDate($diffData);
-		$this->generateReport($this->Diff);
+        $this->generateReport($this->Diff);
     }
 
     /**
@@ -446,93 +447,95 @@ class Diff{
             return self::$config[$key];
         }
     }
-	
-	
-	
-	/*
-	 *生成测试报告
-	 *
-	*/
-	private function generateReport($diffdatas){
-		$dom = new DOMDocument("1.0","utf-8");
-		$xmlFile = "./result/report.xml";
-		$tatalCount = 0;
-		$tatalFailure = 0;
 
-		if(file_exists($xmlFile)){
-			$dom->load($xmlFile);
-			$testsuite = $dom->getElementsByTagName("testsuite")->item(0);
-			$tatalCount = $testsuite->getAttribute("tests");
-			$tatalFailure = $testsuite->getAttribute("failures");
-		}else{
-			$testsuites = $dom->createElement("testsuites");
-			$dom->appendChild($testsuites);
-			$testsuite = $dom->createElement("testsuite");
-			$testsuites->appendChild($testsuite);
-		}
 
-		if(is_array($diffdatas) && count($diffdatas)>0){
-			$count = count($diffdatas);
-			$tatalCount += $count;
-			$tatalFailure += $count;
-			$testsuite->setAttribute("name","diff*  ");
-			$testsuite->setAttribute("tests",$tatalCount);
-			$testsuite->setAttribute("time",$tatalCount);
-			$testsuite->setAttribute("failures",$tatalFailure);
-			$testsuite->setAttribute("total",$tatalCount);
 
-			foreach($diffdatas as $diffdata){
-				$testcase=$dom->createElement("testcase");
-				$testsuite->appendChild($testcase);
-				$testcase->setAttribute("name",$diffdata["name"]);
-				$testcase->setAttribute("time","1");
-				$testcase->setAttribute("failures","1");
-				$testcase->setAttribute("total","1");
+    /*
+     *生成测试报告
+     *
+    */
+    private function generateReport($diffdatas){
+        $smartyConfig = self::getConfig('smarty');
+        $dom = new DOMDocument("1.0","utf-8");
+        $xmlFile = $smartyConfig['templatedir']."report.xml";
+        $tatalCount = 0;
+        $tatalFailure = 0;
 
-				$failure = $dom->createElement("failure");
-				$testcase->appendChild($failure);
-				$failure->setAttribute("type","junit.framework.AssertionFailedError");
-				$msgText = $dom->createTextNode("diff");
-				$failure->appendChild($msgText);
+        if(file_exists($xmlFile)){
+            $dom->load($xmlFile);
+            $testsuite = $dom->getElementsByTagName("testsuite")->item(0);
+            $tatalCount = $testsuite->getAttribute("tests");
+            $tatalFailure = $testsuite->getAttribute("failures");
+        }else{
+            $testsuites = $dom->createElement("testsuites");
+            $dom->appendChild($testsuites);
+            $testsuite = $dom->createElement("testsuite");
+            $testsuites->appendChild($testsuite);
+        }
 
-			}
+        if(is_array($diffdatas) && count($diffdatas)>0){
+            $count = count($diffdatas);
+            $tatalCount += $count;
+            $tatalFailure += $count;
+            $testsuite->setAttribute("name","diff*  ");
+            $testsuite->setAttribute("tests",$tatalCount);
+            $testsuite->setAttribute("time",$tatalCount);
+            $testsuite->setAttribute("failures",$tatalFailure);
+            $testsuite->setAttribute("total",$tatalCount);
 
-		}else if(!file_exists($xmlFile)){
+            foreach($diffdatas as $diffdata){
+                $testcase=$dom->createElement("testcase");
+                $testsuite->appendChild($testcase);
+                $testcase->setAttribute("name",$diffdata["name"]);
+                $testcase->setAttribute("time","1");
+                $testcase->setAttribute("failures","1");
+                $testcase->setAttribute("total","1");
 
-			$testsuite->setAttribute("name","diff*  ");
-			$testsuite->setAttribute("tests",1);
-			$testsuite->setAttribute("time",1);
-			$testsuite->setAttribute("failures",0);
-			$testsuite->setAttribute("total",1);
+                $failure = $dom->createElement("failure");
+                $testcase->appendChild($failure);
+                $failure->setAttribute("type","junit.framework.AssertionFailedError");
+                $msgText = $dom->createTextNode("diff");
+                $failure->appendChild($msgText);
 
-			$testcase=$dom->createElement("testcase");
-			$testsuite->appendChild($testcase);
-			$testcase->setAttribute("name","testcase0");
-			$testcase->setAttribute("time","1");
-			$testcase->setAttribute("failures","0");
-			$testcase->setAttribute("total","1");
-		}
-		$dom->save($xmlFile);
-	}
-	
+            }
+
+        }else if(!file_exists($xmlFile)){
+
+            $testsuite->setAttribute("name","diff*  ");
+            $testsuite->setAttribute("tests",1);
+            $testsuite->setAttribute("time",1);
+            $testsuite->setAttribute("failures",0);
+            $testsuite->setAttribute("total",1);
+
+            $testcase=$dom->createElement("testcase");
+            $testsuite->appendChild($testcase);
+            $testcase->setAttribute("name","testcase0");
+            $testcase->setAttribute("time","1");
+            $testcase->setAttribute("failures","0");
+            $testcase->setAttribute("total","1");
+        }
+        $dom->save($xmlFile);
+    }
+
 
 
     /*
      *  生成diff文件，提供给report工具使用
      * */
     private function createDiffDate($diffdatas){
-          $saveFile = dirname(__FILE__)."/result/diffDate.php";
-          $fileData = array();
-          if(file_exists($saveFile)){
-                $fileData = include $saveFile;
-          }
+        $smartyConfig = self::getConfig('smarty');
+        $saveFile = $smartyConfig['templatedir']."diffDate.php";
+        $fileData = array();
+        if(file_exists($saveFile)){
+            $fileData = include $saveFile;
+        }
         //$res = array_diff($fileData,$diffdatas);
         //$fileData = $res;
         $fileData = array_merge($fileData,$diffdatas);
         $str_content = "<?php return ".var_export($fileData,TRUE).";";
         file_put_contents($saveFile,$str_content);
     }
-	
+
 }
 
 
