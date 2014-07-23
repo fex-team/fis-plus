@@ -6,6 +6,7 @@
 /test
 /doc
 /.tmp
+.npm-debug.log
 
 
 .DS_Store
