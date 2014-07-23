@@ -1,3 +1,7 @@
+## 0.6.9
+
+> 升级fis-parser-less至0.1.1
+
 ## 0.6.8
 
 > 升级fis至[1.7.14](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#1714--tue-jul-02-2014)
