@@ -70,7 +70,8 @@ fis.config.merge({
             },
             {
                 reg : /\.tmpl$/i,
-                release : false
+                release : false,
+                useOptimizer: false
             },
             {
                 reg: /^\/(static)\/(.*)/i,
