@@ -9,6 +9,10 @@ try {
 
 if (r)  r.start();
 
-require('../fis-plus.js').cli.run(process.argv);
+var fis = require('../fis-plus.js');
+
+if (r) r.record(fis);
+
+fis.cli.run(process.argv);
 
 if (r) r.end();
