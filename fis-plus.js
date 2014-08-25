@@ -7,6 +7,7 @@ fis.require.prefixes = ['fisp', 'fis'];
 
 fis.config.merge({
     statics: '/static',
+    templates: '/template',
     server: {
         rewrite: true,
         libs: 'pc',
@@ -42,7 +43,7 @@ fis.config.merge({
             // i18n
             {
                 reg: '/fis_translate.tpl',
-                release: '/template/${namespace}/widget/fis_translate.tpl'
+                release: '${templates}/${namespace}/widget/fis_translate.tpl'
             },
             {
                 reg: /\/lang\/([^\/]+)\.po/i,
@@ -53,7 +54,7 @@ fis.config.merge({
                 reg : /^\/widget\/(.*\.tpl)$/i,
                 isMod : true,
                 url : '${namespace}/widget/$1',
-                release : '/template/${namespace}/widget/$1'
+                release : '${templates}/${namespace}/widget/$1'
             },
             {
                 reg : /^\/widget\/(.*\.(js|css))$/i,
@@ -63,7 +64,7 @@ fis.config.merge({
             {
                 reg : /^\/page\/(.+\.tpl)$/i,
                 isMod: true,
-                release : '/template/${namespace}/page/$1',
+                release : '${templates}/${namespace}/page/$1',
                 extras: {
                     isPage: true
                 }
