@@ -1,6 +1,6 @@
 {
   "name": "fis-plus",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Front End Integrated Solution for PC",
   "main": "fis-plus.js",
   "bin": {
