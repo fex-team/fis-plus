@@ -8,4 +8,5 @@ npm install
 npm install fis-preprocessor-inline
 npm install fis-preprocessor-image-set
 npm install fis-postpackager-ext-map
+npm install fis-packager-autopack
 sh ${TEST_PATH}/release$1.sh new
