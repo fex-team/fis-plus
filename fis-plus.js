@@ -8,9 +8,11 @@ fis.require.prefixes = ['fisp', 'fis'];
 fis.config.merge({
     statics: '/static',
     templates: '/template',
+    namespace: '',
     server: {
         rewrite: true,
         libs: 'pc',
+        type: 'php',
         clean: {
             exclude: "fisdata**,smarty**,rewrite**,index.php**,WEB-INF**"
         }
