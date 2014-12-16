@@ -16,7 +16,7 @@
     "url": "https://github.com/fex-team/fis-plus.git"
   },
   "dependencies": {
-    "fis": "1.8.8",
+    "fis": "1.8.9",
     "fis-preprocessor-extlang": "0.0.8",
     "fis-prepackager-widget-inline": "0.0.9",
     "fis-postprocessor-require-async": "0.0.8",
