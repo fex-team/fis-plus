@@ -81,6 +81,12 @@ fis.config.merge({
                 release: '${statics}/${namespace}/$2'
             },
             {
+                reg: /^\/(config|test)\/(.*\.json$)/i,
+                isMod: false,
+                charset: 'utf8',
+                release: '/$1/${namespace}/$2'
+            },
+            {
                 reg: /^\/(config|test)\/(.*)/i,
                 isMod: false,
                 release: '/$1/${namespace}/$2'
