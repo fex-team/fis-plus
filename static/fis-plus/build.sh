@@ -12,7 +12,7 @@ fi
 
 domain=
 if [ "$2" != "dev" ]; then
-    domain="\/fis-plus\/"
+    domain="\/fis-plus"
 fi
 
 isDev=
@@ -37,7 +37,7 @@ gitpush_gh () {
 for framework in $FRAMEWORKS; do
     echo $framework
     
-    if [ "isDev" = "" ]; then
+    if [ "$isDev" = "" ]; then
         rm -rf $ROOT/doc
     fi
     
@@ -45,7 +45,7 @@ for framework in $FRAMEWORKS; do
     cat fis-conf-${framework}.js | sed s/{%DOMAIN%}/${domain}/g > fis-conf-${framework}_tmp.js
     mv fis-conf-${framework}_tmp.js fis-conf-${framework}.js
     
-    if [ "isDev" = "" ]; then
+    if [ "$isDev" = "" ]; then
         git clone https://github.com/fex-team/${framework}.wiki.git $ROOT/doc
     fi
     
