@@ -1,0 +1,108 @@
+/* mixin */
+/* user style */
+/* skeleton */
+/*
+.nav {
+    height: 20px;
+    background: #5cb85c;
+}
+*/
+.feature {
+  height: 250px; }
+
+.who-use {
+  height: 250px; }
+
+.copyright {
+  margin-top: 20px; }
+
+/*
+nav {
+    //background: url('./img/top-bg.gif');
+    min-height: 50px;
+    a {
+        display: block;
+        margin-left: 5px;
+        padding-left: 4px;
+        float: left;
+    }
+}
+*/
+/* header */
+.navbar {
+  margin-bottom: 0px;
+  border: 0; }
+
+.navbar ul > li {
+  font-size: 1.2em; }
+
+/* intro */
+.bs-docs-header {
+  margin-bottom: 0;
+  padding: 30px 0;
+  background: #1EA076;
+  background: linear-gradient(to bottom, #13557E 0, #1EA076 100%);
+  color: #FFFFFF; }
+
+.intro .logo {
+  text-align: center; }
+  .intro .logo i {
+    font-size: 5em;
+    color: #FFFFFF; }
+  .intro .logo img {
+    margin: 10px; }
+.intro .intro-word h2 {
+  margin-top: 10px;
+  font-size: 22px; }
+
+/* install */
+.install {
+  text-align: center;
+  border-top: 1px solid #1EA076;
+  border-bottom: 1px solid #1EA076;
+  margin: 0 0 40px 0;
+  background-color: #1EA076;
+  color: #FFFFFF; }
+  .install span {
+    font-size: 1.3em;
+    line-height: 1.5em; }
+
+/* feature */
+.feature {
+  margin-bottom: 60px; }
+  .feature ul {
+    margin: 0 auto; }
+    .feature ul li {
+      float: left;
+      margin: 0px 24px;
+      width: 150px; }
+      .feature ul li img {
+        display: block;
+        margin: 0 auto 5px;
+        border: 1px solid #CCCCCC; }
+      .feature ul li h3 {
+        text-align: center; }
+
+/* who use */
+.who-use {
+  padding: 20px 0;
+  border-top: 1px solid #CCCCCC; }
+  .who-use .who-use-word {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 25px; }
+  .who-use .who-use-icons {
+    height: 100%; }
+    .who-use .who-use-icons .who-use-icon img {
+      background: #EEEEEE;
+      float: left;
+      height: 35px;
+      margin: 10px; }
+
+.copyright {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
