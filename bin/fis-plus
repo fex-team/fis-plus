@@ -1,3 +1,0 @@
-#!/usr/bin/env node
-
-require('../fis-plus.js').cli.run(process.argv);
