@@ -86,6 +86,261 @@
         "static/index.scss": {
             "uri": "/fis-plus//static/fis-plus/static/index_b31ada3.css",
             "type": "css"
+        },
+        "t/static/fis-plus/lib/bootstrap/docs.min.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/docs.min_eac46b8.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/lib/bootstrap/docs.min.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/docs.min_e942673.js",
+            "type": "js",
+            "deps": [
+                "t/static/fis-plus/lib/bootstrap/docs.min.css"
+            ]
+        },
+        "t/static/fis-plus/lib/bootstrap/docs.min_e942673.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/docs.min_e942673_e942673.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/docs.min_eac46b8.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/docs.min_eac46b8_eac46b8.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets_8c4dbb4.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets_8c4dbb4.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets_8c4dbb4_8c4dbb4.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap_0ace8bc.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix_f0bb861.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix_f0bb861.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix_f0bb861_f0bb861.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/alert.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/alert_60995c0.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/alert_60995c0.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/alert_60995c0_60995c0.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/button.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/button_611422a.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/button_611422a.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/button_611422a_611422a.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel_cc3c74d.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel_cc3c74d.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel_cc3c74d_cc3c74d.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse_f78c162.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse_f78c162.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse_f78c162_f78c162.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown_5faedf3.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown_5faedf3.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown_5faedf3_5faedf3.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/modal.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/modal_4959ae3.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/modal_4959ae3.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/modal_4959ae3_4959ae3.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/popover.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/popover_4691901.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/popover_4691901.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/popover_4691901_4691901.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy_b023368.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy_b023368.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy_b023368_b023368.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tab.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tab_030183b.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tab_030183b.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tab_030183b_030183b.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip_dad83e9.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip_dad83e9.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip_dad83e9_dad83e9.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/transition.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/transition_858bb24.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/transition_858bb24.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/transition_858bb24_858bb24.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/bootstrap/javascripts/bootstrap_0ace8bc.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap_0ace8bc_0ace8bc.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/fontawesome/css/font-awesome.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/fontawesome/css/font-awesome_93325a1.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/lib/fontawesome/css/font-awesome_6f442c3.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/fontawesome/css/font-awesome_6f442c3_6f442c3.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/lib/jquery/jquery.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/jquery/jquery_cf26f8f.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/lib/jquery/jquery_cf26f8f.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/lib/jquery/jquery_cf26f8f_cf26f8f.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/static/base.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/static/base_39305f5.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/static/base_39305f5.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/static/base_39305f5_39305f5.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/static/document.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/static/document_325c649.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/static/document_325c649.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/static/document_325c649_325c649.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/static/index.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/static/index_b31ada3.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/static/index_b31ada3.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/static/index_b31ada3_b31ada3.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/docs.min_e942673.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/docs.min_e942673_e942673.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/docs.min_eac46b8.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/docs.min_eac46b8_eac46b8.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets_8c4dbb4.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets_8c4dbb4_8c4dbb4.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix_f0bb861.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix_f0bb861_f0bb861.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/alert_60995c0.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/alert_60995c0_60995c0.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/button_611422a.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/button_611422a_611422a.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel_cc3c74d.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel_cc3c74d_cc3c74d.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse_f78c162.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse_f78c162_f78c162.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown_5faedf3.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown_5faedf3_5faedf3.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/modal_4959ae3.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/modal_4959ae3_4959ae3.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/popover_4691901.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/popover_4691901_4691901.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy_b023368.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy_b023368_b023368.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tab_030183b.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tab_030183b_030183b.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip_dad83e9.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip_dad83e9_dad83e9.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/transition_858bb24.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap/transition_858bb24_858bb24.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap_0ace8bc.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/bootstrap/javascripts/bootstrap_0ace8bc_0ace8bc.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/fontawesome/css/font-awesome_6f442c3.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/fontawesome/css/font-awesome_6f442c3_6f442c3.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/t/static/fis-plus/lib/jquery/jquery_cf26f8f.js": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/lib/jquery/jquery_cf26f8f_cf26f8f.js",
+            "type": "js"
+        },
+        "t/static/fis-plus/t/static/fis-plus/static/base_39305f5.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/static/base_39305f5_39305f5.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/t/static/fis-plus/static/document_325c649.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/static/document_325c649_325c649.css",
+            "type": "css"
+        },
+        "t/static/fis-plus/t/static/fis-plus/static/index_b31ada3.css": {
+            "uri": "/fis-plus//static/fis-plus/t/static/fis-plus/t/static/fis-plus/static/index_b31ada3_b31ada3.css",
+            "type": "css"
         }
     },
     "pkg": {}

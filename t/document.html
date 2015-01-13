@@ -1,0 +1,337 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>fis-ui</title>
+        <link rel="stylesheet" href="/static/fis-plus/static/base.css" type="text/css" />
+        <link rel="stylesheet" href="/static/fis-plus/lib/fontawesome/css/font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="/static/fis-plus/static/document.css" type="text/css" />
+        <link rel="stylesheet" href="/static/fis-plus/lib/bootstrap/docs.min.css" type="text/css" />
+        <link rel="stylesheet" href="/static/fis-plus/static/index.css" type="text/css" />
+    </head>
+    <body>
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand"><i class="fa fa-cogs"></i></a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse">
+      <ul class="nav navbar-nav">
+            <li><a href="/">首页</a></li>
+            <li><a href="/fis-plus/document.html#开速入门">开速入门</a></li>
+            <li><a href="/fis-plus/document.html">用户文档</a></li>
+            <li><a href="https://github.com/fex-team/fis-plus/issues">F&Q</a></li>
+            <li><a href="https://www.npmjs.com/search?q=fis">插件</a></li>
+            <li><a href="http://fis.baidu.com">关于</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://fex.baidu.com">博客</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="raw bs-docs-header">
+    <div class="container intro">
+        <div class="col-sm-3">
+            <div class="logo"><!--img src="./static/img/logo.png" alt="fis-plus" /-->
+            <i class="fa fa-cogs"></i>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div class="intro-word">
+            <h1>FIS-PLUS</h1>
+            <h2>
+            fis-plus 是扩展自FIS的前端集成解决方案。其提供 后端框架、前端框架、自动化工具、辅助开发工具等开发套件
+            </h2>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container bs-docs-container">
+<div class="row">
+    <div class="col-sm-9">
+        <div id="document-main" class="document-main">
+            <div class="bs-docs-section"><h1 class="page-header"><a name="FIS-PLUS解决方案" class="anchor" href="#FIS-PLUS解决方案"><span class="header-link"></span></a>FIS-PLUS解决方案</h1><p>Welcome to the fis-plus wiki!</p>
+</div>
+<div class="bs-docs-section"><h1 class="page-header"><a name="快速入门" class="anchor" href="#快速入门"><span class="header-link"></span></a>快速入门</h1><h3 class="" id="安装"><a name="安装" class="anchor" href="#安装"><span class="header-link"></span></a>安装</h3><p>fis-plus 的 自动化/辅助开发工具 被发布为一套 npm包，它对环境的要求是：</p>
+<ul>
+<li>操作系统：任何能安装 nodejs 的操作系统</li>
+<li>node版本：&gt;= v0.8.0</li>
+<li>jre版本：&gt;= v1.5.0 【如果不需要本地调试服务器，可以忽略java环境要求】</li>
+<li>php-cgi版本：&gt;= v5.0.0 【如果不需要本地调试服务器，可以忽略php-cgi环境要求】</li>
+</ul>
+<h4 class=""><a name="安装nodejs" class="anchor" href="#安装nodejs"><span class="header-link"></span></a>安装nodejs</h4><ul>
+<li><a href="http://nodejs.org/">安装nodejs</a></li>
+</ul>
+<h4 class=""><a name="npm" class="anchor" href="#npm"><span class="header-link"></span></a>npm</h4><p><a href="https://www.npmjs.org/">npm</a>是nodejs的包管理工具。安装nodejs后，npm就自动一起安装了。</p>
+<ul>
+<li>用nodejs写的模块都发布在npm上。<a href="https://www.npmjs.org/">npm网站</a></li>
+<li>用户需要使用npm install命令来安装nodejs模块。更多npm使用，执行 npm -h 来查看</li>
+<li><code>由于npm经常被墙，安装fis的时候会出现速度过慢，或者安装不上的问题</code> 。</li>
+<li>可以通过 npm的 <code>--registry</code> 参数指定仓库。指定国内的npm镜像来解决npm被墙的问题。</li>
+</ul>
+<p>例如： </p>
+<pre><code class="lang-bash">npm install &lt;some npm module&gt; -g --registry=镜像
+</code></pre>
+<ul>
+<li>下面提供一个国内镜像<ul>
+<li>--registry=<a href="http://r.cnpmjs.org">http://r.cnpmjs.org</a></li>
+</ul>
+</li>
+<li>百度内部可以使用公司内镜像<ul>
+<li>--registry=<a href="http://npm.internal.baidu.com">http://npm.internal.baidu.com</a></li>
+</ul>
+</li>
+</ul>
+<h4 class=""><a name="安装 fis-plus" class="anchor" href="#安装 fis-plus"><span class="header-link"></span></a>安装 fis-plus</h4><p>nodejs安装好后，命令行执行</p>
+<pre><code class="lang-bash">npm install -g fis-plus
+</code></pre>
+<p>安装好fis-plus之后，执行 fisp -v，如果能看到以下信息，则表明安装成功。<em>如果安装过程中遇到什么问题，可以到 <a href="https://github.com/fex-team/fis-plus/issues?state=open">https://github.com/fex-team/fis-plus/issues?state=open</a> 提问题，或者QQ询问。</em></p>
+<pre><code class="lang-bash">➜  ~  fisp -v
+
+  v0.7.2
+
+ __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\_____/\\\\\\\\\\\___
+  _\/\\\///////////__\/////\\\///____/\\\/////////\\\_
+   _\/\\\_________________\/\\\______\//\\\______\///__
+    _\/\\\\\\\\\\\_________\/\\\_______\////\\\_________
+     _\/\\\///////__________\/\\\__________\////\\\______
+      _\/\\\_________________\/\\\_____________\////\\\___
+       _\/\\\_________________\/\\\______/\\\______\//\\\__
+        _\/\\\______________/\\\\\\\\\\\_\///\\\\\\\\\\\/___
+         _\///______________\///////////____\///////////_____
+</code></pre>
+<h4 class=""><a name="安装lights" class="anchor" href="#安装lights"><span class="header-link"></span></a>安装lights</h4><p><a href="http://lights.baidu.com">lights</a>是fis提供的包管理工具，托管了fis所有资源。是使用fis的时候，必不可少的利器。</p>
+<pre><code class="lang-bash">npm install -g lights
+</code></pre>
+<h4 class=""><a name="安装Java" class="anchor" href="#安装Java"><span class="header-link"></span></a>安装Java</h4><ul>
+<li><a href="http://java.com/">安装java</a></li>
+</ul>
+<h4 class=""><a name="安装php-cgi" class="anchor" href="#安装php-cgi"><span class="header-link"></span></a>安装php-cgi</h4><ul>
+<li><p><a href="https://gist.github.com/xiangshouding/9359739">mac安装</a></p>
+<p>  mac下安装php-cgi有多种方法，这里只介绍比较简单的两个方法；</p>
+<ul>
+<li>用brew安装</li>
+<li><p>直接下载安装XAMPP</p>
+<h5 class=""><a name="用brew安装" class="anchor" href="#用brew安装"><span class="header-link"></span></a>用brew安装</h5><p>如果安装了xcode，那么推荐使用brew来安装php。详细使用方法见<a href="http://brew.sh/">官网</a>，这里只说明如何装php-cgi；</p>
+<pre><code class="lang-bash">$ brew install php55 --with-cgi
+</code></pre>
+<blockquote>
+<p>如果安装提示没有php55，请用 brew tap homebrew/homebrew-php 后再安装</p>
+</blockquote>
+<p>如上，方法很简单，等安装成功后即可使用；</p>
+<h5 class=""><a name="直接下载安装XAMPP" class="anchor" href="#直接下载安装XAMPP"><span class="header-link"></span></a>直接下载安装XAMPP</h5><p>到<a href="http://www.apachefriends.org/">XAMPP官网</a>下载Mac版本，双击安装；等安装成功后需要把XAMPP的bin目录设置到
+环境变量里面；</p>
+</li>
+<li><p>使用zsh</p>
+<pre><code class="lang-bash">$ echo &#39;export PATH=/Applications/XAMPP/bin:$PATH&#39; &gt;&gt; ~/.zshrc
+$ source ~/.zshrc
+</code></pre>
+</li>
+<li><p>使用bash</p>
+<pre><code class="lang-bash">$ echo &#39;export PATH=/Applications/XAMPP/bin:$PATH&#39; &gt;&gt; ~/.bashrc
+$ source ~/.bashrc
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><a href="https://gist.github.com/lily-zhangying/9295c5221fa29d429d52">windows安装</a></p>
+<p>  windows安装方法很多，下面介绍最简单的一种。</p>
+<h5 class=""><a name="直接安装xampp" class="anchor" href="#直接安装xampp"><span class="header-link"></span></a>直接安装xampp</h5><p>  地址：[<a href="http://www.apachefriends.org/zh_cn/index.html">http://www.apachefriends.org/zh_cn/index.html</a>]</p>
+<ul>
+<li>下载xampp并安装，将xampp/php路径加入环境变量中。</li>
+<li>就安装了php和php-cgi。</li>
+<li>cmd命令行输入php-cgi -v ，就看到php-cgi版本号。php-cgi就装好啦</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/fouber/install-php-cgi-1">linux安装</a></p>
+</li>
+</ul>
+<h3 class="" id="示例"><a name="示例" class="anchor" href="#示例"><span class="header-link"></span></a>示例</h3><p><em>以下示例都是在命令行下操作的，如果你是windows用户，请打命令的时候忽略命令前的<code>$</code>，而且请打开<code>cmd</code>来执行这些操作</em></p>
+<p>已经准备好了一个fis-plus的前端项目，只需要经过以下四步，就可以完整运行这个项目，并看到结果。</p>
+<ul>
+<li>初始化本地模拟环境</li>
+<li>下载Demo</li>
+<li>发布</li>
+<li>预览</li>
+</ul>
+<h4 class=""><a name="初始化本地模拟环境" class="anchor" href="#初始化本地模拟环境"><span class="header-link"></span></a>初始化本地模拟环境</h4><p>为了前后端开发分离，来并行开发，fis-plus提供了一套本地环境模拟的工具，安装并初始化它后就能方便的模拟线上环境了。</p>
+<pre><code class="lang-bash">$ fisp server init
+</code></pre>
+<h4 class=""><a name="下载Demo" class="anchor" href="#下载Demo"><span class="header-link"></span></a>下载Demo</h4><p>FIS的所有示例及其组件都用包管理工具<code>lights</code>进行管理，使用<code>lights</code>安装demo。</p>
+<pre><code class="lang-bash">$ lights install pc-demo
+</code></pre>
+<p>其实fisp已经集成了<code>lights</code>的客户端。</p>
+<p>和上面等值的用法；</p>
+<pre><code class="lang-bash">$ fisp install pc-demo
+</code></pre>
+<h4 class=""><a name="发布" class="anchor" href="#发布"><span class="header-link"></span></a>发布</h4><pre><code class="lang-bash">$ cd pc-demo
+$ fisp release -r common
+$ fisp release -r home
+</code></pre>
+<h4 class=""><a name="预览" class="anchor" href="#预览"><span class="header-link"></span></a>预览</h4><pre><code class="lang-bash">$ fisp server start #启动服务器
+</code></pre>
+<p>启动服务的时候，启动成功后会自动打开浏览器，访问首页，这时候你应该打开demo首页，并和下图是一致的。</p>
+<p><img src="{{site.img}}/fis-plus/demo-index.png" alt=""></p>
+<h3 class="" id="示例解说"><a name="示例解说" class="anchor" href="#示例解说"><span class="header-link"></span></a>示例解说</h3><p>自此，一个前端项目已经运行起来了。你可以看一下pc-demo的源码，其中包含两个模块</p>
+<ul>
+<li>common</li>
+<li>home</li>
+</ul>
+<p><code>模块</code>这个词会贯穿整个文档，以及整个<code>fis-plus</code>的使用。为什么会有模块这种东西？
+当前端代码很多时，不得不面临分组件，分页面。为了发布迭代方便，不得不把它们分为不同的子系统。比如用户信息、首页、详情页等等。</p>
+<p><code>模块</code>就是一个子系统，而在fis项目中用<code>namespace</code>和<code>fis-conf.js</code>来区分。每一个模块会有一个配置文件<code>fis-conf.js</code>，还会取名不同的<code>namespace</code>。这主要是为了区分模块之前的静态资源。</p>
+<p>继续进入home模块，可以看看有几个目录及其文件</p>
+<pre><code class="lang-bash">.
+├── fis-conf.js
+├── page
+├── server.conf
+├── static
+├── test
+└── widget
+</code></pre>
+<p>无疑，这就是使用<code>fis-plus</code>需要遵循的目录规范，为什么要有目录规范，可能在网上可以找到很多答案，这里就不再赘述。</p>
+<p>说一下这几个目录所代表的意思；</p>
+<ul>
+<li>page 页面模板</li>
+<li>widget 组件，模板组件，JS组件，CSS组件，会被组件化</li>
+<li>static 这个目录下放一些不需要组件化的公共库，比如<code>lazyload.js</code></li>
+<li>test 放置一些测试数据，和<code>page</code>下的模板相对应，表明哪个模板用哪个数据文件进行渲染</li>
+<li>server.conf 这是一个很有用的文件，它里面可以配置url转发，可以方便在本地模拟<code>ajax</code>请求等。</li>
+</ul>
+<p><em>细心的你有可能发现了一个比较专业的词汇<strong>组件化</strong>，组件化的细节比较繁多，准备新开一节说明</em></p>
+<h4 class=""><a name="page 如何引入 widget" class="anchor" href="#page 如何引入 widget"><span class="header-link"></span></a>page 如何引入 widget</h4><ul>
+<li><p>如示例中<code>index.tpl</code>如何应用<code>widget/header/header.tpl</code> ? 如果用过smarty的你可能会想到<code>include</code>，但在FIS-PLUS中引入widget有个跟<code>include</code>类似的插件完成，<code>widget</code>。</p>
+<p>  {%raw%}</p>
+<pre><code class="lang-html">  {%widget name=&quot;home:widget/header/header.tpl&quot;%}
+</code></pre>
+<p>  {%endraw%}</p>
+<p>  <code>home:widget/header/header.tpl</code> 这个是FIS中<a href="#静态资源id">静态资源id</a></p>
+</li>
+</ul>
+<h4 class=""><a name="模板中如何使用widget目录下的静态资源" class="anchor" href="#模板中如何使用widget目录下的静态资源"><span class="header-link"></span></a>模板中如何使用widget目录下的静态资源</h4><p>根据目录规范<code>widget</code>目录下的js讲被进行<a href="">组件化封装</a>，根据<a href="">同名依赖</a>原则；</p>
+<ul>
+<li>当使用某个widget下模板是，同名js,css将会被加载。</li>
+<li>当使用某个widget下的js时，其同名css会被加载。</li>
+</ul>
+<h5 class=""><a name="加载JS" class="anchor" href="#加载JS"><span class="header-link"></span></a>加载JS</h5><p>由于js进行了组件化封装，比如通过<code>require</code>或者<code>require.async</code>函数来执行其中逻辑。
+{%raw%}</p>
+<pre><code class="lang-html">{%script%}
+require(&#39;/widget/a.js&#39;);
+{%/script%}
+</code></pre>
+<p>{%endraw%}</p>
+<p>如上，在模板中使用<code>widget</code>下的js，必须放到{%raw%}<code>{%script%}</code>  <code>{%/script%}</code>之间，用它来代替js的内联用法。{%endraw%}</p>
+<h5 class=""><a name="加载css" class="anchor" href="#加载css"><span class="header-link"></span></a>加载css</h5><p>说完加载js的方法，css如何引入呢？</p>
+<ul>
+<li>同名依赖，被依赖</li>
+<li>通过smarty的<code>require</code>插件</li>
+</ul>
+<p>{%raw%}</p>
+<pre><code class="lang-html">{%require name=&quot;home:widget/a.css&quot;%}
+</code></pre>
+<p>{%endraw%}</p>
+<h4 class=""><a name="静态资源id" class="anchor" href="#静态资源id"><span class="header-link"></span></a>静态资源id</h4><p>静态资源id会贯穿整个用户文档，跟使用密切相关，所以它很重要。现在需要弄清楚两件事情</p>
+<ul>
+<li>静态资源id是如何在<code>fis-plus</code>中计算的？</li>
+<li>静态资源id在那些情况下使用，那些情况下必须用静态资源id？</li>
+</ul>
+<h5 class=""><a name="静态资源id是如何在<code>fis-plus</code>中计算的？" class="anchor" href="#静态资源id是如何在<code>fis-plus</code>中计算的？"><span class="header-link"></span></a>静态资源id是如何在<code>fis-plus</code>中计算的？</h5><p><code>fis-plus</code>必须要指定模块的<code>namespace</code>，所以静态资源id被标记为</p>
+<blockquote>
+<p>namespace:&lt;资源相对于模块根目录的路径&gt;</p>
+</blockquote>
+<p>比如:  </p>
+<ul>
+<li><code>home/static/a.js</code> home目录为模块跟目录，<code>home</code>为<code>namespace</code>，则静态资源id就为 <code>home:static/a.js</code><ul>
+<li><code>namespace</code>可以为任意值，可以不跟模块根目录相同。</li>
+</ul>
+</li>
+</ul>
+<h5 class=""><a name="静态资源id在那些情况下使用，那些情况下必须用静态资源id？" class="anchor" href="#静态资源id在那些情况下使用，那些情况下必须用静态资源id？"><span class="header-link"></span></a>静态资源id在那些情况下使用，那些情况下必须用静态资源id？</h5><ul>
+<li>使用<code>widget</code>、<code>require</code>、<code>html</code>等<strong>smarty</strong>插件时，必须指定资源的id</li>
+<li><code>require</code>、<code>require.async</code>等<strong>JavaScript</strong>函数，可以使用id</li>
+</ul>
+</div>
+        </div>
+    </div>
+    <div class="col-sm-3 document-nav">
+        <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+            <ul class="nav bs-docs-sidenav">
+                </ul></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="/static/fis-plus/lib/jquery/jquery.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="/static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy.js"></script>
+<script type="text/javascript" src="/static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix.js"></script>
+<script type="text/javascript">
+
+$(function () {
+
+    // Scrollspy
+    var $window = $(window)
+    var $body   = $(document.body)
+    var $element = $('#document-main');
+
+    $body.scrollspy({
+      target: '.bs-docs-sidebar'
+    })
+
+    $window.on('load', function () {
+      $body.scrollspy('refresh')
+    })
+
+    // Kill links
+    $('.bs-docs-container [href=#]').click(function (e) {
+      e.preventDefault()
+    })
+
+    // Sidenav affixing
+    setTimeout(function () {
+      var $sideBar = $('.bs-docs-sidebar')
+
+      $sideBar.affix({
+        offset: {
+          top: function () {
+            var offsetTop      = $sideBar.offset().top
+            var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
+            var navOuterHeight = $('.bs-docs-nav').height()
+
+            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
+          },
+          bottom: function () {
+            return (this.bottom = $('.bs-docs-footer').outerHeight(true))
+          }
+        }
+      })
+    }, 100)
+});
+
+</script>
+        <footer class="bs-docs-footer" role="contentinfo">
+            <div class="container">
+                <div class="bs-docs-social">
+                    <ul class="bs-docs-social-buttons">
+                        <li>
+                            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=fex-team&amp;repo=fis-plus&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
+                        </li>
+                        <li>
+                            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=fex-team&amp;repo=fis-plus&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
+                        </li>
+                        <li class="follow-btn">
+                        </li>
+                    </ul>
+                </div>
+                &copy;2015 fis-team
+            </div>
+        </footer>
+    </body>
+</html>
