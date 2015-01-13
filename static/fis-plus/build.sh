@@ -9,6 +9,11 @@ if [ "$1" = "" ];then
 else
     output=$1
 fi
+domain=
+
+if [ "$2" != "dev" ]; then
+    domain="\/fis-plus\/"
+fi
 
 gitpush_gh () {
     framework=$1
@@ -26,7 +31,11 @@ gitpush_gh () {
 for framework in $FRAMEWORKS; do
     echo $framework
     rm -rf $ROOT/doc
+    
     cat $FIS_CONFIG_TEMPLATE | sed s/{%FRAMEWORK%}/${framework}/g > fis-conf-${framework}.js
+    cat fis-conf-${framework}.js | sed s/{%DOMAIN%}/${domain}/g > fis-conf-${framework}_tmp.js
+    mv fis-conf-${framework}_tmp.js fis-conf-${framework}.js
+
     git clone https://github.com/fex-team/${framework}.wiki.git $ROOT/doc
     fis release -cd $output -f fis-conf-${framework}.js
     if [ "$?" = "0" ]; then

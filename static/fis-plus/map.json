@@ -75,15 +75,6 @@
             "uri": "/static/fis-plus/lib/jquery/jquery.js",
             "type": "js"
         },
-        "pc.js": {
-            "uri": "/static/fis-plus/pc.js",
-            "type": "js",
-            "deps": [
-                "path",
-                "url",
-                "marked"
-            ]
-        },
         "static/base.scss": {
             "uri": "/static/fis-plus/static/base.css",
             "type": "css"
