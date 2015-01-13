@@ -20,6 +20,7 @@ gitpush_gh () {
     git clone https://github.com/fex-team/${framework}.git
     cd "$framework"
     git checkout gh-pages
+    rm -rf * #clear
     cp -rf ../output/* .
     git add *
     git commit -m 'update auto'
