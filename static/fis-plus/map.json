@@ -1,90 +1,90 @@
 {
     "res": {
         "lib/bootstrap/docs.min.css": {
-            "uri": "/static/fis-plus/lib/bootstrap/docs.min.css",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/docs.min_eac46b8.css",
             "type": "css"
         },
         "lib/bootstrap/docs.min.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/docs.min.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/docs.min_e942673.js",
             "type": "js",
             "deps": [
                 "lib/bootstrap/docs.min.css"
             ]
         },
         "lib/bootstrap/javascripts/bootstrap-sprockets.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets_8c4dbb4.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap_0ace8bc.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/affix.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/affix_f0bb861.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/alert.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/alert.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/alert_60995c0.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/button.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/button.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/button_611422a.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/carousel.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel_cc3c74d.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/collapse.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse_f78c162.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/dropdown.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown_5faedf3.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/modal.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/modal.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/modal_4959ae3.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/popover.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/popover.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/popover_4691901.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/scrollspy.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy_b023368.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/tab.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tab.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/tab_030183b.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/tooltip.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip_dad83e9.js",
             "type": "js"
         },
         "lib/bootstrap/javascripts/bootstrap/transition.js": {
-            "uri": "/static/fis-plus/lib/bootstrap/javascripts/bootstrap/transition.js",
+            "uri": "/fis-plus//static/fis-plus/lib/bootstrap/javascripts/bootstrap/transition_858bb24.js",
             "type": "js"
         },
         "lib/fontawesome/css/font-awesome.css": {
-            "uri": "/static/fis-plus/lib/fontawesome/css/font-awesome.css",
+            "uri": "/fis-plus//static/fis-plus/lib/fontawesome/css/font-awesome_21e556b.css",
             "type": "css"
         },
         "lib/jquery/jquery.js": {
-            "uri": "/static/fis-plus/lib/jquery/jquery.js",
+            "uri": "/fis-plus//static/fis-plus/lib/jquery/jquery_cf26f8f.js",
             "type": "js"
         },
         "static/base.scss": {
-            "uri": "/static/fis-plus/static/base.css",
+            "uri": "/fis-plus//static/fis-plus/static/base_39305f5.css",
             "type": "css"
         },
         "static/document.scss": {
-            "uri": "/static/fis-plus/static/document.css",
+            "uri": "/fis-plus//static/fis-plus/static/document_325c649.css",
             "type": "css"
         },
         "static/index.scss": {
-            "uri": "/static/fis-plus/static/index.css",
+            "uri": "/fis-plus//static/fis-plus/static/index_b31ada3.css",
             "type": "css"
         }
     },

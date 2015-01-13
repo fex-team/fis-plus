@@ -37,7 +37,7 @@ for framework in $FRAMEWORKS; do
     mv fis-conf-${framework}_tmp.js fis-conf-${framework}.js
 
     git clone https://github.com/fex-team/${framework}.wiki.git $ROOT/doc
-    fis release -cd $output -f fis-conf-${framework}.js
+    fis release -cmDd $output -f fis-conf-${framework}.js
     if [ "$?" = "0" ]; then
         gitpush_gh "$framework"
         rm -rf fis-conf-${framework}.js
