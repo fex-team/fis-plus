@@ -1,0 +1,41 @@
+<h3 class="" id="上传测试机"><a name="上传测试机" class="anchor" href="#上传测试机"><span class="header-link"></span></a>上传测试机</h3><blockquote>
+<p>fis 通过简单的上传配置，把编译后文件上传到测试机,方便联调。</p>
+</blockquote>
+<ul>
+<li><a href="./deploy-test.html#产出目录">产出目录</a></li>
+<li><a href="./deploy-test.html#上传配置">上传配置</a></li>
+<li><a href="./deploy-test.html#上传常见问题">上传常见问题</a></li>
+</ul>
+<h3 class="" id="发布上线"><a name="发布上线" class="anchor" href="#发布上线"><span class="header-link"></span></a>发布上线</h3><blockquote>
+<p>提供基础的build.sh编译脚本，用于上线时候自动编译项目。</p>
+</blockquote>
+<pre><code class="lang-bash">#!/bin/bash
+
+MOD_NAME=&quot;output&quot;
+TAR=&quot;$MOD_NAME.tar.gz&quot;
+
+# add path
+export PATH=/home/fis/npm/bin:$PATH
+#show fis-plus version
+fisp --version --no-color
+
+#通过fis-plus release 命令进行模块编译 开启optimize、md5、打包功能，同时需开启-u 独立缓存编译方式，产出到同目录下output中
+fisp release -cuompd output
+#进入output目录
+cd output
+#删除产出的test目录
+rm -rf test
+
+#将output目录进行打包
+tar zcf $TAR ./*
+mv $TAR ../
+
+cd ..
+rm -rf output
+
+mkdir output
+
+mv $TAR output/
+
+echo &quot;build end&quot;
+</code></pre>

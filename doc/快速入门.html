@@ -146,36 +146,31 @@ $ fisp release -r home
 </ul>
 <p><em>细心的你有可能发现了一个比较专业的词汇<strong>组件化</strong>，组件化的细节比较繁多，准备新开一节说明</em></p>
 <h4 class=""><a name="page 如何引入 widget" class="anchor" href="#page 如何引入 widget"><span class="header-link"></span></a>page 如何引入 widget</h4><ul>
-<li><p>如示例中<code>index.tpl</code>如何应用<code>widget/header/header.tpl</code> ? 如果用过smarty的你可能会想到<code>include</code>，但在FIS-PLUS中引入widget有个跟<code>include</code>类似的插件完成，<code>widget</code>。</p>
-<p>  {%raw%}</p>
-<pre><code class="lang-html">  {%widget name=&quot;home:widget/header/header.tpl&quot;%}
-</code></pre>
-<p>  {%endraw%}</p>
-<p>  <code>home:widget/header/header.tpl</code> 这个是FIS中<a href="#静态资源id">静态资源id</a></p>
-</li>
+<li>如示例中<code>index.tpl</code>如何应用<code>widget/header/header.tpl</code> ? 如果用过smarty的你可能会想到<code>include</code>，但在FIS-PLUS中引入widget有个跟<code>include</code>类似的插件完成，<code>widget</code>。</li>
 </ul>
-<h4 class=""><a name="模板中如何使用widget目录下的静态资源" class="anchor" href="#模板中如何使用widget目录下的静态资源"><span class="header-link"></span></a>模板中如何使用widget目录下的静态资源</h4><p>根据目录规范<code>widget</code>目录下的js讲被进行<a href="">组件化封装</a>，根据<a href="">同名依赖</a>原则；</p>
+<pre><code>```html
+{%widget name=&quot;home:widget/header/header.tpl&quot;%}
+```
+
+`home:widget/header/header.tpl` 这个是FIS中[静态资源id](#静态资源id)
+</code></pre><h4 class=""><a name="模板中如何使用widget目录下的静态资源" class="anchor" href="#模板中如何使用widget目录下的静态资源"><span class="header-link"></span></a>模板中如何使用widget目录下的静态资源</h4><p>根据目录规范<code>widget</code>目录下的js讲被进行<a href="">组件化封装</a>，根据<a href="">同名依赖</a>原则；</p>
 <ul>
 <li>当使用某个widget下模板是，同名js,css将会被加载。</li>
 <li>当使用某个widget下的js时，其同名css会被加载。</li>
 </ul>
-<h5 class=""><a name="加载JS" class="anchor" href="#加载JS"><span class="header-link"></span></a>加载JS</h5><p>由于js进行了组件化封装，比如通过<code>require</code>或者<code>require.async</code>函数来执行其中逻辑。
-{%raw%}</p>
+<h5 class=""><a name="加载JS" class="anchor" href="#加载JS"><span class="header-link"></span></a>加载JS</h5><p>由于js进行了组件化封装，比如通过<code>require</code>或者<code>require.async</code>函数来执行其中逻辑。</p>
 <pre><code class="lang-html">{%script%}
 require(&#39;/widget/a.js&#39;);
 {%/script%}
 </code></pre>
-<p>{%endraw%}</p>
-<p>如上，在模板中使用<code>widget</code>下的js，必须放到{%raw%}<code>{%script%}</code>  <code>{%/script%}</code>之间，用它来代替js的内联用法。{%endraw%}</p>
+<p>如上，在模板中使用<code>widget</code>下的js，必须放到<code>{%script%}</code>  <code>{%/script%}</code>之间，用它来代替js的内联用法。</p>
 <h5 class=""><a name="加载css" class="anchor" href="#加载css"><span class="header-link"></span></a>加载css</h5><p>说完加载js的方法，css如何引入呢？</p>
 <ul>
 <li>同名依赖，被依赖</li>
 <li>通过smarty的<code>require</code>插件</li>
 </ul>
-<p>{%raw%}</p>
 <pre><code class="lang-html">{%require name=&quot;home:widget/a.css&quot;%}
 </code></pre>
-<p>{%endraw%}</p>
 <h4 class=""><a name="静态资源id" class="anchor" href="#静态资源id"><span class="header-link"></span></a>静态资源id</h4><p>静态资源id会贯穿整个用户文档，跟使用密切相关，所以它很重要。现在需要弄清楚两件事情</p>
 <ul>
 <li>静态资源id是如何在<code>fis-plus</code>中计算的？</li>

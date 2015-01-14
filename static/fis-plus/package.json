@@ -1,0 +1,25 @@
+{
+  "name": "fis-doc",
+  "version": "1.0.0",
+  "description": "fis doc",
+  "main": "fis-conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fis-dev/fis-doc.git"
+  },
+  "keywords": [
+    "fis"
+  ],
+  "author": "fansekey",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/fis-dev/fis-doc/issues"
+  },
+  "homepage": "https://github.com/fis-dev/fis-doc",
+  "dependencies": {
+    "marked": "~0.3.2"
+  }
+}

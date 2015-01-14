@@ -1,4 +1,6 @@
 .document-main {
   font-size: 18px;
   line-height: 1.7em; }
+  .document-main img {
+    width: 100%; }
 
