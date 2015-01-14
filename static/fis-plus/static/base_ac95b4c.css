@@ -4888,3 +4888,9 @@ button.close {
   .hidden-print {
     display: none !important; }
  }
+
+body {
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Georgia, Verdana, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Palatino, "Palatino Linotype", 'OFL Sorts Mill Goudy', 'OFL Sorts Mill Goudy TT', Georgia, serif; }

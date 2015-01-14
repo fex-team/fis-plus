@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/fis-dev/fis-doc",
   "dependencies": {
-    "marked": "~0.3.2"
+    "marked": "~0.3.2",
+    "fis": "~1.9.1",
+    "fis-parser-sass": "~0.2.3"
   }
 }

@@ -16,20 +16,33 @@ if [ "$2" != "dev" ]; then
 fi
 
 isDev=
-if [ "$2" == "dev" ]; then
+
+if [ "$2" = "dev" ]; then
     isDev="dev"
+else
+    export PATH=$ROOT/node_modules/.bin:$PATH
+    export NODE_PATH=$ROOT/node_modules
 fi
 
 gitpush_gh () {
     framework=$1
     git clone https://github.com/fex-team/${framework}.git
     cd "$framework"
+    
     git checkout gh-pages
+    echo $GIT_NAME
+    git config --global user.email "${GIT_EMAIL}"
+    git config --global user.name "${GIT_NAME}"
+    git config credential.helper "store --file=.git/credential"
+    echo "https://${GH_TOKEN}:@github.com" > .git/credential
+
     rm -rf * #clear
     cp -rf ../output/* .
-    git add *
-    git commit -m 'update auto'
+    
+    git add -A -f
+    git commit -m 'auto commit' -a
     git push origin gh-pages
+
     cd ..
     rm -rf "$framework"
 }
