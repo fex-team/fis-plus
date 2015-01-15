@@ -88,7 +88,7 @@
             "type": "css"
         },
         "static/document.scss": {
-            "uri": "/fis-plus/static/fis-plus/static/document_4dec1b2.css",
+            "uri": "/fis-plus/static/fis-plus/static/document_3f028ef.css",
             "type": "css"
         },
         "static/index.scss": {
@@ -96,5 +96,26 @@
             "type": "css"
         }
     },
-    "pkg": {}
+    "pkg": {
+        "auto_js_0": {
+            "uri": "/fis-plus/static/fis-plus/pkg/auto_combine_f5a54_bd0f29a.js",
+            "type": "js",
+            "has": [
+                "lib/jquery/jquery.js",
+                "lib/bootstrap/javascripts/bootstrap.js"
+            ]
+        },
+        "auto_css_1": {
+            "uri": "/fis-plus/static/fis-plus/pkg/auto_combine_19342_16b1a11.css",
+            "type": "css",
+            "has": [
+                "static/base.scss",
+                "lib/fontawesome/css/font-awesome.css",
+                "lib/highlight.js/github.css",
+                "static/document.scss",
+                "lib/bootstrap/docs.min.css",
+                "static/index.scss"
+            ]
+        }
+    }
 }
