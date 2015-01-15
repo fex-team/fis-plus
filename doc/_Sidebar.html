@@ -557,8 +557,9 @@ $ lights install <span class="hljs-keyword">template</span>
 <pre><code>lights <span class="hljs-keyword">install</span> modjs
 </code></pre><p>同时在开发中需要使用modjs,则需要通过<a href="#html">模板插件语法html</a>进行注册。</p>
 <h4 class=""><a name="组件化封装" class="anchor" href="#组件化封装"><span class="doc-link"></span></a>组件化封装</h4><p>modjs使用define来定义一个模块：</p>
-<pre><code><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
-</code></pre><p><code>在平常开发中，我们只需写factory中的代码即可，无需手动定义模块</code>。发布工具会自动将模块代码嵌入factory的闭包里。</p>
+<pre><code class="hljs lang-javascript"><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
+</code></pre>
+<p><code>在平常开发中，我们只需写factory中的代码即可，无需手动定义模块</code>。发布工具会自动将模块代码嵌入factory的闭包里。</p>
 <p>factory提供了3个参数：require, exports, module ，用于模块的引用和导出。</p>
 <p>在编译处理过程中会对JS文件进行组件化define包装处理:</p>
 <ul>
@@ -804,7 +805,7 @@ javascript: <span class="hljs-keyword">void</span> <span class="hljs-function"><
 <div class="bs-docs-section"><h3 class="" id="Rewrite"><a name="Rewrite" class="anchor" href="#Rewrite"><span class="doc-link"></span></a>Rewrite</h3><p>FIS的rewrite模块。用于本地浏览时，url的转发，覆盖fis默认的url规则，模拟线上url规则，ajax请求，文件转发等。</p>
 <h3 class="" id="基础配置"><a name="基础配置" class="anchor" href="#基础配置"><span class="doc-link"></span></a>基础配置</h3><p>在模块目录下通过配置文件server.conf文件进行配置，配置方式是：</p>
 <p>rewrite和redirect开头的会被翻译成一条匹配规则，自上而下的匹配。所有非rewrite和redirect开头的会被当做注释处理。</p>
-<pre><code class="hljs lang-php">rewrite ： 匹配规则后转发到一个文件
+<pre><code class="hljs lang-ini">rewrite ： 匹配规则后转发到一个文件
 <span class="hljs-keyword">template</span> ： 匹配规则后转发到一个模板文件，但url不改变，只针对模板
 redirect ： 匹配规则后重定向到另一个url
 
@@ -823,22 +824,11 @@ rewrite、redirect和template是fis默认的三种匹配类型。</li>
 <li><strong>template</strong> :  为了完全模拟线上url，可通过template配置对应的url规则对应相应的模板进行访问，访问url不变。</li>
 <li><strong>redirect</strong> ： 匹配规则后重定向到另一个url。</li>
 </ol>
-<h3 class="" id="注意"><a name="注意" class="anchor" href="#注意"><span class="doc-link"></span></a>注意</h3><ol>
+<p>注意:</p>
+<ol>
 <li>server.conf专门配置转发规则，文件名不能改哦</li>
 <li>项目很大，多模块时，一个模块配置server.conf就可以啦，比如在common模块配置全站的转发规则，否则会覆盖</li>
 <li>所有非rewrite、template和redirect开头的会被当做注释处理。</li>
-</ol>
-<h3 class="" id="高级使用"><a name="高级使用" class="anchor" href="#高级使用"><span class="doc-link"></span></a>高级使用</h3><p>fis默认的rewrite，redirect转发无法满足你的需求怎么办？别怕，fis允许用户自定义全新的规则噢~ 自定义的规则优先级最高，会在server.conf保存的规则之前匹配url</p>
-<h4 class=""><a name="addRewriteRule" class="anchor" href="#addRewriteRule"><span class="doc-link"></span></a>addRewriteRule</h4><p>使用：rewrite提供 public static function addRewriteRule($reg, callable $callback){}公共静态方法。
-用户可以在自己的处理url的php文件中添加自己的url处理规则。</p>
-<h4 class=""><a name="参数" class="anchor" href="#参数"><span class="doc-link"></span></a>参数</h4><ol>
-<li><p>$reg 匹配url的正则，注意正则需要添加定界符。例如：“/^\/photo\/?$/”</p>
-</li>
-<li><p>$callback 匹配到$reg之后，处理匹配的回调函数。这个函数有两个参数($matches, $root)
-$matches 匹配$reg后的匹配数组
-$root是根目录。默认是fis本地的调试目录，用户可以通过rewrite的公共方法设置。
-public static function setRoot($root){}</p>
-</li>
 </ol>
 </div>
 <div class="bs-docs-section"><h3 class="" id="独立加载静态资源"><a name="独立加载静态资源" class="anchor" href="#独立加载静态资源"><span class="doc-link"></span></a>独立加载静态资源</h3><p>如果你在配置文件中进行静态资源打包配置，在编译后会产出资源表以及相对应的打包文件。在页面渲染加载时，FIS后端框架会根据页面静态资源使用情况加载对应的资源包及静态资源。

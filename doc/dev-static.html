@@ -7,8 +7,9 @@
 <pre><code>lights <span class="hljs-keyword">install</span> modjs
 </code></pre><p>同时在开发中需要使用modjs,则需要通过<a href="#html">模板插件语法html</a>进行注册。</p>
 <h4 class=""><a name="组件化封装" class="anchor" href="#组件化封装"><span class="doc-link"></span></a>组件化封装</h4><p>modjs使用define来定义一个模块：</p>
-<pre><code><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
-</code></pre><p><code>在平常开发中，我们只需写factory中的代码即可，无需手动定义模块</code>。发布工具会自动将模块代码嵌入factory的闭包里。</p>
+<pre><code class="hljs lang-javascript"><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
+</code></pre>
+<p><code>在平常开发中，我们只需写factory中的代码即可，无需手动定义模块</code>。发布工具会自动将模块代码嵌入factory的闭包里。</p>
 <p>factory提供了3个参数：require, exports, module ，用于模块的引用和导出。</p>
 <p>在编译处理过程中会对JS文件进行组件化define包装处理:</p>
 <ul>
