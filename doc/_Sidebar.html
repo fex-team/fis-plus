@@ -34,20 +34,7 @@
 <pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g fis-plus
 </code></pre>
 <p>安装好fis-plus之后，执行 fisp -v，如果能看到以下信息，则表明安装成功。<em>如果安装过程中遇到什么问题，可以到 <a href="https://github.com/fex-team/fis-plus/issues?state=open">https://github.com/fex-team/fis-plus/issues?state=open</a> 提问题，或者QQ询问。</em></p>
-<pre><code class="hljs lang-bash">➜  <span class="hljs-special">~</span>  fisp -v
-
-  v0.7.2
-
- __/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>____/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>__
-  _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>//////////__<span class="hljs-command">\/</span>////<span class="hljs-command">\\</span><span class="hljs-command">\/</span>//____/<span class="hljs-command">\\</span><span class="hljs-command">\/</span>////////<span class="hljs-command">\\</span><span class="hljs-command">\_</span>
-   _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>//__
-    _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>______<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>________
-     _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>//////__________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_________<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____
-      _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>____________<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>__
-       _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_
-        _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____________/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span><span class="hljs-command">\/</span>//<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>___
-         _<span class="hljs-command">\/</span>//______________<span class="hljs-command">\/</span>//////////____<span class="hljs-command">\/</span>//////////_____
-</code></pre>
+<p><img src="/fis-plus/static/fis-plus/doc/img/fisp-version_0d295f9.png" alt=""></p>
 <h4 class=""><a name="安装lights" class="anchor" href="#安装lights"><span class="doc-link"></span></a>安装lights</h4><p><a href="http://lights.baidu.com">lights</a>是fis提供的包管理工具，托管了fis所有资源。是使用fis的时候，必不可少的利器。</p>
 <pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g lights
 </code></pre>
@@ -803,7 +790,7 @@ javascript: <span class="hljs-keyword">void</span> <span class="hljs-function"><
 </code></pre><p>文件名: <code>index_\d+.php</code></p>
 </div>
 <div class="bs-docs-section"><h3 class="" id="Rewrite"><a name="Rewrite" class="anchor" href="#Rewrite"><span class="doc-link"></span></a>Rewrite</h3><p>FIS的rewrite模块。用于本地浏览时，url的转发，覆盖fis默认的url规则，模拟线上url规则，ajax请求，文件转发等。</p>
-<h3 class="" id="基础配置"><a name="基础配置" class="anchor" href="#基础配置"><span class="doc-link"></span></a>基础配置</h3><p>在模块目录下通过配置文件server.conf文件进行配置，配置方式是：</p>
+<h4 class=""><a name="基础配置" class="anchor" href="#基础配置"><span class="doc-link"></span></a>基础配置</h4><p>在模块目录下通过配置文件server.conf文件进行配置，配置方式是：</p>
 <p>rewrite和redirect开头的会被翻译成一条匹配规则，自上而下的匹配。所有非rewrite和redirect开头的会被当做注释处理。</p>
 <pre><code class="hljs lang-ini">rewrite ： 匹配规则后转发到一个文件
 <span class="hljs-keyword">template</span> ： 匹配规则后转发到一个模板文件，但url不改变，只针对模板
@@ -813,7 +800,7 @@ rewrite ^\/news\?.*tn\=[a-zA-<span class="hljs-type">Z0</span>-<span class="hljs
 <span class="hljs-keyword">template</span> ^\/(.*)\?.*  /home/page/index.tpl
 redirect ^\/index\?.* /home/page/index
 </code></pre>
-<h3 class="" id="配置文件说明"><a name="配置文件说明" class="anchor" href="#配置文件说明"><span class="doc-link"></span></a>配置文件说明</h3><ol>
+<h4 class=""><a name="配置文件说明" class="anchor" href="#配置文件说明"><span class="doc-link"></span></a>配置文件说明</h4><ol>
 <li>配置文件每一行为一条规则。</li>
 <li>格式为：匹配类型 (空格) 匹配url正则 (空格) 命中正则后的目的文件路径或者url。
 rewrite、redirect和template是fis默认的三种匹配类型。</li>
