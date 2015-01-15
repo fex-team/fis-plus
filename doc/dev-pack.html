@@ -1,7 +1,7 @@
 <blockquote>
 <p>FIS-Plus提供静态资源管理系统，支持通过运行时计算静态资源使用情况来加载对应的静态资源。为了达到合理的高性能的加载方式，用户可以将静态资源进行合并。</p>
 </blockquote>
-<h3 class="" id="配置"><a name="配置" class="anchor" href="#配置"><span class="header-link"></span></a>配置</h3><p>用户可以在配置文件中，通过配置将静态资源进行合并处理，对demo-home模块增加打包配置：</p>
+<h3 class="" id="配置"><a name="配置" class="anchor" href="#配置"><span class="doc-link"></span></a>配置</h3><p>用户可以在配置文件中，通过配置将静态资源进行合并处理，对demo-home模块增加打包配置：</p>
 <pre><code class="lang-javascript">//fis-conf.js
 fis.config.set(&#39;pack&#39;, {
         //打包所有static目录下的JS文件
@@ -21,18 +21,18 @@ fis.config.set(&#39;pack&#39;, {
 <li>使用正则配置时需要添加定界符，不然将会达不到用户配置预期</li>
 </ul>
 <p>输出结果：使用命令 fis release <strong>--pack</strong> --md5 --dest ./output 编译项目，然后到output目录下查看产出的home-map.json内容.fis内置的 <a href="https://github.com/fis-dev/fis/wiki/运行原理#----1">打包原理</a> 与传统的打包概念不同，fis的打包实际上是在建立一个资源表，并将其描述并产出为一份map.json文件，用户应该围绕着这份描述文件来设计前后端运行框架，从而实现运行时判断打包输出策略的架构。</p>
-<h3 class="" id="打包策略"><a name="打包策略" class="anchor" href="#打包策略"><span class="header-link"></span></a>打包策略</h3><ul>
+<h3 class="" id="打包策略"><a name="打包策略" class="anchor" href="#打包策略"><span class="doc-link"></span></a>打包策略</h3><ul>
 <li>每个资源包之间不会有重复资源，合并处理包时会根据配置节点顺序，将资源合并至资源包中。</li>
 <li>根据资源包配置的匹配规则，进行资源顺序排序。</li>
 <li>每个资源包中的静态资源，会根据文件之间的依赖关系进行自动排序。</li>
 </ul>
-<h3 class="" id="基本打包原则"><a name="基本打包原则" class="anchor" href="#基本打包原则"><span class="header-link"></span></a>基本打包原则</h3><ul>
+<h3 class="" id="基本打包原则"><a name="基本打包原则" class="anchor" href="#基本打包原则"><span class="doc-link"></span></a>基本打包原则</h3><ul>
 <li>根据静态资源复用率情况，可将复用率较高的可合并在一起，复用率较低的可合并一起，同时可根据使用情况对静态资源不进行打包。</li>
 <li>在common模块中，可以根据其他业务模块使用common资源情况进行打包，将复用高的资源合并打包，将个别模块使用的资源独立打包。</li>
 <li>需要独立加载的JS组件资源，可不合并在包中，运行时会自动按需加载。</li>
 <li>对匹配成功的资源会合并进资源包中，同时其依赖的资源会记录在资源表中，如果需要加载资源包时，会先加载依赖的文件。</li>
 </ul>
-<h3 class="" id="自动打包"><a name="自动打包" class="anchor" href="#自动打包"><span class="header-link"></span></a>自动打包</h3><p>手工维护资源打包工作存在未能及时排除废弃资源、需持续维护、成本大等缺陷。针对此问题，FIS提供静态资源自动合并服务自动生成资源打包配置，根据网站页面pv以及页面静态资源使用情况，<code>自动计算静态资源合并方案，减少人工管理静态资源成本和风险</code>。</p>
+<h3 class="" id="自动打包"><a name="自动打包" class="anchor" href="#自动打包"><span class="doc-link"></span></a>自动打包</h3><p>手工维护资源打包工作存在未能及时排除废弃资源、需持续维护、成本大等缺陷。针对此问题，FIS提供静态资源自动合并服务自动生成资源打包配置，根据网站页面pv以及页面静态资源使用情况，<code>自动计算静态资源合并方案，减少人工管理静态资源成本和风险</code>。</p>
 <p>自动打包使用方式与现有一致，接入简单。提供简版和高端版两个版本：</p>
 <ul>
 <li>简版：只需安装一个插件便可使用自动打包。在编译过程中扫描模块代码分析资源依赖，提供页面级别的打包配置，支持重点页面权重等配置</li>

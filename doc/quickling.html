@@ -1,4 +1,4 @@
-<h1 class="page-header"><a name="Quickling解决方案" class="anchor" href="#Quickling解决方案"><span class="header-link"></span></a>Quickling解决方案</h1><blockquote>
+<h1 class="page-header"><a name="Quickling解决方案" class="anchor" href="#Quickling解决方案"><span class="doc-link"></span></a>Quickling解决方案</h1><blockquote>
 <p>Quickling适用于网络高延迟、低带宽场景的解决方案。</p>
 </blockquote>
 <ul>
@@ -6,22 +6,22 @@
 <li>提高服务端的渲染效率和并行度，保证功能不会受到慢数据模块的影响；</li>
 <li>支持page cache和用户缓存控制，可以避免大量的服务器端重复计算和客户端重复渲染</li>
 </ul>
-<h3 class="" id="背景"><a name="背景" class="anchor" href="#背景"><span class="header-link"></span></a>背景</h3><blockquote>
+<h3 class="" id="背景"><a name="背景" class="anchor" href="#背景"><span class="doc-link"></span></a>背景</h3><blockquote>
 <p><strong>Quickling</strong>这个词诞生自<a href="http://www.slideshare.net/ajaxexperience2009/chanhao-jiang-and-david-wei-presentation-quickling-pagecache">facebook Web优化方案</a>，它指的是页面的某一个块可以通过Ajax请求，包括这块使用到的静态资源，然后通过JSON方式返回给前端加载器，前端加载器先加载静态资源然后渲染块，这样得到一个可展示的页面局部，可以把它放到当前页的任何地方。</p>
 </blockquote>
 <p><strong>Quickling解决方案</strong>也使用相同的原理。得益于FIS 2.0，我们很轻松就可以搞定整个逻辑的实现。</p>
-<h3 class="" id="解决方案特性"><a name="解决方案特性" class="anchor" href="#解决方案特性"><span class="header-link"></span></a>解决方案特性</h3><blockquote>
+<h3 class="" id="解决方案特性"><a name="解决方案特性" class="anchor" href="#解决方案特性"><span class="doc-link"></span></a>解决方案特性</h3><blockquote>
 <p>介绍Quickling是如何工作。解决方案特性：</p>
 </blockquote>
 <ul>
 <li><strong>A</strong> 支持任意一个widget被异步请求，请求内容包括渲染好的HTML及静态资源</li>
 <li><strong>B</strong> 当widget指定为异步请求时，渲染引用此widget模版时不会渲染此widget，降低后端渲染模版压力。</li>
 </ul>
-<h3 class="" id="使用场景"><a name="使用场景" class="anchor" href="#使用场景"><span class="header-link"></span></a>使用场景</h3><p>使用场景一栏，主要给大家展示一些案例，来引导理解整个解决方案。</p>
-<h4 class=""><a name="案例一" class="anchor" href="#案例一"><span class="header-link"></span></a>案例一</h4><p>项目A中使用方案提供的最初使用前端模板实现webapp一站式效果，但是前端渲染的形式，在展示的时候后端获取数据分为两步，展现页面时只能等数据拿到以后才能进行展现，而恰巧获取数据时比较慢，导致页面出现卡顿。那么我们用<strong>Quickling解决方案</strong>如何解决这个问题呢？</p>
+<h3 class="" id="使用场景"><a name="使用场景" class="anchor" href="#使用场景"><span class="doc-link"></span></a>使用场景</h3><p>使用场景一栏，主要给大家展示一些案例，来引导理解整个解决方案。</p>
+<h4 class=""><a name="案例一" class="anchor" href="#案例一"><span class="doc-link"></span></a>案例一</h4><p>项目A中使用方案提供的最初使用前端模板实现webapp一站式效果，但是前端渲染的形式，在展示的时候后端获取数据分为两步，展现页面时只能等数据拿到以后才能进行展现，而恰巧获取数据时比较慢，导致页面出现卡顿。那么我们用<strong>Quickling解决方案</strong>如何解决这个问题呢？</p>
 <p>答案很简单，展现页面的时候也分为两步走，第一次渲染的时候拿到比较重要那块的数据，并渲染对应的部分页面。再发起一次异步请求，请求剩下的部分页面。这样至少用户不会感觉到卡顿。是不是看着似曾相识，这个就好比纯的WebApp在渲染一个页面时，请求两次数据并渲染页面一样。但这个是后端模板层面支持的。</p>
-<h4 class=""><a name="案例二" class="anchor" href="#案例二"><span class="header-link"></span></a>案例二</h4><p>项目B主要服务于东南亚地区，这些国家的网络有个特点，那就是<strong>慢</strong>，有IPHONE并使用移动号的同学拿出手机访问一下某网站试试，就那种感觉。通过项目B同学的反馈以及统计数据显示，下载HTML的速度都慢的可怜。还有一个问题并发时下载资源之间抢带宽，阻塞页面的渲染。</p>
-<h4 class=""><a name="问题" class="anchor" href="#问题"><span class="header-link"></span></a>问题</h4><blockquote>
+<h4 class=""><a name="案例二" class="anchor" href="#案例二"><span class="doc-link"></span></a>案例二</h4><p>项目B主要服务于东南亚地区，这些国家的网络有个特点，那就是<strong>慢</strong>，有IPHONE并使用移动号的同学拿出手机访问一下某网站试试，就那种感觉。通过项目B同学的反馈以及统计数据显示，下载HTML的速度都慢的可怜。还有一个问题并发时下载资源之间抢带宽，阻塞页面的渲染。</p>
+<h4 class=""><a name="问题" class="anchor" href="#问题"><span class="doc-link"></span></a>问题</h4><blockquote>
 <p>总结一下俩问题上面两个案例的问题</p>
 </blockquote>
 <ul>
@@ -33,8 +33,8 @@
 <li>整个页面多次渲染，第一次访问或者刷新时只渲染首屏，这样展示首屏的时候就减少了很多html。下载变快了</li>
 <li>拆分逻辑，把基础功能的css内联，增强功能的css在一定条件下触发请求，js进行异步加载。这样控制后页面渲染就变快了。</li>
 </ul>
-<h4 class=""><a name="总结" class="anchor" href="#总结"><span class="header-link"></span></a>总结</h4><p><strong>案例一</strong> 和 <strong>案例二</strong> 中可以看到，Quickling解决方案很好的解决了这些遇到的问题，而案例中说到的情况就是方案已知的适用场景，其他场景还有待发现。</p>
-<h3 class="" id="使用方法"><a name="使用方法" class="anchor" href="#使用方法"><span class="header-link"></span></a>使用方法</h3><blockquote>
+<h4 class=""><a name="总结" class="anchor" href="#总结"><span class="doc-link"></span></a>总结</h4><p><strong>案例一</strong> 和 <strong>案例二</strong> 中可以看到，Quickling解决方案很好的解决了这些遇到的问题，而案例中说到的情况就是方案已知的适用场景，其他场景还有待发现。</p>
+<h3 class="" id="使用方法"><a name="使用方法" class="anchor" href="#使用方法"><span class="doc-link"></span></a>使用方法</h3><blockquote>
 <p>很多同学到这里就有疑问了，如此复杂的请求方式，一个页面可以分块请求，是不是需要在开发的时候实现很多东西，维护起来很麻烦。答案是 <strong>否定</strong> 的。整个方案依托于FIS 2.0的前端架构思想，从目录结构到静态资源管理。只需要做很小的工作就瞬间享受到 <strong>Quickling解决方案</strong> 带来的新特性。</p>
 </blockquote>
 <p>首先得有一个后端模板是Smarty的项目，并且是使用FIS制定的目录规范以及用FIS编译。目录结构是这样的；</p>
@@ -103,14 +103,14 @@
 <li><a href="https://github.com/xiangshouding/bigpipe.smarty">demo</a></li>
 <li><a href="https://github.com/xiangshouding/fis-smarty-bigpipe-plugin">Smarty插件</a></li>
 </ul>
-<h3 class="" id="优点和缺点"><a name="优点和缺点" class="anchor" href="#优点和缺点"><span class="header-link"></span></a>优点和缺点</h3><p>有了使用场景而且也知道如何使用，那现在开始总结一下它到底有哪些优点，事物都是双面的当然也有缺点。这栏总结一下整个方案的优缺点。按照一贯的做法，先说优点。</p>
-<h4 class=""><a name="优点" class="anchor" href="#优点"><span class="header-link"></span></a>优点</h4><ul>
+<h3 class="" id="优点和缺点"><a name="优点和缺点" class="anchor" href="#优点和缺点"><span class="doc-link"></span></a>优点和缺点</h3><p>有了使用场景而且也知道如何使用，那现在开始总结一下它到底有哪些优点，事物都是双面的当然也有缺点。这栏总结一下整个方案的优缺点。按照一贯的做法，先说优点。</p>
+<h4 class=""><a name="优点" class="anchor" href="#优点"><span class="doc-link"></span></a>优点</h4><ul>
 <li><strong>灵活</strong> 页面widget可以灵活请求</li>
 <li><strong>可维护性高</strong> FIS用户项目都是组件化的，维护肯定是最好的</li>
 <li><strong>使用简单</strong> 只需要关注那些页面部分想后展示、具体展示的时机</li>
 <li><strong>能解决特定问题</strong>  案例一和案例二已经说明了这一点。</li>
 </ul>
-<h4 class=""><a name="缺点" class="anchor" href="#缺点"><span class="header-link"></span></a>缺点</h4><ul>
+<h4 class=""><a name="缺点" class="anchor" href="#缺点"><span class="doc-link"></span></a>缺点</h4><ul>
 <li>增加了请求  一个页面渲染，如果某一个widget显然模式是“quickling”，那么渲染页面就会多一次请求</li>
 <li>增加了服务器负担</li>
 </ul>

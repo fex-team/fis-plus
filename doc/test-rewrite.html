@@ -1,5 +1,5 @@
-<h3 class="" id="简介"><a name="简介" class="anchor" href="#简介"><span class="header-link"></span></a>简介</h3><p>FIS的rewrite模块。用于本地浏览时，url的转发，覆盖fis默认的url规则，模拟线上url规则，ajax请求，文件转发等。</p>
-<h3 class="" id="基础配置"><a name="基础配置" class="anchor" href="#基础配置"><span class="header-link"></span></a>基础配置</h3><p>在模块目录下通过配置文件server.conf文件进行配置，配置方式是：</p>
+<h3 class="" id="Rewrite"><a name="Rewrite" class="anchor" href="#Rewrite"><span class="doc-link"></span></a>Rewrite</h3><p>FIS的rewrite模块。用于本地浏览时，url的转发，覆盖fis默认的url规则，模拟线上url规则，ajax请求，文件转发等。</p>
+<h3 class="" id="基础配置"><a name="基础配置" class="anchor" href="#基础配置"><span class="doc-link"></span></a>基础配置</h3><p>在模块目录下通过配置文件server.conf文件进行配置，配置方式是：</p>
 <p>rewrite和redirect开头的会被翻译成一条匹配规则，自上而下的匹配。所有非rewrite和redirect开头的会被当做注释处理。</p>
 <pre><code class="lang-php">rewrite ： 匹配规则后转发到一个文件
 template ： 匹配规则后转发到一个模板文件，但url不改变，只针对模板
@@ -9,7 +9,7 @@ rewrite ^\/news\?.*tn\=[a-zA-Z0-9]+.* app/data/news.php
 template ^\/(.*)\?.*  /home/page/index.tpl
 redirect ^\/index\?.* /home/page/index
 </code></pre>
-<h3 class="" id="配置文件说明"><a name="配置文件说明" class="anchor" href="#配置文件说明"><span class="header-link"></span></a>配置文件说明</h3><ol>
+<h3 class="" id="配置文件说明"><a name="配置文件说明" class="anchor" href="#配置文件说明"><span class="doc-link"></span></a>配置文件说明</h3><ol>
 <li>配置文件每一行为一条规则。</li>
 <li>格式为：匹配类型 (空格) 匹配url正则 (空格) 命中正则后的目的文件路径或者url。
 rewrite、redirect和template是fis默认的三种匹配类型。</li>
@@ -20,15 +20,15 @@ rewrite、redirect和template是fis默认的三种匹配类型。</li>
 <li><strong>template</strong> :  为了完全模拟线上url，可通过template配置对应的url规则对应相应的模板进行访问，访问url不变。</li>
 <li><strong>redirect</strong> ： 匹配规则后重定向到另一个url。</li>
 </ol>
-<h3 class="" id="注意"><a name="注意" class="anchor" href="#注意"><span class="header-link"></span></a>注意</h3><ol>
+<h3 class="" id="注意"><a name="注意" class="anchor" href="#注意"><span class="doc-link"></span></a>注意</h3><ol>
 <li>server.conf专门配置转发规则，文件名不能改哦</li>
 <li>项目很大，多模块时，一个模块配置server.conf就可以啦，比如在common模块配置全站的转发规则，否则会覆盖</li>
 <li>所有非rewrite、template和redirect开头的会被当做注释处理。</li>
 </ol>
-<h3 class="" id="高级使用"><a name="高级使用" class="anchor" href="#高级使用"><span class="header-link"></span></a>高级使用</h3><p>fis默认的rewrite，redirect转发无法满足你的需求怎么办？别怕，fis允许用户自定义全新的规则噢~ 自定义的规则优先级最高，会在server.conf保存的规则之前匹配url</p>
-<h4 class=""><a name="addRewriteRule" class="anchor" href="#addRewriteRule"><span class="header-link"></span></a>addRewriteRule</h4><p>使用：rewrite提供 public static function addRewriteRule($reg, callable $callback){}公共静态方法。
+<h3 class="" id="高级使用"><a name="高级使用" class="anchor" href="#高级使用"><span class="doc-link"></span></a>高级使用</h3><p>fis默认的rewrite，redirect转发无法满足你的需求怎么办？别怕，fis允许用户自定义全新的规则噢~ 自定义的规则优先级最高，会在server.conf保存的规则之前匹配url</p>
+<h4 class=""><a name="addRewriteRule" class="anchor" href="#addRewriteRule"><span class="doc-link"></span></a>addRewriteRule</h4><p>使用：rewrite提供 public static function addRewriteRule($reg, callable $callback){}公共静态方法。
 用户可以在自己的处理url的php文件中添加自己的url处理规则。</p>
-<h4 class=""><a name="参数" class="anchor" href="#参数"><span class="header-link"></span></a>参数</h4><ol>
+<h4 class=""><a name="参数" class="anchor" href="#参数"><span class="doc-link"></span></a>参数</h4><ol>
 <li><p>$reg 匹配url的正则，注意正则需要添加定界符。例如：“/^\/photo\/?$/”</p>
 </li>
 <li><p>$callback 匹配到$reg之后，处理匹配的回调函数。这个函数有两个参数($matches, $root)
