@@ -71,6 +71,14 @@
             "uri": "/fis-plus/static/fis-plus/lib/fontawesome/css/font-awesome_6a27a93.css",
             "type": "css"
         },
+        "lib/highlight.js/github.css": {
+            "uri": "/fis-plus/static/fis-plus/lib/highlight.js/github_93a844e.css",
+            "type": "css"
+        },
+        "lib/highlight.js/monokai.css": {
+            "uri": "/fis-plus/static/fis-plus/lib/highlight.js/monokai_fa10bb5.css",
+            "type": "css"
+        },
         "lib/jquery/jquery.js": {
             "uri": "/fis-plus/static/fis-plus/lib/jquery/jquery_cf26f8f.js",
             "type": "js"
