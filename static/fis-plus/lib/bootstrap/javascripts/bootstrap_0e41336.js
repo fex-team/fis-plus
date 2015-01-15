@@ -1291,9 +1291,9 @@
       this.refresh()
     }
 
-    if (scrollTop >= maxScroll) {
-      return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
-    }
+    // if (scrollTop >= maxScroll) {
+    //   return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
+    // }
 
     if (activeTarget && scrollTop < offsets[0]) {
       this.activeTarget = null
