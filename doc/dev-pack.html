@@ -2,18 +2,18 @@
 <p>FIS-Plus提供静态资源管理系统，支持通过运行时计算静态资源使用情况来加载对应的静态资源。为了达到合理的高性能的加载方式，用户可以将静态资源进行合并。</p>
 </blockquote>
 <h3 class="" id="配置"><a name="配置" class="anchor" href="#配置"><span class="doc-link"></span></a>配置</h3><p>用户可以在配置文件中，通过配置将静态资源进行合并处理，对demo-home模块增加打包配置：</p>
-<pre><code class="lang-javascript">//fis-conf.js
-fis.config.set(&#39;pack&#39;, {
-        //打包所有static目录下的JS文件
-        &#39;pkg/aio.js&#39; : /^\/static\/(.*\.js)$/i,
-        &#39;pkg/widget.js&#39; : [
-            /^\/widget\/ui\/(.*\.js)$/i,
-            &#39;/widget/menu/menu.js&#39;
+<pre><code class="hljs lang-javascript"><span class="xml">//fis-conf.js
+fis.config.set('pack', </span><span class="hljs-expression">{
+        //打包所有<span class="hljs-variable">static</span>目录下的<span class="hljs-variable">JS</span>文件
+        '<span class="hljs-variable">pkg</span><span class="hljs-end-block">/aio.js</span>' : /^\<span class="hljs-end-block">/static</span>\/(<span class="hljs-variable">.</span>*\<span class="hljs-variable">.js</span>)$<span class="hljs-end-block">/i</span>,
+        '<span class="hljs-variable">pkg</span><span class="hljs-end-block">/widget.js</span>' : [
+            /^\<span class="hljs-end-block">/widget</span>\<span class="hljs-end-block">/ui</span>\/(<span class="hljs-variable">.</span>*\<span class="hljs-variable">.js</span>)$<span class="hljs-end-block">/i</span>,
+            '<span class="hljs-end-block">/widget</span><span class="hljs-end-block">/menu</span><span class="hljs-end-block">/menu.js</span>'
         ],
-        //打包所有的css文件
-        //将内容输出为static/pkg/aio.css文件
-        &#39;pkg/aio.css&#39; : &#39;**.css&#39;
-});
+        //打包所有的<span class="hljs-variable">css</span>文件
+        //将内容输出为<span class="hljs-variable">static</span><span class="hljs-end-block">/pkg</span><span class="hljs-end-block">/aio.css</span>文件
+        '<span class="hljs-variable">pkg</span><span class="hljs-end-block">/aio.css</span>' : '**<span class="hljs-variable">.css</span>'
+}</span><span class="xml">);</span>
 </code></pre>
 <p>打包配置支持正则、字符串以及通配符，用户可灵活根据自己需求进行资源打包，同时注意以下打包细节：</p>
 <ul>

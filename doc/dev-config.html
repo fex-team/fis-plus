@@ -1,32 +1,32 @@
 <h3 class="" id="模块配置"><a name="模块配置" class="anchor" href="#模块配置"><span class="doc-link"></span></a>模块配置</h3><p>每个模块都有对应的模块名，同时需要在配置文件中申明，配置如下。</p>
-<pre><code class="lang-javascript">fis.config.set(&#39;namespace&#39;, &#39;common&#39;);
+<pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'namespace'</span>, <span class="hljs-string">'common'</span>);
 </code></pre>
 <p>模块编译输出时默认都为utf8编码，如果需要做修改，可以进行如下配置：</p>
-<pre><code class="lang-javascript">fis.config.set(&#39;project.charset&#39;, &#39;gbk&#39;);
+<pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.charset'</span>, <span class="hljs-string">'gbk'</span>);
 </code></pre>
 <p>对静态资源进行MD5戳编译时，默认长度都为7，当然你也可以进行修改：</p>
-<pre><code class="lang-javascript">fis.config.set(&#39;project.md5Length&#39;, 8);
+<pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.md5Length'</span>, <span class="hljs-number">8</span>);
 </code></pre>
 <h3 class="" id="Smarty配置"><a name="Smarty配置" class="anchor" href="#Smarty配置"><span class="doc-link"></span></a>Smarty配置</h3><p>在fis-config.js配置文件中，可在setting节点下配置smarty节点，修改定界符。</p>
-<pre><code class="lang-xml">fis.config.set(&#39;settings.smarty&#39;, {
-    &#39;left_delimiter&#39;  : &#39;&lt;{&#39;,
-    &#39;right_delimiter&#39; : &#39;}&gt;&#39;
+<pre><code class="hljs lang-xml">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'settings.smarty'</span>, {
+    <span class="hljs-string">'left_delimiter'</span>  : <span class="hljs-string">'&lt;{'</span>,
+    <span class="hljs-string">'right_delimiter'</span> : <span class="hljs-string">'}&gt;'</span>
 })
 </code></pre>
 <h4 class=""><a name="本地调试环境smarty定界符修改" class="anchor" href="#本地调试环境smarty定界符修改"><span class="doc-link"></span></a>本地调试环境smarty定界符修改</h4><p>在模块根目录下放置<code>smarty.conf</code>将其内容设置为：</p>
-<pre><code>left_delimiter=&#39;&lt;{&#39;
-right_delimiter=&#39;}&gt;&#39;
+<pre><code>left_delimiter=<span class="hljs-string">'&lt;{'</span>
+right_delimiter=<span class="hljs-string">'}&gt;'</span>
 </code></pre><p><em>假设有多个模块，只需要在common模块根目录下放置<code>smarty.conf</code></em></p>
 <h3 class="" id="domain配置"><a name="domain配置" class="anchor" href="#domain配置"><span class="doc-link"></span></a>domain配置</h3><p>设置静态资源域名，domain的值如果不是特殊需要，请不要以&quot;/&quot;结尾。</p>
-<pre><code class="lang-xml">//fis-conf.js
-//用法一
-fis.config.set(&#39;roadmap.domain&#39;, &#39;http://s1.example.com, http://s2.example.com&#39;);
+<pre><code class="hljs lang-xml"><span class="hljs-comment">//fis-conf.js</span>
+<span class="hljs-comment">//用法一</span>
+fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'roadmap.domain'</span>, <span class="hljs-string">'http://s1.example.com, http://s2.example.com'</span>);
 
-//用法二
-fis.config.set(&#39;roadmap.domain&#39;, {
-    //widget目录下的所有css文件使用 http://css1.example.com 作为域名
-    &#39;widget/**.css&#39; : &#39;http://css1.example.com&#39;,
-    //所有的js文件使用 http://js1.example.com 或者  http://js2.example.com 作为域名
-    &#39;**.js&#39; : [&#39;http://js1.example.com&#39;, &#39;http://js2.example.com&#39;]
+<span class="hljs-comment">//用法二</span>
+fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'roadmap.domain'</span>, {
+    <span class="hljs-comment">//widget目录下的所有css文件使用 http://css1.example.com 作为域名</span>
+    <span class="hljs-string">'widget/**.css'</span> : <span class="hljs-string">'http://css1.example.com'</span>,
+    <span class="hljs-comment">//所有的js文件使用 http://js1.example.com 或者  http://js2.example.com 作为域名</span>
+    <span class="hljs-string">'**.js'</span> : [<span class="hljs-string">'http://js1.example.com'</span>, <span class="hljs-string">'http://js2.example.com'</span>]
 });
 </code></pre>

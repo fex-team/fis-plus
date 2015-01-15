@@ -22,6 +22,7 @@
   "dependencies": {
     "marked": "~0.3.2",
     "fis": "~1.9.1",
-    "fis-parser-sass": "~0.2.3"
+    "fis-parser-sass": "~0.2.3",
+    "highlight.js": "8.4.0"
   }
 }

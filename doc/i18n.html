@@ -69,26 +69,26 @@
 <li>预览 <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></li>
 </ol>
 <h4 class=""><a name="如何开发" class="anchor" href="#如何开发"><span class="doc-link"></span></a>如何开发</h4><p>按照上面说的使用方法，已经在本地模拟一个国际化项目。修改测试数据<code>i18n</code>字段，为en_US、ja_JP或其他分别看看效果。</p>
-<pre><code class="lang-php">&lt;?php
-$fis_data = array(
-    &#39;i18n&#39; =&gt; &#39;en_US&#39;
+<pre><code class="hljs lang-php"><span class="php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$fis_data</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'i18n'</span> =&gt; <span class="hljs-string">'en_US'</span>
 );
-?&gt;
+<span class="hljs-preprocessor">?&gt;</span></span>
 </code></pre>
 <p>进入模块i18n，详细了解一下目录结构；</p>
-<pre><code class="lang-bash">└── i18n
-    ├── fis-conf.js
+<pre><code class="hljs lang-bash">└── i18n
+    ├── fis-conf<span class="hljs-class">.js</span>
     ├── lang #语言目录
-    │   ├── en_US.po
-    │   └── ja_JP.po
+    │   ├── en_US<span class="hljs-class">.po</span>
+    │   └── ja_JP<span class="hljs-class">.po</span>
     ├── page
-    ├── server.conf
+    ├── server<span class="hljs-class">.conf</span>
     ├── static
     ├── test
     └── widget
 </code></pre>
 <p>当这个模块release以后得到如下结果;</p>
-<pre><code class="lang-bash">.
+<pre><code class="hljs lang-bash">.
 ├── config
 │   ├── i18n-map.json
 │   └── lang
@@ -96,11 +96,11 @@ $fis_data = array(
 │       └── i18n.ja_JP.json
 ├── server-conf
 │   └── i18n.conf
-├── static
+├── <span class="hljs-keyword">static</span>
 │   └── i18n
-│       ├── mod.js
+│       ├── <span class="hljs-keyword">mod</span>.js
 │       └── widget
-├── template
+├── <span class="hljs-keyword">template</span>
 │   └── i18n
 │       ├── page
 │       └── widget
@@ -109,10 +109,10 @@ $fis_data = array(
         └── page
 </code></pre>
 <p>可以看到config/lang目录下是一些JSON翻译文件。翻译文件格式为;</p>
-<pre><code class="lang-json">{
-    &quot;原文&quot;: &quot;译文&quot;,
-    &quot;原文1&quot;: &quot;译文1&quot;
-}
+<pre><code class="hljs lang-json">{
+    "<span class="hljs-attribute">原文</span>": <span class="hljs-value"><span class="hljs-string">"译文"</span></span>,
+    "<span class="hljs-attribute">原文1</span>": <span class="hljs-value"><span class="hljs-string">"译文1"</span>
+</span>}
 </code></pre>
 <p>这样当运行时调用了翻译函数，翻译函数读取对应的翻译文件展示译文。</p>
 <h5 class=""><a name="翻译函数" class="anchor" href="#翻译函数"><span class="doc-link"></span></a>翻译函数</h5><ul>
@@ -120,10 +120,10 @@ $fis_data = array(
 <li>Smarty模板中的语言</li>
 </ul>
 <p>js中的语言：</p>
-<pre><code class="lang-javascript">var str = __(&#39;中文&#39;);
+<pre><code class="hljs lang-javascript"><span class="hljs-keyword">var</span> str = __(<span class="hljs-string">'中文'</span>);
 </code></pre>
 <p>Smarty模板中的语言：</p>
-<pre><code class="lang-html">{%&#39;中文&#39;|gettext%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span><span class="hljs-string">'中文'</span>|gettext<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p>综述，开发过程；</p>
 <ol>

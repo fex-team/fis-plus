@@ -1,99 +1,99 @@
 <h3 class="" id="模板开发"><a name="模板开发" class="anchor" href="#模板开发"><span class="doc-link"></span></a>模板开发</h3><h4 class=""><a name="页面模板" class="anchor" href="#页面模板"><span class="doc-link"></span></a>页面模板</h4><p>在模块中，用户可直接访问浏览的页面称为页面模板，文件在 <strong>模块根目录/page/</strong> 下。FIS提供提供了很多模板插件替换原生html标签，为页面模板开发提供使用。</p>
 <ul>
-<li>通过<a href="smarty-plugin.html#html">html插件</a>控制整体页面的输出，以及注册前端组件化框架。</li>
-<li>通过<a href="smarty-plugin.html#head">head插件</a>在模板解析运行时，控制加载同步静态资源使用。</li>
-<li>通过<a href="smarty-plugin.html#body">body插件</a>可在页面底部集中输出JS静态资源。</li>
+<li>通过<a href="#html">html插件</a>控制整体页面的输出，以及注册前端组件化框架。</li>
+<li>通过<a href="#head">head插件</a>在模板解析运行时，控制加载同步静态资源使用。</li>
+<li>通过<a href="#body">body插件</a>可在页面底部集中输出JS静态资源。</li>
 </ul>
 <p>从demo中common模块的layout.tpl，可以了解到如何通过后端框架进行开发，组织整个页面:</p>
-<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
-{%* 使用html插件替换普通html标签，同时注册JS组件化库 *%}
-{%html framework=&quot;common:static/mod.js&quot; class=&quot;expanded&quot;%}
-    {%* 使用head插件替换head标签，主要为控制加载同步静态资源使用 *%}
-    {%head%}
-    &lt;meta charset=&quot;utf-8&quot;/&gt;
-        &lt;meta content=&quot;{%$description%}&quot; name=&quot;description&quot;&gt;
-        &lt;title&gt;{%$title%}&lt;/title&gt;
-        {%block name=&quot;block_head_static&quot;%}{%/block%}
-    {%/head%}
-    {%* 使用body插件替换body标签，主要为可控制加载JS资源 *%}
-    {%body%}
-    {%block name=&quot;content&quot;%}{%/block%}
-    {%/body%}
-{%/html%}
+<pre><code class="hljs lang-html"><span class="xml"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+</span><span class="hljs-template_tag">{%* 使用html插件替换普通html标签，同时注册JS组件化库 *%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%html framework="common:<span class="hljs-keyword">static</span>/mod.js" class="expanded"%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%* 使用head插件替换head标签，主要为控制加载同步静态资源使用 *%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%head%}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"</span></span></span><span class="hljs-template_tag">{%$description%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-value">"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span></span><span class="hljs-template_tag">{%$title%}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+        </span><span class="hljs-template_tag">{%<span class="hljs-keyword">block</span> name="block_head_static"%}</span><span class="xml"></span><span class="hljs-template_tag">{%/<span class="hljs-keyword">block</span>%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%/head%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%* 使用body插件替换body标签，主要为可控制加载JS资源 *%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%body%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%<span class="hljs-keyword">block</span> name="content"%}</span><span class="xml"></span><span class="hljs-template_tag">{%/<span class="hljs-keyword">block</span>%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%/body%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%/html%}</span><span class="xml"></span>
 </code></pre>
 <ul>
-<li>通过<a href="smarty-plugin.html#require">require插件</a>加载静态资源，便于静态资源管理。</li>
-<li>通过<a href="smarty-plugin.html#script">script插件</a>管理JS片段，集中在页面底部加载。</li>
-<li>通过<a href="smarty-plugin.html#widget">widget插件</a>调用模板组件组织页面，处理对应的静态资源。</li>
+<li>通过<a href="#require">require插件</a>加载静态资源，便于静态资源管理。</li>
+<li>通过<a href="#script">script插件</a>管理JS片段，集中在页面底部加载。</li>
+<li>通过<a href="#widget">widget插件</a>调用模板组件组织页面，处理对应的静态资源。</li>
 </ul>
 <p>在demo-home模块中的index.tpl，加载页面模板对应的静态资源，通过模板组件组织页面:</p>
-<pre><code class="lang-html">{%extends file=&quot;common/page/layout.tpl&quot;%}
-{%block name=&quot;block_head_static&quot;%}
-    &lt;!--[if lt IE 9]&gt;
-        &lt;script src=&quot;/lib/js/html5.js&quot;&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-    {%* 模板中加载静态资源 *%}
-    {%require name=&quot;home:static/lib/css/bootstrap.css&quot;%}
-    {%require name=&quot;home:static/lib/css/bootstrap-responsive.css&quot;%}
-    {%require name=&quot;home:static/lib/js/jquery-1.10.1.js&quot;%}
-{%/block%}
-{%block name=&quot;content&quot;%}
-    &lt;div id=&quot;wrapper&quot;&gt;
-        &lt;div id=&quot;sidebar&quot;&gt;
-            {%* 通过widget插件加载模块化页面片段，name属性对应文件路径,模块名:文件目录路径 *%}
-            {%widget
-                name=&quot;common:widget/sidebar/sidebar.tpl&quot;
+<pre><code class="hljs lang-html"><span class="xml"></span><span class="hljs-template_tag">{%<span class="hljs-keyword">extends</span> file="common/page/layout.tpl"%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%<span class="hljs-keyword">block</span> name="block_head_static"%}</span><span class="xml">
+    <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
+        &lt;script src="/lib/js/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+    </span><span class="hljs-template_tag">{%* 模板中加载静态资源 *%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%require name="home:<span class="hljs-keyword">static</span>/lib/css/bootstrap.css"%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%require name="home:<span class="hljs-keyword">static</span>/lib/css/bootstrap-responsive.css"%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%require name="home:<span class="hljs-keyword">static</span>/lib/js/jquery-1.10.1.js"%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%/<span class="hljs-keyword">block</span>%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%<span class="hljs-keyword">block</span> name="content"%}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"wrapper"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"sidebar"</span>&gt;</span>
+            </span><span class="hljs-template_tag">{%* 通过widget插件加载模块化页面片段，name属性对应文件路径,模块名:文件目录路径 *%}</span><span class="xml">
+            </span><span class="hljs-template_tag">{%widget
+                name="common:widget/sidebar/sidebar.tpl"
                 data=$docs
-            %}
-        &lt;/div&gt;
-        &lt;div id=&quot;container&quot;&gt;
-            {%widget name=&quot;home:widget/slogan/slogan.tpl&quot;%}
-            {%foreach $docs as $index=&gt;$doc%}
-                {%widget
-                    name=&quot;home:widget/section/section.tpl&quot;
-                    call=&quot;section&quot;
+            %}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"container"</span>&gt;</span>
+            </span><span class="hljs-template_tag">{%widget name="home:widget/slogan/slogan.tpl"%}</span><span class="xml">
+            </span><span class="hljs-template_tag">{%foreach $docs <span class="hljs-keyword">as</span> $index=&gt;$doc%}</span><span class="xml">
+                </span><span class="hljs-template_tag">{%widget
+                    name="home:widget/section/section.tpl"
+                    call="section"
                     data=$doc index=$index
-                %}
-            {%/foreach%}
-        &lt;/div&gt;
-    &lt;/div&gt;
-    {%require name=&quot;home:static/index/index.css&quot;%}
-    {%* 通过script插件收集JS片段 *%}
-    {%script%}var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
-document.write(unescape(&quot;%3Cscript src=&#39;&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F70b541fe48dd916f7163051b0ce5a0e3&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&quot;));{%/script%}
-{%/block%}
+                %}</span><span class="xml">
+            </span><span class="hljs-template_tag">{%/foreach%}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    </span><span class="hljs-template_tag">{%require name="home:<span class="hljs-keyword">static</span>/index/index.css"%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%* 通过script插件收集JS片段 *%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%script%}</span><span class="xml">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F70b541fe48dd916f7163051b0ce5a0e3' type='text/javascript'%3E%3C/script%3E"));</span><span class="hljs-template_tag">{%/script%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%/<span class="hljs-keyword">block</span>%}</span><span class="xml"></span>
 </code></pre>
 <p>在模板框架中，对应的文件调用路径均为 <code>modulename:相对模块根目录的相对路径</code> ：</p>
-<pre><code>//home为模块名，static/lib/css/bootstrap.css为绝对路径截取home模块根目录后的路径
-{%require name=&quot;home:static/lib/css/bootstrap.css&quot;%}
+<pre><code>/<span class="hljs-regexp">/home为模块名，static/lib</span><span class="hljs-regexp">/css/bootstrap</span>.css为绝对路径截取home模块根目录后的路径
+{%<span class="hljs-keyword">require</span> name=<span class="hljs-string">"home:static/lib/css/bootstrap.css"</span>%}
 </code></pre><h5 class=""><a name="前端模板" class="anchor" href="#前端模板"><span class="doc-link"></span></a>前端模板</h5><p>在FIS中，集成了<a href="http://baidufe.github.com/BaiduTemplate">百度前端模板</a>。在编译过程中，会静态编译baidu template，不需要线上编译，提高页面运行效率。</p>
 <p>在JS代码中，通过 <strong>__inline</strong> 方式进行编译处理前端模板。同时规定以 <strong>tmpl</strong> 为后缀的文件为前端模板，使用方式：</p>
-<pre><code class="lang-javascript">//编译前
-var demoTemplate = __inline(&#39;demo.tmpl&#39;);
-//编译后
-var demoTemplate = function (_template_object) {
+<pre><code class="hljs lang-javascript"><span class="hljs-comment">//编译前</span>
+<span class="hljs-keyword">var</span> demoTemplate = __inline(<span class="hljs-string">'demo.tmpl'</span>);
+<span class="hljs-comment">//编译后</span>
+<span class="hljs-keyword">var</span> demoTemplate = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(_template_object)</span> </span>{
        .......
 };
 </code></pre>
 <p>在使用前端模板时需要注意的问题：</p>
-<pre><code>//在__inline前端模板前加载template对象
-require(&quot;common:static/lib/template.js&quot;)
+<pre><code>//在__inline前端模板前加载<span class="hljs-keyword">template</span>对象
+require(<span class="hljs-string">"common:static/lib/template.js"</span>)
 //或者通过全局加载的方式
-{%require name=&quot;common:static/lib/template.js&quot;%}
+{%require name=<span class="hljs-string">"common:static/lib/template.js"</span>%}
 </code></pre><p>template的安装方式</p>
-<pre><code>//在common的static/lib目录下执行下面命令
-$ lights install template
+<pre><code>//在common的<span class="hljs-keyword">static</span>/lib目录下执行下面命令
+$ lights install <span class="hljs-keyword">template</span>
 </code></pre><h4 class=""><a name="模板组件化" class="anchor" href="#模板组件化"><span class="doc-link"></span></a>模板组件化</h4><p>模板组件是能独立提供功能且能够复用的页面片段，所在规范目录 <strong>模块根目录/widget/</strong> ，模板组件以模板、JS组件、CSS组件组成（默认必须有模板）。</p>
 <h4 class=""><a name="widget定义" class="anchor" href="#widget定义"><span class="doc-link"></span></a>widget定义</h4><p>只要在widget目录下的Smarty模板即为模板组件，<code>目录下有与模板同名的JS、CSS文件FIS会自动添加依赖关系处理，在模板渲染时进行同步加载</code>。</p>
 <h5 class=""><a name="widget调用" class="anchor" href="#widget调用"><span class="doc-link"></span></a>widget调用</h5><p>调用一个模板组件需要通过widget语法，如我们想调用home下的section模板组件，则语法为</p>
-<pre><code>//调用模板的路径为 modulename:模板在widget目录下路径
-{%widget name=&quot;home:widget/section/section.tpl&quot; %}
+<pre><code><span class="hljs-comment">//调用模板的路径为 modulename:模板在widget目录下路径</span>
+{<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"home:widget/section/section.tpl"</span> <span class="hljs-variable">%}</span>
 </code></pre><h4 class=""><a name="widget函数调用方式" class="anchor" href="#widget函数调用方式"><span class="doc-link"></span></a>widget函数调用方式</h4><p>widget插件可以直接调用某个smarty的function函数，使用方式为:</p>
-<pre><code>//在模板中定义function函数
-{%function name=&quot;functionDemo&quot;%}
-       .............
-{%/function%}
-------------------------------------
-//在模板中调用此函数
-{%widget call=&quot;functionDemo&quot; %}
+<pre><code><span class="hljs-comment">//在模板中定义function函数</span>
+{%function name="functionDemo"%}
+<span class="hljs-code">       .............</span>
+<span class="hljs-header">{%/function%}
+------------------------------------</span>
+<span class="hljs-comment">//在模板中调用此函数</span>
+{%widget call="functionDemo" %}
 </code></pre>

@@ -38,9 +38,9 @@
 <p>很多同学到这里就有疑问了，如此复杂的请求方式，一个页面可以分块请求，是不是需要在开发的时候实现很多东西，维护起来很麻烦。答案是 <strong>否定</strong> 的。整个方案依托于FIS 2.0的前端架构思想，从目录结构到静态资源管理。只需要做很小的工作就瞬间享受到 <strong>Quickling解决方案</strong> 带来的新特性。</p>
 </blockquote>
 <p>首先得有一个后端模板是Smarty的项目，并且是使用FIS制定的目录规范以及用FIS编译。目录结构是这样的；</p>
-<pre><code class="lang-bash">├── build.sh
+<pre><code class="hljs lang-bash">├── build<span class="hljs-class">.sh</span>
 ├── config
-├── fis-conf.js
+├── fis-conf<span class="hljs-class">.js</span>
 ├── page
 ├── static
 ├── test
@@ -48,38 +48,38 @@
 </code></pre>
 <p>每个目录放些什么，就不一一说明了，见<a href="http://fe.baidu.com/doc/fis/2.0/user/">FIS2.0文档</a>。我们只关注 <strong>widget</strong> 和 <strong>page</strong> 。</p>
 <p>假设有一个widget <strong>widget_A</strong> ，包括一个模板文件widget_A.tpl和一个js文件widget_A.js还有一个css文件widget_A.css。有个页面 <strong>index.tpl</strong> 要使用这个widget。</p>
-<pre><code class="lang-bash">├── page
-│   └── index.tpl
+<pre><code class="hljs lang-bash">├── page
+│   └── index<span class="hljs-class">.tpl</span>
 └── widget
     └── widget_A
-        ├── widget_A.js
-        ├── widget_A.css
+        ├── widget_A<span class="hljs-class">.js</span>
+        ├── widget_A<span class="hljs-class">.css</span>
         └── widget_A.tpl
 </code></pre>
 <p>网站展示时渲染 <strong>index.tpl</strong> ，widget_A是页面中的一部分。</p>
-<pre><code class="lang-html">//index.tpl
-{%widget name=&quot;demo:widget/widget_A/widget_A.tpl&quot;%}
+<pre><code class="hljs lang-html"><span class="hljs-comment">//index.tpl</span>
+{<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"demo:widget/widget_A/widget_A.tpl"</span><span class="hljs-variable">%}</span>
 </code></pre>
 <p>当页面被渲染时，widget_A就展现在页面上了。</p>
-<pre><code class="lang-html">&lt;html&gt;
-...
-    &lt;link href=&quot;widget_A.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+<pre><code class="hljs lang-html">&lt;html&gt;
+<span class="hljs-keyword">...</span>
+    &lt;link href=<span class="hljs-string">"widget_A.css"</span> rel=<span class="hljs-string">"stylesheet"</span> type=<span class="hljs-string">"text/css"</span> /&gt;
 ....
     &lt;div&gt; 我是widget_A &lt;/div&gt;
 ....
-    &lt;script src=&quot;widget_A.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=<span class="hljs-string">"widget_A.js"</span> type=<span class="hljs-string">"text/javascript"</span>&gt;&lt;/script&gt;
 &lt;/html&gt;
 </code></pre>
 <p>上面是正常的使用方式，就像<strong>方案二</strong>中说到的，如何让渲染index.tpl时不展示<strong>widget_A</strong>呢。</p>
-<pre><code class="lang-html">{%widget name=&quot;demo:widget/widget_A/widget_A.tpl&quot; mode=&quot;quickling&quot; pagelet_id=&quot;widget_A&quot;%}
+<pre><code class="hljs lang-html">{%widget <span class="hljs-variable">name=</span><span class="hljs-string">"demo:widget/widget_A/widget_A.tpl"</span> <span class="hljs-variable">mode=</span><span class="hljs-string">"quickling"</span> <span class="hljs-variable">pagelet_id=</span><span class="hljs-string">"widget_A"</span>%}
 </code></pre>
 <p>OK，改造完成。
 加了<code>mode=&quot;quickling&quot;</code>和<code>pagelet_id=&quot;widget_A&quot;</code>这俩参数。
 这时候渲染页面的结果是什么呢？</p>
-<pre><code class="lang-html">&lt;html&gt;
+<pre><code class="hljs lang-html">&lt;html&gt;
 .....
-&lt;textarea class=&quot;fis_g_bigrender&quot; style=“display:none”&gt;BigPipe.asyncLoad({id: &quot;widget_A&quot;})&lt;/textarea&gt;
-&lt;div id=&quot;widget_A&quot;&gt;&lt;/div&gt;
+&lt;<span class="hljs-tag">textarea</span> class=<span class="hljs-string">"fis_g_bigrender"</span> style=“<span class="hljs-attribute">display</span>:<span class="hljs-attribute">none</span>”&gt;BigPipe.<span class="hljs-function"><span class="hljs-title">asyncLoad</span><span class="hljs-params">({id: <span class="hljs-string">"widget_A"</span>})</span></span>&lt;/textarea&gt;
+&lt;<span class="hljs-tag">div</span> id=<span class="hljs-string">"widget_A"</span>&gt;&lt;/div&gt;
 .....
 &lt;/html&gt;
 </code></pre>

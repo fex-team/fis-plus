@@ -7,9 +7,9 @@
 <li>是否必须：是</li>
 <li>用法：在模板中替换普通\<html\>标签</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
     ....
-{%/html%}
+{<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl1_fbad2c9.jpg" alt=""></p>
 <h3 class="" id="head"><a name="head" class="anchor" href="#head"><span class="doc-link"></span></a>head</h3><ul>
@@ -18,11 +18,11 @@
 <li>是否必须：是</li>
 <li>用法：在模板中替换普通\<head\>标签</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-        &lt;meta charset=&quot;utf-8&quot;/&gt;
-    {%/head%}
-{%/html%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
+    {<span class="hljs-preprocessor">%</span>head<span class="hljs-preprocessor">%</span>}
+        &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+    {<span class="hljs-preprocessor">%</span>/head<span class="hljs-preprocessor">%</span>}
+{<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl2_2373cfb.jpg" alt="head"></p>
 <h3 class="" id="body"><a name="body" class="anchor" href="#body"><span class="doc-link"></span></a>body</h3><ul>
@@ -31,14 +31,14 @@
 <li>是否必须：是</li>
 <li>用法：在模板中替换普通\<body\>标签</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-        &lt;meta charset=&quot;utf-8&quot;/&gt;
-    {%/head%}
-    {%body%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
+    {<span class="hljs-preprocessor">%</span>head<span class="hljs-preprocessor">%</span>}
+        &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+    {<span class="hljs-preprocessor">%</span>/head<span class="hljs-preprocessor">%</span>}
+    {<span class="hljs-preprocessor">%</span>body<span class="hljs-preprocessor">%</span>}
         ....
-    {%/body%}
-{%/html%}
+    {<span class="hljs-preprocessor">%</span>/body<span class="hljs-preprocessor">%</span>}
+{<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl3_60b8620.jpg" alt="body"></p>
 <h3 class="" id="script"><a name="script" class="anchor" href="#script"><span class="doc-link"></span></a>script</h3><ul>
@@ -47,18 +47,18 @@
 <li>是否必须：在模板中使用异步JS组件的JS代码块，必须通过插件包裹</li>
 <li>用法：在模板中替换普通<code>&lt;script&gt;</code>标签</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-       &lt;meta charset=&quot;utf-8&quot;/&gt;
-       {*通过script插件收集加载组件化JS代码*}
-       {%script%}
-           require.async(&quot;home:static/ui/B/B.js&quot;);
-       {%/script%}
-    {%/head%}
-    {%body%}
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
+       &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
+           require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
+       {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%/</span>head<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%body</span><span class="hljs-variable">%}</span>
         ...
-    {%/body%}
-{%/html%}
+    {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
+{<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl4_14c6f6d.jpg" alt="script"></p>
 <h3 class="" id="require"><a name="require" class="anchor" href="#require"><span class="doc-link"></span></a>require</h3><ul>
@@ -68,19 +68,19 @@
 <li>是否必须：是</li>
 <li>用法：在模板中如果需要加载模块内某个静态资源，可以通过require插件加载，便于管理输出静态资源</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-       &lt;meta charset=&quot;utf-8&quot;/&gt;
-       {*通过script插件收集加载组件化JS代码*}
-       {%script%}
-            require.async(&quot;home:static/ui/B/B.js&quot;);
-       {%/script%}
-    {%/head%}
-    {%body%}
-        {%require name=&quot;home:static/index/index.css&quot;%}
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
+       &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
+            require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
+       {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%/</span>head<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%body</span><span class="hljs-variable">%}</span>
+        {<span class="hljs-variable">%require</span> name=<span class="hljs-string">"home:static/index/index.css"</span><span class="hljs-variable">%}</span>
         ...
-    {%/body%}
-{%/html%}
+    {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
+{<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl5_d82f332.jpg" alt="require"></p>
 <h3 class="" id="widget"><a name="widget" class="anchor" href="#widget"><span class="doc-link"></span></a>widget</h3><ul>
@@ -90,18 +90,18 @@
 <li>是否必须：是</li>
 <li>用法：在模板中调用某个模板组件</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-       &lt;meta charset=&quot;utf-8&quot;/&gt;
-       {*通过script插件收集加载组件化JS代码*}
-       {%script%}
-            require.async(&quot;home:static/ui/B/B.js&quot;);
-       {%/script%}
-    {%/head%}
-    {%body%}
-        {%require name=&quot;home:static/index/index.css&quot;%}
-        {%widget name=&quot;home:widget/A/A.tpl&quot;%}
-    {%/body%}
-{%/html%}
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
+       &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
+            require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
+       {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%/</span>head<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%body</span><span class="hljs-variable">%}</span>
+        {<span class="hljs-variable">%require</span> name=<span class="hljs-string">"home:static/index/index.css"</span><span class="hljs-variable">%}</span>
+        {<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"home:widget/A/A.tpl"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
+{<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl6_bd9d3ae.jpg" alt="widget"></p>

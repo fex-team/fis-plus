@@ -18,36 +18,36 @@
 <li><code>业务模块</code>: 根据业务、URI等将站点进行划分的子系统站点模块。</li>
 </ul>
 <p>站点整体目录结构示意：</p>
-<pre><code class="lang-bash">|---site
-|     |---common //通用子系统
-|     |      |---config //smarty配置文件
-|     |      |---page //模板页面文件目录，也包含用于继承的模板页面
-|     |            └── layout.tpl
-|     |      |---widget //组件的资源目录，包括模板组件,JS组件,CSS组件等
-|     |      |     └── menu   //widget模板组件
-|     |      |     |    └── menu.tpl
-|     |      |     |    └── menu.js
-|     |      |     |    └── menu.css
-|     |      |     └── ui   //UI组件
-|     |      |          └── dialog  //JS组件
-|     |      |          |    └──dialog.js
-|     |      |          |    └──dialog.css
-|     |      |          └── reset //CSS组件
-|     |      |               └── reset.css
-|     |      |---static //非组件静态资源目录，包括模板页面引用的静态资源和其他静态资源
-|     |      |---plugin //模板插件目录(可选，对于特殊需要的产品线，可以独立维护)
-|     |      |---fis-conf.js //fis配置文件
-|     |---module1 //module1子系统
-|     |      |---test
-|     |      |---config
-|     |      |---page
-|     |            └── index.tpl
-|     |      |---widget
-|     |      |---static
-|     |      |     └── index //index.tpl模板对应的静态资源
-|     |      |          └── index.js
-|     |      |          └── index.css
-|     |      |---fis-conf.js //fis配置文件
+<pre><code class="hljs lang-bash"><span class="hljs-string">|---site</span>
+<span class="hljs-string">|     |---common //通用子系统</span>
+<span class="hljs-string">|     |      |---config //smarty配置文件</span>
+<span class="hljs-string">|     |      |---page //模板页面文件目录，也包含用于继承的模板页面</span>
+<span class="hljs-string">|     |            └── layout.tpl</span>
+<span class="hljs-string">|     |      |---widget //组件的资源目录，包括模板组件,JS组件,CSS组件等</span>
+<span class="hljs-string">|     |      |     └── menu   //widget模板组件</span>
+<span class="hljs-string">|     |      |     |    └── menu.tpl</span>
+<span class="hljs-string">|     |      |     |    └── menu.js</span>
+<span class="hljs-string">|     |      |     |    └── menu.css</span>
+<span class="hljs-string">|     |      |     └── ui   //UI组件</span>
+<span class="hljs-string">|     |      |          └── dialog  //JS组件</span>
+<span class="hljs-string">|     |      |          |    └──dialog.js</span>
+<span class="hljs-string">|     |      |          |    └──dialog.css</span>
+<span class="hljs-string">|     |      |          └── reset //CSS组件</span>
+<span class="hljs-string">|     |      |               └── reset.css</span>
+<span class="hljs-string">|     |      |---static //非组件静态资源目录，包括模板页面引用的静态资源和其他静态资源</span>
+<span class="hljs-string">|     |      |---plugin //模板插件目录(可选，对于特殊需要的产品线，可以独立维护)</span>
+<span class="hljs-string">|     |      |---fis-conf.js //fis配置文件</span>
+<span class="hljs-string">|     |---module1 //module1子系统</span>
+<span class="hljs-string">|     |      |---test</span>
+<span class="hljs-string">|     |      |---config</span>
+<span class="hljs-string">|     |      |---page</span>
+<span class="hljs-string">|     |            └── index.tpl</span>
+<span class="hljs-string">|     |      |---widget</span>
+<span class="hljs-string">|     |      |---static</span>
+<span class="hljs-string">|     |      |     └── index //index.tpl模板对应的静态资源</span>
+<span class="hljs-string">|     |      |          └── index.js</span>
+<span class="hljs-string">|     |      |          └── index.css</span>
+<span class="hljs-string">|     |      |---fis-conf.js //fis配置文件</span>
 
         ......
 </code></pre>
@@ -60,38 +60,38 @@
 </ul>
 <h4 class=""><a name="路径说明" class="anchor" href="#路径说明"><span class="doc-link"></span></a>路径说明</h4><ol>
 <li><p><code>页面(page)</code>：存放在 <strong>模块根目录/page</strong> 下，url访问路径为 <strong>/模块名/page/页面名</strong>，例如path_to_user_module/page/view.tpl，访问url为：/user/page/view。页面静态资源存储的位置为：</p>
-<pre><code class="lang-bash"> tpl ：path_to_module/page/页面名.tpl
-  js ：path_to_module/page/页面名.js
+<pre><code class="hljs lang-bash"> tpl ：path_to_module/page/页面名<span class="hljs-class">.tpl</span>
+  js ：path_to_module/page/页面名<span class="hljs-class">.js</span>
  css ：path_to_module/page/页面名.css
 </code></pre>
 </li>
 <li><p><code>css组件</code>：一般来说，CSS组件是最简单的组件，它的存储方式为：</p>
-<pre><code class="lang-bash"> #widget目录下的css文件皆为css组件，建议存放在widget/ui目录下
- css ：path_to_module/widget/ui/组件名/组件名.css
+<pre><code class="hljs lang-bash"> <span class="hljs-comment">#widget目录下的css文件皆为css组件，建议存放在widget/ui目录下</span>
+ css ：path_to_module<span class="hljs-regexp">/widget/ui/</span>组件名/组件名.css
 </code></pre>
 </li>
 <li><p><code>js组件</code>：支持AMD规范的js组件，js组件存储的方式为：</p>
-<pre><code class="lang-bash"> #widget目录下的js文件皆为js组件，建议存放在widget/ui目录下
- js ：path_to_module/widget/ui/组件名/组件名.js
+<pre><code class="hljs lang-bash"> #widget目录下的<span class="hljs-keyword">js</span>文件皆为<span class="hljs-keyword">js</span>组件，建议存放在widget/ui目录下
+ <span class="hljs-keyword">js</span> ：path_to_module/widget/ui/组件名/组件名<span class="hljs-string">.js</span>
 </code></pre>
 </li>
 <li><p><code>模板组件</code>：存放在 <strong>模块根目录/widget</strong> 下，每个widget包含至少一个与widget目录<strong>同名</strong>的tpl，同时可以有与widget <strong>同名</strong> 的js、css作为其静态资源。组件存储方式为：</p>
-<pre><code class="lang-bash"> tpl ：path_to_module/widget/组件名/组件名.tpl
-  js ：path_to_module/widget/组件名/组件名.js
+<pre><code class="hljs lang-bash"> tpl ：path_to_module/widget/组件名/组件名<span class="hljs-class">.tpl</span>
+  js ：path_to_module/widget/组件名/组件名<span class="hljs-class">.js</span>
  css ：path_to_module/widget/组件名/组件名.css
 </code></pre>
 </li>
 <li><p><code>配置文件(fis-conf.js)</code>：fis配置文件存放在模块根目录下 <strong>path_to_user_module/fis-conf.js</strong> ，smarty配置文件存放在：</p>
-<pre><code class="lang-bash"> conf：path_to_module/config/模块名/
+<pre><code class="hljs lang-bash"> conf：path_to_module<span class="hljs-regexp">/config/</span>模块名/
 </code></pre>
 </li>
 <li><p><code>smarty插件</code>：与smarty插件相关的都存放在plugin目录下，存储位置为：</p>
-<pre><code class="lang-bash"> 插件：path_to_module/plugin/
+<pre><code class="hljs lang-bash"> 插件：path_to_module<span class="hljs-regexp">/plugin/</span>
 </code></pre>
 </li>
 <li><p><code>测试数据(test)</code>：fis开发环境允许在本地开发中设置测试数据进行调试，测试数据以页面模板为单位进行组织，其存储方式为：</p>
-<pre><code class="lang-bash"> tpl：path_to_module/page/模块名/页面名.tpl
- data：path_to_module/test/page/页面名.json(或php)
+<pre><code class="hljs lang-bash"> tpl：path_to_module/page/模块名/页面名<span class="hljs-class">.tpl</span>
+ data：path_to_module/test/page/页面名.<span class="hljs-function"><span class="hljs-title">json</span><span class="hljs-params">(或php)</span></span>
 </code></pre>
 </li>
 </ol>

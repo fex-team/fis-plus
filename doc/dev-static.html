@@ -1,0 +1,94 @@
+<h3 class="" id="JS组件化"><a name="JS组件化" class="anchor" href="#JS组件化"><span class="doc-link"></span></a>JS组件化</h3><blockquote>
+<p>在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。</p>
+</blockquote>
+<p>在 <strong>模块根目录/widget/</strong> 下的JS资源皆为组件化资源，可以通过require和require.async进行调用，则在编译处理过程中会进行组件化封装。</p>
+<h4 class=""><a name="modjs前端组件化框架" class="anchor" href="#modjs前端组件化框架"><span class="doc-link"></span></a>modjs前端组件化框架</h4><p>modJS是一套的前端模块加载解决方案。与传统的模块加载相比，modJS会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
+作为FIS前端组件化框架，完全遵循AMD规范，用户可以通过lights进行安装</p>
+<pre><code>lights <span class="hljs-keyword">install</span> modjs
+</code></pre><p>同时在开发中需要使用modjs,则需要通过<a href="#html">模板插件语法html</a>进行注册。</p>
+<h4 class=""><a name="组件化封装" class="anchor" href="#组件化封装"><span class="doc-link"></span></a>组件化封装</h4><p>modjs使用define来定义一个模块：</p>
+<pre><code><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
+</code></pre><p><code>在平常开发中，我们只需写factory中的代码即可，无需手动定义模块</code>。发布工具会自动将模块代码嵌入factory的闭包里。</p>
+<p>factory提供了3个参数：require, exports, module ，用于模块的引用和导出。</p>
+<p>在编译处理过程中会对JS文件进行组件化define包装处理:</p>
+<ul>
+<li>JS源码：</li>
+</ul>
+<pre><code class="hljs lang-javascript"><span class="hljs-comment">//common/widget/menu/menu.js</span>
+<span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'common:widget/jquery/jquery.js'</span>);
+
+exports.init = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    $(<span class="hljs-string">'.menu-ui ul li a'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event)</span> </span>{
+        <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+        $(<span class="hljs-string">'.menu-ui ul li a.active'</span>).removeClass(<span class="hljs-string">'active'</span>);
+        $(self).addClass(<span class="hljs-string">'active'</span>);
+        event.preventDefault();
+    });
+};
+</code></pre>
+<ul>
+<li>编译后代码：</li>
+</ul>
+<pre><code class="hljs lang-javascript">define(<span class="hljs-string">'common:widget/menu/menu.js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(require, exports, module)</span></span>{
+    <span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'common:widget/jquery/jquery.js'</span>);
+    exports.init = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+        $(<span class="hljs-string">'.menu-ui ul li a'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event)</span> </span>{
+            <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+            $(<span class="hljs-string">'.menu-ui ul li a.active'</span>).removeClass(<span class="hljs-string">'active'</span>);
+            $(self).addClass(<span class="hljs-string">'active'</span>);
+            event.preventDefault();
+        });
+    };
+});
+</code></pre>
+<h4 class=""><a name="组件化调用" class="anchor" href="#组件化调用"><span class="doc-link"></span></a>组件化调用</h4><ul>
+<li><p>modJS的发布工具会保证你的程序在使用之前，所有依赖的模块都已加载。因此当我们需要一个模块时，只需提供一个模块名即可获取：</p>
+<p><strong>require</strong> (id)</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-comment">//id可为相对路径，或FIS中组件调用路径 模块名:文件所在widget中路径</span>
+  <span class="hljs-function"><span class="hljs-title">require</span><span class="hljs-params">(<span class="hljs-string">"common:widget/ui/a/a.js"</span>)</span></span>
+</code></pre>
+</li>
+</ul>
+<p> 因为所需的模块都已预先加载，因此require可以立即返回该模块。</p>
+<ul>
+<li><p>考虑到有些模块无需在启动时载入，因此modJS提供了可以在运行时<code>异步加载模块的接口</code>：</p>
+<p><strong>require.async</strong> (names, callback)</p>
+<p>names可以是一个id，或者是数组形式的id列表。</p>
+<p>当所有都加载都完成时，callback被调用，names对应的模块实例将依次传入。</p>
+<p>使用require.async获取的模块不会被发布工具安排在预加载中，因此在完成回调之前require将会抛出模块未定义错误。</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-comment">//id可为相对路径，或FIS-Plus中组件调用路径 模块名:文件所在widget中路径</span>
+  <span class="hljs-built_in">require</span>.async([<span class="hljs-string">"common:widget/menu/menu.js"</span>],<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(menu)</span></span>{
+        menu.init()
+  })
+</code></pre>
+</li>
+<li><p><a href="/userdoc/fis/modjs">了解更多modjs</a></p>
+</li>
+</ul>
+<h4 class=""><a name="其他JS" class="anchor" href="#其他JS"><span class="doc-link"></span></a>其他JS</h4><p>在非widget目录下的JS资源，皆为非组件化资源。用户可以通过script标签、<a href="#require">require插件</a>等方式进行调用.</p>
+<h5 class=""><a name="页面模板静态资源" class="anchor" href="#页面模板静态资源"><span class="doc-link"></span></a>页面模板静态资源</h5><p>对应页面模板的同名静态资源，FIS-Plus会在页面自动进行加载，用户不需要在页面中声明加载。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/page/页面名<span class="hljs-class">.tpl</span>
+js ：模板根目录/page/页面名<span class="hljs-class">.js</span>
+css ：模板根目录/page/页面名.css
+</code></pre>
+<h4 class=""><a name="模板组件静态资源" class="anchor" href="#模板组件静态资源"><span class="doc-link"></span></a>模板组件静态资源</h4><p>与模板组件同名的静态资源，FIS会自动添加依赖关系，同时会对JS、CSS进行同步加载。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
+js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
+css ：模板根目录/widget/widgetName/widgetName.css
+</code></pre>
+<h3 class="" id="CSS组件化"><a name="CSS组件化" class="anchor" href="#CSS组件化"><span class="doc-link"></span></a>CSS组件化</h3><blockquote>
+<p>在前端开发中，CSS资源占了很大一部分比例，在FIS中，我们将CSS资源分为组件和非组件类。CSS组件会绑定到同名JS组件、模板组件上，进行加载管理，用户不需要关心加载方式；非组件类CSS资源通过link标签、require插件方式进行加载。</p>
+</blockquote>
+<p>在 <strong>模块根目录/widget</strong> 目录下的CSS资源，皆为组件。在模板组件中以及JS组件中对应同名的CSS组件会自动与模板组件、JS组件添加依赖关系，进行加载管理，用户不需要显示进行调用加载。</p>
+<h4 class=""><a name="其他CSS" class="anchor" href="#其他CSS"><span class="doc-link"></span></a>其他CSS</h4><p>在非widget目录下的CSS资源，皆为非组件化资源。用户可以通过link标签、<a href="#require">require插件</a>等方式进行调用.</p>
+<h4 class=""><a name="页面模板静态资源" class="anchor" href="#页面模板静态资源"><span class="doc-link"></span></a>页面模板静态资源</h4><p><code>对应页面模板的同名静态资源，FIS会在页面自动进行加载</code>，用户不需要在页面中声明加载。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/page/页面名<span class="hljs-class">.tpl</span>
+js ：模板根目录/page/页面名<span class="hljs-class">.js</span>
+css ：模板根目录/page/页面名.css
+</code></pre>
+<h4 class=""><a name="模板组件静态资源" class="anchor" href="#模板组件静态资源"><span class="doc-link"></span></a>模板组件静态资源</h4><p><code>与模板组件同名的静态资源，FIS会自动添加依赖关系，同时会对JS、CSS进行同步加载</code>。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
+js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
+css ：模板根目录/widget/widgetName/widgetName.css
+</code></pre>
+<h4 class=""><a name="Less资源" class="anchor" href="#Less资源"><span class="doc-link"></span></a>Less资源</h4><p>在FIS中默认配置了对less资源处理插件，less文件编译处理后变为css文件。</p>

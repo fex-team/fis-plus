@@ -3,21 +3,21 @@
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;modules.optimizer.tpl&#39;, &#39;smarty-xss&#39;);
+<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-string">'modules.optimizer.tpl'</span>, <span class="hljs-string">'smarty-xss'</span>);
 
-fis.config.set(&#39;settings.optimizer.smarty-xss&#39;, {
-    &#39;escapeMap&#39; : {
-        &#39;js&#39; : &#39;f_escape_js&#39;,  //配置js_escape指定js转义插件的名称
-        &#39;html&#39; : &#39;f_escape_xml&#39;, //配置html_escape指定对于xml转义插件的名称
-        &#39;data&#39; : &#39;f_escape_data&#39;, //配置data_escape指定data转义插件的名称
-        &#39;path&#39; : &#39;f_escape_path&#39;, //配置path_escape指定url、path转义插件的名称
-        &#39;event&#39; : &#39;f_escape_event&#39;, //配置event_escape指定event转义插件的名称
-        &#39;no_escape&#39; : &#39;escape:none&#39; //不需要添加转义的变量标志
+fis.config.set(<span class="hljs-string">'settings.optimizer.smarty-xss'</span>, {
+    <span class="hljs-string">'escapeMap'</span> : {
+        <span class="hljs-string">'js'</span> : <span class="hljs-string">'f_escape_js'</span>,  <span class="hljs-comment">//配置js_escape指定js转义插件的名称</span>
+        <span class="hljs-string">'html'</span> : <span class="hljs-string">'f_escape_xml'</span>, <span class="hljs-comment">//配置html_escape指定对于xml转义插件的名称</span>
+        <span class="hljs-string">'data'</span> : <span class="hljs-string">'f_escape_data'</span>, <span class="hljs-comment">//配置data_escape指定data转义插件的名称</span>
+        <span class="hljs-string">'path'</span> : <span class="hljs-string">'f_escape_path'</span>, <span class="hljs-comment">//配置path_escape指定url、path转义插件的名称</span>
+        <span class="hljs-string">'event'</span> : <span class="hljs-string">'f_escape_event'</span>, <span class="hljs-comment">//配置event_escape指定event转义插件的名称</span>
+        <span class="hljs-string">'no_escape'</span> : <span class="hljs-string">'escape:none'</span> <span class="hljs-comment">//不需要添加转义的变量标志</span>
     },
-    leftDelimiter&#39; : &#39;{%&#39;, //smarty左定界符
-    &#39;rightDelimiter&#39; : &#39;%}&#39;, //smarty右定界符
-    &#39;xssSafeVars&#39; :[          //配置白名单
-        &#39;fis_safe&#39;      //支持正则
+    leftDelimiter<span class="hljs-string">' : '</span>{<span class="hljs-variable">%'</span>, <span class="hljs-comment">//smarty左定界符</span>
+    <span class="hljs-string">'rightDelimiter'</span> : <span class="hljs-string">'%}'</span>, <span class="hljs-comment">//smarty右定界符</span>
+    <span class="hljs-string">'xssSafeVars'</span> :[          <span class="hljs-comment">//配置白名单</span>
+        <span class="hljs-string">'fis_safe'</span>      <span class="hljs-comment">//支持正则</span>
     ]
 });
 </code></pre>
@@ -28,9 +28,9 @@ fis.config.set(&#39;settings.optimizer.smarty-xss&#39;, {
 <li>使用文档：<a href="https://github.com/fex-team/fis-spriter-csssprites">用户文档</a></li>
 <li>配置：</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;settings.spriter.csssprites&#39;, {
-    //图之间的边距
-    margin: 10
+<pre><code class="hljs lang-javascript"><span class="hljs-tag">fis</span><span class="hljs-class">.config</span><span class="hljs-class">.set</span>(<span class="hljs-string">'settings.spriter.csssprites'</span>, {
+    <span class="hljs-comment">//图之间的边距</span>
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">10</span>
 });
 </code></pre>
 <h3 class="" id="模板压缩工具"><a name="模板压缩工具" class="anchor" href="#模板压缩工具"><span class="doc-link"></span></a>模板压缩工具</h3><ul>
@@ -38,7 +38,7 @@ fis.config.set(&#39;settings.optimizer.smarty-xss&#39;, {
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;modules.optimizer.tpl&#39;, &#39;html-compress&#39;);
+<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-symbol">'modules</span>.optimizer.tpl', <span class="hljs-symbol">'html</span>-compress');
 </code></pre>
 <ul>
 <li>详细使用文档：<a href="https://github.com/wangcheng714/fis-optimizer-html-compress">用户文档</a></li>
@@ -48,12 +48,12 @@ fis.config.set(&#39;settings.optimizer.smarty-xss&#39;, {
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;modules.optimizer.js&#39;, &#39;uglify-js&#39;);
+<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-symbol">'modules</span>.optimizer.js', <span class="hljs-symbol">'uglify</span>-js');
 </code></pre>
 <h3 class="" id="CSS压缩工具"><a name="CSS压缩工具" class="anchor" href="#CSS压缩工具"><span class="doc-link"></span></a>CSS压缩工具</h3><ul>
 <li>功能：通过clean-css对CSS文件进行压缩。</li>
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;modules.optimizer.css&#39;, &#39;clean-css&#39;);
+<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-symbol">'modules</span>.optimizer.css', <span class="hljs-symbol">'clean</span>-css');
 </code></pre>

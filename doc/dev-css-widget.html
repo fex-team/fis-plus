@@ -1,17 +1,16 @@
-<hr>
-<blockquote>
+<h3 class="" id="CSS组件化"><a name="CSS组件化" class="anchor" href="#CSS组件化"><span class="doc-link"></span></a>CSS组件化</h3><blockquote>
 <p>在前端开发中，CSS资源占了很大一部分比例，在FIS中，我们将CSS资源分为组件和非组件类。CSS组件会绑定到同名JS组件、模板组件上，进行加载管理，用户不需要关心加载方式；非组件类CSS资源通过link标签、require插件方式进行加载。</p>
 </blockquote>
-<h4 class=""><a name="CSS组件化" class="anchor" href="#CSS组件化"><span class="doc-link"></span></a>CSS组件化</h4><p>在 <strong>模块根目录/widget</strong> 目录下的CSS资源，皆为组件。在模板组件中以及JS组件中对应同名的CSS组件会自动与模板组件、JS组件添加依赖关系，进行加载管理，用户不需要显示进行调用加载。</p>
-<h4 class=""><a name="其他CSS" class="anchor" href="#其他CSS"><span class="doc-link"></span></a>其他CSS</h4><p>在非widget目录下的CSS资源，皆为非组件化资源。用户可以通过link标签、<a href="smarty-plugin.html#require">require插件</a>等方式进行调用.</p>
+<p>在 <strong>模块根目录/widget</strong> 目录下的CSS资源，皆为组件。在模板组件中以及JS组件中对应同名的CSS组件会自动与模板组件、JS组件添加依赖关系，进行加载管理，用户不需要显示进行调用加载。</p>
+<h4 class=""><a name="其他CSS" class="anchor" href="#其他CSS"><span class="doc-link"></span></a>其他CSS</h4><p>在非widget目录下的CSS资源，皆为非组件化资源。用户可以通过link标签、<a href="#require">require插件</a>等方式进行调用.</p>
 <h4 class=""><a name="页面模板静态资源" class="anchor" href="#页面模板静态资源"><span class="doc-link"></span></a>页面模板静态资源</h4><p><code>对应页面模板的同名静态资源，FIS会在页面自动进行加载</code>，用户不需要在页面中声明加载。</p>
-<pre><code class="lang-bash">tpl ：模板根目录/page/页面名.tpl
-js ：模板根目录/page/页面名.js
+<pre><code class="hljs lang-bash">tpl ：模板根目录/page/页面名<span class="hljs-class">.tpl</span>
+js ：模板根目录/page/页面名<span class="hljs-class">.js</span>
 css ：模板根目录/page/页面名.css
 </code></pre>
 <h4 class=""><a name="模板组件静态资源" class="anchor" href="#模板组件静态资源"><span class="doc-link"></span></a>模板组件静态资源</h4><p><code>与模板组件同名的静态资源，FIS会自动添加依赖关系，同时会对JS、CSS进行同步加载</code>。</p>
-<pre><code class="lang-bash">tpl ：模板根目录/widget/widgetName/widgetName.tpl
-js ：模板根目录/widget/widgetName/widgetName.js
+<pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
+js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
 css ：模板根目录/widget/widgetName/widgetName.css
 </code></pre>
 <h4 class=""><a name="Less资源" class="anchor" href="#Less资源"><span class="doc-link"></span></a>Less资源</h4><p>在FIS中默认配置了对less资源处理插件，less文件编译处理后变为css文件。</p>

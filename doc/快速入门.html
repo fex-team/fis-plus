@@ -16,7 +16,7 @@
 <li>可以通过 npm的 <code>--registry</code> 参数指定仓库。指定国内的npm镜像来解决npm被墙的问题。</li>
 </ul>
 <p>例如： </p>
-<pre><code class="lang-bash">npm install &lt;some npm module&gt; -g --registry=镜像
+<pre><code class="hljs lang-bash">npm <span class="hljs-operator"><span class="hljs-keyword">install</span> &lt;<span class="hljs-keyword">some</span> npm <span class="hljs-keyword">module</span>&gt; -g <span class="hljs-comment">--registry=镜像</span></span>
 </code></pre>
 <ul>
 <li>下面提供一个国内镜像<ul>
@@ -29,25 +29,25 @@
 </li>
 </ul>
 <h4 class=""><a name="安装 fis-plus" class="anchor" href="#安装 fis-plus"><span class="doc-link"></span></a>安装 fis-plus</h4><p>nodejs安装好后，命令行执行</p>
-<pre><code class="lang-bash">npm install -g fis-plus
+<pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g fis-plus
 </code></pre>
 <p>安装好fis-plus之后，执行 fisp -v，如果能看到以下信息，则表明安装成功。<em>如果安装过程中遇到什么问题，可以到 <a href="https://github.com/fex-team/fis-plus/issues?state=open">https://github.com/fex-team/fis-plus/issues?state=open</a> 提问题，或者QQ询问。</em></p>
-<pre><code class="lang-bash">➜  ~  fisp -v
+<pre><code class="hljs lang-bash">➜  <span class="hljs-special">~</span>  fisp -v
 
   v0.7.2
 
- __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\_____/\\\\\\\\\\\___
-  _\/\\\///////////__\/////\\\///____/\\\/////////\\\_
-   _\/\\\_________________\/\\\______\//\\\______\///__
-    _\/\\\\\\\\\\\_________\/\\\_______\////\\\_________
-     _\/\\\///////__________\/\\\__________\////\\\______
-      _\/\\\_________________\/\\\_____________\////\\\___
-       _\/\\\_________________\/\\\______/\\\______\//\\\__
-        _\/\\\______________/\\\\\\\\\\\_\///\\\\\\\\\\\/___
-         _\///______________\///////////____\///////////_____
+ __/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>____/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>__
+  _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>//////////__<span class="hljs-command">\/</span>////<span class="hljs-command">\\</span><span class="hljs-command">\/</span>//____/<span class="hljs-command">\\</span><span class="hljs-command">\/</span>////////<span class="hljs-command">\\</span><span class="hljs-command">\_</span>
+   _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>//__
+    _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>______<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>________
+     _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>//////__________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_________<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____
+      _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>____________<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>__
+       _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_
+        _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____________/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span><span class="hljs-command">\/</span>//<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>___
+         _<span class="hljs-command">\/</span>//______________<span class="hljs-command">\/</span>//////////____<span class="hljs-command">\/</span>//////////_____
 </code></pre>
 <h4 class=""><a name="安装lights" class="anchor" href="#安装lights"><span class="doc-link"></span></a>安装lights</h4><p><a href="http://lights.baidu.com">lights</a>是fis提供的包管理工具，托管了fis所有资源。是使用fis的时候，必不可少的利器。</p>
-<pre><code class="lang-bash">npm install -g lights
+<pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g lights
 </code></pre>
 <h4 class=""><a name="安装Java" class="anchor" href="#安装Java"><span class="doc-link"></span></a>安装Java</h4><ul>
 <li><a href="http://java.com/">安装java</a></li>
@@ -59,7 +59,7 @@
 <li>用brew安装</li>
 <li><p>直接下载安装XAMPP</p>
 <h5 class=""><a name="用brew安装" class="anchor" href="#用brew安装"><span class="doc-link"></span></a>用brew安装</h5><p>如果安装了xcode，那么推荐使用brew来安装php。详细使用方法见<a href="http://brew.sh/">官网</a>，这里只说明如何装php-cgi；</p>
-<pre><code class="lang-bash">$ brew install php55 --with-cgi
+<pre><code class="hljs lang-bash">$ brew <span class="hljs-operator"><span class="hljs-keyword">install</span> php55 <span class="hljs-comment">--with-cgi</span></span>
 </code></pre>
 <blockquote>
 <p>如果安装提示没有php55，请用 brew tap homebrew/homebrew-php 后再安装</p>
@@ -69,13 +69,13 @@
 环境变量里面；</p>
 </li>
 <li><p>使用zsh</p>
-<pre><code class="lang-bash">$ echo &#39;export PATH=/Applications/XAMPP/bin:$PATH&#39; &gt;&gt; ~/.zshrc
-$ source ~/.zshrc
+<pre><code class="hljs lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'export PATH=/Applications/XAMPP/bin:$PATH'</span> &gt;&gt; ~/.zshrc
+$ <span class="hljs-built_in">source</span> ~/.zshrc
 </code></pre>
 </li>
 <li><p>使用bash</p>
-<pre><code class="lang-bash">$ echo &#39;export PATH=/Applications/XAMPP/bin:$PATH&#39; &gt;&gt; ~/.bashrc
-$ source ~/.bashrc
+<pre><code class="hljs lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'export PATH=/Applications/XAMPP/bin:$PATH'</span> &gt;&gt; ~/.bashrc
+$ <span class="hljs-built_in">source</span> ~/.bashrc
 </code></pre>
 </li>
 </ul>
@@ -101,20 +101,20 @@ $ source ~/.bashrc
 <li>预览</li>
 </ul>
 <h4 class=""><a name="初始化本地模拟环境" class="anchor" href="#初始化本地模拟环境"><span class="doc-link"></span></a>初始化本地模拟环境</h4><p>为了前后端开发分离，来并行开发，fis-plus提供了一套本地环境模拟的工具，安装并初始化它后就能方便的模拟线上环境了。</p>
-<pre><code class="lang-bash">$ fisp server init
+<pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">server</span> init
 </code></pre>
 <h4 class=""><a name="下载Demo" class="anchor" href="#下载Demo"><span class="doc-link"></span></a>下载Demo</h4><p>FIS的所有示例及其组件都用包管理工具<code>lights</code>进行管理，使用<code>lights</code>安装demo。</p>
-<pre><code class="lang-bash">$ lights install pc-demo
+<pre><code class="hljs lang-bash">$ lights <span class="hljs-keyword">install</span> pc-demo
 </code></pre>
 <p>其实fisp已经集成了<code>lights</code>的客户端。</p>
 <p>和上面等值的用法；</p>
-<pre><code class="lang-bash">$ fisp install pc-demo
+<pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">install</span> pc-demo
 </code></pre>
-<h4 class=""><a name="发布" class="anchor" href="#发布"><span class="doc-link"></span></a>发布</h4><pre><code class="lang-bash">$ cd pc-demo
-$ fisp release -r common
-$ fisp release -r home
+<h4 class=""><a name="发布" class="anchor" href="#发布"><span class="doc-link"></span></a>发布</h4><pre><code class="hljs lang-bash"><span class="hljs-variable">$ </span>cd pc-demo
+<span class="hljs-variable">$ </span>fisp release -r common
+<span class="hljs-variable">$ </span>fisp release -r home
 </code></pre>
-<h4 class=""><a name="预览" class="anchor" href="#预览"><span class="doc-link"></span></a>预览</h4><pre><code class="lang-bash">$ fisp server start #启动服务器
+<h4 class=""><a name="预览" class="anchor" href="#预览"><span class="doc-link"></span></a>预览</h4><pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">server</span> start <span class="hljs-preprocessor">#启动服务器</span>
 </code></pre>
 <p>启动服务的时候，启动成功后会自动打开浏览器，访问首页，这时候你应该打开demo首页，并和下图是一致的。</p>
 <p><img src="/fis-plus/static/fis-plus/doc/img/demo-index_9f1991c.png" alt=""></p>
@@ -127,10 +127,10 @@ $ fisp release -r home
 当前端代码很多时，不得不面临分组件，分页面。为了发布迭代方便，不得不把它们分为不同的子系统。比如用户信息、首页、详情页等等。</p>
 <p><code>模块</code>就是一个子系统，而在fis项目中用<code>namespace</code>和<code>fis-conf.js</code>来区分。每一个模块会有一个配置文件<code>fis-conf.js</code>，还会取名不同的<code>namespace</code>。这主要是为了区分模块之前的静态资源。</p>
 <p>继续进入home模块，可以看看有几个目录及其文件</p>
-<pre><code class="lang-bash">.
-├── fis-conf.js
+<pre><code class="hljs lang-bash">.
+├── fis-conf<span class="hljs-class">.js</span>
 ├── page
-├── server.conf
+├── server<span class="hljs-class">.conf</span>
 ├── static
 ├── test
 └── widget
@@ -148,20 +148,20 @@ $ fisp release -r home
 <h4 class=""><a name="page 如何引入 widget" class="anchor" href="#page 如何引入 widget"><span class="doc-link"></span></a>page 如何引入 widget</h4><ul>
 <li>如示例中<code>index.tpl</code>如何应用<code>widget/header/header.tpl</code> ? 如果用过smarty的你可能会想到<code>include</code>，但在FIS-PLUS中引入widget有个跟<code>include</code>类似的插件完成，<code>widget</code>。</li>
 </ul>
-<pre><code>```html
-{%widget name=&quot;home:widget/header/header.tpl&quot;%}
-```
+<pre><code><span class="hljs-code">```</span>html
+{%widget name="home:widget/header/header.tpl"%}
+<span class="hljs-code">```</span>
 
-`home:widget/header/header.tpl` 这个是FIS中[静态资源id](#静态资源id)
+<span class="hljs-code">`home:widget/header/header.tpl`</span> 这个是FIS中[<span class="hljs-link_label">静态资源id</span>](<span class="hljs-link_url">#静态资源id</span>)
 </code></pre><h4 class=""><a name="模板中如何使用widget目录下的静态资源" class="anchor" href="#模板中如何使用widget目录下的静态资源"><span class="doc-link"></span></a>模板中如何使用widget目录下的静态资源</h4><p>根据目录规范<code>widget</code>目录下的js讲被进行<a href="">组件化封装</a>，根据<a href="">同名依赖</a>原则；</p>
 <ul>
 <li>当使用某个widget下模板是，同名js,css将会被加载。</li>
 <li>当使用某个widget下的js时，其同名css会被加载。</li>
 </ul>
 <h5 class=""><a name="加载JS" class="anchor" href="#加载JS"><span class="doc-link"></span></a>加载JS</h5><p>由于js进行了组件化封装，比如通过<code>require</code>或者<code>require.async</code>函数来执行其中逻辑。</p>
-<pre><code class="lang-html">{%script%}
-require(&#39;/widget/a.js&#39;);
-{%/script%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>script<span class="hljs-preprocessor">%</span>}
+require<span class="hljs-comment">('/widget/a.js')</span>;
+{<span class="hljs-preprocessor">%</span>/script<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p>如上，在模板中使用<code>widget</code>下的js，必须放到<code>{%script%}</code>  <code>{%/script%}</code>之间，用它来代替js的内联用法。</p>
 <h5 class=""><a name="加载css" class="anchor" href="#加载css"><span class="doc-link"></span></a>加载css</h5><p>说完加载js的方法，css如何引入呢？</p>
@@ -169,7 +169,7 @@ require(&#39;/widget/a.js&#39;);
 <li>同名依赖，被依赖</li>
 <li>通过smarty的<code>require</code>插件</li>
 </ul>
-<pre><code class="lang-html">{%require name=&quot;home:widget/a.css&quot;%}
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%require</span> name=<span class="hljs-string">"home:widget/a.css"</span><span class="hljs-variable">%}</span>
 </code></pre>
 <h4 class=""><a name="静态资源id" class="anchor" href="#静态资源id"><span class="doc-link"></span></a>静态资源id</h4><p>静态资源id会贯穿整个用户文档，跟使用密切相关，所以它很重要。现在需要弄清楚两件事情</p>
 <ul>

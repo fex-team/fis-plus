@@ -9,9 +9,9 @@
 <li>解释：当前文件添加依赖，是一个Smarty运行时函数</li>
 <li>参数：<code>name</code>、<code>src</code></li>
 <li><p>例子：</p>
-<pre><code class="lang-smarty">  {%require name=&quot;common:static/lib/jquery.js&quot;%}
+<pre><code class="hljs lang-smarty">  {<span class="hljs-variable">%require</span> name=<span class="hljs-string">"common:static/lib/jquery.js"</span><span class="hljs-variable">%}</span>
   或
-  {%require src=&quot;http://www.baidu.com/cdn/jquery.js&quot;%} {%*外链*%}
+  {<span class="hljs-variable">%require</span> src=<span class="hljs-string">"http://www.baidu.com/cdn/jquery.js"</span><span class="hljs-variable">%}</span> {<span class="hljs-variable">%*</span>外链<span class="hljs-variable">*%</span>}
 </code></pre>
 </li>
 </ul>
@@ -21,7 +21,7 @@
 <li>解释：运行时动态定位某一个资源，是一个Smarty运行时函数</li>
 <li>参数：<code>name</code></li>
 <li><p>例子：</p>
-<pre><code class="lang-smarty">  &lt;script src=&quot;{%uri name=&quot;common:static/lib/jquery.js&quot;%}&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+<pre><code class="hljs lang-smarty"><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"</span></span></span><span class="hljs-template_tag">{%uri name="common:<span class="hljs-keyword">static</span>/lib/jquery.js"%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-value">"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span>
 </code></pre>
 </li>
 </ul>

@@ -18,7 +18,7 @@
 <li>可以通过 npm的 <code>--registry</code> 参数指定仓库。指定国内的npm镜像来解决npm被墙的问题。</li>
 </ul>
 <p>例如： </p>
-<pre><code class="lang-bash">npm install &lt;some npm module&gt; -g --registry=镜像
+<pre><code class="hljs lang-bash">npm <span class="hljs-operator"><span class="hljs-keyword">install</span> &lt;<span class="hljs-keyword">some</span> npm <span class="hljs-keyword">module</span>&gt; -g <span class="hljs-comment">--registry=镜像</span></span>
 </code></pre>
 <ul>
 <li>下面提供一个国内镜像<ul>
@@ -31,25 +31,25 @@
 </li>
 </ul>
 <h4 class=""><a name="安装 fis-plus" class="anchor" href="#安装 fis-plus"><span class="doc-link"></span></a>安装 fis-plus</h4><p>nodejs安装好后，命令行执行</p>
-<pre><code class="lang-bash">npm install -g fis-plus
+<pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g fis-plus
 </code></pre>
 <p>安装好fis-plus之后，执行 fisp -v，如果能看到以下信息，则表明安装成功。<em>如果安装过程中遇到什么问题，可以到 <a href="https://github.com/fex-team/fis-plus/issues?state=open">https://github.com/fex-team/fis-plus/issues?state=open</a> 提问题，或者QQ询问。</em></p>
-<pre><code class="lang-bash">➜  ~  fisp -v
+<pre><code class="hljs lang-bash">➜  <span class="hljs-special">~</span>  fisp -v
 
   v0.7.2
 
- __/\\\\\\\\\\\\\\\__/\\\\\\\\\\\_____/\\\\\\\\\\\___
-  _\/\\\///////////__\/////\\\///____/\\\/////////\\\_
-   _\/\\\_________________\/\\\______\//\\\______\///__
-    _\/\\\\\\\\\\\_________\/\\\_______\////\\\_________
-     _\/\\\///////__________\/\\\__________\////\\\______
-      _\/\\\_________________\/\\\_____________\////\\\___
-       _\/\\\_________________\/\\\______/\\\______\//\\\__
-        _\/\\\______________/\\\\\\\\\\\_\///\\\\\\\\\\\/___
-         _\///______________\///////////____\///////////_____
+ __/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>____/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>__
+  _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>//////////__<span class="hljs-command">\/</span>////<span class="hljs-command">\\</span><span class="hljs-command">\/</span>//____/<span class="hljs-command">\\</span><span class="hljs-command">\/</span>////////<span class="hljs-command">\\</span><span class="hljs-command">\_</span>
+   _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>//__
+    _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>______<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>________
+     _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>//////__________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_________<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____
+      _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>____________<span class="hljs-command">\/</span>///<span class="hljs-command">\\</span><span class="hljs-command">\_</span>__
+       _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>________________<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____<span class="hljs-command">\/</span>/<span class="hljs-command">\\</span><span class="hljs-command">\_</span>_
+        _<span class="hljs-command">\/</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span>_____________/<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\_</span><span class="hljs-command">\/</span>//<span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\\</span><span class="hljs-command">\/</span>___
+         _<span class="hljs-command">\/</span>//______________<span class="hljs-command">\/</span>//////////____<span class="hljs-command">\/</span>//////////_____
 </code></pre>
 <h4 class=""><a name="安装lights" class="anchor" href="#安装lights"><span class="doc-link"></span></a>安装lights</h4><p><a href="http://lights.baidu.com">lights</a>是fis提供的包管理工具，托管了fis所有资源。是使用fis的时候，必不可少的利器。</p>
-<pre><code class="lang-bash">npm install -g lights
+<pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g lights
 </code></pre>
 <h4 class=""><a name="安装Java" class="anchor" href="#安装Java"><span class="doc-link"></span></a>安装Java</h4><ul>
 <li><a href="http://java.com/">安装java</a></li>
@@ -61,7 +61,7 @@
 <li>用brew安装</li>
 <li><p>直接下载安装XAMPP</p>
 <h5 class=""><a name="用brew安装" class="anchor" href="#用brew安装"><span class="doc-link"></span></a>用brew安装</h5><p>如果安装了xcode，那么推荐使用brew来安装php。详细使用方法见<a href="http://brew.sh/">官网</a>，这里只说明如何装php-cgi；</p>
-<pre><code class="lang-bash">$ brew install php55 --with-cgi
+<pre><code class="hljs lang-bash">$ brew <span class="hljs-operator"><span class="hljs-keyword">install</span> php55 <span class="hljs-comment">--with-cgi</span></span>
 </code></pre>
 <blockquote>
 <p>如果安装提示没有php55，请用 brew tap homebrew/homebrew-php 后再安装</p>
@@ -71,13 +71,13 @@
 环境变量里面；</p>
 </li>
 <li><p>使用zsh</p>
-<pre><code class="lang-bash">$ echo &#39;export PATH=/Applications/XAMPP/bin:$PATH&#39; &gt;&gt; ~/.zshrc
-$ source ~/.zshrc
+<pre><code class="hljs lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'export PATH=/Applications/XAMPP/bin:$PATH'</span> &gt;&gt; ~/.zshrc
+$ <span class="hljs-built_in">source</span> ~/.zshrc
 </code></pre>
 </li>
 <li><p>使用bash</p>
-<pre><code class="lang-bash">$ echo &#39;export PATH=/Applications/XAMPP/bin:$PATH&#39; &gt;&gt; ~/.bashrc
-$ source ~/.bashrc
+<pre><code class="hljs lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">'export PATH=/Applications/XAMPP/bin:$PATH'</span> &gt;&gt; ~/.bashrc
+$ <span class="hljs-built_in">source</span> ~/.bashrc
 </code></pre>
 </li>
 </ul>
@@ -103,20 +103,20 @@ $ source ~/.bashrc
 <li>预览</li>
 </ul>
 <h4 class=""><a name="初始化本地模拟环境" class="anchor" href="#初始化本地模拟环境"><span class="doc-link"></span></a>初始化本地模拟环境</h4><p>为了前后端开发分离，来并行开发，fis-plus提供了一套本地环境模拟的工具，安装并初始化它后就能方便的模拟线上环境了。</p>
-<pre><code class="lang-bash">$ fisp server init
+<pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">server</span> init
 </code></pre>
 <h4 class=""><a name="下载Demo" class="anchor" href="#下载Demo"><span class="doc-link"></span></a>下载Demo</h4><p>FIS的所有示例及其组件都用包管理工具<code>lights</code>进行管理，使用<code>lights</code>安装demo。</p>
-<pre><code class="lang-bash">$ lights install pc-demo
+<pre><code class="hljs lang-bash">$ lights <span class="hljs-keyword">install</span> pc-demo
 </code></pre>
 <p>其实fisp已经集成了<code>lights</code>的客户端。</p>
 <p>和上面等值的用法；</p>
-<pre><code class="lang-bash">$ fisp install pc-demo
+<pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">install</span> pc-demo
 </code></pre>
-<h4 class=""><a name="发布" class="anchor" href="#发布"><span class="doc-link"></span></a>发布</h4><pre><code class="lang-bash">$ cd pc-demo
-$ fisp release -r common
-$ fisp release -r home
+<h4 class=""><a name="发布" class="anchor" href="#发布"><span class="doc-link"></span></a>发布</h4><pre><code class="hljs lang-bash"><span class="hljs-variable">$ </span>cd pc-demo
+<span class="hljs-variable">$ </span>fisp release -r common
+<span class="hljs-variable">$ </span>fisp release -r home
 </code></pre>
-<h4 class=""><a name="预览" class="anchor" href="#预览"><span class="doc-link"></span></a>预览</h4><pre><code class="lang-bash">$ fisp server start #启动服务器
+<h4 class=""><a name="预览" class="anchor" href="#预览"><span class="doc-link"></span></a>预览</h4><pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">server</span> start <span class="hljs-preprocessor">#启动服务器</span>
 </code></pre>
 <p>启动服务的时候，启动成功后会自动打开浏览器，访问首页，这时候你应该打开demo首页，并和下图是一致的。</p>
 <p><img src="/fis-plus/static/fis-plus/doc/img/demo-index_9f1991c.png" alt=""></p>
@@ -129,10 +129,10 @@ $ fisp release -r home
 当前端代码很多时，不得不面临分组件，分页面。为了发布迭代方便，不得不把它们分为不同的子系统。比如用户信息、首页、详情页等等。</p>
 <p><code>模块</code>就是一个子系统，而在fis项目中用<code>namespace</code>和<code>fis-conf.js</code>来区分。每一个模块会有一个配置文件<code>fis-conf.js</code>，还会取名不同的<code>namespace</code>。这主要是为了区分模块之前的静态资源。</p>
 <p>继续进入home模块，可以看看有几个目录及其文件</p>
-<pre><code class="lang-bash">.
-├── fis-conf.js
+<pre><code class="hljs lang-bash">.
+├── fis-conf<span class="hljs-class">.js</span>
 ├── page
-├── server.conf
+├── server<span class="hljs-class">.conf</span>
 ├── static
 ├── test
 └── widget
@@ -150,20 +150,20 @@ $ fisp release -r home
 <h4 class=""><a name="page 如何引入 widget" class="anchor" href="#page 如何引入 widget"><span class="doc-link"></span></a>page 如何引入 widget</h4><ul>
 <li>如示例中<code>index.tpl</code>如何应用<code>widget/header/header.tpl</code> ? 如果用过smarty的你可能会想到<code>include</code>，但在FIS-PLUS中引入widget有个跟<code>include</code>类似的插件完成，<code>widget</code>。</li>
 </ul>
-<pre><code>```html
-{%widget name=&quot;home:widget/header/header.tpl&quot;%}
-```
+<pre><code><span class="hljs-code">```</span>html
+{%widget name="home:widget/header/header.tpl"%}
+<span class="hljs-code">```</span>
 
-`home:widget/header/header.tpl` 这个是FIS中[静态资源id](#静态资源id)
+<span class="hljs-code">`home:widget/header/header.tpl`</span> 这个是FIS中[<span class="hljs-link_label">静态资源id</span>](<span class="hljs-link_url">#静态资源id</span>)
 </code></pre><h4 class=""><a name="模板中如何使用widget目录下的静态资源" class="anchor" href="#模板中如何使用widget目录下的静态资源"><span class="doc-link"></span></a>模板中如何使用widget目录下的静态资源</h4><p>根据目录规范<code>widget</code>目录下的js讲被进行<a href="">组件化封装</a>，根据<a href="">同名依赖</a>原则；</p>
 <ul>
 <li>当使用某个widget下模板是，同名js,css将会被加载。</li>
 <li>当使用某个widget下的js时，其同名css会被加载。</li>
 </ul>
 <h5 class=""><a name="加载JS" class="anchor" href="#加载JS"><span class="doc-link"></span></a>加载JS</h5><p>由于js进行了组件化封装，比如通过<code>require</code>或者<code>require.async</code>函数来执行其中逻辑。</p>
-<pre><code class="lang-html">{%script%}
-require(&#39;/widget/a.js&#39;);
-{%/script%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>script<span class="hljs-preprocessor">%</span>}
+require<span class="hljs-comment">('/widget/a.js')</span>;
+{<span class="hljs-preprocessor">%</span>/script<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p>如上，在模板中使用<code>widget</code>下的js，必须放到<code>{%script%}</code>  <code>{%/script%}</code>之间，用它来代替js的内联用法。</p>
 <h5 class=""><a name="加载css" class="anchor" href="#加载css"><span class="doc-link"></span></a>加载css</h5><p>说完加载js的方法，css如何引入呢？</p>
@@ -171,7 +171,7 @@ require(&#39;/widget/a.js&#39;);
 <li>同名依赖，被依赖</li>
 <li>通过smarty的<code>require</code>插件</li>
 </ul>
-<pre><code class="lang-html">{%require name=&quot;home:widget/a.css&quot;%}
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%require</span> name=<span class="hljs-string">"home:widget/a.css"</span><span class="hljs-variable">%}</span>
 </code></pre>
 <h4 class=""><a name="静态资源id" class="anchor" href="#静态资源id"><span class="doc-link"></span></a>静态资源id</h4><p>静态资源id会贯穿整个用户文档，跟使用密切相关，所以它很重要。现在需要弄清楚两件事情</p>
 <ul>
@@ -218,36 +218,36 @@ require(&#39;/widget/a.js&#39;);
 <li><code>业务模块</code>: 根据业务、URI等将站点进行划分的子系统站点模块。</li>
 </ul>
 <p>站点整体目录结构示意：</p>
-<pre><code class="lang-bash">|---site
-|     |---common //通用子系统
-|     |      |---config //smarty配置文件
-|     |      |---page //模板页面文件目录，也包含用于继承的模板页面
-|     |            └── layout.tpl
-|     |      |---widget //组件的资源目录，包括模板组件,JS组件,CSS组件等
-|     |      |     └── menu   //widget模板组件
-|     |      |     |    └── menu.tpl
-|     |      |     |    └── menu.js
-|     |      |     |    └── menu.css
-|     |      |     └── ui   //UI组件
-|     |      |          └── dialog  //JS组件
-|     |      |          |    └──dialog.js
-|     |      |          |    └──dialog.css
-|     |      |          └── reset //CSS组件
-|     |      |               └── reset.css
-|     |      |---static //非组件静态资源目录，包括模板页面引用的静态资源和其他静态资源
-|     |      |---plugin //模板插件目录(可选，对于特殊需要的产品线，可以独立维护)
-|     |      |---fis-conf.js //fis配置文件
-|     |---module1 //module1子系统
-|     |      |---test
-|     |      |---config
-|     |      |---page
-|     |            └── index.tpl
-|     |      |---widget
-|     |      |---static
-|     |      |     └── index //index.tpl模板对应的静态资源
-|     |      |          └── index.js
-|     |      |          └── index.css
-|     |      |---fis-conf.js //fis配置文件
+<pre><code class="hljs lang-bash"><span class="hljs-string">|---site</span>
+<span class="hljs-string">|     |---common //通用子系统</span>
+<span class="hljs-string">|     |      |---config //smarty配置文件</span>
+<span class="hljs-string">|     |      |---page //模板页面文件目录，也包含用于继承的模板页面</span>
+<span class="hljs-string">|     |            └── layout.tpl</span>
+<span class="hljs-string">|     |      |---widget //组件的资源目录，包括模板组件,JS组件,CSS组件等</span>
+<span class="hljs-string">|     |      |     └── menu   //widget模板组件</span>
+<span class="hljs-string">|     |      |     |    └── menu.tpl</span>
+<span class="hljs-string">|     |      |     |    └── menu.js</span>
+<span class="hljs-string">|     |      |     |    └── menu.css</span>
+<span class="hljs-string">|     |      |     └── ui   //UI组件</span>
+<span class="hljs-string">|     |      |          └── dialog  //JS组件</span>
+<span class="hljs-string">|     |      |          |    └──dialog.js</span>
+<span class="hljs-string">|     |      |          |    └──dialog.css</span>
+<span class="hljs-string">|     |      |          └── reset //CSS组件</span>
+<span class="hljs-string">|     |      |               └── reset.css</span>
+<span class="hljs-string">|     |      |---static //非组件静态资源目录，包括模板页面引用的静态资源和其他静态资源</span>
+<span class="hljs-string">|     |      |---plugin //模板插件目录(可选，对于特殊需要的产品线，可以独立维护)</span>
+<span class="hljs-string">|     |      |---fis-conf.js //fis配置文件</span>
+<span class="hljs-string">|     |---module1 //module1子系统</span>
+<span class="hljs-string">|     |      |---test</span>
+<span class="hljs-string">|     |      |---config</span>
+<span class="hljs-string">|     |      |---page</span>
+<span class="hljs-string">|     |            └── index.tpl</span>
+<span class="hljs-string">|     |      |---widget</span>
+<span class="hljs-string">|     |      |---static</span>
+<span class="hljs-string">|     |      |     └── index //index.tpl模板对应的静态资源</span>
+<span class="hljs-string">|     |      |          └── index.js</span>
+<span class="hljs-string">|     |      |          └── index.css</span>
+<span class="hljs-string">|     |      |---fis-conf.js //fis配置文件</span>
 
         ......
 </code></pre>
@@ -260,38 +260,38 @@ require(&#39;/widget/a.js&#39;);
 </ul>
 <h4 class=""><a name="路径说明" class="anchor" href="#路径说明"><span class="doc-link"></span></a>路径说明</h4><ol>
 <li><p><code>页面(page)</code>：存放在 <strong>模块根目录/page</strong> 下，url访问路径为 <strong>/模块名/page/页面名</strong>，例如path_to_user_module/page/view.tpl，访问url为：/user/page/view。页面静态资源存储的位置为：</p>
-<pre><code class="lang-bash"> tpl ：path_to_module/page/页面名.tpl
-  js ：path_to_module/page/页面名.js
+<pre><code class="hljs lang-bash"> tpl ：path_to_module/page/页面名<span class="hljs-class">.tpl</span>
+  js ：path_to_module/page/页面名<span class="hljs-class">.js</span>
  css ：path_to_module/page/页面名.css
 </code></pre>
 </li>
 <li><p><code>css组件</code>：一般来说，CSS组件是最简单的组件，它的存储方式为：</p>
-<pre><code class="lang-bash"> #widget目录下的css文件皆为css组件，建议存放在widget/ui目录下
- css ：path_to_module/widget/ui/组件名/组件名.css
+<pre><code class="hljs lang-bash"> <span class="hljs-comment">#widget目录下的css文件皆为css组件，建议存放在widget/ui目录下</span>
+ css ：path_to_module<span class="hljs-regexp">/widget/ui/</span>组件名/组件名.css
 </code></pre>
 </li>
 <li><p><code>js组件</code>：支持AMD规范的js组件，js组件存储的方式为：</p>
-<pre><code class="lang-bash"> #widget目录下的js文件皆为js组件，建议存放在widget/ui目录下
- js ：path_to_module/widget/ui/组件名/组件名.js
+<pre><code class="hljs lang-bash"> #widget目录下的<span class="hljs-keyword">js</span>文件皆为<span class="hljs-keyword">js</span>组件，建议存放在widget/ui目录下
+ <span class="hljs-keyword">js</span> ：path_to_module/widget/ui/组件名/组件名<span class="hljs-string">.js</span>
 </code></pre>
 </li>
 <li><p><code>模板组件</code>：存放在 <strong>模块根目录/widget</strong> 下，每个widget包含至少一个与widget目录<strong>同名</strong>的tpl，同时可以有与widget <strong>同名</strong> 的js、css作为其静态资源。组件存储方式为：</p>
-<pre><code class="lang-bash"> tpl ：path_to_module/widget/组件名/组件名.tpl
-  js ：path_to_module/widget/组件名/组件名.js
+<pre><code class="hljs lang-bash"> tpl ：path_to_module/widget/组件名/组件名<span class="hljs-class">.tpl</span>
+  js ：path_to_module/widget/组件名/组件名<span class="hljs-class">.js</span>
  css ：path_to_module/widget/组件名/组件名.css
 </code></pre>
 </li>
 <li><p><code>配置文件(fis-conf.js)</code>：fis配置文件存放在模块根目录下 <strong>path_to_user_module/fis-conf.js</strong> ，smarty配置文件存放在：</p>
-<pre><code class="lang-bash"> conf：path_to_module/config/模块名/
+<pre><code class="hljs lang-bash"> conf：path_to_module<span class="hljs-regexp">/config/</span>模块名/
 </code></pre>
 </li>
 <li><p><code>smarty插件</code>：与smarty插件相关的都存放在plugin目录下，存储位置为：</p>
-<pre><code class="lang-bash"> 插件：path_to_module/plugin/
+<pre><code class="hljs lang-bash"> 插件：path_to_module<span class="hljs-regexp">/plugin/</span>
 </code></pre>
 </li>
 <li><p><code>测试数据(test)</code>：fis开发环境允许在本地开发中设置测试数据进行调试，测试数据以页面模板为单位进行组织，其存储方式为：</p>
-<pre><code class="lang-bash"> tpl：path_to_module/page/模块名/页面名.tpl
- data：path_to_module/test/page/页面名.json(或php)
+<pre><code class="hljs lang-bash"> tpl：path_to_module/page/模块名/页面名<span class="hljs-class">.tpl</span>
+ data：path_to_module/test/page/页面名.<span class="hljs-function"><span class="hljs-title">json</span><span class="hljs-params">(或php)</span></span>
 </code></pre>
 </li>
 </ol>
@@ -317,9 +317,9 @@ require(&#39;/widget/a.js&#39;);
 <li>解释：当前文件添加依赖，是一个Smarty运行时函数</li>
 <li>参数：<code>name</code>、<code>src</code></li>
 <li><p>例子：</p>
-<pre><code class="lang-smarty">  {%require name=&quot;common:static/lib/jquery.js&quot;%}
+<pre><code class="hljs lang-smarty">  {<span class="hljs-variable">%require</span> name=<span class="hljs-string">"common:static/lib/jquery.js"</span><span class="hljs-variable">%}</span>
   或
-  {%require src=&quot;http://www.baidu.com/cdn/jquery.js&quot;%} {%*外链*%}
+  {<span class="hljs-variable">%require</span> src=<span class="hljs-string">"http://www.baidu.com/cdn/jquery.js"</span><span class="hljs-variable">%}</span> {<span class="hljs-variable">%*</span>外链<span class="hljs-variable">*%</span>}
 </code></pre>
 </li>
 </ul>
@@ -329,7 +329,7 @@ require(&#39;/widget/a.js&#39;);
 <li>解释：运行时动态定位某一个资源，是一个Smarty运行时函数</li>
 <li>参数：<code>name</code></li>
 <li><p>例子：</p>
-<pre><code class="lang-smarty">  &lt;script src=&quot;{%uri name=&quot;common:static/lib/jquery.js&quot;%}&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+<pre><code class="hljs lang-smarty"><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"</span></span></span><span class="hljs-template_tag">{%uri name="common:<span class="hljs-keyword">static</span>/lib/jquery.js"%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-value">"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></span>
 </code></pre>
 </li>
 </ul>
@@ -343,102 +343,102 @@ require(&#39;/widget/a.js&#39;);
 </div>
 <div class="bs-docs-section"><h3 class="" id="模板开发"><a name="模板开发" class="anchor" href="#模板开发"><span class="doc-link"></span></a>模板开发</h3><h4 class=""><a name="页面模板" class="anchor" href="#页面模板"><span class="doc-link"></span></a>页面模板</h4><p>在模块中，用户可直接访问浏览的页面称为页面模板，文件在 <strong>模块根目录/page/</strong> 下。FIS提供提供了很多模板插件替换原生html标签，为页面模板开发提供使用。</p>
 <ul>
-<li>通过<a href="smarty-plugin.html#html">html插件</a>控制整体页面的输出，以及注册前端组件化框架。</li>
-<li>通过<a href="smarty-plugin.html#head">head插件</a>在模板解析运行时，控制加载同步静态资源使用。</li>
-<li>通过<a href="smarty-plugin.html#body">body插件</a>可在页面底部集中输出JS静态资源。</li>
+<li>通过<a href="#html">html插件</a>控制整体页面的输出，以及注册前端组件化框架。</li>
+<li>通过<a href="#head">head插件</a>在模板解析运行时，控制加载同步静态资源使用。</li>
+<li>通过<a href="#body">body插件</a>可在页面底部集中输出JS静态资源。</li>
 </ul>
 <p>从demo中common模块的layout.tpl，可以了解到如何通过后端框架进行开发，组织整个页面:</p>
-<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
-{%* 使用html插件替换普通html标签，同时注册JS组件化库 *%}
-{%html framework=&quot;common:static/mod.js&quot; class=&quot;expanded&quot;%}
-    {%* 使用head插件替换head标签，主要为控制加载同步静态资源使用 *%}
-    {%head%}
-    &lt;meta charset=&quot;utf-8&quot;/&gt;
-        &lt;meta content=&quot;{%$description%}&quot; name=&quot;description&quot;&gt;
-        &lt;title&gt;{%$title%}&lt;/title&gt;
-        {%block name=&quot;block_head_static&quot;%}{%/block%}
-    {%/head%}
-    {%* 使用body插件替换body标签，主要为可控制加载JS资源 *%}
-    {%body%}
-    {%block name=&quot;content&quot;%}{%/block%}
-    {%/body%}
-{%/html%}
+<pre><code class="hljs lang-html"><span class="xml"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+</span><span class="hljs-template_tag">{%* 使用html插件替换普通html标签，同时注册JS组件化库 *%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%html framework="common:<span class="hljs-keyword">static</span>/mod.js" class="expanded"%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%* 使用head插件替换head标签，主要为控制加载同步静态资源使用 *%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%head%}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"</span></span></span><span class="hljs-template_tag">{%$description%}</span><span class="xml"><span class="hljs-tag"><span class="hljs-value">"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span></span><span class="hljs-template_tag">{%$title%}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+        </span><span class="hljs-template_tag">{%<span class="hljs-keyword">block</span> name="block_head_static"%}</span><span class="xml"></span><span class="hljs-template_tag">{%/<span class="hljs-keyword">block</span>%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%/head%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%* 使用body插件替换body标签，主要为可控制加载JS资源 *%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%body%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%<span class="hljs-keyword">block</span> name="content"%}</span><span class="xml"></span><span class="hljs-template_tag">{%/<span class="hljs-keyword">block</span>%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%/body%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%/html%}</span><span class="xml"></span>
 </code></pre>
 <ul>
-<li>通过<a href="smarty-plugin.html#require">require插件</a>加载静态资源，便于静态资源管理。</li>
-<li>通过<a href="smarty-plugin.html#script">script插件</a>管理JS片段，集中在页面底部加载。</li>
-<li>通过<a href="smarty-plugin.html#widget">widget插件</a>调用模板组件组织页面，处理对应的静态资源。</li>
+<li>通过<a href="#require">require插件</a>加载静态资源，便于静态资源管理。</li>
+<li>通过<a href="#script">script插件</a>管理JS片段，集中在页面底部加载。</li>
+<li>通过<a href="#widget">widget插件</a>调用模板组件组织页面，处理对应的静态资源。</li>
 </ul>
 <p>在demo-home模块中的index.tpl，加载页面模板对应的静态资源，通过模板组件组织页面:</p>
-<pre><code class="lang-html">{%extends file=&quot;common/page/layout.tpl&quot;%}
-{%block name=&quot;block_head_static&quot;%}
-    &lt;!--[if lt IE 9]&gt;
-        &lt;script src=&quot;/lib/js/html5.js&quot;&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
-    {%* 模板中加载静态资源 *%}
-    {%require name=&quot;home:static/lib/css/bootstrap.css&quot;%}
-    {%require name=&quot;home:static/lib/css/bootstrap-responsive.css&quot;%}
-    {%require name=&quot;home:static/lib/js/jquery-1.10.1.js&quot;%}
-{%/block%}
-{%block name=&quot;content&quot;%}
-    &lt;div id=&quot;wrapper&quot;&gt;
-        &lt;div id=&quot;sidebar&quot;&gt;
-            {%* 通过widget插件加载模块化页面片段，name属性对应文件路径,模块名:文件目录路径 *%}
-            {%widget
-                name=&quot;common:widget/sidebar/sidebar.tpl&quot;
+<pre><code class="hljs lang-html"><span class="xml"></span><span class="hljs-template_tag">{%<span class="hljs-keyword">extends</span> file="common/page/layout.tpl"%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%<span class="hljs-keyword">block</span> name="block_head_static"%}</span><span class="xml">
+    <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
+        &lt;script src="/lib/js/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+    </span><span class="hljs-template_tag">{%* 模板中加载静态资源 *%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%require name="home:<span class="hljs-keyword">static</span>/lib/css/bootstrap.css"%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%require name="home:<span class="hljs-keyword">static</span>/lib/css/bootstrap-responsive.css"%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%require name="home:<span class="hljs-keyword">static</span>/lib/js/jquery-1.10.1.js"%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%/<span class="hljs-keyword">block</span>%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%<span class="hljs-keyword">block</span> name="content"%}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"wrapper"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"sidebar"</span>&gt;</span>
+            </span><span class="hljs-template_tag">{%* 通过widget插件加载模块化页面片段，name属性对应文件路径,模块名:文件目录路径 *%}</span><span class="xml">
+            </span><span class="hljs-template_tag">{%widget
+                name="common:widget/sidebar/sidebar.tpl"
                 data=$docs
-            %}
-        &lt;/div&gt;
-        &lt;div id=&quot;container&quot;&gt;
-            {%widget name=&quot;home:widget/slogan/slogan.tpl&quot;%}
-            {%foreach $docs as $index=&gt;$doc%}
-                {%widget
-                    name=&quot;home:widget/section/section.tpl&quot;
-                    call=&quot;section&quot;
+            %}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"container"</span>&gt;</span>
+            </span><span class="hljs-template_tag">{%widget name="home:widget/slogan/slogan.tpl"%}</span><span class="xml">
+            </span><span class="hljs-template_tag">{%foreach $docs <span class="hljs-keyword">as</span> $index=&gt;$doc%}</span><span class="xml">
+                </span><span class="hljs-template_tag">{%widget
+                    name="home:widget/section/section.tpl"
+                    call="section"
                     data=$doc index=$index
-                %}
-            {%/foreach%}
-        &lt;/div&gt;
-    &lt;/div&gt;
-    {%require name=&quot;home:static/index/index.css&quot;%}
-    {%* 通过script插件收集JS片段 *%}
-    {%script%}var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
-document.write(unescape(&quot;%3Cscript src=&#39;&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F70b541fe48dd916f7163051b0ce5a0e3&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&quot;));{%/script%}
-{%/block%}
+                %}</span><span class="xml">
+            </span><span class="hljs-template_tag">{%/foreach%}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    </span><span class="hljs-template_tag">{%require name="home:<span class="hljs-keyword">static</span>/index/index.css"%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%* 通过script插件收集JS片段 *%}</span><span class="xml">
+    </span><span class="hljs-template_tag">{%script%}</span><span class="xml">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F70b541fe48dd916f7163051b0ce5a0e3' type='text/javascript'%3E%3C/script%3E"));</span><span class="hljs-template_tag">{%/script%}</span><span class="xml">
+</span><span class="hljs-template_tag">{%/<span class="hljs-keyword">block</span>%}</span><span class="xml"></span>
 </code></pre>
 <p>在模板框架中，对应的文件调用路径均为 <code>modulename:相对模块根目录的相对路径</code> ：</p>
-<pre><code>//home为模块名，static/lib/css/bootstrap.css为绝对路径截取home模块根目录后的路径
-{%require name=&quot;home:static/lib/css/bootstrap.css&quot;%}
+<pre><code>/<span class="hljs-regexp">/home为模块名，static/lib</span><span class="hljs-regexp">/css/bootstrap</span>.css为绝对路径截取home模块根目录后的路径
+{%<span class="hljs-keyword">require</span> name=<span class="hljs-string">"home:static/lib/css/bootstrap.css"</span>%}
 </code></pre><h5 class=""><a name="前端模板" class="anchor" href="#前端模板"><span class="doc-link"></span></a>前端模板</h5><p>在FIS中，集成了<a href="http://baidufe.github.com/BaiduTemplate">百度前端模板</a>。在编译过程中，会静态编译baidu template，不需要线上编译，提高页面运行效率。</p>
 <p>在JS代码中，通过 <strong>__inline</strong> 方式进行编译处理前端模板。同时规定以 <strong>tmpl</strong> 为后缀的文件为前端模板，使用方式：</p>
-<pre><code class="lang-javascript">//编译前
-var demoTemplate = __inline(&#39;demo.tmpl&#39;);
-//编译后
-var demoTemplate = function (_template_object) {
+<pre><code class="hljs lang-javascript"><span class="hljs-comment">//编译前</span>
+<span class="hljs-keyword">var</span> demoTemplate = __inline(<span class="hljs-string">'demo.tmpl'</span>);
+<span class="hljs-comment">//编译后</span>
+<span class="hljs-keyword">var</span> demoTemplate = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(_template_object)</span> </span>{
        .......
 };
 </code></pre>
 <p>在使用前端模板时需要注意的问题：</p>
-<pre><code>//在__inline前端模板前加载template对象
-require(&quot;common:static/lib/template.js&quot;)
+<pre><code>//在__inline前端模板前加载<span class="hljs-keyword">template</span>对象
+require(<span class="hljs-string">"common:static/lib/template.js"</span>)
 //或者通过全局加载的方式
-{%require name=&quot;common:static/lib/template.js&quot;%}
+{%require name=<span class="hljs-string">"common:static/lib/template.js"</span>%}
 </code></pre><p>template的安装方式</p>
-<pre><code>//在common的static/lib目录下执行下面命令
-$ lights install template
+<pre><code>//在common的<span class="hljs-keyword">static</span>/lib目录下执行下面命令
+$ lights install <span class="hljs-keyword">template</span>
 </code></pre><h4 class=""><a name="模板组件化" class="anchor" href="#模板组件化"><span class="doc-link"></span></a>模板组件化</h4><p>模板组件是能独立提供功能且能够复用的页面片段，所在规范目录 <strong>模块根目录/widget/</strong> ，模板组件以模板、JS组件、CSS组件组成（默认必须有模板）。</p>
 <h4 class=""><a name="widget定义" class="anchor" href="#widget定义"><span class="doc-link"></span></a>widget定义</h4><p>只要在widget目录下的Smarty模板即为模板组件，<code>目录下有与模板同名的JS、CSS文件FIS会自动添加依赖关系处理，在模板渲染时进行同步加载</code>。</p>
 <h5 class=""><a name="widget调用" class="anchor" href="#widget调用"><span class="doc-link"></span></a>widget调用</h5><p>调用一个模板组件需要通过widget语法，如我们想调用home下的section模板组件，则语法为</p>
-<pre><code>//调用模板的路径为 modulename:模板在widget目录下路径
-{%widget name=&quot;home:widget/section/section.tpl&quot; %}
+<pre><code><span class="hljs-comment">//调用模板的路径为 modulename:模板在widget目录下路径</span>
+{<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"home:widget/section/section.tpl"</span> <span class="hljs-variable">%}</span>
 </code></pre><h4 class=""><a name="widget函数调用方式" class="anchor" href="#widget函数调用方式"><span class="doc-link"></span></a>widget函数调用方式</h4><p>widget插件可以直接调用某个smarty的function函数，使用方式为:</p>
-<pre><code>//在模板中定义function函数
-{%function name=&quot;functionDemo&quot;%}
-       .............
-{%/function%}
-------------------------------------
-//在模板中调用此函数
-{%widget call=&quot;functionDemo&quot; %}
+<pre><code><span class="hljs-comment">//在模板中定义function函数</span>
+{%function name="functionDemo"%}
+<span class="hljs-code">       .............</span>
+<span class="hljs-header">{%/function%}
+------------------------------------</span>
+<span class="hljs-comment">//在模板中调用此函数</span>
+{%widget call="functionDemo" %}
 </code></pre></div>
 <div class="bs-docs-section"><blockquote>
 <p>FIS-PLUS提供一套基于smarty(version &gt;= 3.1.13)插件的后台运行框架，针对静态资源管理、模板模块化、pagelet等功能。</p>
@@ -449,9 +449,9 @@ $ lights install template
 <li>是否必须：是</li>
 <li>用法：在模板中替换普通\<html\>标签</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
     ....
-{%/html%}
+{<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl1_fbad2c9.jpg" alt=""></p>
 <h3 class="" id="head"><a name="head" class="anchor" href="#head"><span class="doc-link"></span></a>head</h3><ul>
@@ -460,11 +460,11 @@ $ lights install template
 <li>是否必须：是</li>
 <li>用法：在模板中替换普通\<head\>标签</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-        &lt;meta charset=&quot;utf-8&quot;/&gt;
-    {%/head%}
-{%/html%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
+    {<span class="hljs-preprocessor">%</span>head<span class="hljs-preprocessor">%</span>}
+        &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+    {<span class="hljs-preprocessor">%</span>/head<span class="hljs-preprocessor">%</span>}
+{<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl2_2373cfb.jpg" alt="head"></p>
 <h3 class="" id="body"><a name="body" class="anchor" href="#body"><span class="doc-link"></span></a>body</h3><ul>
@@ -473,14 +473,14 @@ $ lights install template
 <li>是否必须：是</li>
 <li>用法：在模板中替换普通\<body\>标签</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-        &lt;meta charset=&quot;utf-8&quot;/&gt;
-    {%/head%}
-    {%body%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
+    {<span class="hljs-preprocessor">%</span>head<span class="hljs-preprocessor">%</span>}
+        &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+    {<span class="hljs-preprocessor">%</span>/head<span class="hljs-preprocessor">%</span>}
+    {<span class="hljs-preprocessor">%</span>body<span class="hljs-preprocessor">%</span>}
         ....
-    {%/body%}
-{%/html%}
+    {<span class="hljs-preprocessor">%</span>/body<span class="hljs-preprocessor">%</span>}
+{<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl3_60b8620.jpg" alt="body"></p>
 <h3 class="" id="script"><a name="script" class="anchor" href="#script"><span class="doc-link"></span></a>script</h3><ul>
@@ -489,18 +489,18 @@ $ lights install template
 <li>是否必须：在模板中使用异步JS组件的JS代码块，必须通过插件包裹</li>
 <li>用法：在模板中替换普通<code>&lt;script&gt;</code>标签</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-       &lt;meta charset=&quot;utf-8&quot;/&gt;
-       {*通过script插件收集加载组件化JS代码*}
-       {%script%}
-           require.async(&quot;home:static/ui/B/B.js&quot;);
-       {%/script%}
-    {%/head%}
-    {%body%}
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
+       &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
+           require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
+       {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%/</span>head<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%body</span><span class="hljs-variable">%}</span>
         ...
-    {%/body%}
-{%/html%}
+    {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
+{<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl4_14c6f6d.jpg" alt="script"></p>
 <h3 class="" id="require"><a name="require" class="anchor" href="#require"><span class="doc-link"></span></a>require</h3><ul>
@@ -510,19 +510,19 @@ $ lights install template
 <li>是否必须：是</li>
 <li>用法：在模板中如果需要加载模块内某个静态资源，可以通过require插件加载，便于管理输出静态资源</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-       &lt;meta charset=&quot;utf-8&quot;/&gt;
-       {*通过script插件收集加载组件化JS代码*}
-       {%script%}
-            require.async(&quot;home:static/ui/B/B.js&quot;);
-       {%/script%}
-    {%/head%}
-    {%body%}
-        {%require name=&quot;home:static/index/index.css&quot;%}
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
+       &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
+            require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
+       {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%/</span>head<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%body</span><span class="hljs-variable">%}</span>
+        {<span class="hljs-variable">%require</span> name=<span class="hljs-string">"home:static/index/index.css"</span><span class="hljs-variable">%}</span>
         ...
-    {%/body%}
-{%/html%}
+    {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
+{<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl5_d82f332.jpg" alt="require"></p>
 <h3 class="" id="widget"><a name="widget" class="anchor" href="#widget"><span class="doc-link"></span></a>widget</h3><ul>
@@ -532,43 +532,137 @@ $ lights install template
 <li>是否必须：是</li>
 <li>用法：在模板中调用某个模板组件</li>
 </ul>
-<pre><code class="lang-html">{%html framework=&quot;home:static/lib/mod.js&quot;%}
-    {%head%}
-       &lt;meta charset=&quot;utf-8&quot;/&gt;
-       {*通过script插件收集加载组件化JS代码*}
-       {%script%}
-            require.async(&quot;home:static/ui/B/B.js&quot;);
-       {%/script%}
-    {%/head%}
-    {%body%}
-        {%require name=&quot;home:static/index/index.css&quot;%}
-        {%widget name=&quot;home:widget/A/A.tpl&quot;%}
-    {%/body%}
-{%/html%}
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
+       &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
+       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
+            require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
+       {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%/</span>head<span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%body</span><span class="hljs-variable">%}</span>
+        {<span class="hljs-variable">%require</span> name=<span class="hljs-string">"home:static/index/index.css"</span><span class="hljs-variable">%}</span>
+        {<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"home:widget/A/A.tpl"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
+{<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl6_bd9d3ae.jpg" alt="widget"></p>
 </div>
-<div class="bs-docs-section"></div>
+<div class="bs-docs-section"><h3 class="" id="JS组件化"><a name="JS组件化" class="anchor" href="#JS组件化"><span class="doc-link"></span></a>JS组件化</h3><blockquote>
+<p>在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。</p>
+</blockquote>
+<p>在 <strong>模块根目录/widget/</strong> 下的JS资源皆为组件化资源，可以通过require和require.async进行调用，则在编译处理过程中会进行组件化封装。</p>
+<h4 class=""><a name="modjs前端组件化框架" class="anchor" href="#modjs前端组件化框架"><span class="doc-link"></span></a>modjs前端组件化框架</h4><p>modJS是一套的前端模块加载解决方案。与传统的模块加载相比，modJS会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
+作为FIS前端组件化框架，完全遵循AMD规范，用户可以通过lights进行安装</p>
+<pre><code>lights <span class="hljs-keyword">install</span> modjs
+</code></pre><p>同时在开发中需要使用modjs,则需要通过<a href="#html">模板插件语法html</a>进行注册。</p>
+<h4 class=""><a name="组件化封装" class="anchor" href="#组件化封装"><span class="doc-link"></span></a>组件化封装</h4><p>modjs使用define来定义一个模块：</p>
+<pre><code><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
+</code></pre><p><code>在平常开发中，我们只需写factory中的代码即可，无需手动定义模块</code>。发布工具会自动将模块代码嵌入factory的闭包里。</p>
+<p>factory提供了3个参数：require, exports, module ，用于模块的引用和导出。</p>
+<p>在编译处理过程中会对JS文件进行组件化define包装处理:</p>
+<ul>
+<li>JS源码：</li>
+</ul>
+<pre><code class="hljs lang-javascript"><span class="hljs-comment">//common/widget/menu/menu.js</span>
+<span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'common:widget/jquery/jquery.js'</span>);
+
+exports.init = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    $(<span class="hljs-string">'.menu-ui ul li a'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event)</span> </span>{
+        <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+        $(<span class="hljs-string">'.menu-ui ul li a.active'</span>).removeClass(<span class="hljs-string">'active'</span>);
+        $(self).addClass(<span class="hljs-string">'active'</span>);
+        event.preventDefault();
+    });
+};
+</code></pre>
+<ul>
+<li>编译后代码：</li>
+</ul>
+<pre><code class="hljs lang-javascript">define(<span class="hljs-string">'common:widget/menu/menu.js'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(require, exports, module)</span></span>{
+    <span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'common:widget/jquery/jquery.js'</span>);
+    exports.init = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+        $(<span class="hljs-string">'.menu-ui ul li a'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event)</span> </span>{
+            <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
+            $(<span class="hljs-string">'.menu-ui ul li a.active'</span>).removeClass(<span class="hljs-string">'active'</span>);
+            $(self).addClass(<span class="hljs-string">'active'</span>);
+            event.preventDefault();
+        });
+    };
+});
+</code></pre>
+<h4 class=""><a name="组件化调用" class="anchor" href="#组件化调用"><span class="doc-link"></span></a>组件化调用</h4><ul>
+<li><p>modJS的发布工具会保证你的程序在使用之前，所有依赖的模块都已加载。因此当我们需要一个模块时，只需提供一个模块名即可获取：</p>
+<p><strong>require</strong> (id)</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-comment">//id可为相对路径，或FIS中组件调用路径 模块名:文件所在widget中路径</span>
+  <span class="hljs-function"><span class="hljs-title">require</span><span class="hljs-params">(<span class="hljs-string">"common:widget/ui/a/a.js"</span>)</span></span>
+</code></pre>
+</li>
+</ul>
+<p> 因为所需的模块都已预先加载，因此require可以立即返回该模块。</p>
+<ul>
+<li><p>考虑到有些模块无需在启动时载入，因此modJS提供了可以在运行时<code>异步加载模块的接口</code>：</p>
+<p><strong>require.async</strong> (names, callback)</p>
+<p>names可以是一个id，或者是数组形式的id列表。</p>
+<p>当所有都加载都完成时，callback被调用，names对应的模块实例将依次传入。</p>
+<p>使用require.async获取的模块不会被发布工具安排在预加载中，因此在完成回调之前require将会抛出模块未定义错误。</p>
+<pre><code class="hljs lang-javascript">  <span class="hljs-comment">//id可为相对路径，或FIS-Plus中组件调用路径 模块名:文件所在widget中路径</span>
+  <span class="hljs-built_in">require</span>.async([<span class="hljs-string">"common:widget/menu/menu.js"</span>],<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(menu)</span></span>{
+        menu.init()
+  })
+</code></pre>
+</li>
+<li><p><a href="/userdoc/fis/modjs">了解更多modjs</a></p>
+</li>
+</ul>
+<h4 class=""><a name="其他JS" class="anchor" href="#其他JS"><span class="doc-link"></span></a>其他JS</h4><p>在非widget目录下的JS资源，皆为非组件化资源。用户可以通过script标签、<a href="#require">require插件</a>等方式进行调用.</p>
+<h5 class=""><a name="页面模板静态资源" class="anchor" href="#页面模板静态资源"><span class="doc-link"></span></a>页面模板静态资源</h5><p>对应页面模板的同名静态资源，FIS-Plus会在页面自动进行加载，用户不需要在页面中声明加载。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/page/页面名<span class="hljs-class">.tpl</span>
+js ：模板根目录/page/页面名<span class="hljs-class">.js</span>
+css ：模板根目录/page/页面名.css
+</code></pre>
+<h4 class=""><a name="模板组件静态资源" class="anchor" href="#模板组件静态资源"><span class="doc-link"></span></a>模板组件静态资源</h4><p>与模板组件同名的静态资源，FIS会自动添加依赖关系，同时会对JS、CSS进行同步加载。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
+js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
+css ：模板根目录/widget/widgetName/widgetName.css
+</code></pre>
+<h3 class="" id="CSS组件化"><a name="CSS组件化" class="anchor" href="#CSS组件化"><span class="doc-link"></span></a>CSS组件化</h3><blockquote>
+<p>在前端开发中，CSS资源占了很大一部分比例，在FIS中，我们将CSS资源分为组件和非组件类。CSS组件会绑定到同名JS组件、模板组件上，进行加载管理，用户不需要关心加载方式；非组件类CSS资源通过link标签、require插件方式进行加载。</p>
+</blockquote>
+<p>在 <strong>模块根目录/widget</strong> 目录下的CSS资源，皆为组件。在模板组件中以及JS组件中对应同名的CSS组件会自动与模板组件、JS组件添加依赖关系，进行加载管理，用户不需要显示进行调用加载。</p>
+<h4 class=""><a name="其他CSS" class="anchor" href="#其他CSS"><span class="doc-link"></span></a>其他CSS</h4><p>在非widget目录下的CSS资源，皆为非组件化资源。用户可以通过link标签、<a href="#require">require插件</a>等方式进行调用.</p>
+<h4 class=""><a name="页面模板静态资源" class="anchor" href="#页面模板静态资源"><span class="doc-link"></span></a>页面模板静态资源</h4><p><code>对应页面模板的同名静态资源，FIS会在页面自动进行加载</code>，用户不需要在页面中声明加载。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/page/页面名<span class="hljs-class">.tpl</span>
+js ：模板根目录/page/页面名<span class="hljs-class">.js</span>
+css ：模板根目录/page/页面名.css
+</code></pre>
+<h4 class=""><a name="模板组件静态资源" class="anchor" href="#模板组件静态资源"><span class="doc-link"></span></a>模板组件静态资源</h4><p><code>与模板组件同名的静态资源，FIS会自动添加依赖关系，同时会对JS、CSS进行同步加载</code>。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
+js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
+css ：模板根目录/widget/widgetName/widgetName.css
+</code></pre>
+<h4 class=""><a name="Less资源" class="anchor" href="#Less资源"><span class="doc-link"></span></a>Less资源</h4><p>在FIS中默认配置了对less资源处理插件，less文件编译处理后变为css文件。</p>
+</div>
 <div class="bs-docs-section"><h3 class="" id="模板XSS修复工具"><a name="模板XSS修复工具" class="anchor" href="#模板XSS修复工具"><span class="doc-link"></span></a>模板XSS修复工具</h3><ul>
 <li>功能：对Smarty模板进行XSS校验修复。</li>
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;modules.optimizer.tpl&#39;, &#39;smarty-xss&#39;);
+<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-string">'modules.optimizer.tpl'</span>, <span class="hljs-string">'smarty-xss'</span>);
 
-fis.config.set(&#39;settings.optimizer.smarty-xss&#39;, {
-    &#39;escapeMap&#39; : {
-        &#39;js&#39; : &#39;f_escape_js&#39;,  //配置js_escape指定js转义插件的名称
-        &#39;html&#39; : &#39;f_escape_xml&#39;, //配置html_escape指定对于xml转义插件的名称
-        &#39;data&#39; : &#39;f_escape_data&#39;, //配置data_escape指定data转义插件的名称
-        &#39;path&#39; : &#39;f_escape_path&#39;, //配置path_escape指定url、path转义插件的名称
-        &#39;event&#39; : &#39;f_escape_event&#39;, //配置event_escape指定event转义插件的名称
-        &#39;no_escape&#39; : &#39;escape:none&#39; //不需要添加转义的变量标志
+fis.config.set(<span class="hljs-string">'settings.optimizer.smarty-xss'</span>, {
+    <span class="hljs-string">'escapeMap'</span> : {
+        <span class="hljs-string">'js'</span> : <span class="hljs-string">'f_escape_js'</span>,  <span class="hljs-comment">//配置js_escape指定js转义插件的名称</span>
+        <span class="hljs-string">'html'</span> : <span class="hljs-string">'f_escape_xml'</span>, <span class="hljs-comment">//配置html_escape指定对于xml转义插件的名称</span>
+        <span class="hljs-string">'data'</span> : <span class="hljs-string">'f_escape_data'</span>, <span class="hljs-comment">//配置data_escape指定data转义插件的名称</span>
+        <span class="hljs-string">'path'</span> : <span class="hljs-string">'f_escape_path'</span>, <span class="hljs-comment">//配置path_escape指定url、path转义插件的名称</span>
+        <span class="hljs-string">'event'</span> : <span class="hljs-string">'f_escape_event'</span>, <span class="hljs-comment">//配置event_escape指定event转义插件的名称</span>
+        <span class="hljs-string">'no_escape'</span> : <span class="hljs-string">'escape:none'</span> <span class="hljs-comment">//不需要添加转义的变量标志</span>
     },
-    leftDelimiter&#39; : &#39;{%&#39;, //smarty左定界符
-    &#39;rightDelimiter&#39; : &#39;%}&#39;, //smarty右定界符
-    &#39;xssSafeVars&#39; :[          //配置白名单
-        &#39;fis_safe&#39;      //支持正则
+    leftDelimiter<span class="hljs-string">' : '</span>{<span class="hljs-variable">%'</span>, <span class="hljs-comment">//smarty左定界符</span>
+    <span class="hljs-string">'rightDelimiter'</span> : <span class="hljs-string">'%}'</span>, <span class="hljs-comment">//smarty右定界符</span>
+    <span class="hljs-string">'xssSafeVars'</span> :[          <span class="hljs-comment">//配置白名单</span>
+        <span class="hljs-string">'fis_safe'</span>      <span class="hljs-comment">//支持正则</span>
     ]
 });
 </code></pre>
@@ -579,9 +673,9 @@ fis.config.set(&#39;settings.optimizer.smarty-xss&#39;, {
 <li>使用文档：<a href="https://github.com/fex-team/fis-spriter-csssprites">用户文档</a></li>
 <li>配置：</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;settings.spriter.csssprites&#39;, {
-    //图之间的边距
-    margin: 10
+<pre><code class="hljs lang-javascript"><span class="hljs-tag">fis</span><span class="hljs-class">.config</span><span class="hljs-class">.set</span>(<span class="hljs-string">'settings.spriter.csssprites'</span>, {
+    <span class="hljs-comment">//图之间的边距</span>
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">10</span>
 });
 </code></pre>
 <h3 class="" id="模板压缩工具"><a name="模板压缩工具" class="anchor" href="#模板压缩工具"><span class="doc-link"></span></a>模板压缩工具</h3><ul>
@@ -589,7 +683,7 @@ fis.config.set(&#39;settings.optimizer.smarty-xss&#39;, {
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;modules.optimizer.tpl&#39;, &#39;html-compress&#39;);
+<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-symbol">'modules</span>.optimizer.tpl', <span class="hljs-symbol">'html</span>-compress');
 </code></pre>
 <ul>
 <li>详细使用文档：<a href="https://github.com/wangcheng714/fis-optimizer-html-compress">用户文档</a></li>
@@ -599,32 +693,32 @@ fis.config.set(&#39;settings.optimizer.smarty-xss&#39;, {
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;modules.optimizer.js&#39;, &#39;uglify-js&#39;);
+<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-symbol">'modules</span>.optimizer.js', <span class="hljs-symbol">'uglify</span>-js');
 </code></pre>
 <h3 class="" id="CSS压缩工具"><a name="CSS压缩工具" class="anchor" href="#CSS压缩工具"><span class="doc-link"></span></a>CSS压缩工具</h3><ul>
 <li>功能：通过clean-css对CSS文件进行压缩。</li>
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="lang-javascript">fis.config.set(&#39;modules.optimizer.css&#39;, &#39;clean-css&#39;);
+<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-symbol">'modules</span>.optimizer.css', <span class="hljs-symbol">'clean</span>-css');
 </code></pre>
 </div>
 <div class="bs-docs-section"><blockquote>
 <p>FIS-Plus提供静态资源管理系统，支持通过运行时计算静态资源使用情况来加载对应的静态资源。为了达到合理的高性能的加载方式，用户可以将静态资源进行合并。</p>
 </blockquote>
 <h3 class="" id="配置"><a name="配置" class="anchor" href="#配置"><span class="doc-link"></span></a>配置</h3><p>用户可以在配置文件中，通过配置将静态资源进行合并处理，对demo-home模块增加打包配置：</p>
-<pre><code class="lang-javascript">//fis-conf.js
-fis.config.set(&#39;pack&#39;, {
-        //打包所有static目录下的JS文件
-        &#39;pkg/aio.js&#39; : /^\/static\/(.*\.js)$/i,
-        &#39;pkg/widget.js&#39; : [
-            /^\/widget\/ui\/(.*\.js)$/i,
-            &#39;/widget/menu/menu.js&#39;
+<pre><code class="hljs lang-javascript"><span class="xml">//fis-conf.js
+fis.config.set('pack', </span><span class="hljs-expression">{
+        //打包所有<span class="hljs-variable">static</span>目录下的<span class="hljs-variable">JS</span>文件
+        '<span class="hljs-variable">pkg</span><span class="hljs-end-block">/aio.js</span>' : /^\<span class="hljs-end-block">/static</span>\/(<span class="hljs-variable">.</span>*\<span class="hljs-variable">.js</span>)$<span class="hljs-end-block">/i</span>,
+        '<span class="hljs-variable">pkg</span><span class="hljs-end-block">/widget.js</span>' : [
+            /^\<span class="hljs-end-block">/widget</span>\<span class="hljs-end-block">/ui</span>\/(<span class="hljs-variable">.</span>*\<span class="hljs-variable">.js</span>)$<span class="hljs-end-block">/i</span>,
+            '<span class="hljs-end-block">/widget</span><span class="hljs-end-block">/menu</span><span class="hljs-end-block">/menu.js</span>'
         ],
-        //打包所有的css文件
-        //将内容输出为static/pkg/aio.css文件
-        &#39;pkg/aio.css&#39; : &#39;**.css&#39;
-});
+        //打包所有的<span class="hljs-variable">css</span>文件
+        //将内容输出为<span class="hljs-variable">static</span><span class="hljs-end-block">/pkg</span><span class="hljs-end-block">/aio.css</span>文件
+        '<span class="hljs-variable">pkg</span><span class="hljs-end-block">/aio.css</span>' : '**<span class="hljs-variable">.css</span>'
+}</span><span class="xml">);</span>
 </code></pre>
 <p>打包配置支持正则、字符串以及通配符，用户可灵活根据自己需求进行资源打包，同时注意以下打包细节：</p>
 <ul>
@@ -652,35 +746,35 @@ fis.config.set(&#39;pack&#39;, {
 <p>具体使用可以进入官网查看<a href="http://solar.baidu.com/autopack/doc">此文档</a></p>
 </div>
 <div class="bs-docs-section"><h3 class="" id="模块配置"><a name="模块配置" class="anchor" href="#模块配置"><span class="doc-link"></span></a>模块配置</h3><p>每个模块都有对应的模块名，同时需要在配置文件中申明，配置如下。</p>
-<pre><code class="lang-javascript">fis.config.set(&#39;namespace&#39;, &#39;common&#39;);
+<pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'namespace'</span>, <span class="hljs-string">'common'</span>);
 </code></pre>
 <p>模块编译输出时默认都为utf8编码，如果需要做修改，可以进行如下配置：</p>
-<pre><code class="lang-javascript">fis.config.set(&#39;project.charset&#39;, &#39;gbk&#39;);
+<pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.charset'</span>, <span class="hljs-string">'gbk'</span>);
 </code></pre>
 <p>对静态资源进行MD5戳编译时，默认长度都为7，当然你也可以进行修改：</p>
-<pre><code class="lang-javascript">fis.config.set(&#39;project.md5Length&#39;, 8);
+<pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.md5Length'</span>, <span class="hljs-number">8</span>);
 </code></pre>
 <h3 class="" id="Smarty配置"><a name="Smarty配置" class="anchor" href="#Smarty配置"><span class="doc-link"></span></a>Smarty配置</h3><p>在fis-config.js配置文件中，可在setting节点下配置smarty节点，修改定界符。</p>
-<pre><code class="lang-xml">fis.config.set(&#39;settings.smarty&#39;, {
-    &#39;left_delimiter&#39;  : &#39;&lt;{&#39;,
-    &#39;right_delimiter&#39; : &#39;}&gt;&#39;
+<pre><code class="hljs lang-xml">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'settings.smarty'</span>, {
+    <span class="hljs-string">'left_delimiter'</span>  : <span class="hljs-string">'&lt;{'</span>,
+    <span class="hljs-string">'right_delimiter'</span> : <span class="hljs-string">'}&gt;'</span>
 })
 </code></pre>
 <h4 class=""><a name="本地调试环境smarty定界符修改" class="anchor" href="#本地调试环境smarty定界符修改"><span class="doc-link"></span></a>本地调试环境smarty定界符修改</h4><p>在模块根目录下放置<code>smarty.conf</code>将其内容设置为：</p>
-<pre><code>left_delimiter=&#39;&lt;{&#39;
-right_delimiter=&#39;}&gt;&#39;
+<pre><code>left_delimiter=<span class="hljs-string">'&lt;{'</span>
+right_delimiter=<span class="hljs-string">'}&gt;'</span>
 </code></pre><p><em>假设有多个模块，只需要在common模块根目录下放置<code>smarty.conf</code></em></p>
 <h3 class="" id="domain配置"><a name="domain配置" class="anchor" href="#domain配置"><span class="doc-link"></span></a>domain配置</h3><p>设置静态资源域名，domain的值如果不是特殊需要，请不要以&quot;/&quot;结尾。</p>
-<pre><code class="lang-xml">//fis-conf.js
-//用法一
-fis.config.set(&#39;roadmap.domain&#39;, &#39;http://s1.example.com, http://s2.example.com&#39;);
+<pre><code class="hljs lang-xml"><span class="hljs-comment">//fis-conf.js</span>
+<span class="hljs-comment">//用法一</span>
+fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'roadmap.domain'</span>, <span class="hljs-string">'http://s1.example.com, http://s2.example.com'</span>);
 
-//用法二
-fis.config.set(&#39;roadmap.domain&#39;, {
-    //widget目录下的所有css文件使用 http://css1.example.com 作为域名
-    &#39;widget/**.css&#39; : &#39;http://css1.example.com&#39;,
-    //所有的js文件使用 http://js1.example.com 或者  http://js2.example.com 作为域名
-    &#39;**.js&#39; : [&#39;http://js1.example.com&#39;, &#39;http://js2.example.com&#39;]
+<span class="hljs-comment">//用法二</span>
+fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'roadmap.domain'</span>, {
+    <span class="hljs-comment">//widget目录下的所有css文件使用 http://css1.example.com 作为域名</span>
+    <span class="hljs-string">'widget/**.css'</span> : <span class="hljs-string">'http://css1.example.com'</span>,
+    <span class="hljs-comment">//所有的js文件使用 http://js1.example.com 或者  http://js2.example.com 作为域名</span>
+    <span class="hljs-string">'**.js'</span> : [<span class="hljs-string">'http://js1.example.com'</span>, <span class="hljs-string">'http://js2.example.com'</span>]
 });
 </code></pre>
 </div>
@@ -688,9 +782,9 @@ fis.config.set(&#39;roadmap.domain&#39;, {
 <div class="bs-docs-section"><h3 class="" id="本地测试数据模拟"><a name="本地测试数据模拟" class="anchor" href="#本地测试数据模拟"><span class="doc-link"></span></a>本地测试数据模拟</h3><blockquote>
 <p>FIS提供了本地调试数据功能，本地预览模板时会根据选择的测试数据进行展现，默认的smarty版本为3.1.13。</p>
 </blockquote>
-<h4 class=""><a name="浏览器书签" class="anchor" href="#浏览器书签"><span class="doc-link"></span></a>浏览器书签</h4><pre><code class="lang-javascript">
-//新建浏览器书签，网址为以下内容
-javascript: void function() {var d = new Date();d.setFullYear(d.getFullYear() + 1);document.cookie=&#39;FIS_DEBUG_DATA=4f10e208f47bfb4d35a5e6f115a6df1a;path=/;expires=&#39; + d.toGMTString() + &#39;&#39;;location.reload(); }();
+<h4 class=""><a name="浏览器书签" class="anchor" href="#浏览器书签"><span class="doc-link"></span></a>浏览器书签</h4><pre><code class="hljs lang-javascript">
+<span class="hljs-comment">//新建浏览器书签，网址为以下内容</span>
+javascript: <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{<span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();d.setFullYear(d.getFullYear() + <span class="hljs-number">1</span>);<span class="hljs-built_in">document</span>.cookie=<span class="hljs-string">'FIS_DEBUG_DATA=4f10e208f47bfb4d35a5e6f115a6df1a;path=/;expires='</span> + d.toGMTString() + <span class="hljs-string">''</span>;location.reload(); }();
 </code></pre>
 <p>当模块进行编译发布后，在预览的时候点击书签，进入数据管理页面，修改数据后再进行渲染:
 <img src="http://c.hiphotos.bdimg.com/album/s%3D550%3Bq%3D90%3Bc%3Dxiangce%2C100%2C100/sign=83ad2515d1a20cf44290feda46323a0b/b3b7d0a20cf431ad11c0e1ab4a36acaf2edd9816.jpg?referer=e006ba57e1fe9925921b5c60d80c&amp;x=.jpg" alt="fisp test"></p>
@@ -699,23 +793,23 @@ javascript: void function() {var d = new Date();d.setFullYear(d.getFullYear() + 
 <p>模板:
     <code>photo/page/index.tpl</code></p>
 <p>对应数据文件:</p>
-<pre><code>0. photo/test/page/index.php (php格式)
-0. photo/test/page/index.json (json格式)
+<pre><code><span class="hljs-number">0</span>. photo/test/page/index<span class="hljs-class">.php</span> (php格式)
+<span class="hljs-number">0</span>. photo/test/page/index<span class="hljs-class">.json</span> (json格式)
 </code></pre><p>也支持多份数据(php格式为例):</p>
-<pre><code>0. photo/test/page/index/index_1.php
-0. photo/test/page/index/index_2.php
-...
+<pre><code><span class="hljs-number">0.</span> photo/test/page/index/index_1.php
+<span class="hljs-number">0.</span> photo/test/page/index/index_2.php
+<span class="hljs-keyword">...</span>
 </code></pre><p>文件名: <code>index_\d+.php</code></p>
 </div>
 <div class="bs-docs-section"><h3 class="" id="Rewrite"><a name="Rewrite" class="anchor" href="#Rewrite"><span class="doc-link"></span></a>Rewrite</h3><p>FIS的rewrite模块。用于本地浏览时，url的转发，覆盖fis默认的url规则，模拟线上url规则，ajax请求，文件转发等。</p>
 <h3 class="" id="基础配置"><a name="基础配置" class="anchor" href="#基础配置"><span class="doc-link"></span></a>基础配置</h3><p>在模块目录下通过配置文件server.conf文件进行配置，配置方式是：</p>
 <p>rewrite和redirect开头的会被翻译成一条匹配规则，自上而下的匹配。所有非rewrite和redirect开头的会被当做注释处理。</p>
-<pre><code class="lang-php">rewrite ： 匹配规则后转发到一个文件
-template ： 匹配规则后转发到一个模板文件，但url不改变，只针对模板
+<pre><code class="hljs lang-php">rewrite ： 匹配规则后转发到一个文件
+<span class="hljs-keyword">template</span> ： 匹配规则后转发到一个模板文件，但url不改变，只针对模板
 redirect ： 匹配规则后重定向到另一个url
 
-rewrite ^\/news\?.*tn\=[a-zA-Z0-9]+.* app/data/news.php
-template ^\/(.*)\?.*  /home/page/index.tpl
+rewrite ^\/news\?.*tn\=[a-zA-<span class="hljs-type">Z0</span>-<span class="hljs-number">9</span>]+.* app/data/news.php
+<span class="hljs-keyword">template</span> ^\/(.*)\?.*  /home/page/index.tpl
 redirect ^\/index\?.* /home/page/index
 </code></pre>
 <h3 class="" id="配置文件说明"><a name="配置文件说明" class="anchor" href="#配置文件说明"><span class="doc-link"></span></a>配置文件说明</h3><ol>
@@ -750,8 +844,8 @@ public static function setRoot($root){}</p>
 <div class="bs-docs-section"><h3 class="" id="独立加载静态资源"><a name="独立加载静态资源" class="anchor" href="#独立加载静态资源"><span class="doc-link"></span></a>独立加载静态资源</h3><p>如果你在配置文件中进行静态资源打包配置，在编译后会产出资源表以及相对应的打包文件。在页面渲染加载时，FIS后端框架会根据页面静态资源使用情况加载对应的资源包及静态资源。
 如果在联调或者线上出现问题时，需要独立加载静态资源不想加载资源包进行问题定位怎么设置呢？</p>
 <p>你只需要在url上加上 <code>fis_debug</code> 参数，即可获取静态资源的独立加载，而不是加载资源包。</p>
-<pre><code class="lang-php">如访问demo-home中的index:
-http://localhost:8080/home/page/index?fis_debug
+<pre><code class="hljs lang-php">如访问demo-home中的<span class="hljs-string">index:</span>
+<span class="hljs-string">http:</span><span class="hljs-comment">//localhost:8080/home/page/index?fis_debug</span>
 </code></pre>
 <p>此时页面渲染加载的都是独立的静态资源。</p>
 </div>
@@ -795,9 +889,9 @@ http://localhost:8080/home/page/index?fis_debug
 <p>很多同学到这里就有疑问了，如此复杂的请求方式，一个页面可以分块请求，是不是需要在开发的时候实现很多东西，维护起来很麻烦。答案是 <strong>否定</strong> 的。整个方案依托于FIS 2.0的前端架构思想，从目录结构到静态资源管理。只需要做很小的工作就瞬间享受到 <strong>Quickling解决方案</strong> 带来的新特性。</p>
 </blockquote>
 <p>首先得有一个后端模板是Smarty的项目，并且是使用FIS制定的目录规范以及用FIS编译。目录结构是这样的；</p>
-<pre><code class="lang-bash">├── build.sh
+<pre><code class="hljs lang-bash">├── build<span class="hljs-class">.sh</span>
 ├── config
-├── fis-conf.js
+├── fis-conf<span class="hljs-class">.js</span>
 ├── page
 ├── static
 ├── test
@@ -805,38 +899,38 @@ http://localhost:8080/home/page/index?fis_debug
 </code></pre>
 <p>每个目录放些什么，就不一一说明了，见<a href="http://fe.baidu.com/doc/fis/2.0/user/">FIS2.0文档</a>。我们只关注 <strong>widget</strong> 和 <strong>page</strong> 。</p>
 <p>假设有一个widget <strong>widget_A</strong> ，包括一个模板文件widget_A.tpl和一个js文件widget_A.js还有一个css文件widget_A.css。有个页面 <strong>index.tpl</strong> 要使用这个widget。</p>
-<pre><code class="lang-bash">├── page
-│   └── index.tpl
+<pre><code class="hljs lang-bash">├── page
+│   └── index<span class="hljs-class">.tpl</span>
 └── widget
     └── widget_A
-        ├── widget_A.js
-        ├── widget_A.css
+        ├── widget_A<span class="hljs-class">.js</span>
+        ├── widget_A<span class="hljs-class">.css</span>
         └── widget_A.tpl
 </code></pre>
 <p>网站展示时渲染 <strong>index.tpl</strong> ，widget_A是页面中的一部分。</p>
-<pre><code class="lang-html">//index.tpl
-{%widget name=&quot;demo:widget/widget_A/widget_A.tpl&quot;%}
+<pre><code class="hljs lang-html"><span class="hljs-comment">//index.tpl</span>
+{<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"demo:widget/widget_A/widget_A.tpl"</span><span class="hljs-variable">%}</span>
 </code></pre>
 <p>当页面被渲染时，widget_A就展现在页面上了。</p>
-<pre><code class="lang-html">&lt;html&gt;
-...
-    &lt;link href=&quot;widget_A.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+<pre><code class="hljs lang-html">&lt;html&gt;
+<span class="hljs-keyword">...</span>
+    &lt;link href=<span class="hljs-string">"widget_A.css"</span> rel=<span class="hljs-string">"stylesheet"</span> type=<span class="hljs-string">"text/css"</span> /&gt;
 ....
     &lt;div&gt; 我是widget_A &lt;/div&gt;
 ....
-    &lt;script src=&quot;widget_A.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=<span class="hljs-string">"widget_A.js"</span> type=<span class="hljs-string">"text/javascript"</span>&gt;&lt;/script&gt;
 &lt;/html&gt;
 </code></pre>
 <p>上面是正常的使用方式，就像<strong>方案二</strong>中说到的，如何让渲染index.tpl时不展示<strong>widget_A</strong>呢。</p>
-<pre><code class="lang-html">{%widget name=&quot;demo:widget/widget_A/widget_A.tpl&quot; mode=&quot;quickling&quot; pagelet_id=&quot;widget_A&quot;%}
+<pre><code class="hljs lang-html">{%widget <span class="hljs-variable">name=</span><span class="hljs-string">"demo:widget/widget_A/widget_A.tpl"</span> <span class="hljs-variable">mode=</span><span class="hljs-string">"quickling"</span> <span class="hljs-variable">pagelet_id=</span><span class="hljs-string">"widget_A"</span>%}
 </code></pre>
 <p>OK，改造完成。
 加了<code>mode=&quot;quickling&quot;</code>和<code>pagelet_id=&quot;widget_A&quot;</code>这俩参数。
 这时候渲染页面的结果是什么呢？</p>
-<pre><code class="lang-html">&lt;html&gt;
+<pre><code class="hljs lang-html">&lt;html&gt;
 .....
-&lt;textarea class=&quot;fis_g_bigrender&quot; style=“display:none”&gt;BigPipe.asyncLoad({id: &quot;widget_A&quot;})&lt;/textarea&gt;
-&lt;div id=&quot;widget_A&quot;&gt;&lt;/div&gt;
+&lt;<span class="hljs-tag">textarea</span> class=<span class="hljs-string">"fis_g_bigrender"</span> style=“<span class="hljs-attribute">display</span>:<span class="hljs-attribute">none</span>”&gt;BigPipe.<span class="hljs-function"><span class="hljs-title">asyncLoad</span><span class="hljs-params">({id: <span class="hljs-string">"widget_A"</span>})</span></span>&lt;/textarea&gt;
+&lt;<span class="hljs-tag">div</span> id=<span class="hljs-string">"widget_A"</span>&gt;&lt;/div&gt;
 .....
 &lt;/html&gt;
 </code></pre>
@@ -944,26 +1038,26 @@ http://localhost:8080/home/page/index?fis_debug
 <li>预览 <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></li>
 </ol>
 <h4 class=""><a name="如何开发" class="anchor" href="#如何开发"><span class="doc-link"></span></a>如何开发</h4><p>按照上面说的使用方法，已经在本地模拟一个国际化项目。修改测试数据<code>i18n</code>字段，为en_US、ja_JP或其他分别看看效果。</p>
-<pre><code class="lang-php">&lt;?php
-$fis_data = array(
-    &#39;i18n&#39; =&gt; &#39;en_US&#39;
+<pre><code class="hljs lang-php"><span class="php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$fis_data</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'i18n'</span> =&gt; <span class="hljs-string">'en_US'</span>
 );
-?&gt;
+<span class="hljs-preprocessor">?&gt;</span></span>
 </code></pre>
 <p>进入模块i18n，详细了解一下目录结构；</p>
-<pre><code class="lang-bash">└── i18n
-    ├── fis-conf.js
+<pre><code class="hljs lang-bash">└── i18n
+    ├── fis-conf<span class="hljs-class">.js</span>
     ├── lang #语言目录
-    │   ├── en_US.po
-    │   └── ja_JP.po
+    │   ├── en_US<span class="hljs-class">.po</span>
+    │   └── ja_JP<span class="hljs-class">.po</span>
     ├── page
-    ├── server.conf
+    ├── server<span class="hljs-class">.conf</span>
     ├── static
     ├── test
     └── widget
 </code></pre>
 <p>当这个模块release以后得到如下结果;</p>
-<pre><code class="lang-bash">.
+<pre><code class="hljs lang-bash">.
 ├── config
 │   ├── i18n-map.json
 │   └── lang
@@ -971,11 +1065,11 @@ $fis_data = array(
 │       └── i18n.ja_JP.json
 ├── server-conf
 │   └── i18n.conf
-├── static
+├── <span class="hljs-keyword">static</span>
 │   └── i18n
-│       ├── mod.js
+│       ├── <span class="hljs-keyword">mod</span>.js
 │       └── widget
-├── template
+├── <span class="hljs-keyword">template</span>
 │   └── i18n
 │       ├── page
 │       └── widget
@@ -984,10 +1078,10 @@ $fis_data = array(
         └── page
 </code></pre>
 <p>可以看到config/lang目录下是一些JSON翻译文件。翻译文件格式为;</p>
-<pre><code class="lang-json">{
-    &quot;原文&quot;: &quot;译文&quot;,
-    &quot;原文1&quot;: &quot;译文1&quot;
-}
+<pre><code class="hljs lang-json">{
+    "<span class="hljs-attribute">原文</span>": <span class="hljs-value"><span class="hljs-string">"译文"</span></span>,
+    "<span class="hljs-attribute">原文1</span>": <span class="hljs-value"><span class="hljs-string">"译文1"</span>
+</span>}
 </code></pre>
 <p>这样当运行时调用了翻译函数，翻译函数读取对应的翻译文件展示译文。</p>
 <h5 class=""><a name="翻译函数" class="anchor" href="#翻译函数"><span class="doc-link"></span></a>翻译函数</h5><ul>
@@ -995,10 +1089,10 @@ $fis_data = array(
 <li>Smarty模板中的语言</li>
 </ul>
 <p>js中的语言：</p>
-<pre><code class="lang-javascript">var str = __(&#39;中文&#39;);
+<pre><code class="hljs lang-javascript"><span class="hljs-keyword">var</span> str = __(<span class="hljs-string">'中文'</span>);
 </code></pre>
 <p>Smarty模板中的语言：</p>
-<pre><code class="lang-html">{%&#39;中文&#39;|gettext%}
+<pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span><span class="hljs-string">'中文'</span>|gettext<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p>综述，开发过程；</p>
 <ol>

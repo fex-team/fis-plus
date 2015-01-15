@@ -43,15 +43,15 @@
 <li>FIS组件化库<a href="https://github.com/zjcqoo/mod" title="modjs">modjs</a>保持最新</li>
 </ul>
 <p>插件引入代码如下：</p>
-<pre><code class="lang-smarty">{%html framework=&quot;common:static/lib/js/mod.js&quot;%}
+<pre><code class="hljs lang-smarty">{%html framework=<span class="hljs-string">"common:static/lib/js/mod.js"</span>%}
     {%head%}
-        ...
-        {%require name=&quot;common:static/lib/js/lazyload.js&quot;%}
-        {%require name=&quot;common:static/lib/js/BigPipe.js&quot;%}
-        ...
+        <span class="hljs-keyword">...</span>
+        {%<span class="hljs-keyword">require</span> name=<span class="hljs-string">"common:static/lib/js/lazyload.js"</span>%}
+        {%<span class="hljs-keyword">require</span> name=<span class="hljs-string">"common:static/lib/js/BigPipe.js"</span>%}
+        <span class="hljs-keyword">...</span>
     {%/head%}
     {%body%}
-        ...
+        <span class="hljs-keyword">...</span>
     {%/body%}
 {%/html%}
 </code></pre>
@@ -61,38 +61,38 @@
 </blockquote>
 <p>只需要引入支持localstorage的FIS组件化库<a href="https://github.com/xiangshouding/mod-store.js" title="mod-store.js">mod-store.js</a>即可。</p>
 <p>插件引入代码如下：</p>
-<pre><code class="lang-smarty">{%html framework=&quot;common:static/lib/js/mod-store.js&quot;%}
+<pre><code class="hljs lang-smarty">{%html framework=<span class="hljs-string">"common:static/lib/js/mod-store.js"</span>%}
     {%head%}
-        ...
-        {%require name=&quot;common:static/lib/js/lazyload.js&quot;%}
-        {%require name=&quot;common:static/lib/js/BigPipe.js&quot;%}
-        ...
+        <span class="hljs-keyword">...</span>
+        {%<span class="hljs-keyword">require</span> name=<span class="hljs-string">"common:static/lib/js/lazyload.js"</span>%}
+        {%<span class="hljs-keyword">require</span> name=<span class="hljs-string">"common:static/lib/js/BigPipe.js"</span>%}
+        <span class="hljs-keyword">...</span>
     {%/head%}
     {%body%}
-        ...
+        <span class="hljs-keyword">...</span>
     {%/body%}
 {%/html%}
 </code></pre>
 <h4 class=""><a name="<strong>前端loader</strong>" class="anchor" href="#<strong>前端loader</strong>"><span class="doc-link"></span></a><strong>前端loader</strong></h4><p><code>局部刷新</code> 中FIS提供了一个可被异步请求的<code>后端框架</code>(以<a href="https://github.com/xiangshouding/bigpipe.smarty" title="BigPipe.smarty">smarty插件</a>的方式)；
 <a href="https://github.com/xiangshouding/bigpipe.smarty/blob/master/single/common/static/lib/js/BigPipe.js" title="loader">前端loader</a>。</p>
 <p>前端loader提供接口<code>fetch</code>方法，来异步请求渲染一个widget。</p>
-<pre><code class="lang-javascript">BigPipe.fetch(url, containerId);
+<pre><code class="hljs lang-javascript">BigPipe.fetch<span class="hljs-comment">(url, containerId)</span>;
 </code></pre>
 <p>例子</p>
-<pre><code class="lang-javascript">BigPipe.fetch(&#39;/index/page/index?pagelets[]=&quot;pager&quot;&#39;, &#39;pager&#39;);
+<pre><code class="hljs lang-javascript"><span class="hljs-transposed_variable">BigPipe.</span>fetch(<span class="hljs-string">'/index/page/index?pagelets[]="</span>pager<span class="hljs-string">"'</span>, <span class="hljs-string">'pager'</span>);
 </code></pre>
 <p>表示请求<code>paglet_id=&quot;pager&quot;</code>的widget，并把它渲染到页面的<code>&lt;div id=&quot;pager&quot;&gt;&lt;/div&gt;</code>
 内。</p>
 <p>这个接口提供了异步请求渲染一个widget的能力。这样就可以实现局刷了。</p>
 <h4 class=""><a name="整页切换" class="anchor" href="#整页切换"><span class="doc-link"></span></a>整页切换</h4><p>支持整个页面的切换，例如：A页面 -&gt; B页面</p>
 <pre><code>| A | B |
-| {%widget name=&quot;xxxx&quot; pagelet_id=&quot;pager&quot;%} | {%widget name=&quot;oooo&quot; pagelet_id=&quot;pager&quot;%} |
+| {<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"xxxx"</span> pagelet_id=<span class="hljs-string">"pager"</span><span class="hljs-variable">%}</span> | {<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"oooo"</span> pagelet_id=<span class="hljs-string">"pager"</span><span class="hljs-variable">%}</span> |
 </code></pre><p>两个都有相同的pagelet_id的widget，整页切换。</p>
 <p>提供<code>widget_block</code>来解决。只需要在layout里面使用widget_block
 其他页面extends即可。</p>
-<pre><code class="lang-smarty">{%widget_block pagelet_id=&quot;pager&quot;%}
-    {%block name=&quot;body&quot;%}{%/block%}
-{%/widget_block%}
+<pre><code class="hljs lang-smarty">{<span class="hljs-variable">%widget_block</span> pagelet_id=<span class="hljs-string">"pager"</span><span class="hljs-variable">%}</span>
+    {<span class="hljs-variable">%block</span> name=<span class="hljs-string">"body"</span><span class="hljs-variable">%}</span>{<span class="hljs-variable">%/</span>block<span class="hljs-variable">%}</span>
+{<span class="hljs-variable">%/</span>widget_block<span class="hljs-variable">%}</span>
 </code></pre>
 <p>整个页面就这样切换起来了。</p>
 <h4 class=""><a name="<strong>页面管理库page.js</strong>" class="anchor" href="#<strong>页面管理库page.js</strong>"><span class="doc-link"></span></a><strong>页面管理库page.js</strong></h4><p>以上接口在使用时需要考虑前端很多细节，为此提供了page.js这个页面管路口库。</p>
@@ -102,11 +102,11 @@
 <li>前进后退控制， 使用pushState</li>
 </ul>
 <p>提供接口</p>
-<h5 class=""><a name="appPage.start()" class="anchor" href="#appPage.start()"><span class="doc-link"></span></a>appPage.start()</h5><pre><code class="lang-javascript">appPage.start(
-    containerId: &#39;pager&#39;,   //pagelets渲染容器
-    pagelets: &#39;pager&#39;,      //请求的pagelet
-    validateUrl: /.*/i,     //符合这个规则的链接或者带data-href属性的元素进行事件代理
-    cacheMaxTime: 1000      //每一个pagelet的缓存时间，视访问情况而定。
+<h5 class=""><a name="appPage.start()" class="anchor" href="#appPage.start()"><span class="doc-link"></span></a>appPage.start()</h5><pre><code class="hljs lang-javascript">appPage.start(
+    containerId: <span class="hljs-string">'pager'</span>,   <span class="hljs-comment">//pagelets渲染容器</span>
+    pagelets: <span class="hljs-string">'pager'</span>,      <span class="hljs-comment">//请求的pagelet</span>
+    validateUrl: <span class="hljs-regexp">/.*/i</span>,     <span class="hljs-comment">//符合这个规则的链接或者带data-href属性的元素进行事件代理</span>
+    cacheMaxTime: <span class="hljs-number">1000</span>      <span class="hljs-comment">//每一个pagelet的缓存时间，视访问情况而定。</span>
 );
 </code></pre>
 <h5 class=""><a name="data-area" class="anchor" href="#data-area"><span class="doc-link"></span></a>data-area</h5><p>如果更新小范围的内容该如何办？</p>
@@ -114,14 +114,14 @@
 <li>只需在触发元素上添加<code>data-area</code>属性，</li>
 </ul>
 <p>如;</p>
-<pre><code class="lang-html">&lt;a href=&quot;/xxxxx&quot; data-area=&quot;left-bar&quot;&gt;A&lt;/a&gt;
+<pre><code class="hljs lang-html">&lt;<span class="hljs-literal">a</span> href=<span class="hljs-string">"/xxxxx"</span> data-area=<span class="hljs-string">"left-bar"</span>&gt;<span class="hljs-literal">A</span>&lt;/<span class="hljs-literal">a</span>&gt;
 </code></pre>
 <p>当点击时回请求页面的<code>pagelet_id=&quot;left-bar&quot;</code>的widget，并渲染到当前页面的<code>&lt;div id=&quot;left-bar&quot;&gt;&lt;/div&gt;</code>内。</p>
-<h5 class=""><a name="appPage.redirect()" class="anchor" href="#appPage.redirect()"><span class="doc-link"></span></a>appPage.redirect()</h5><pre><code class="lang-javascript">appPage.redirect(
-    &quot;/index/page/index&quot;,
+<h5 class=""><a name="appPage.redirect()" class="anchor" href="#appPage.redirect()"><span class="doc-link"></span></a>appPage.redirect()</h5><pre><code class="hljs lang-javascript">appPage.redirect(
+    <span class="hljs-string">"/index/page/index"</span>,
     {
-        &quot;pagelets&quot;: &quot;test&quot;     // 需要请求的pagelet
-        &quot;containerId&quot;: &quot;xxx&quot;   // pagelet渲染的容器
+        <span class="hljs-string">"pagelets"</span>: <span class="hljs-string">"test"</span>     <span class="hljs-comment">// 需要请求的pagelet</span>
+        <span class="hljs-string">"containerId"</span>: <span class="hljs-string">"xxx"</span>   <span class="hljs-comment">// pagelet渲染的容器</span>
     }
 );
 </code></pre>
