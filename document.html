@@ -73,11 +73,7 @@
 
 </div>
 </div>
-<div class="bs-docs-section"><h1 class="page-header"><a name="快速入门" class="anchor" href="#快速入门"><span class="doc-link"></span></a>快速入门</h1><div class="bs-callout bs-callout-warning">
-  test
-</div>
-
-<h3 class="" id="安装"><a name="安装" class="anchor" href="#安装"><span class="doc-link"></span></a>安装</h3><p>fis-plus 的 自动化/辅助开发工具 被发布为一套 npm包，它对环境的要求是：</p>
+<div class="bs-docs-section"><h1 class="page-header"><a name="快速入门" class="anchor" href="#快速入门"><span class="doc-link"></span></a>快速入门</h1><h3 class="" id="安装"><a name="安装" class="anchor" href="#安装"><span class="doc-link"></span></a>安装</h3><p>fis-plus 的 自动化/辅助开发工具 被发布为一套 npm包，它对环境的要求是：</p>
 <ul>
 <li>操作系统：任何能安装 nodejs 的操作系统</li>
 <li>node版本：&gt;= v0.8.0</li>
@@ -258,10 +254,9 @@ require<span class="hljs-comment">('/widget/a.js')</span>;
 <li><code>require</code>、<code>require.async</code>等<strong>JavaScript</strong>函数，可以使用id</li>
 </ul>
 </div>
-<div class="bs-docs-section"><h1 class="page-header"><a name="本地开发" class="anchor" href="#本地开发"><span class="doc-link"></span></a>本地开发</h1><h3 class="" id="三种语言能力"><a name="三种语言能力" class="anchor" href="#三种语言能力"><span class="doc-link"></span></a>三种语言能力</h3><ul>
-<li><a href="dev-lang">三种语言能力</a></li>
-</ul>
-</div>
+<div class="bs-docs-section"><h1 class="page-header"><a name="本地开发" class="anchor" href="#本地开发"><span class="doc-link"></span></a>本地开发</h1><div class="<#class-warning#>">
+本地开发主要是一些fis-plus指定的目录规范的讲解以及提供的js和css组件化开发和Smarty模板中提供的一些插件的使用等。
+</div></div>
 <div class="bs-docs-section"><h3 class="" id="目录规范"><a name="目录规范" class="anchor" href="#目录规范"><span class="doc-link"></span></a>目录规范</h3><blockquote>
 <p>规范是辅助用户开发的利器，按照规范进行开发，可以极大的提升开发效率。
 在FIS中，定义了一套默认的模块化开发规范。</p>
@@ -612,9 +607,10 @@ $ lights install <span class="hljs-keyword">template</span>
 </code></pre>
 <p><img src="/fis-plus/static/fis-plus/doc/img/tpl6_bd9d3ae.jpg" alt="widget"></p>
 </div>
-<div class="bs-docs-section"><h3 class="" id="JS组件化"><a name="JS组件化" class="anchor" href="#JS组件化"><span class="doc-link"></span></a>JS组件化</h3><blockquote>
-<p>在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。</p>
-</blockquote>
+<div class="bs-docs-section"><h3 class="" id="JS组件化"><a name="JS组件化" class="anchor" href="#JS组件化"><span class="doc-link"></span></a>JS组件化</h3><div class="<#class-info#>">
+&gt; 在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。
+</div>
+
 <p>在 <strong>模块根目录/widget/</strong> 下的JS资源皆为组件化资源，可以通过require和require.async进行调用，则在编译处理过程中会进行组件化封装。</p>
 <h4 class=""><a name="modjs前端组件化框架" class="anchor" href="#modjs前端组件化框架"><span class="doc-link"></span></a>modjs前端组件化框架</h4><p>modJS是一套的前端模块加载解决方案。与传统的模块加载相比，modJS会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
 作为FIS前端组件化框架，完全遵循AMD规范，用户可以通过lights进行安装</p>
@@ -1163,7 +1159,7 @@ rewrite、redirect和template是fis默认的三种匹配类型。</li>
     <div class="col-sm-3 document-nav">
         <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
             <ul class="nav bs-docs-sidenav">
-                <li><a href="#FIS-PLUS解决方案">FIS-PLUS解决方案</a><ul class="nav"></ul></li><li><a href="#快速入门">快速入门</a><ul class="nav"><li><a href="#安装">安装</a><li><a href="#示例">示例</a><li><a href="#示例解说">示例解说</a></ul></li><li><a href="#本地开发">本地开发</a><ul class="nav"><li><a href="#三种语言能力">三种语言能力</a><li><a href="#目录规范">目录规范</a><li><a href="#三种语言能力">三种语言能力</a><li><a href="#模板开发">模板开发</a><li><a href="#html">html</a><li><a href="#head">head</a><li><a href="#body">body</a><li><a href="#script">script</a><li><a href="#require">require</a><li><a href="#widget">widget</a><li><a href="#JS组件化">JS组件化</a><li><a href="#CSS组件化">CSS组件化</a><li><a href="#模板XSS修复工具">模板XSS修复工具</a><li><a href="#图片合并工具">图片合并工具</a><li><a href="#模板压缩工具">模板压缩工具</a><li><a href="#JS压缩工具">JS压缩工具</a><li><a href="#CSS压缩工具">CSS压缩工具</a><li><a href="#配置">配置</a><li><a href="#打包策略">打包策略</a><li><a href="#基本打包原则">基本打包原则</a><li><a href="#自动打包">自动打包</a><li><a href="#模块配置">模块配置</a><li><a href="#Smarty配置">Smarty配置</a><li><a href="#domain配置">domain配置</a></ul></li><li><a href="#联调测试">联调测试</a><ul class="nav"><li><a href="#本地测试数据模拟">本地测试数据模拟</a><li><a href="#Rewrite">Rewrite</a><li><a href="#独立加载静态资源">独立加载静态资源</a></ul></li><li><a href="#Quickling解决方案">Quickling解决方案</a><ul class="nav"><li><a href="#背景">背景</a><li><a href="#解决方案特性">解决方案特性</a><li><a href="#使用场景">使用场景</a><li><a href="#使用方法">使用方法</a><li><a href="#优点和缺点">优点和缺点</a></ul></li><li><a href="#国际化解决方案">国际化解决方案</a><ul class="nav"><li><a href="#背景">背景</a><li><a href="#产品国际化的基本流程">产品国际化的基本流程</a><li><a href="#前端开发调研点">前端开发调研点</a><li><a href="#FIS国际化方案">FIS国际化方案</a></ul></li>
+                <li><a href="#FIS-PLUS解决方案">FIS-PLUS解决方案</a><ul class="nav"></ul></li><li><a href="#快速入门">快速入门</a><ul class="nav"><li><a href="#安装">安装</a><li><a href="#示例">示例</a><li><a href="#示例解说">示例解说</a></ul></li><li><a href="#本地开发">本地开发</a><ul class="nav"><li><a href="#目录规范">目录规范</a><li><a href="#三种语言能力">三种语言能力</a><li><a href="#模板开发">模板开发</a><li><a href="#html">html</a><li><a href="#head">head</a><li><a href="#body">body</a><li><a href="#script">script</a><li><a href="#require">require</a><li><a href="#widget">widget</a><li><a href="#JS组件化">JS组件化</a><li><a href="#CSS组件化">CSS组件化</a><li><a href="#模板XSS修复工具">模板XSS修复工具</a><li><a href="#图片合并工具">图片合并工具</a><li><a href="#模板压缩工具">模板压缩工具</a><li><a href="#JS压缩工具">JS压缩工具</a><li><a href="#CSS压缩工具">CSS压缩工具</a><li><a href="#配置">配置</a><li><a href="#打包策略">打包策略</a><li><a href="#基本打包原则">基本打包原则</a><li><a href="#自动打包">自动打包</a><li><a href="#模块配置">模块配置</a><li><a href="#Smarty配置">Smarty配置</a><li><a href="#domain配置">domain配置</a></ul></li><li><a href="#联调测试">联调测试</a><ul class="nav"><li><a href="#本地测试数据模拟">本地测试数据模拟</a><li><a href="#Rewrite">Rewrite</a><li><a href="#独立加载静态资源">独立加载静态资源</a></ul></li><li><a href="#Quickling解决方案">Quickling解决方案</a><ul class="nav"><li><a href="#背景">背景</a><li><a href="#解决方案特性">解决方案特性</a><li><a href="#使用场景">使用场景</a><li><a href="#使用方法">使用方法</a><li><a href="#优点和缺点">优点和缺点</a></ul></li><li><a href="#国际化解决方案">国际化解决方案</a><ul class="nav"><li><a href="#背景">背景</a><li><a href="#产品国际化的基本流程">产品国际化的基本流程</a><li><a href="#前端开发调研点">前端开发调研点</a><li><a href="#FIS国际化方案">FIS国际化方案</a></ul></li>
             </ul>
         </nav>
     </div>

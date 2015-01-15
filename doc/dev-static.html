@@ -1,6 +1,7 @@
-<h3 class="" id="JS组件化"><a name="JS组件化" class="anchor" href="#JS组件化"><span class="doc-link"></span></a>JS组件化</h3><blockquote>
-<p>在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。</p>
-</blockquote>
+<h3 class="" id="JS组件化"><a name="JS组件化" class="anchor" href="#JS组件化"><span class="doc-link"></span></a>JS组件化</h3><div class="<#class-info#>">
+&gt; 在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。
+</div>
+
 <p>在 <strong>模块根目录/widget/</strong> 下的JS资源皆为组件化资源，可以通过require和require.async进行调用，则在编译处理过程中会进行组件化封装。</p>
 <h4 class=""><a name="modjs前端组件化框架" class="anchor" href="#modjs前端组件化框架"><span class="doc-link"></span></a>modjs前端组件化框架</h4><p>modJS是一套的前端模块加载解决方案。与传统的模块加载相比，modJS会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
 作为FIS前端组件化框架，完全遵循AMD规范，用户可以通过lights进行安装</p>
