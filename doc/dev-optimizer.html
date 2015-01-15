@@ -3,9 +3,9 @@
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
-<pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-string">'modules.optimizer.tpl'</span>, <span class="hljs-string">'smarty-xss'</span>);
+<pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'modules.optimizer.tpl'</span>, <span class="hljs-string">'smarty-xss'</span>);
 
-fis.config.set(<span class="hljs-string">'settings.optimizer.smarty-xss'</span>, {
+fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'settings.optimizer.smarty-xss'</span>, {
     <span class="hljs-string">'escapeMap'</span> : {
         <span class="hljs-string">'js'</span> : <span class="hljs-string">'f_escape_js'</span>,  <span class="hljs-comment">//配置js_escape指定js转义插件的名称</span>
         <span class="hljs-string">'html'</span> : <span class="hljs-string">'f_escape_xml'</span>, <span class="hljs-comment">//配置html_escape指定对于xml转义插件的名称</span>
@@ -14,7 +14,7 @@ fis.config.set(<span class="hljs-string">'settings.optimizer.smarty-xss'</span>,
         <span class="hljs-string">'event'</span> : <span class="hljs-string">'f_escape_event'</span>, <span class="hljs-comment">//配置event_escape指定event转义插件的名称</span>
         <span class="hljs-string">'no_escape'</span> : <span class="hljs-string">'escape:none'</span> <span class="hljs-comment">//不需要添加转义的变量标志</span>
     },
-    leftDelimiter<span class="hljs-string">' : '</span>{<span class="hljs-variable">%'</span>, <span class="hljs-comment">//smarty左定界符</span>
+    <span class="hljs-string">'leftDelimiter'</span> : <span class="hljs-string">'{%'</span>, <span class="hljs-comment">//smarty左定界符</span>
     <span class="hljs-string">'rightDelimiter'</span> : <span class="hljs-string">'%}'</span>, <span class="hljs-comment">//smarty右定界符</span>
     <span class="hljs-string">'xssSafeVars'</span> :[          <span class="hljs-comment">//配置白名单</span>
         <span class="hljs-string">'fis_safe'</span>      <span class="hljs-comment">//支持正则</span>
