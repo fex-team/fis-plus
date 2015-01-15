@@ -86,15 +86,6 @@
         "static/index.scss": {
             "uri": "/fis-plus/static/fis-plus/static/index_b31ada3.css",
             "type": "css"
-        },
-        "trigger.js": {
-            "uri": "/fis-plus/static/fis-plus/trigger_cce5b1a.js",
-            "type": "js",
-            "deps": [
-                "http",
-                "github",
-                "crypto"
-            ]
         }
     },
     "pkg": {}

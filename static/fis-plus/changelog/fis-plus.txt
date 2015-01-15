@@ -1,3 +1,0 @@
-WIKI test-rewrite https://github.com/fex-team/fis-plus/wiki/test-rewrite
-WIKI test-rewrite https://github.com/fex-team/fis-plus/wiki/test-rewrite
-WIKI Home.md https://github.com/fex-team/fis-plus/wiki/Home1421282848956
