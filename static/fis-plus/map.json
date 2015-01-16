@@ -92,7 +92,7 @@
             "type": "css"
         },
         "static/index.scss": {
-            "uri": "/fis-plus/static/fis-plus/static/index_b31ada3.css",
+            "uri": "/fis-plus/static/fis-plus/static/index_b7b14d4.css",
             "type": "css"
         }
     },
@@ -106,7 +106,7 @@
             ]
         },
         "auto_css_1": {
-            "uri": "/fis-plus/static/fis-plus/pkg/auto_combine_19342_16b1a11.css",
+            "uri": "/fis-plus/static/fis-plus/pkg/auto_combine_19342_b8e98e3.css",
             "type": "css",
             "has": [
                 "static/base.scss",

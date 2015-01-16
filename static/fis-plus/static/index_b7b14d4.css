@@ -1,33 +1,6 @@
 /* mixin */
 /* user style */
 /* skeleton */
-/*
-.nav {
-    height: 20px;
-    background: #5cb85c;
-}
-*/
-.feature {
-  height: 250px; }
-
-.who-use {
-  height: 250px; }
-
-.copyright {
-  margin-top: 20px; }
-
-/*
-nav {
-    //background: url('./img/top-bg.gif');
-    min-height: 50px;
-    a {
-        display: block;
-        margin-left: 5px;
-        padding-left: 4px;
-        float: left;
-    }
-}
-*/
 /* header */
 .navbar {
   margin-bottom: 0px;
@@ -71,9 +44,13 @@ nav {
 .feature {
   margin-bottom: 60px; }
   .feature ul {
+    list-style: none;
     margin: 0 auto; }
     .feature ul li {
-      float: left;
+      vertical-align: top;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
       margin: 0px 24px;
       width: 150px; }
       .feature ul li img {
@@ -90,12 +67,14 @@ nav {
   .who-use .who-use-word {
     margin-top: 30px;
     text-align: right;
-    font-size: 25px; }
-  .who-use .who-use-icons {
-    height: 100%; }
+    font-size: 24px; }
+    @media screen and (min-width: 100px) {
+      .who-use .who-use-word {
+        text-align: center; } }
+  .who-use .who-use-icons .who-use-icon {
+    float: left; }
     .who-use .who-use-icons .who-use-icon img {
       background: #EEEEEE;
-      float: left;
       height: 35px;
       margin: 10px; }
 
