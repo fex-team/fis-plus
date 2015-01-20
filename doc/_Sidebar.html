@@ -138,14 +138,13 @@ $ <span class="hljs-built_in">source</span> ~/.bashrc
 </ul>
 <p><em>细心的你有可能发现了一个比较专业的词汇<strong>组件化</strong>，组件化的细节比较繁多，准备新开一节说明</em></p>
 <h4 class=""><a name="page 如何引入 widget" class="anchor" href="#page 如何引入 widget"><span class="doc-link"></span></a>page 如何引入 widget</h4><ul>
-<li>如示例中<code>index.tpl</code>如何应用<code>widget/header/header.tpl</code> ? 如果用过smarty的你可能会想到<code>include</code>，但在FIS-PLUS中引入widget有个跟<code>include</code>类似的插件完成，<code>widget</code>。</li>
+<li><p>如示例中<code>index.tpl</code>如何应用<code>widget/header/header.tpl</code> ? 如果用过smarty的你可能会想到<code>include</code>，但在FIS-PLUS中引入widget有个跟<code>include</code>类似的插件完成，<code>widget</code>。</p>
+<pre><code class="hljs lang-html">{<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"home:widget/header/header.tpl"</span><span class="hljs-variable">%}</span>
+</code></pre>
+<p><code>home:widget/header/header.tpl</code> 这个是FIS中<a href="#静态资源id">静态资源id</a></p>
+</li>
 </ul>
-<pre><code><span class="hljs-code">```</span>html
-{%widget name="home:widget/header/header.tpl"%}
-<span class="hljs-code">```</span>
-
-<span class="hljs-code">`home:widget/header/header.tpl`</span> 这个是FIS中[<span class="hljs-link_label">静态资源id</span>](<span class="hljs-link_url">#静态资源id</span>)
-</code></pre><h4 class=""><a name="模板中如何使用widget目录下的静态资源" class="anchor" href="#模板中如何使用widget目录下的静态资源"><span class="doc-link"></span></a>模板中如何使用widget目录下的静态资源</h4><p>根据目录规范<code>widget</code>目录下的js讲被进行<a href="">组件化封装</a>，根据<a href="">同名依赖</a>原则；</p>
+<h4 class=""><a name="模板中如何使用widget目录下的静态资源" class="anchor" href="#模板中如何使用widget目录下的静态资源"><span class="doc-link"></span></a>模板中如何使用widget目录下的静态资源</h4><p>根据目录规范<code>widget</code>目录下的js讲被进行<a href="">组件化封装</a>，根据<a href="">同名依赖</a>原则；</p>
 <ul>
 <li>当使用某个widget下模板是，同名js,css将会被加载。</li>
 <li>当使用某个widget下的js时，其同名css会被加载。</li>
