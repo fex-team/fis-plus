@@ -769,6 +769,48 @@ fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'road
 });
 </code></pre>
 </div>
+<div class="bs-docs-section"><h3 class="" id="上传测试机"><a name="上传测试机" class="anchor" href="#上传测试机"><span class="doc-link"></span></a>上传测试机</h3><blockquote>
+<p>fis 通过简单的上传配置，把编译后文件上传到测试机,方便联调。</p>
+</blockquote>
+<ul>
+<li><a href="#产出目录">产出目录</a></li>
+<li><a href="#上传配置">上传配置</a></li>
+<li><a href="#上传常见问题">上传常见问题</a></li>
+</ul>
+<h3 class="" id="发布上线"><a name="发布上线" class="anchor" href="#发布上线"><span class="doc-link"></span></a>发布上线</h3><blockquote>
+<p>提供基础的build.sh编译脚本，用于上线时候自动编译项目。</p>
+</blockquote>
+<pre><code class="hljs lang-bash"><span class="hljs-shebang">#!/bin/bash
+</span>
+MOD_NAME=<span class="hljs-string">"output"</span>
+TAR=<span class="hljs-string">"<span class="hljs-variable">$MOD_NAME</span>.tar.gz"</span>
+
+<span class="hljs-comment"># add path</span>
+<span class="hljs-built_in">export</span> PATH=/home/fis/npm/bin:<span class="hljs-variable">$PATH</span>
+<span class="hljs-comment">#show fis-plus version</span>
+fisp --version --no-color
+
+<span class="hljs-comment">#通过fis-plus release 命令进行模块编译 开启optimize、md5、打包功能，同时需开启-u 独立缓存编译方式，产出到同目录下output中</span>
+fisp release -cuompd output
+<span class="hljs-comment">#进入output目录</span>
+<span class="hljs-built_in">cd</span> output
+<span class="hljs-comment">#删除产出的test目录</span>
+rm -rf <span class="hljs-built_in">test</span>
+
+<span class="hljs-comment">#将output目录进行打包</span>
+tar zcf <span class="hljs-variable">$TAR</span> ./*
+mv <span class="hljs-variable">$TAR</span> ../
+
+<span class="hljs-built_in">cd</span> ..
+rm -rf output
+
+mkdir output
+
+mv <span class="hljs-variable">$TAR</span> output/
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"build end"</span>
+</code></pre>
+</div>
 <div class="bs-docs-section"><h1 class="page-header"><a name="联调测试" class="anchor" href="#联调测试"><span class="doc-link"></span></a>联调测试</h1></div>
 <div class="bs-docs-section"><h3 class="" id="本地测试数据模拟"><a name="本地测试数据模拟" class="anchor" href="#本地测试数据模拟"><span class="doc-link"></span></a>本地测试数据模拟</h3><blockquote>
 <p>FIS提供了本地调试数据功能，本地预览模板时会根据选择的测试数据进行展现，默认的smarty版本为3.1.13。</p>
