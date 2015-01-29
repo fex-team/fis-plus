@@ -1,6 +1,7 @@
 /.idea
 /.settings
 /.project
+/node_modules
 
 tmp
 ~*
