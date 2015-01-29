@@ -24,7 +24,10 @@ fis.config.merge({
             po: 'po'
         },
         preprocessor: {
-            tpl: 'extlang'
+            tpl: 'components, extlang',
+            html: 'components',
+            js: 'components',
+            css: 'components'
         },
         postprocessor: {
             tpl: 'require-async',
@@ -52,6 +55,11 @@ fis.config.merge({
                 release: '/config/lang/${namespace}.$1.po'
             },
             //i18n end
+            {
+                reg: /^\/components\/(.*\.(js|css))$/i,
+                isMod: true,
+                release: '${statics}/${namespace}/components/$1'
+            },
             {
                 reg : /^\/widget\/(.*\.tpl)$/i,
                 isMod : true,
@@ -128,5 +136,13 @@ fis.config.merge({
                 type: 'amd'
             }
         }
+    },
+
+    component: {
+        protocol: 'github',
+        gitlab: {
+            author: 'fis-components'
+        },
+        skipRoadmapCheck: true
     }
 });
