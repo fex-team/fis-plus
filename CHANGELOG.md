@@ -1,3 +1,9 @@
+## 0.7.4 - 0.7.5 / Mon Feb 02 2015
+
+> 升级 fis 至 [1.9.3](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#193--wed-jan-28-2015)
+> 去掉 fisp-command-install 插件，改成 fis 自带的，支持组件生态。
+> 修改原来的 fisp-command-install 成 fisp-command-init。
+
 ## 0.7.3 / Tue Dec 16 2014
 
 > 升级fis至[1.8.10](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#1810--tue-dec-16-2014)
@@ -86,7 +92,7 @@ bugfix
 
     //@require.async ./a.js
 
-    or 
+    or
     /*
      * @require.async ./a.js
      */
@@ -154,7 +160,7 @@ bugfix
 > 升级fis至 [v1.2.6](https://github.com/fis-dev/fis/blob/master/CHANGELOG.md#126)
 
 ## 0.3.5
-    
+
 > 升级fis至 [v1.2.5](https://github.com/fis-dev/fis/blob/master/CHANGELOG.md#125)
 
 * 默认支持csssprite

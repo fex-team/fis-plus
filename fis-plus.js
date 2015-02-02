@@ -5,6 +5,8 @@ fis.cli.info = fis.util.readJSON(__dirname + '/package.json');
 
 fis.require.prefixes = ['fisp', 'fis'];
 
+fis.cli.help.commands = [ 'release', 'install', 'server', 'init' ];
+
 fis.config.merge({
     statics: '/static',
     templates: '/template',
