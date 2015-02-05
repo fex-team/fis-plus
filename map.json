@@ -1,0 +1,145 @@
+{
+    "res": {
+        "lib/bootstrap/docs.min.css": {
+            "uri": "/fis-plus/lib/bootstrap/docs.min_eac46b8.css",
+            "type": "css"
+        },
+        "lib/bootstrap/docs.min.js": {
+            "uri": "/fis-plus/lib/bootstrap/docs.min_e942673.js",
+            "type": "js",
+            "deps": [
+                "lib/bootstrap/docs.min.css"
+            ]
+        },
+        "lib/bootstrap/javascripts/bootstrap-sprockets.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap-sprockets_8c4dbb4.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap_0e41336.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/affix.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/affix_f0bb861.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/alert.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/alert_60995c0.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/button.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/button_611422a.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/carousel.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/carousel_cc3c74d.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/collapse.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/collapse_f78c162.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/dropdown.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/dropdown_5faedf3.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/modal.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/modal_4959ae3.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/popover.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/popover_4691901.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/scrollspy.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/scrollspy_6a00e24.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/tab.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/tab_030183b.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/tooltip.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/tooltip_dad83e9.js",
+            "type": "js"
+        },
+        "lib/bootstrap/javascripts/bootstrap/transition.js": {
+            "uri": "/fis-plus/lib/bootstrap/javascripts/bootstrap/transition_858bb24.js",
+            "type": "js"
+        },
+        "lib/fontawesome/css/font-awesome.css": {
+            "uri": "/fis-plus/lib/fontawesome/css/font-awesome_8e81f2d.css",
+            "type": "css"
+        },
+        "lib/highlight.js/github.css": {
+            "uri": "/fis-plus/lib/highlight.js/github_93a844e.css",
+            "type": "css"
+        },
+        "lib/highlight.js/monokai.css": {
+            "uri": "/fis-plus/lib/highlight.js/monokai_fa10bb5.css",
+            "type": "css"
+        },
+        "lib/jquery/jquery.js": {
+            "uri": "/fis-plus/lib/jquery/jquery_cf26f8f.js",
+            "type": "js"
+        },
+        "static/fis-plus/css/base.scss": {
+            "uri": "/fis-plus/static/css/base_ac95b4c.css",
+            "type": "css"
+        },
+        "static/fis-plus/css/document.scss": {
+            "uri": "/fis-plus/static/css/document_3f028ef.css",
+            "type": "css"
+        },
+        "static/fis-plus/css/index.scss": {
+            "uri": "/fis-plus/static/css/index_b7b14d4.css",
+            "type": "css"
+        },
+        "static/yog2/css/base.scss": {
+            "uri": "/fis-plus/static/static/yog2/css/base_ac95b4c.css",
+            "type": "css"
+        },
+        "static/yog2/css/document.scss": {
+            "uri": "/fis-plus/static/static/yog2/css/document_3f028ef.css",
+            "type": "css"
+        },
+        "static/yog2/css/index.scss": {
+            "uri": "/fis-plus/static/static/yog2/css/index_a2d902f.css",
+            "type": "css"
+        }
+    },
+    "pkg": {
+        "auto_js_0": {
+            "uri": "/fis-plus/static/pkg/auto_combine_f5a54_bd0f29a.js",
+            "type": "js",
+            "has": [
+                "lib/jquery/jquery.js",
+                "lib/bootstrap/javascripts/bootstrap.js"
+            ]
+        },
+        "auto_css_1": {
+            "uri": "/fis-plus/static/pkg/auto_combine_bc809_1046863.css",
+            "type": "css",
+            "has": [
+                "lib/fontawesome/css/font-awesome.css",
+                "lib/highlight.js/github.css",
+                "lib/bootstrap/docs.min.css",
+                "static/fis-plus/css/base.scss",
+                "static/fis-plus/css/document.scss",
+                "static/fis-plus/css/index.scss"
+            ]
+        },
+        "auto_css_2": {
+            "uri": "/fis-plus/static/pkg/auto_combine_fcec5_60e2fcc.css",
+            "type": "css",
+            "has": [
+                "lib/fontawesome/css/font-awesome.css",
+                "lib/highlight.js/github.css",
+                "lib/bootstrap/docs.min.css",
+                "static/yog2/css/base.scss",
+                "static/yog2/css/document.scss",
+                "static/yog2/css/index.scss"
+            ]
+        }
+    }
+}

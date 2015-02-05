@@ -37,7 +37,7 @@ FIS-PLUS 是基于 FIS，应用于后端是 PHP，模板是 Smarty 的场景。�
 <pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g fis-plus
 </code></pre>
 <p>安装好fis-plus之后，执行 fisp -v，如果能看到以下信息，则表明安装成功。<em>如果安装过程中遇到什么问题，可以到 <a href="https://github.com/fex-team/fis-plus/issues?state=open">https://github.com/fex-team/fis-plus/issues?state=open</a> 提问题，或者QQ询问。</em></p>
-<p><img src="/fis-plus/static/fis-plus/doc/img/fisp-version_0d295f9.png" alt=""></p>
+<p><img src="/fis-plus/static/doc/img/fisp-version_0d295f9.png" alt=""></p>
 <h4 class=""><a name="安装lights" class="anchor" href="#安装lights"><span class="doc-link"></span></a>安装lights</h4><p><a href="http://lights.baidu.com">lights</a>是fis提供的包管理工具，托管了fis所有资源。是使用fis的时候，必不可少的利器。</p>
 <pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g lights
 </code></pre>
@@ -116,7 +116,7 @@ $ fisp init pc-demo
 <h4 class=""><a name="预览" class="anchor" href="#预览"><span class="doc-link"></span></a>预览</h4><pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">server</span> start <span class="hljs-preprocessor">#启动服务器</span>
 </code></pre>
 <p>启动服务的时候，启动成功后会自动打开浏览器，访问首页，这时候你应该打开demo首页，并和下图是一致的。</p>
-<p><img src="/fis-plus/static/fis-plus/doc/img/demo-index_9f1991c.png" alt=""></p>
+<p><img src="/fis-plus/static/doc/img/demo-index_9f1991c.png" alt=""></p>
 <h3 class="" id="示例解说"><a name="示例解说" class="anchor" href="#示例解说"><span class="doc-link"></span></a>示例解说</h3><p>自此，一个前端项目已经运行起来了。你可以看一下pc-demo的源码，其中包含两个模块</p>
 <ul>
 <li>common</li>
@@ -448,7 +448,7 @@ $ lights install <span class="hljs-keyword">template</span>
     ....
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
-<p><img src="/fis-plus/static/fis-plus/doc/img/tpl1_fbad2c9.jpg" alt=""></p>
+<p><img src="/fis-plus/static/doc/img/tpl1_fbad2c9.jpg" alt=""></p>
 <h3 class="" id="head"><a name="head" class="anchor" href="#head"><span class="doc-link"></span></a>head</h3><ul>
 <li>功能：代替\<head\>标签，控制CSS资源加载输出。</li>
 <li>属性值：head标签原生属性值</li>
@@ -461,7 +461,7 @@ $ lights install <span class="hljs-keyword">template</span>
     {<span class="hljs-preprocessor">%</span>/head<span class="hljs-preprocessor">%</span>}
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
-<p><img src="/fis-plus/static/fis-plus/doc/img/tpl2_2373cfb.jpg" alt="head"></p>
+<p><img src="/fis-plus/static/doc/img/tpl2_2373cfb.jpg" alt="head"></p>
 <h3 class="" id="body"><a name="body" class="anchor" href="#body"><span class="doc-link"></span></a>body</h3><ul>
 <li>功能：代替\<body\>标签，控制JS资源加载输出。</li>
 <li>属性值：body标签原生属性值</li>
@@ -477,7 +477,7 @@ $ lights install <span class="hljs-keyword">template</span>
     {<span class="hljs-preprocessor">%</span>/body<span class="hljs-preprocessor">%</span>}
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
-<p><img src="/fis-plus/static/fis-plus/doc/img/tpl3_60b8620.jpg" alt="body"></p>
+<p><img src="/fis-plus/static/doc/img/tpl3_60b8620.jpg" alt="body"></p>
 <h3 class="" id="script"><a name="script" class="anchor" href="#script"><span class="doc-link"></span></a>script</h3><ul>
 <li>功能：代替<code>&lt;script&gt;</code>标签，收集使用JS组件的代码块，控制输出至页面底部。</li>
 <li>属性值：无</li>
@@ -497,7 +497,7 @@ $ lights install <span class="hljs-keyword">template</span>
     {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
 {<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
-<p><img src="/fis-plus/static/fis-plus/doc/img/tpl4_14c6f6d.jpg" alt="script"></p>
+<p><img src="/fis-plus/static/doc/img/tpl4_14c6f6d.jpg" alt="script"></p>
 <h3 class="" id="require"><a name="require" class="anchor" href="#require"><span class="doc-link"></span></a>require</h3><ul>
 <li>功能：通过静态资源管理框架加载静态资源。</li>
 <li>插件类型：compiler</li>
@@ -519,7 +519,7 @@ $ lights install <span class="hljs-keyword">template</span>
     {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
 {<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
-<p><img src="/fis-plus/static/fis-plus/doc/img/tpl5_d82f332.jpg" alt="require"></p>
+<p><img src="/fis-plus/static/doc/img/tpl5_d82f332.jpg" alt="require"></p>
 <h3 class="" id="widget"><a name="widget" class="anchor" href="#widget"><span class="doc-link"></span></a>widget</h3><ul>
 <li>功能：调用模板组件，渲染输出模板片段。</li>
 <li>插件类型：compiler</li>
@@ -541,7 +541,7 @@ $ lights install <span class="hljs-keyword">template</span>
     {<span class="hljs-variable">%/</span>body<span class="hljs-variable">%}</span>
 {<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
-<p><img src="/fis-plus/static/fis-plus/doc/img/tpl6_bd9d3ae.jpg" alt="widget"></p>
+<p><img src="/fis-plus/static/doc/img/tpl6_bd9d3ae.jpg" alt="widget"></p>
 </div>
 <div class="bs-docs-section"><h3 class="" id="JS组件化"><a name="JS组件化" class="anchor" href="#JS组件化"><span class="doc-link"></span></a>JS组件化</h3><div class="bs-callout bs-callout-info">
 &gt; 在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。

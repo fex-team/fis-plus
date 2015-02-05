@@ -6,8 +6,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/fis-plus/static/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_7149833.eot?v=4.2.0');
-  src: url('/fis-plus/static/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_7149833.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/fis-plus/static/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_d95d6f5.woff?v=4.2.0') format('woff'), url('/fis-plus/static/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_c4668ed.ttf?v=4.2.0') format('truetype'), url('/fis-plus/static/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_65bcbc8.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_7149833.eot?v=4.2.0');
+  src: url('/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_7149833.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_d95d6f5.woff?v=4.2.0') format('woff'), url('/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_c4668ed.ttf?v=4.2.0') format('truetype'), url('/fis-plus/lib/fontawesome/fonts/fontawesome-webfont_65bcbc8.svg?v=4.2.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
