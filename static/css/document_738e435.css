@@ -26,3 +26,6 @@
       padding-left: 30px;
       margin-left: -30px; }
 
+.document-nav nav {
+  position: fixed; }
+

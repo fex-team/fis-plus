@@ -88,7 +88,7 @@
             "type": "css"
         },
         "static/fis-plus/css/document.scss": {
-            "uri": "/fis-plus/static/css/document_3f028ef.css",
+            "uri": "/fis-plus/static/css/document_738e435.css",
             "type": "css"
         },
         "static/fis-plus/css/index.scss": {
@@ -109,16 +109,8 @@
         }
     },
     "pkg": {
-        "auto_js_0": {
-            "uri": "/fis-plus/static/pkg/auto_combine_f5a54_bd0f29a.js",
-            "type": "js",
-            "has": [
-                "lib/jquery/jquery.js",
-                "lib/bootstrap/javascripts/bootstrap.js"
-            ]
-        },
-        "auto_css_1": {
-            "uri": "/fis-plus/static/pkg/auto_combine_bc809_1046863.css",
+        "auto_css_0": {
+            "uri": "/fis-plus/static/pkg/auto_combine_bc809_7561997.css",
             "type": "css",
             "has": [
                 "lib/fontawesome/css/font-awesome.css",
@@ -127,6 +119,14 @@
                 "static/fis-plus/css/base.scss",
                 "static/fis-plus/css/document.scss",
                 "static/fis-plus/css/index.scss"
+            ]
+        },
+        "auto_js_1": {
+            "uri": "/fis-plus/static/pkg/auto_combine_f5a54_bd0f29a.js",
+            "type": "js",
+            "has": [
+                "lib/jquery/jquery.js",
+                "lib/bootstrap/javascripts/bootstrap.js"
             ]
         },
         "auto_css_2": {
