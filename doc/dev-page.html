@@ -1,4 +1,4 @@
-<h3 class="" id="模板开发"><a name="模板开发" class="anchor" href="#模板开发"><span class="doc-link"></span></a>模板开发</h3><h4 class=""><a name="页面模板" class="anchor" href="#页面模板"><span class="doc-link"></span></a>页面模板</h4><p>在模块中，用户可直接访问浏览的页面称为页面模板，文件在 <strong> 模块根目录 /page/</strong> 下。FIS 提供提供了很多模板插件替换原生 html 标签，为页面模板开发提供使用。</p>
+<h3 class="" id="模板开发"><a name="%E6%A8%A1%E6%9D%BF%E5%BC%80%E5%8F%91" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E5%BC%80%E5%8F%91"><span class="doc-link"></span></a>模板开发</h3><h4 class=""><a name="%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF" class="anchor" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF"><span class="doc-link"></span></a>页面模板</h4><p>在模块中，用户可直接访问浏览的页面称为页面模板，文件在 <strong> 模块根目录 /page/</strong> 下。FIS 提供提供了很多模板插件替换原生 html 标签，为页面模板开发提供使用。</p>
 <ul>
 <li>通过 <a href="#html">html 插件</a> 控制整体页面的输出，以及注册前端组件化框架。</li>
 <li>通过 <a href="#head">head 插件</a> 在模板解析运行时，控制加载同步静态资源使用。</li>
@@ -66,7 +66,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <p>在模板框架中，对应的文件调用路径均为 <code>modulename: 相对模块根目录的相对路径</code> ：</p>
 <pre><code>/<span class="hljs-regexp">/home 为模块名，static/lib</span><span class="hljs-regexp">/css/bootstrap</span>.css 为绝对路径截取 home 模块根目录后的路径
 {%<span class="hljs-keyword">require</span> name=<span class="hljs-string">"home:static/lib/css/bootstrap.css"</span>%}
-</code></pre><h5 class=""><a name="前端模板" class="anchor" href="#前端模板"><span class="doc-link"></span></a>前端模板</h5><p>在 FIS 中，集成了<a href="http://baidufe.github.com/BaiduTemplate">百度前端模板</a>。在编译过程中，会静态编译 baidu template，不需要线上编译，提高页面运行效率。</p>
+</code></pre><h5 class=""><a name="%E5%89%8D%E7%AB%AF%E6%A8%A1%E6%9D%BF" class="anchor" href="#%E5%89%8D%E7%AB%AF%E6%A8%A1%E6%9D%BF"><span class="doc-link"></span></a>前端模板</h5><p>在 FIS 中，集成了<a href="http://baidufe.github.com/BaiduTemplate">百度前端模板</a>。在编译过程中，会静态编译 baidu template，不需要线上编译，提高页面运行效率。</p>
 <p>在 JS 代码中，通过 <strong>__inline</strong> 方式进行编译处理前端模板。同时规定以 <strong>tmpl</strong> 为后缀的文件为前端模板，使用方式：</p>
 <pre><code class="hljs lang-javascript">// 编译前
 <span class="hljs-keyword">var</span> demoTemplate = __inline('demo.tmpl');
@@ -81,12 +81,12 @@ require(<span class="hljs-string">"common:static/lib/template.js"</span>)
 </code></pre><p>template 的安装方式</p>
 <pre><code>// 在 common 的 <span class="hljs-keyword">static</span>/lib 目录下执行下面命令
 $ lights install <span class="hljs-keyword">template</span>
-</code></pre><h4 class=""><a name="模板组件化" class="anchor" href="#模板组件化"><span class="doc-link"></span></a>模板组件化</h4><p>模板组件是能独立提供功能且能够复用的页面片段，所在规范目录 <strong> 模块根目录 /widget/</strong> ，模板组件以模板、JS 组件、CSS 组件组成（默认必须有模板）。</p>
-<h4 class=""><a name="widget 定义" class="anchor" href="#widget 定义"><span class="doc-link"></span></a>widget 定义</h4><p>只要在 widget 目录下的 Smarty 模板即为模板组件，<code>目录下有与模板同名的 JS、CSS 文件 FIS 会自动添加依赖关系处理，在模板渲染时进行同步加载</code>。</p>
-<h5 class=""><a name="widget 调用" class="anchor" href="#widget 调用"><span class="doc-link"></span></a>widget 调用</h5><p>调用一个模板组件需要通过 widget 语法，如我们想调用 home 下的 section 模板组件，则语法为</p>
+</code></pre><h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="doc-link"></span></a>模板组件化</h4><p>模板组件是能独立提供功能且能够复用的页面片段，所在规范目录 <strong> 模块根目录 /widget/</strong> ，模板组件以模板、JS 组件、CSS 组件组成（默认必须有模板）。</p>
+<h4 class=""><a name="widget%20%E5%AE%9A%E4%B9%89" class="anchor" href="#widget%20%E5%AE%9A%E4%B9%89"><span class="doc-link"></span></a>widget 定义</h4><p>只要在 widget 目录下的 Smarty 模板即为模板组件，<code>目录下有与模板同名的 JS、CSS 文件 FIS 会自动添加依赖关系处理，在模板渲染时进行同步加载</code>。</p>
+<h5 class=""><a name="widget%20%E8%B0%83%E7%94%A8" class="anchor" href="#widget%20%E8%B0%83%E7%94%A8"><span class="doc-link"></span></a>widget 调用</h5><p>调用一个模板组件需要通过 widget 语法，如我们想调用 home 下的 section 模板组件，则语法为</p>
 <pre><code><span class="hljs-comment">// 调用模板的路径为 modulename: 模板在 widget 目录下路径</span>
 {<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"home:widget/section/section.tpl"</span> <span class="hljs-variable">%}</span>
-</code></pre><h4 class=""><a name="widget 函数调用方式" class="anchor" href="#widget 函数调用方式"><span class="doc-link"></span></a>widget 函数调用方式</h4><p>widget 插件可以直接调用某个 smarty 的 function 函数，使用方式为:</p>
+</code></pre><h4 class=""><a name="widget%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F" class="anchor" href="#widget%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="doc-link"></span></a>widget 函数调用方式</h4><p>widget 插件可以直接调用某个 smarty 的 function 函数，使用方式为:</p>
 <pre><code><span class="hljs-comment">// 在模板中定义 function 函数</span>
 {%function name="functionDemo"%}
 <span class="hljs-code">       .............</span>

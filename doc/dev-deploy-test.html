@@ -1,4 +1,4 @@
-<h3 class="" id="产出目录"><a name="产出目录" class="anchor" href="#产出目录"><span class="doc-link"></span></a>产出目录</h3><p>FIS 根据目录规范默认设置了文件的产出路径：</p>
+<h3 class="" id="产出目录"><a name="%E4%BA%A7%E5%87%BA%E7%9B%AE%E5%BD%95" class="anchor" href="#%E4%BA%A7%E5%87%BA%E7%9B%AE%E5%BD%95"><span class="doc-link"></span></a>产出目录</h3><p>FIS 根据目录规范默认设置了文件的产出路径：</p>
 <pre><code class="hljs lang-bash">└── config
 │    └── modulename-map<span class="hljs-class">.json</span>    静态资源表
 ├── template
@@ -23,13 +23,13 @@
 ├── test
 </code></pre>
 <p>用户根据产出后的目录，只需要将 <strong>config、template、static、plugin</strong> 目录上传至联调机器进行项目联调。</p>
-<h3 class="" id="上传配置"><a name="上传配置" class="anchor" href="#上传配置"><span class="doc-link"></span></a>上传配置</h3><p>用户通过配置 <strong>deploy 节点 </strong> 进行文件上传，fis 支持使用 post 请求向 http 服务器发送文件，服务器端可以使用 php、java 等后端逻辑进行接收，<a href="https://github.com/fis-dev/fis-command-release">fis-command-release</a> 插件中提供了一个这样的 <a href="https://github.com/fis-dev/fis-command-release/blob/master/tools/receiver.php">php 版示例</a>，用户可以直接部署此文件于接收端服务器上。</p>
+<h3 class="" id="上传配置"><a name="%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE" class="anchor" href="#%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>上传配置</h3><p>用户通过配置 <strong>deploy 节点 </strong> 进行文件上传，fis 支持使用 post 请求向 http 服务器发送文件，服务器端可以使用 php、java 等后端逻辑进行接收，<a href="https://github.com/fis-dev/fis-command-release">fis-command-release</a> 插件中提供了一个这样的 <a href="https://github.com/fis-dev/fis-command-release/blob/master/tools/receiver.php">php 版示例</a>，用户可以直接部署此文件于接收端服务器上。</p>
 <blockquote>
 <p>注意： receiver.php 放到测试机后，请在浏览器中直接访问该文件，保证可以访问。
 可以访问的情况下，页面会显示 I&#39;m ready for that, you know. </p>
 </blockquote>
 <p>根据产出目录以及联调机器，进行上传配置：</p>
-<h4 class=""><a name="上传到 1 个测试机" class="anchor" href="#上传到 1 个测试机"><span class="doc-link"></span></a>上传到 1 个测试机</h4><pre><code class="hljs lang-javascript"><span class="xml">// 上传到一个 remote 测试机
+<h4 class=""><a name="%E4%B8%8A%E4%BC%A0%E5%88%B0%201%20%E4%B8%AA%E6%B5%8B%E8%AF%95%E6%9C%BA" class="anchor" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0%201%20%E4%B8%AA%E6%B5%8B%E8%AF%95%E6%9C%BA"><span class="doc-link"></span></a>上传到 1 个测试机</h4><pre><code class="hljs lang-javascript"><span class="xml">// 上传到一个 remote 测试机
 fis.config.set('deploy', </span><span class="hljs-expression">{
     /<span class="hljs-end-block">/ </span>使用 <span class="hljs-variable">fis</span> <span class="hljs-variable">release</span> <span class="hljs-variable">--dest</span> <span class="hljs-variable">static</span> 来使用这个配置
     <span class="hljs-variable">remote</span>: [{
@@ -80,7 +80,7 @@ fis.config.set('deploy', </span><span class="hljs-expression">{
     }</span><span class="xml">]
 });</span>
 </code></pre>
-<h4 class=""><a name="上传到多个测试机" class="anchor" href="#上传到多个测试机"><span class="doc-link"></span></a>上传到多个测试机</h4><pre><code class="hljs lang-javascript"><span class="xml">// 上传到 remote，local，remote2 三台机器
+<h4 class=""><a name="%E4%B8%8A%E4%BC%A0%E5%88%B0%E5%A4%9A%E4%B8%AA%E6%B5%8B%E8%AF%95%E6%9C%BA" class="anchor" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0%E5%A4%9A%E4%B8%AA%E6%B5%8B%E8%AF%95%E6%9C%BA"><span class="doc-link"></span></a>上传到多个测试机</h4><pre><code class="hljs lang-javascript"><span class="xml">// 上传到 remote，local，remote2 三台机器
 //fis-conf.js
 fis.config.set('deploy', </span><span class="hljs-expression">{
     /<span class="hljs-end-block">/ </span>使用 <span class="hljs-variable">fis</span> <span class="hljs-variable">release</span> <span class="hljs-variable">--dest</span> <span class="hljs-variable">remote</span> 来使用这个配置
@@ -131,7 +131,7 @@ fis.config.set('deploy', </span><span class="hljs-expression">{
     ]
 });</span>
 </code></pre>
-<h4 class=""><a name="小贴士" class="anchor" href="#小贴士"><span class="doc-link"></span></a>小贴士</h4><ul>
+<h4 class=""><a name="%E5%B0%8F%E8%B4%B4%E5%A3%AB" class="anchor" href="#%E5%B0%8F%E8%B4%B4%E5%A3%AB"><span class="doc-link"></span></a>小贴士</h4><ul>
 <li><p><strong>--dest 参数 </strong> 支持使用逗号（,）分割多个发布配置，比如上面的例子，我们可以使用 fis release --dest <strong>remote,plugin</strong> 命令在一次编译中同时发布多个目标。</p>
 </li>
 <li><p><code>subOnly 参数</code>
@@ -148,7 +148,7 @@ fis.config.set('deploy', </span><span class="hljs-expression">{
     }
 }
 </code></pre>
-<h3 class="" id="上传常见问题"><a name="上传常见问题" class="anchor" href="#上传常见问题"><span class="doc-link"></span></a>上传常见问题</h3><ol>
+<h3 class="" id="上传常见问题"><a name="%E4%B8%8A%E4%BC%A0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" class="anchor" href="#%E4%B8%8A%E4%BC%A0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="doc-link"></span></a>上传常见问题</h3><ol>
 <li><p><code>上传到一半突然中断, 怎么办？</code></p>
 <p> A: 请关闭测试机的服务器的防火墙，然后重新上传。至于服务器防火墙怎么关闭，不同服务器不一样，所以还是查文档或者 google 一下吧</p>
 </li>

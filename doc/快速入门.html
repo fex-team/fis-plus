@@ -1,11 +1,11 @@
-<h1 class="page-header"><a name="快速入门" class="anchor" href="#快速入门"><span class="doc-link"></span></a>快速入门</h1><h3 class="" id="安装"><a name="安装" class="anchor" href="#安装"><span class="doc-link"></span></a>安装</h3><p>fis-plus 的 自动化 / 辅助开发工具 被发布为一套 npm 包，它对环境的要求是：</p>
+<h1 class="page-header"><a name="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8" class="anchor" href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="doc-link"></span></a>快速入门</h1><h3 class="" id="安装"><a name="%E5%AE%89%E8%A3%85" class="anchor" href="#%E5%AE%89%E8%A3%85"><span class="doc-link"></span></a>安装</h3><p>fis-plus 的 自动化 / 辅助开发工具 被发布为一套 npm 包，它对环境的要求是：</p>
 <ul>
 <li>操作系统：任何能安装 nodejs 的操作系统</li>
 <li>node 版本：&gt;= v0.8.0</li>
 <li>jre 版本：&gt;= v1.5.0 【如果不需要本地调试服务器，可以忽略 java 环境要求】</li>
 <li>php-cgi 版本：&gt;= v5.0.0 【如果不需要本地调试服务器，可以忽略 php-cgi 环境要求】</li>
 </ul>
-<h4 class=""><a name="安装 nodejs" class="anchor" href="#安装 nodejs"><span class="doc-link"></span></a>安装 nodejs</h4><ul>
+<h4 class=""><a name="%E5%AE%89%E8%A3%85%20nodejs" class="anchor" href="#%E5%AE%89%E8%A3%85%20nodejs"><span class="doc-link"></span></a>安装 nodejs</h4><ul>
 <li><a href="http://nodejs.org/">安装 nodejs</a></li>
 </ul>
 <h4 class=""><a name="npm" class="anchor" href="#npm"><span class="doc-link"></span></a>npm</h4><p><a href="https://www.npmjs.org/">npm</a>是 nodejs 的包管理工具。安装 nodejs 后，npm 就自动一起安装了。</p>
@@ -28,31 +28,31 @@
 </ul>
 </li>
 </ul>
-<h4 class=""><a name="安装 fis-plus" class="anchor" href="#安装 fis-plus"><span class="doc-link"></span></a>安装 fis-plus</h4><p>nodejs 安装好后，命令行执行</p>
+<h4 class=""><a name="%E5%AE%89%E8%A3%85%20fis-plus" class="anchor" href="#%E5%AE%89%E8%A3%85%20fis-plus"><span class="doc-link"></span></a>安装 fis-plus</h4><p>nodejs 安装好后，命令行执行</p>
 <pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g fis-plus
 </code></pre>
 <p>安装好 fis-plus 之后，执行 fisp -v，如果能看到以下信息，则表明安装成功。<em>如果安装过程中遇到什么问题，可以到 <a href="https://github.com/fex-team/fis-plus/issues?state=open">https://github.com/fex-team/fis-plus/issues?state=open</a> 提问题，或者 QQ 询问。</em></p>
 <p><img src="/fis-plus/static/doc/img/fisp-version_0d295f9.png" alt=""></p>
-<h4 class=""><a name="安装 lights" class="anchor" href="#安装 lights"><span class="doc-link"></span></a>安装 lights</h4><p><a href="http://lights.baidu.com">lights</a>是 fis 提供的包管理工具，托管了 fis 所有资源。是使用 fis 的时候，必不可少的利器。</p>
+<h4 class=""><a name="%E5%AE%89%E8%A3%85%20lights" class="anchor" href="#%E5%AE%89%E8%A3%85%20lights"><span class="doc-link"></span></a>安装 lights</h4><p><a href="http://lights.baidu.com">lights</a>是 fis 提供的包管理工具，托管了 fis 所有资源。是使用 fis 的时候，必不可少的利器。</p>
 <pre><code class="hljs lang-bash">npm <span class="hljs-keyword">install</span> -g lights
 </code></pre>
-<h4 class=""><a name="安装 Java" class="anchor" href="#安装 Java"><span class="doc-link"></span></a>安装 Java</h4><ul>
+<h4 class=""><a name="%E5%AE%89%E8%A3%85%20Java" class="anchor" href="#%E5%AE%89%E8%A3%85%20Java"><span class="doc-link"></span></a>安装 Java</h4><ul>
 <li><a href="http://java.com/">安装 java</a></li>
 </ul>
-<h4 class=""><a name="安装 php-cgi" class="anchor" href="#安装 php-cgi"><span class="doc-link"></span></a>安装 php-cgi</h4><ul>
+<h4 class=""><a name="%E5%AE%89%E8%A3%85%20php-cgi" class="anchor" href="#%E5%AE%89%E8%A3%85%20php-cgi"><span class="doc-link"></span></a>安装 php-cgi</h4><ul>
 <li><p><a href="https://gist.github.com/xiangshouding/9359739">mac 安装</a></p>
 <p>  mac 下安装 php-cgi 有多种方法，这里只介绍比较简单的两个方法；</p>
 <ul>
 <li>用 brew 安装</li>
 <li><p>直接下载安装 XAMPP</p>
-<h5 class=""><a name="用 brew 安装" class="anchor" href="#用 brew 安装"><span class="doc-link"></span></a>用 brew 安装</h5><p>如果安装了 xcode，那么推荐使用 brew 来安装 php。详细使用方法见<a href="http://brew.sh/">官网</a>，这里只说明如何装 php-cgi；</p>
+<h5 class=""><a name="%E7%94%A8%20brew%20%E5%AE%89%E8%A3%85" class="anchor" href="#%E7%94%A8%20brew%20%E5%AE%89%E8%A3%85"><span class="doc-link"></span></a>用 brew 安装</h5><p>如果安装了 xcode，那么推荐使用 brew 来安装 php。详细使用方法见<a href="http://brew.sh/">官网</a>，这里只说明如何装 php-cgi；</p>
 <pre><code class="hljs lang-bash">$ brew <span class="hljs-operator"><span class="hljs-keyword">install</span> php55 <span class="hljs-comment">--with-cgi</span></span>
 </code></pre>
 <blockquote>
 <p>如果安装提示没有 php55，请用 brew tap homebrew/homebrew-php 后再安装</p>
 </blockquote>
 <p>如上，方法很简单，等安装成功后即可使用；</p>
-<h5 class=""><a name="直接下载安装 XAMPP" class="anchor" href="#直接下载安装 XAMPP"><span class="doc-link"></span></a>直接下载安装 XAMPP</h5><p>到 <a href="http://www.apachefriends.org/">XAMPP 官网</a> 下载 Mac 版本，双击安装；等安装成功后需要把 XAMPP 的 bin 目录设置到
+<h5 class=""><a name="%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%20XAMPP" class="anchor" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%20XAMPP"><span class="doc-link"></span></a>直接下载安装 XAMPP</h5><p>到 <a href="http://www.apachefriends.org/">XAMPP 官网</a> 下载 Mac 版本，双击安装；等安装成功后需要把 XAMPP 的 bin 目录设置到
 环境变量里面；</p>
 </li>
 <li><p>使用 zsh</p>
@@ -69,7 +69,7 @@ $ <span class="hljs-built_in">source</span> ~/.bashrc
 </li>
 <li><p><a href="https://gist.github.com/lily-zhangying/9295c5221fa29d429d52">windows 安装</a></p>
 <p>  windows 安装方法很多，下面介绍最简单的一种。</p>
-<h5 class=""><a name="直接安装 xampp" class="anchor" href="#直接安装 xampp"><span class="doc-link"></span></a>直接安装 xampp</h5><p>  地址：[<a href="http://www.apachefriends.org/zh_cn/index.html">http://www.apachefriends.org/zh_cn/index.html</a>]</p>
+<h5 class=""><a name="%E7%9B%B4%E6%8E%A5%E5%AE%89%E8%A3%85%20xampp" class="anchor" href="#%E7%9B%B4%E6%8E%A5%E5%AE%89%E8%A3%85%20xampp"><span class="doc-link"></span></a>直接安装 xampp</h5><p>  地址：[<a href="http://www.apachefriends.org/zh_cn/index.html">http://www.apachefriends.org/zh_cn/index.html</a>]</p>
 <ul>
 <li>下载 xampp 并安装，将 xampp/php 路径加入环境变量中。</li>
 <li>就安装了 php 和 php-cgi。</li>
@@ -79,7 +79,7 @@ $ <span class="hljs-built_in">source</span> ~/.bashrc
 <li><p><a href="https://github.com/fouber/install-php-cgi-1">linux 安装</a></p>
 </li>
 </ul>
-<h3 class="" id="示例"><a name="示例" class="anchor" href="#示例"><span class="doc-link"></span></a>示例</h3><p><em>以下示例都是在命令行下操作的，如果你是 windows 用户，请打命令的时候忽略命令前的 <code>$</code>，而且请打开 <code>cmd</code> 来执行这些操作</em></p>
+<h3 class="" id="示例"><a name="%E7%A4%BA%E4%BE%8B" class="anchor" href="#%E7%A4%BA%E4%BE%8B"><span class="doc-link"></span></a>示例</h3><p><em>以下示例都是在命令行下操作的，如果你是 windows 用户，请打命令的时候忽略命令前的 <code>$</code>，而且请打开 <code>cmd</code> 来执行这些操作</em></p>
 <p>已经准备好了一个 fis-plus 的前端项目，只需要经过以下四步，就可以完整运行这个项目，并看到结果。</p>
 <ul>
 <li>初始化本地模拟环境</li>
@@ -87,10 +87,10 @@ $ <span class="hljs-built_in">source</span> ~/.bashrc
 <li>发布</li>
 <li>预览</li>
 </ul>
-<h4 class=""><a name="初始化本地模拟环境" class="anchor" href="#初始化本地模拟环境"><span class="doc-link"></span></a>初始化本地模拟环境</h4><p>为了前后端开发分离，来并行开发，fis-plus 提供了一套本地环境模拟的工具，安装并初始化它后就能方便的模拟线上环境了。</p>
+<h4 class=""><a name="%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83" class="anchor" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%AC%E5%9C%B0%E6%A8%A1%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="doc-link"></span></a>初始化本地模拟环境</h4><p>为了前后端开发分离，来并行开发，fis-plus 提供了一套本地环境模拟的工具，安装并初始化它后就能方便的模拟线上环境了。</p>
 <pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">server</span> init
 </code></pre>
-<h4 class=""><a name="下载 Demo" class="anchor" href="#下载 Demo"><span class="doc-link"></span></a>下载 Demo</h4><p>FIS 的所有示例及其组件都用包管理工具 <code>lights</code> 进行管理，使用 <code>lights</code> 安装 demo。</p>
+<h4 class=""><a name="%E4%B8%8B%E8%BD%BD%20Demo" class="anchor" href="#%E4%B8%8B%E8%BD%BD%20Demo"><span class="doc-link"></span></a>下载 Demo</h4><p>FIS 的所有示例及其组件都用包管理工具 <code>lights</code> 进行管理，使用 <code>lights</code> 安装 demo。</p>
 <pre><code class="hljs lang-bash">$ lights <span class="hljs-keyword">install</span> pc-demo
 </code></pre>
 <p>其实 fisp 已经集成了 <code>lights</code> 的客户端。</p>
@@ -104,15 +104,15 @@ $ fisp init pc-demo
 </code></pre>
 </div>
 
-<h4 class=""><a name="发布" class="anchor" href="#发布"><span class="doc-link"></span></a>发布</h4><pre><code class="hljs lang-bash"><span class="hljs-variable">$ </span>cd pc-demo
+<h4 class=""><a name="%E5%8F%91%E5%B8%83" class="anchor" href="#%E5%8F%91%E5%B8%83"><span class="doc-link"></span></a>发布</h4><pre><code class="hljs lang-bash"><span class="hljs-variable">$ </span>cd pc-demo
 <span class="hljs-variable">$ </span>fisp release -r common
 <span class="hljs-variable">$ </span>fisp release -r home
 </code></pre>
-<h4 class=""><a name="预览" class="anchor" href="#预览"><span class="doc-link"></span></a>预览</h4><pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">server</span> start <span class="hljs-preprocessor">#启动服务器</span>
+<h4 class=""><a name="%E9%A2%84%E8%A7%88" class="anchor" href="#%E9%A2%84%E8%A7%88"><span class="doc-link"></span></a>预览</h4><pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">server</span> start <span class="hljs-preprocessor">#启动服务器</span>
 </code></pre>
 <p>启动服务的时候，启动成功后会自动打开浏览器，访问首页，这时候你应该打开 demo 首页，并和下图是一致的。</p>
 <p><img src="/fis-plus/static/doc/img/demo-index_9f1991c.png" alt=""></p>
-<h3 class="" id="示例解说"><a name="示例解说" class="anchor" href="#示例解说"><span class="doc-link"></span></a>示例解说</h3><p>自此，一个前端项目已经运行起来了。你可以看一下 pc-demo 的源码，其中包含两个模块</p>
+<h3 class="" id="示例解说"><a name="%E7%A4%BA%E4%BE%8B%E8%A7%A3%E8%AF%B4" class="anchor" href="#%E7%A4%BA%E4%BE%8B%E8%A7%A3%E8%AF%B4"><span class="doc-link"></span></a>示例解说</h3><p>自此，一个前端项目已经运行起来了。你可以看一下 pc-demo 的源码，其中包含两个模块</p>
 <ul>
 <li>common</li>
 <li>home</li>
@@ -139,37 +139,37 @@ $ fisp init pc-demo
 <li>server.conf 这是一个很有用的文件，它里面可以配置 url 转发，可以方便在本地模拟 <code>ajax</code> 请求等。</li>
 </ul>
 <p><em>细心的你有可能发现了一个比较专业的词汇 <strong> 组件化 </strong>，组件化的细节比较繁多，准备新开一节说明</em></p>
-<h4 class=""><a name="page 如何引入 widget" class="anchor" href="#page 如何引入 widget"><span class="doc-link"></span></a>page 如何引入 widget</h4><ul>
+<h4 class=""><a name="page%20%E5%A6%82%E4%BD%95%E5%BC%95%E5%85%A5%20widget" class="anchor" href="#page%20%E5%A6%82%E4%BD%95%E5%BC%95%E5%85%A5%20widget"><span class="doc-link"></span></a>page 如何引入 widget</h4><ul>
 <li><p>如示例中 <code>index.tpl</code> 如何应用 <code>widget/header/header.tpl</code> ? 如果用过 smarty 的你可能会想到 <code>include</code>，但在 FIS-PLUS 中引入 widget 有个跟 <code>include</code> 类似的插件完成，<code>widget</code>。</p>
 <pre><code class="hljs lang-html">{<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"home:widget/header/header.tpl"</span><span class="hljs-variable">%}</span>
 </code></pre>
 <p><code>home:widget/header/header.tpl</code> 这个是 FIS 中<a href="# 静态资源 id">静态资源 id</a></p>
 </li>
 </ul>
-<h4 class=""><a name="模板中如何使用 widget 目录下的静态资源" class="anchor" href="#模板中如何使用 widget 目录下的静态资源"><span class="doc-link"></span></a>模板中如何使用 widget 目录下的静态资源</h4><p>根据目录规范 <code>widget</code> 目录下的 js 讲被进行 <a href="">组件化封装</a>，根据<a href="">同名依赖</a> 原则；</p>
+<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>模板中如何使用 widget 目录下的静态资源</h4><p>根据目录规范 <code>widget</code> 目录下的 js 讲被进行 <a href="">组件化封装</a>，根据<a href="">同名依赖</a> 原则；</p>
 <ul>
 <li>当使用某个 widget 下模板是，同名 js,css 将会被加载。</li>
 <li>当使用某个 widget 下的 js 时，其同名 css 会被加载。</li>
 </ul>
-<h5 class=""><a name="加载 JS" class="anchor" href="#加载 JS"><span class="doc-link"></span></a>加载 JS</h5><p>由于 js 进行了组件化封装，比如通过 <code>require</code> 或者 <code>require.async</code> 函数来执行其中逻辑。</p>
+<h5 class=""><a name="%E5%8A%A0%E8%BD%BD%20JS" class="anchor" href="#%E5%8A%A0%E8%BD%BD%20JS"><span class="doc-link"></span></a>加载 JS</h5><p>由于 js 进行了组件化封装，比如通过 <code>require</code> 或者 <code>require.async</code> 函数来执行其中逻辑。</p>
 <pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>script<span class="hljs-preprocessor">%</span>}
 require<span class="hljs-comment">('/widget/a.js')</span>;
 {<span class="hljs-preprocessor">%</span>/script<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p>如上，在模板中使用 <code>widget</code> 下的 js，必须放到 <code>{%script%}</code>  <code>{%/script%}</code> 之间，用它来代替 js 的内联用法。</p>
-<h5 class=""><a name="加载 css" class="anchor" href="#加载 css"><span class="doc-link"></span></a>加载 css</h5><p>说完加载 js 的方法，css 如何引入呢？</p>
+<h5 class=""><a name="%E5%8A%A0%E8%BD%BD%20css" class="anchor" href="#%E5%8A%A0%E8%BD%BD%20css"><span class="doc-link"></span></a>加载 css</h5><p>说完加载 js 的方法，css 如何引入呢？</p>
 <ul>
 <li>同名依赖，被依赖</li>
 <li>通过 smarty 的 <code>require</code> 插件</li>
 </ul>
 <pre><code class="hljs lang-html">{<span class="hljs-variable">%require</span> name=<span class="hljs-string">"home:widget/a.css"</span><span class="hljs-variable">%}</span>
 </code></pre>
-<h4 class=""><a name="静态资源 id" class="anchor" href="#静态资源 id"><span class="doc-link"></span></a>静态资源 id</h4><p>静态资源 id 会贯穿整个用户文档，跟使用密切相关，所以它很重要。现在需要弄清楚两件事情</p>
+<h4 class=""><a name="%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%20id" class="anchor" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%20id"><span class="doc-link"></span></a>静态资源 id</h4><p>静态资源 id 会贯穿整个用户文档，跟使用密切相关，所以它很重要。现在需要弄清楚两件事情</p>
 <ul>
 <li>静态资源 id 是如何在 <code>fis-plus</code> 中计算的？</li>
 <li>静态资源 id 在那些情况下使用，那些情况下必须用静态资源 id？</li>
 </ul>
-<h5 class=""><a name="静态资源 id 是如何在 <code>fis-plus</code> 中计算的？" class="anchor" href="#静态资源 id 是如何在 <code>fis-plus</code> 中计算的？"><span class="doc-link"></span></a>静态资源 id 是如何在 <code>fis-plus</code> 中计算的？</h5><p><code>fis-plus</code> 必须要指定模块的 <code>namespace</code>，所以静态资源 id 被标记为</p>
+<h5 class=""><a name="%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%20id%20%E6%98%AF%E5%A6%82%E4%BD%95%E5%9C%A8%20%3Ccode%3Efis-plus%3C/code%3E%20%E4%B8%AD%E8%AE%A1%E7%AE%97%E7%9A%84%EF%BC%9F" class="anchor" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%20id%20%E6%98%AF%E5%A6%82%E4%BD%95%E5%9C%A8%20%3Ccode%3Efis-plus%3C/code%3E%20%E4%B8%AD%E8%AE%A1%E7%AE%97%E7%9A%84%EF%BC%9F"><span class="doc-link"></span></a>静态资源 id 是如何在 <code>fis-plus</code> 中计算的？</h5><p><code>fis-plus</code> 必须要指定模块的 <code>namespace</code>，所以静态资源 id 被标记为</p>
 <blockquote>
 <p>namespace:&lt;资源相对于模块根目录的路径&gt;</p>
 </blockquote>
@@ -180,7 +180,7 @@ require<span class="hljs-comment">('/widget/a.js')</span>;
 </ul>
 </li>
 </ul>
-<h5 class=""><a name="静态资源 id 在那些情况下使用，那些情况下必须用静态资源 id？" class="anchor" href="#静态资源 id 在那些情况下使用，那些情况下必须用静态资源 id？"><span class="doc-link"></span></a>静态资源 id 在那些情况下使用，那些情况下必须用静态资源 id？</h5><ul>
+<h5 class=""><a name="%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%20id%20%E5%9C%A8%E9%82%A3%E4%BA%9B%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF%E7%94%A8%EF%BC%8C%E9%82%A3%E4%BA%9B%E6%83%85%E5%86%B5%E4%B8%8B%E5%BF%85%E9%A1%BB%E7%94%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%20id%EF%BC%9F" class="anchor" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%20id%20%E5%9C%A8%E9%82%A3%E4%BA%9B%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF%E7%94%A8%EF%BC%8C%E9%82%A3%E4%BA%9B%E6%83%85%E5%86%B5%E4%B8%8B%E5%BF%85%E9%A1%BB%E7%94%A8%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%20id%EF%BC%9F"><span class="doc-link"></span></a>静态资源 id 在那些情况下使用，那些情况下必须用静态资源 id？</h5><ul>
 <li>使用 <code>widget</code>、<code>require</code>、<code>html</code> 等 <strong>smarty</strong> 插件时，必须指定资源的 id</li>
 <li><code>require</code>、<code>require.async</code> 等 <strong>JavaScript</strong> 函数，可以使用 id</li>
 </ul>

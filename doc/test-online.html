@@ -1,4 +1,4 @@
-<h3 class="" id="独立加载静态资源"><a name="独立加载静态资源" class="anchor" href="#独立加载静态资源"><span class="doc-link"></span></a>独立加载静态资源</h3><p>如果你在配置文件中进行静态资源打包配置，在编译后会产出资源表以及相对应的打包文件。在页面渲染加载时，FIS 后端框架会根据页面静态资源使用情况加载对应的资源包及静态资源。
+<h3 class="" id="独立加载静态资源"><a name="%E7%8B%AC%E7%AB%8B%E5%8A%A0%E8%BD%BD%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E7%8B%AC%E7%AB%8B%E5%8A%A0%E8%BD%BD%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>独立加载静态资源</h3><p>如果你在配置文件中进行静态资源打包配置，在编译后会产出资源表以及相对应的打包文件。在页面渲染加载时，FIS 后端框架会根据页面静态资源使用情况加载对应的资源包及静态资源。
 如果在联调或者线上出现问题时，需要独立加载静态资源不想加载资源包进行问题定位怎么设置呢？</p>
 <p>你只需要在 url 上加上 <code>fis_debug</code> 参数，即可获取静态资源的独立加载，而不是加载资源包。</p>
 <pre><code class="hljs lang-php">如访问 demo-home 中的 <span class="hljs-string">index:</span>

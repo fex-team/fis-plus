@@ -1,5 +1,5 @@
 <h3 class="" id="Rewrite"><a name="Rewrite" class="anchor" href="#Rewrite"><span class="doc-link"></span></a>Rewrite</h3><p>FIS 的 rewrite 模块。用于本地浏览时，url 的转发，覆盖 fis 默认的 url 规则，模拟线上 url 规则，ajax 请求，文件转发等。</p>
-<h4 class=""><a name="基础配置" class="anchor" href="#基础配置"><span class="doc-link"></span></a>基础配置</h4><p>在模块目录下通过配置文件 server.conf 文件进行配置，配置方式是：</p>
+<h4 class=""><a name="%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE" class="anchor" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>基础配置</h4><p>在模块目录下通过配置文件 server.conf 文件进行配置，配置方式是：</p>
 <p>rewrite 和 redirect 开头的会被翻译成一条匹配规则，自上而下的匹配。所有非 rewrite 和 redirect 开头的会被当做注释处理。</p>
 <pre><code class="hljs lang-ini">rewrite ： 匹配规则后转发到一个文件
 <span class="hljs-keyword">template</span> ： 匹配规则后转发到一个模板文件，但 url 不改变，只针对模板
@@ -9,7 +9,7 @@ rewrite ^\/news\?.*tn\=[a-zA-<span class="hljs-type">Z0</span>-<span class="hljs
 <span class="hljs-keyword">template</span> ^\/(.*)\?.*  /home/page/index.tpl
 redirect ^\/index\?.* /home/page/index
 </code></pre>
-<h4 class=""><a name="配置文件说明" class="anchor" href="#配置文件说明"><span class="doc-link"></span></a>配置文件说明</h4><ol>
+<h4 class=""><a name="%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E" class="anchor" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E"><span class="doc-link"></span></a>配置文件说明</h4><ol>
 <li>配置文件每一行为一条规则。</li>
 <li>格式为：匹配类型 (空格) 匹配 url 正则 (空格) 命中正则后的目的文件路径或者 url。
 rewrite、redirect 和 template 是 fis 默认的三种匹配类型。</li>
