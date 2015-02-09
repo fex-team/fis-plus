@@ -4,153 +4,152 @@
 ├── template
 │    ├──home
 │    │   └── page
-│    │         └── index<span class="hljs-class">.tpl</span>      page级模板文件
+│    │         └── index<span class="hljs-class">.tpl</span>      page 级模板文件
 │    │   └── widget
 │    │         └── <span class="hljs-tag">section</span>
-│    │           └── <span class="hljs-tag">section</span><span class="hljs-class">.tpl</span>   widget模板文件
+│    │           └── <span class="hljs-tag">section</span><span class="hljs-class">.tpl</span>   widget 模板文件
 ├── static
 │    └── home
 │    │   ├── pkg
-│    │   │   ├── demo<span class="hljs-class">.css</span>  打包css文件
-│    │   │   └── demo<span class="hljs-class">.js</span>   打包js文件
+│    │   │   ├── demo<span class="hljs-class">.css</span>  打包 css 文件
+│    │   │   └── demo<span class="hljs-class">.js</span>   打包 js 文件
 │    │   ├── index
-│    │   │   ├── index<span class="hljs-class">.css</span>  page级css文件
-│    │   │   └── index<span class="hljs-class">.js</span>   page级js文件
-│    │   └── widget             widget组件目录
+│    │   │   ├── index<span class="hljs-class">.css</span>  page 级 css 文件
+│    │   │   └── index<span class="hljs-class">.js</span>   page 级 js 文件
+│    │   └── widget             widget 组件目录
 │    │       └── <span class="hljs-tag">section</span>
 │    │               └── <span class="hljs-tag">section</span><span class="hljs-class">.css</span>
 ├── plugin
 ├── test
 </code></pre>
 <p>用户根据产出后的目录，只需要将 <strong>config、template、static、plugin</strong> 目录上传至联调机器进行项目联调。</p>
-<h3 class="" id="上传配置"><a name="上传配置" class="anchor" href="#上传配置"><span class="doc-link"></span></a>上传配置</h3><p>用户通过配置 <strong>deploy节点</strong> 进行文件上传，fis支持使用post请求向http服务器发送文件，服务器端可以使用php、java等后端逻辑进行接收，<a href="https://github.com/fis-dev/fis-command-release">fis-command-release</a>插件中提供了一个这样的 <a href="https://github.com/fis-dev/fis-command-release/blob/master/tools/receiver.php">php版示例</a>，用户可以直接部署此文件于接收端服务器上。</p>
+<h3 class="" id="上传配置"><a name="上传配置" class="anchor" href="#上传配置"><span class="doc-link"></span></a>上传配置</h3><p>用户通过配置 <strong>deploy 节点 </strong> 进行文件上传，fis 支持使用 post 请求向 http 服务器发送文件，服务器端可以使用 php、java 等后端逻辑进行接收，<a href="https://github.com/fis-dev/fis-command-release">fis-command-release</a> 插件中提供了一个这样的 <a href="https://github.com/fis-dev/fis-command-release/blob/master/tools/receiver.php">php 版示例</a>，用户可以直接部署此文件于接收端服务器上。</p>
 <blockquote>
-<p>注意： receiver.php放到测试机后，请在浏览器中直接访问该文件，保证可以访问。
+<p>注意： receiver.php 放到测试机后，请在浏览器中直接访问该文件，保证可以访问。
 可以访问的情况下，页面会显示 I&#39;m ready for that, you know. </p>
 </blockquote>
 <p>根据产出目录以及联调机器，进行上传配置：</p>
-<h4 class=""><a name="上传到1个测试机" class="anchor" href="#上传到1个测试机"><span class="doc-link"></span></a>上传到1个测试机</h4><pre><code class="hljs lang-javascript"><span class="hljs-comment">//上传到一个 remote测试机</span>
-fis.config.set(<span class="hljs-string">'deploy'</span>, {
-    <span class="hljs-comment">//使用fis release --dest static来使用这个配置</span>
-<span class="hljs-label">    remote:</span> [{
-        <span class="hljs-comment">//如果配置了receiver，fis会把文件逐个post到接收端上</span>
-        <span class="hljs-string">receiver :</span> <span class="hljs-string">'http://www.example.com/path/to/receiver.php'</span>,
-        <span class="hljs-comment">//从产出的结果的static目录下找文件</span>
-        <span class="hljs-string">from :</span> <span class="hljs-string">'/static'</span>,
-        <span class="hljs-comment">//上传目录从static下一级开始不包括static目录</span>
-        <span class="hljs-string">subOnly :</span> <span class="hljs-literal">true</span>,
-        <span class="hljs-comment">//保存到远端机器的/home/fis/www/static目录下</span>
-        <span class="hljs-comment">//这个参数会跟随post请求一起发送</span>
-        <span class="hljs-string">to :</span> <span class="hljs-string">'/home/fis/www/'</span>,
-        <span class="hljs-comment">//某些后缀的文件不进行上传</span>
-        <span class="hljs-string">exclude :</span> <span class="hljs-regexp">/.*\.(?:svn|cvs|tar|rar|psd).*/</span>
-    },
-    {
-        <span class="hljs-comment">//如果配置了receiver，fis会把文件逐个post到接收端上</span>
-        <span class="hljs-string">receiver :</span> <span class="hljs-string">'http://www.example.com/path/to/receiver.php'</span>,
-        <span class="hljs-comment">//从产出的结果的config目录下找文件</span>
-        <span class="hljs-string">from :</span> <span class="hljs-string">'/config'</span>,
-        <span class="hljs-comment">//保存到远端机器的/home/fis/www/config目录下</span>
-        <span class="hljs-comment">//这个参数会跟随post请求一起发送</span>
-        <span class="hljs-string">to :</span> <span class="hljs-string">'/home/fis/www/'</span>,
-        <span class="hljs-comment">//某些后缀的文件不进行上传</span>
-        <span class="hljs-string">exclude :</span> <span class="hljs-regexp">/.*\.(?:svn|cvs|tar|rar|psd).*/</span>
-    },
-    {
-        <span class="hljs-comment">//如果配置了receiver，fis会把文件逐个post到接收端上</span>
-        <span class="hljs-string">receiver :</span> <span class="hljs-string">'http://www.example.com/path/to/receiver.php'</span>,
-        <span class="hljs-comment">//从产出的结果的template目录下找文件</span>
-        <span class="hljs-string">from :</span> <span class="hljs-string">'/config'</span>,
-        <span class="hljs-comment">//保存到远端机器的/home/fis/www/template目录下</span>
-        <span class="hljs-comment">//这个参数会跟随post请求一起发送</span>
-        <span class="hljs-string">to :</span> <span class="hljs-string">'/home/fis/www/'</span>,
-        <span class="hljs-comment">//某些后缀的文件不进行上传</span>
-        <span class="hljs-string">exclude :</span> <span class="hljs-regexp">/.*\.(?:svn|cvs|tar|rar|psd).*/</span>
-    },
-    {
-        <span class="hljs-comment">//如果配置了receiver，fis会把文件逐个post到接收端上</span>
-        <span class="hljs-string">receiver :</span> <span class="hljs-string">'http://www.example.com/path/to/receiver.php'</span>,
-        <span class="hljs-comment">//从产出的结果的plugin目录下找文件</span>
-        <span class="hljs-string">from :</span> <span class="hljs-string">'/plugin'</span>,
-        <span class="hljs-comment">//保存到远端机器的/home/fis/www/plugin目录下</span>
-        <span class="hljs-comment">//这个参数会跟随post请求一起发送</span>
-        <span class="hljs-string">to :</span> <span class="hljs-string">'/home/fis/www/'</span>,
-        <span class="hljs-comment">//某些后缀的文件不进行上传</span>
-        <span class="hljs-string">exclude :</span> <span class="hljs-regexp">/.*\.(?:svn|cvs|tar|rar|psd).*/</span>
-    }]
-});
+<h4 class=""><a name="上传到 1 个测试机" class="anchor" href="#上传到 1 个测试机"><span class="doc-link"></span></a>上传到 1 个测试机</h4><pre><code class="hljs lang-javascript"><span class="xml">// 上传到一个 remote 测试机
+fis.config.set('deploy', </span><span class="hljs-expression">{
+    /<span class="hljs-end-block">/ </span>使用 <span class="hljs-variable">fis</span> <span class="hljs-variable">release</span> <span class="hljs-variable">--dest</span> <span class="hljs-variable">static</span> 来使用这个配置
+    <span class="hljs-variable">remote</span>: [{
+        /<span class="hljs-end-block">/ </span>如果配置了 <span class="hljs-variable">receiver</span>，<span class="hljs-variable">fis</span> 会把文件逐个 <span class="hljs-variable">post</span> 到接收端上
+        <span class="hljs-variable">receiver</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.example.com</span><span class="hljs-end-block">/path</span><span class="hljs-end-block">/to</span><span class="hljs-end-block">/receiver.php</span>',
+        /<span class="hljs-end-block">/ </span>从产出的结果的 <span class="hljs-variable">static</span> 目录下找文件
+        <span class="hljs-variable">from</span> : '<span class="hljs-end-block">/static</span>',
+        /<span class="hljs-end-block">/ </span>上传目录从 <span class="hljs-variable">static</span> 下一级开始不包括 <span class="hljs-variable">static</span> 目录
+        <span class="hljs-variable">subOnly</span> : <span class="hljs-variable">true</span>,
+        /<span class="hljs-end-block">/ </span>保存到远端机器的 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/static </span>目录下
+        /<span class="hljs-end-block">/ </span>这个参数会跟随 <span class="hljs-variable">post</span> 请求一起发送
+        <span class="hljs-variable">to</span> : '<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span>/',
+        /<span class="hljs-end-block">/ </span>某些后缀的文件不进行上传
+        <span class="hljs-variable">exclude</span> : <span class="hljs-end-block">/.</span>*\<span class="hljs-variable">.</span>(?:<span class="hljs-variable">svn</span>|<span class="hljs-variable">cvs</span>|<span class="hljs-variable">tar</span>|<span class="hljs-variable">rar</span>|<span class="hljs-variable">psd</span>)<span class="hljs-variable">.</span>*/
+    }</span><span class="xml">,
+    </span><span class="hljs-expression">{
+        /<span class="hljs-end-block">/ </span>如果配置了 <span class="hljs-variable">receiver</span>，<span class="hljs-variable">fis</span> 会把文件逐个 <span class="hljs-variable">post</span> 到接收端上
+        <span class="hljs-variable">receiver</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.example.com</span><span class="hljs-end-block">/path</span><span class="hljs-end-block">/to</span><span class="hljs-end-block">/receiver.php</span>',
+        /<span class="hljs-end-block">/ </span>从产出的结果的 <span class="hljs-variable">config</span> 目录下找文件
+        <span class="hljs-variable">from</span> : '<span class="hljs-end-block">/config</span>',
+        /<span class="hljs-end-block">/ </span>保存到远端机器的 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/config </span>目录下
+        /<span class="hljs-end-block">/ </span>这个参数会跟随 <span class="hljs-variable">post</span> 请求一起发送
+        <span class="hljs-variable">to</span> : '<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span>/',
+        /<span class="hljs-end-block">/ </span>某些后缀的文件不进行上传
+        <span class="hljs-variable">exclude</span> : <span class="hljs-end-block">/.</span>*\<span class="hljs-variable">.</span>(?:<span class="hljs-variable">svn</span>|<span class="hljs-variable">cvs</span>|<span class="hljs-variable">tar</span>|<span class="hljs-variable">rar</span>|<span class="hljs-variable">psd</span>)<span class="hljs-variable">.</span>*/
+    }</span><span class="xml">,
+    </span><span class="hljs-expression">{
+        /<span class="hljs-end-block">/ </span>如果配置了 <span class="hljs-variable">receiver</span>，<span class="hljs-variable">fis</span> 会把文件逐个 <span class="hljs-variable">post</span> 到接收端上
+        <span class="hljs-variable">receiver</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.example.com</span><span class="hljs-end-block">/path</span><span class="hljs-end-block">/to</span><span class="hljs-end-block">/receiver.php</span>',
+        /<span class="hljs-end-block">/ </span>从产出的结果的 <span class="hljs-variable">template</span> 目录下找文件
+        <span class="hljs-variable">from</span> : '<span class="hljs-end-block">/config</span>',
+        /<span class="hljs-end-block">/ </span>保存到远端机器的 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/template </span>目录下
+        /<span class="hljs-end-block">/ </span>这个参数会跟随 <span class="hljs-variable">post</span> 请求一起发送
+        <span class="hljs-variable">to</span> : '<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span>/',
+        /<span class="hljs-end-block">/ </span>某些后缀的文件不进行上传
+        <span class="hljs-variable">exclude</span> : <span class="hljs-end-block">/.</span>*\<span class="hljs-variable">.</span>(?:<span class="hljs-variable">svn</span>|<span class="hljs-variable">cvs</span>|<span class="hljs-variable">tar</span>|<span class="hljs-variable">rar</span>|<span class="hljs-variable">psd</span>)<span class="hljs-variable">.</span>*/
+    }</span><span class="xml">,
+    </span><span class="hljs-expression">{
+        /<span class="hljs-end-block">/ </span>如果配置了 <span class="hljs-variable">receiver</span>，<span class="hljs-variable">fis</span> 会把文件逐个 <span class="hljs-variable">post</span> 到接收端上
+        <span class="hljs-variable">receiver</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.example.com</span><span class="hljs-end-block">/path</span><span class="hljs-end-block">/to</span><span class="hljs-end-block">/receiver.php</span>',
+        /<span class="hljs-end-block">/ </span>从产出的结果的 <span class="hljs-variable">plugin</span> 目录下找文件
+        <span class="hljs-variable">from</span> : '<span class="hljs-end-block">/plugin</span>',
+        /<span class="hljs-end-block">/ </span>保存到远端机器的 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/plugin </span>目录下
+        /<span class="hljs-end-block">/ </span>这个参数会跟随 <span class="hljs-variable">post</span> 请求一起发送
+        <span class="hljs-variable">to</span> : '<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span>/',
+        /<span class="hljs-end-block">/ </span>某些后缀的文件不进行上传
+        <span class="hljs-variable">exclude</span> : <span class="hljs-end-block">/.</span>*\<span class="hljs-variable">.</span>(?:<span class="hljs-variable">svn</span>|<span class="hljs-variable">cvs</span>|<span class="hljs-variable">tar</span>|<span class="hljs-variable">rar</span>|<span class="hljs-variable">psd</span>)<span class="hljs-variable">.</span>*/
+    }</span><span class="xml">]
+});</span>
 </code></pre>
-<h4 class=""><a name="上传到多个测试机" class="anchor" href="#上传到多个测试机"><span class="doc-link"></span></a>上传到多个测试机</h4><pre><code class="hljs lang-javascript"><span class="xml">//上传到remote，local，remote2三台机器
+<h4 class=""><a name="上传到多个测试机" class="anchor" href="#上传到多个测试机"><span class="doc-link"></span></a>上传到多个测试机</h4><pre><code class="hljs lang-javascript"><span class="xml">// 上传到 remote，local，remote2 三台机器
 //fis-conf.js
 fis.config.set('deploy', </span><span class="hljs-expression">{
-    //使用<span class="hljs-variable">fis</span> <span class="hljs-variable">release</span> <span class="hljs-variable">--dest</span> <span class="hljs-variable">remote</span>来使用这个配置
+    /<span class="hljs-end-block">/ </span>使用 <span class="hljs-variable">fis</span> <span class="hljs-variable">release</span> <span class="hljs-variable">--dest</span> <span class="hljs-variable">remote</span> 来使用这个配置
     <span class="hljs-variable">remote</span> : {
-        //如果配置了<span class="hljs-variable">receiver</span>，<span class="hljs-variable">fis</span>会把文件逐个<span class="hljs-variable">post</span>到接收端上
+        /<span class="hljs-end-block">/ </span>如果配置了 <span class="hljs-variable">receiver</span>，<span class="hljs-variable">fis</span> 会把文件逐个 <span class="hljs-variable">post</span> 到接收端上
         <span class="hljs-variable">receiver</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.example.com</span><span class="hljs-end-block">/path</span><span class="hljs-end-block">/to</span><span class="hljs-end-block">/receiver.php</span>',
-        //从产出的结果的<span class="hljs-variable">static</span>目录下找文件
+        /<span class="hljs-end-block">/ </span>从产出的结果的 <span class="hljs-variable">static</span> 目录下找文件
         <span class="hljs-variable">from</span> : '<span class="hljs-end-block">/static</span>',
-        //保存到远端机器的<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/static</span>目录下
-        //这个参数会跟随<span class="hljs-variable">post</span>请求一起发送
+        /<span class="hljs-end-block">/ </span>保存到远端机器的 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/static </span>目录下
+        /<span class="hljs-end-block">/ </span>这个参数会跟随 <span class="hljs-variable">post</span> 请求一起发送
         <span class="hljs-variable">to</span> : '<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span>/',
-        //通配或正则过滤文件，表示只上传所有的<span class="hljs-variable">js</span>文件
+        /<span class="hljs-end-block">/ </span>通配或正则过滤文件，表示只上传所有的 <span class="hljs-variable">js</span> 文件
         <span class="hljs-variable">include</span> : '**<span class="hljs-variable">.js</span>',
-        /<span class="hljs-end-block">/widget</span>目录下的那些文件就不要发布了
+        /<span class="hljs-end-block">/widget </span>目录下的那些文件就不要发布了
         <span class="hljs-variable">exclude</span> : /\<span class="hljs-end-block">/widget</span>\/<span class="hljs-end-block">/i</span>,
-        //支持对文件进行字符串替换
+        /<span class="hljs-end-block">/ </span>支持对文件进行字符串替换
         <span class="hljs-variable">replace</span> : {
             <span class="hljs-variable">from</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.online.com</span>',
             <span class="hljs-variable">to</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.offline.com</span>'
         }</span><span class="xml">
     },
-    //名字随便取的，没有特殊含义
+    // 名字随便取的，没有特殊含义
     local : </span><span class="hljs-expression">{
-        /<span class="hljs-end-block">/from</span>参数省略，表示从发布后的根目录开始上传
-        //发布到当前项目的上一级的<span class="hljs-variable">output</span>目录中
+        /<span class="hljs-end-block">/from </span>参数省略，表示从发布后的根目录开始上传
+        /<span class="hljs-end-block">/ </span>发布到当前项目的上一级的 <span class="hljs-variable">output</span> 目录中
         <span class="hljs-variable">to</span> : '<span class="hljs-variable">..</span><span class="hljs-end-block">/output</span>'
     }</span><span class="xml">,
-    //也可以是一个数组
+    // 也可以是一个数组
     remote2 : [
         </span><span class="hljs-expression">{
-            //将<span class="hljs-variable">static</span>目录上传到<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/webroot</span>下
-            //上传文件路径为<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/webroot</span><span class="hljs-end-block">/static</span><span class="hljs-end-block">/xxxx</span>
+            /<span class="hljs-end-block">/ </span>将 <span class="hljs-variable">static</span> 目录上传到 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/webroot </span>下
+            /<span class="hljs-end-block">/ </span>上传文件路径为 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/webroot</span><span class="hljs-end-block">/static</span><span class="hljs-end-block">/xxxx</span>
             <span class="hljs-variable">receiver</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.example.com</span><span class="hljs-end-block">/path</span><span class="hljs-end-block">/to</span><span class="hljs-end-block">/receiver.php</span>',
             <span class="hljs-variable">from</span> : '<span class="hljs-end-block">/static</span>',
             <span class="hljs-variable">to</span> : '<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/webroot</span>'
         }</span><span class="xml">,
         </span><span class="hljs-expression">{
-            //将<span class="hljs-variable">template</span>目录内的文件（不包括<span class="hljs-variable">template</span>一级）
-            //上传到<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/tpl</span>下
-            //上传文件路径为<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/tpl</span><span class="hljs-end-block">/xxxx</span>
+            /<span class="hljs-end-block">/ </span>将 <span class="hljs-variable">template</span> 目录内的文件（不包括 <span class="hljs-variable">template</span> 一级）
+            /<span class="hljs-end-block">/ </span>上传到 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/tpl </span>下
+            /<span class="hljs-end-block">/ </span>上传文件路径为 <span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/tpl</span><span class="hljs-end-block">/xxxx</span>
             <span class="hljs-variable">receiver</span> : '<span class="hljs-variable">http</span>:/<span class="hljs-end-block">/www.example.com</span><span class="hljs-end-block">/path</span><span class="hljs-end-block">/to</span><span class="hljs-end-block">/receiver.php</span>',
-            /<span class="hljs-end-block">/from</span>支持正则
+            /<span class="hljs-end-block">/from </span>支持正则
             <span class="hljs-variable">from</span> : '<span class="hljs-end-block">/template</span>',
             <span class="hljs-variable">to</span> : '<span class="hljs-end-block">/home</span><span class="hljs-end-block">/fis</span><span class="hljs-end-block">/www</span><span class="hljs-end-block">/tpl</span>',
-            /<span class="hljs-end-block">/subOnly</span>仅上传
+            /<span class="hljs-end-block">/subOnly </span>仅上传
             <span class="hljs-variable">subOnly</span> : <span class="hljs-variable">true</span>
         }</span><span class="xml">
     ]
 });</span>
 </code></pre>
 <h4 class=""><a name="小贴士" class="anchor" href="#小贴士"><span class="doc-link"></span></a>小贴士</h4><ul>
-<li><p><strong>--dest参数</strong> 支持使用逗号（,）分割多个发布配置，比如上面的例子，我们可以使用fis release --dest <strong>remote,plugin</strong> 命令在一次编译中同时发布多个目标。</p>
+<li><p><strong>--dest 参数 </strong> 支持使用逗号（,）分割多个发布配置，比如上面的例子，我们可以使用 fis release --dest <strong>remote,plugin</strong> 命令在一次编译中同时发布多个目标。</p>
 </li>
-<li><p><code>subOnly参数</code>
-默认上传from整个目录到测试机。添加subOnly参数仅上传from目录下文件。</p>
+<li><p><code>subOnly 参数</code>
+默认上传 from 整个目录到测试机。添加 subOnly 参数仅上传 from 目录下文件。</p>
 </li>
-<li><p>replace替换多个字符串
-需要replace替换多个字符串，可以使用正则的方式。例如：</p>
+<li><p>replace 替换多个字符串
+需要 replace 替换多个字符串，可以使用正则的方式。例如：</p>
 </li>
 </ul>
 <pre><code class="hljs lang-javascript"><span class="hljs-string">replace :</span> {
     <span class="hljs-string">from :</span> <span class="hljs-regexp">/www\.a\.com|www\.b\.com/</span>,
-    <span class="hljs-string">to :</span> function(m){
-        <span class="hljs-keyword">if</span>(m === <span class="hljs-string">'www.a.com'</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">'www.x.com'</span>;
+    <span class="hljs-string">to :</span> function(m){<span class="hljs-keyword">if</span>(m === <span class="hljs-string">'www.a.com'</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">'www.x.com'</span>;
         <span class="hljs-keyword">if</span>(m === <span class="hljs-string">'www.b.com'</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">'www.y.com'</span>;
     }
 }
 </code></pre>
 <h3 class="" id="上传常见问题"><a name="上传常见问题" class="anchor" href="#上传常见问题"><span class="doc-link"></span></a>上传常见问题</h3><ol>
-<li><p><code>上传到一半突然中断,怎么办？</code></p>
-<p> A: 请关闭测试机的服务器的防火墙，然后重新上传。至于服务器防火墙怎么关闭，不同服务器不一样，所以还是查文档或者google一下吧</p>
+<li><p><code>上传到一半突然中断, 怎么办？</code></p>
+<p> A: 请关闭测试机的服务器的防火墙，然后重新上传。至于服务器防火墙怎么关闭，不同服务器不一样，所以还是查文档或者 google 一下吧</p>
 </li>
 </ol>

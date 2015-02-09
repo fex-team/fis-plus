@@ -1,11 +1,11 @@
 <blockquote>
-<p>FIS-PLUS提供一套基于smarty(version &gt;= 3.1.13)插件的后台运行框架，针对静态资源管理、模板模块化、pagelet等功能。</p>
+<p>FIS-PLUS 提供一套基于 smarty(version&gt;= 3.1.13) 插件的后台运行框架，针对静态资源管理、模板模块化、pagelet 等功能。</p>
 </blockquote>
 <h3 class="" id="html"><a name="html" class="anchor" href="#html"><span class="doc-link"></span></a>html</h3><ul>
-<li>功能：代替\<html\>标签，设置页面运行的前端框架，以及控制整体页面输出。</li>
-<li>属性值：framework及html标签原生属性值</li>
+<li>功能：代替 \<html\> 标签，设置页面运行的前端框架，以及控制整体页面输出。</li>
+<li>属性值：framework 及 html 标签原生属性值</li>
 <li>是否必须：是</li>
-<li>用法：在模板中替换普通\<html\>标签</li>
+<li>用法：在模板中替换普通 \<html\> 标签</li>
 </ul>
 <pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
     ....
@@ -13,10 +13,10 @@
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl1_fbad2c9.jpg" alt=""></p>
 <h3 class="" id="head"><a name="head" class="anchor" href="#head"><span class="doc-link"></span></a>head</h3><ul>
-<li>功能：代替\<head\>标签，控制CSS资源加载输出。</li>
-<li>属性值：head标签原生属性值</li>
+<li>功能：代替 \<head\> 标签，控制 CSS 资源加载输出。</li>
+<li>属性值：head 标签原生属性值</li>
 <li>是否必须：是</li>
-<li>用法：在模板中替换普通\<head\>标签</li>
+<li>用法：在模板中替换普通 \<head\> 标签</li>
 </ul>
 <pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
     {<span class="hljs-preprocessor">%</span>head<span class="hljs-preprocessor">%</span>}
@@ -26,10 +26,10 @@
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl2_2373cfb.jpg" alt="head"></p>
 <h3 class="" id="body"><a name="body" class="anchor" href="#body"><span class="doc-link"></span></a>body</h3><ul>
-<li>功能：代替\<body\>标签，控制JS资源加载输出。</li>
-<li>属性值：body标签原生属性值</li>
+<li>功能：代替 \<body\> 标签，控制 JS 资源加载输出。</li>
+<li>属性值：body 标签原生属性值</li>
 <li>是否必须：是</li>
-<li>用法：在模板中替换普通\<body\>标签</li>
+<li>用法：在模板中替换普通 \<body\> 标签</li>
 </ul>
 <pre><code class="hljs lang-html">{<span class="hljs-preprocessor">%</span>html framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-preprocessor">%</span>}
     {<span class="hljs-preprocessor">%</span>head<span class="hljs-preprocessor">%</span>}
@@ -42,15 +42,15 @@
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl3_60b8620.jpg" alt="body"></p>
 <h3 class="" id="script"><a name="script" class="anchor" href="#script"><span class="doc-link"></span></a>script</h3><ul>
-<li>功能：代替<code>&lt;script&gt;</code>标签，收集使用JS组件的代码块，控制输出至页面底部。</li>
+<li>功能：代替 <code>&lt;script&gt;</code> 标签，收集使用 JS 组件的代码块，控制输出至页面底部。</li>
 <li>属性值：无</li>
-<li>是否必须：在模板中使用异步JS组件的JS代码块，必须通过插件包裹</li>
-<li>用法：在模板中替换普通<code>&lt;script&gt;</code>标签</li>
+<li>是否必须：在模板中使用异步 JS 组件的 JS 代码块，必须通过插件包裹</li>
+<li>用法：在模板中替换普通 <code>&lt;script&gt;</code> 标签</li>
 </ul>
 <pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
     {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
        &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
-       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {* 通过 script 插件收集加载组件化 JS 代码 <span class="hljs-variable">*}</span>
        {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
            require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
        {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
@@ -64,14 +64,14 @@
 <h3 class="" id="require"><a name="require" class="anchor" href="#require"><span class="doc-link"></span></a>require</h3><ul>
 <li>功能：通过静态资源管理框架加载静态资源。</li>
 <li>插件类型：compiler</li>
-<li>属性值：name(调用文件目录路径，与src属性二选一) | src(调用线上资源，与name属性二选一)</li>
+<li>属性值：name(调用文件目录路径，与 src 属性二选一) | src(调用线上资源，与 name 属性二选一)</li>
 <li>是否必须：是</li>
-<li>用法：在模板中如果需要加载模块内某个静态资源，可以通过require插件加载，便于管理输出静态资源</li>
+<li>用法：在模板中如果需要加载模块内某个静态资源，可以通过 require 插件加载，便于管理输出静态资源</li>
 </ul>
 <pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
     {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
        &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
-       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {* 通过 script 插件收集加载组件化 JS 代码 <span class="hljs-variable">*}</span>
        {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
             require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
        {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
@@ -93,7 +93,7 @@
 <pre><code class="hljs lang-html">{<span class="hljs-variable">%html</span> framework=<span class="hljs-string">"home:static/lib/mod.js"</span><span class="hljs-variable">%}</span>
     {<span class="hljs-variable">%head</span><span class="hljs-variable">%}</span>
        &lt;meta charset=<span class="hljs-string">"utf-8"</span>/&gt;
-       {<span class="hljs-variable">*通</span>过script插件收集加载组件化JS代码<span class="hljs-variable">*}</span>
+       {* 通过 script 插件收集加载组件化 JS 代码 <span class="hljs-variable">*}</span>
        {<span class="hljs-variable">%script</span><span class="hljs-variable">%}</span>
             require.async(<span class="hljs-string">"home:static/ui/B/B.js"</span>);
        {<span class="hljs-variable">%/</span>script<span class="hljs-variable">%}</span>
