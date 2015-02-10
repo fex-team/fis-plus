@@ -433,10 +433,10 @@ $ lights install <span class="hljs-keyword">template</span>
 <span class="hljs-comment">// 在模板中调用此函数</span>
 {%widget call="functionDemo" %}
 </code></pre></div>
-<div class="bs-docs-section"><blockquote>
+<div class="bs-docs-section"><h3 class="" id="Smarty 插件"><a name="Smarty%20%E6%8F%92%E4%BB%B6" class="anchor" href="#Smarty%20%E6%8F%92%E4%BB%B6"><span class="doc-link"></span></a>Smarty 插件</h3><blockquote>
 <p>FIS-PLUS 提供一套基于 smarty(version&gt;= 3.1.13) 插件的后台运行框架，针对静态资源管理、模板模块化、pagelet 等功能。</p>
 </blockquote>
-<h3 class="" id="html"><a name="html" class="anchor" href="#html"><span class="doc-link"></span></a>html</h3><ul>
+<h4 class=""><a name="html" class="anchor" href="#html"><span class="doc-link"></span></a>html</h4><ul>
 <li>功能：代替 \<html\> 标签，设置页面运行的前端框架，以及控制整体页面输出。</li>
 <li>属性值：framework 及 html 标签原生属性值</li>
 <li>是否必须：是</li>
@@ -447,7 +447,7 @@ $ lights install <span class="hljs-keyword">template</span>
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl1_fbad2c9.jpg" alt=""></p>
-<h3 class="" id="head"><a name="head" class="anchor" href="#head"><span class="doc-link"></span></a>head</h3><ul>
+<h4 class=""><a name="head" class="anchor" href="#head"><span class="doc-link"></span></a>head</h4><ul>
 <li>功能：代替 \<head\> 标签，控制 CSS 资源加载输出。</li>
 <li>属性值：head 标签原生属性值</li>
 <li>是否必须：是</li>
@@ -460,7 +460,7 @@ $ lights install <span class="hljs-keyword">template</span>
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl2_2373cfb.jpg" alt="head"></p>
-<h3 class="" id="body"><a name="body" class="anchor" href="#body"><span class="doc-link"></span></a>body</h3><ul>
+<h4 class=""><a name="body" class="anchor" href="#body"><span class="doc-link"></span></a>body</h4><ul>
 <li>功能：代替 \<body\> 标签，控制 JS 资源加载输出。</li>
 <li>属性值：body 标签原生属性值</li>
 <li>是否必须：是</li>
@@ -476,7 +476,7 @@ $ lights install <span class="hljs-keyword">template</span>
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl3_60b8620.jpg" alt="body"></p>
-<h3 class="" id="script"><a name="script" class="anchor" href="#script"><span class="doc-link"></span></a>script</h3><ul>
+<h4 class=""><a name="script" class="anchor" href="#script"><span class="doc-link"></span></a>script</h4><ul>
 <li>功能：代替 <code>&lt;script&gt;</code> 标签，收集使用 JS 组件的代码块，控制输出至页面底部。</li>
 <li>属性值：无</li>
 <li>是否必须：在模板中使用异步 JS 组件的 JS 代码块，必须通过插件包裹</li>
@@ -496,7 +496,7 @@ $ lights install <span class="hljs-keyword">template</span>
 {<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl4_14c6f6d.jpg" alt="script"></p>
-<h3 class="" id="require"><a name="require" class="anchor" href="#require"><span class="doc-link"></span></a>require</h3><ul>
+<h4 class=""><a name="require" class="anchor" href="#require"><span class="doc-link"></span></a>require</h4><ul>
 <li>功能：通过静态资源管理框架加载静态资源。</li>
 <li>插件类型：compiler</li>
 <li>属性值：name(调用文件目录路径，与 src 属性二选一) | src(调用线上资源，与 name 属性二选一)</li>
@@ -518,7 +518,7 @@ $ lights install <span class="hljs-keyword">template</span>
 {<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl5_d82f332.jpg" alt="require"></p>
-<h3 class="" id="widget"><a name="widget" class="anchor" href="#widget"><span class="doc-link"></span></a>widget</h3><ul>
+<h4 class=""><a name="widget" class="anchor" href="#widget"><span class="doc-link"></span></a>widget</h4><ul>
 <li>功能：调用模板组件，渲染输出模板片段。</li>
 <li>插件类型：compiler</li>
 <li>属性值：name(调用文件目录路径)</li>
@@ -541,16 +541,16 @@ $ lights install <span class="hljs-keyword">template</span>
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl6_bd9d3ae.jpg" alt="widget"></p>
 </div>
-<div class="bs-docs-section"><h3 class="" id="JS 组件化"><a name="JS%20%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#JS%20%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="doc-link"></span></a>JS 组件化</h3><div class="bs-callout bs-callout-info">
+<div class="bs-docs-section"><h3 class="" id="JS &amp; CSS"><a name="JS%20&amp;%20CSS" class="anchor" href="#JS%20&amp;%20CSS"><span class="doc-link"></span></a>JS &amp; CSS</h3><h4 class=""><a name="JS%20%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#JS%20%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="doc-link"></span></a>JS 组件化</h4><div class="bs-callout bs-callout-info">
 &gt; 在前端开发中，JS 资源占了很大一部分比例，在 FIS 中，我们将 JS 资源分为组件和非组件类。组件类 JS 资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类 JS 资源，用户可以通过同步 script 标签加载方式或通过 require 插件方式加载。
 </div>
 
 <p>在 <strong> 模块根目录 /widget/</strong> 下的 JS 资源皆为组件化资源，可以通过 require 和 require.async 进行调用，则在编译处理过程中会进行组件化封装。</p>
-<h4 class=""><a name="modjs%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6" class="anchor" href="#modjs%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6"><span class="doc-link"></span></a>modjs 前端组件化框架</h4><p>modJS 是一套的前端模块加载解决方案。与传统的模块加载相比，modJS 会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
+<h5 class=""><a name="modjs%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6" class="anchor" href="#modjs%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6"><span class="doc-link"></span></a>modjs 前端组件化框架</h5><p>modJS 是一套的前端模块加载解决方案。与传统的模块加载相比，modJS 会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
 作为 FIS 前端组件化框架，完全遵循 AMD 规范，用户可以通过 lights 进行安装</p>
 <pre><code>lights <span class="hljs-keyword">install</span> modjs
 </code></pre><p>同时在开发中需要使用 modjs, 则需要通过 <a href="#html">模板插件语法 html</a> 进行注册。</p>
-<h4 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85" class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85"><span class="doc-link"></span></a>组件化封装</h4><p>modjs 使用 define 来定义一个模块：</p>
+<h5 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85" class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85"><span class="doc-link"></span></a>组件化封装</h5><p>modjs 使用 define 来定义一个模块：</p>
 <pre><code class="hljs lang-javascript"><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
 </code></pre>
 <p><code>在平常开发中，我们只需写 factory 中的代码即可，无需手动定义模块</code>。发布工具会自动将模块代码嵌入 factory 的闭包里。</p>
@@ -581,7 +581,7 @@ exports.init = <span class="hljs-function"><span class="hljs-keyword">function</
     };
 });
 </code></pre>
-<h4 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E8%B0%83%E7%94%A8" class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E8%B0%83%E7%94%A8"><span class="doc-link"></span></a>组件化调用</h4><ul>
+<h5 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E8%B0%83%E7%94%A8" class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E8%B0%83%E7%94%A8"><span class="doc-link"></span></a>组件化调用</h5><ul>
 <li><p>modJS 的发布工具会保证你的程序在使用之前，所有依赖的模块都已加载。因此当我们需要一个模块时，只需提供一个模块名即可获取：</p>
 <p><strong>require</strong> (id)</p>
 <pre><code class="hljs lang-javascript">  <span class="hljs-comment">//id 可为相对路径，或 FIS 中组件调用路径 模块名: 文件所在 widget 中路径</span>
@@ -604,35 +604,25 @@ exports.init = <span class="hljs-function"><span class="hljs-keyword">function</
 <li><p><a href="/userdoc/fis/modjs">了解更多 modjs</a></p>
 </li>
 </ul>
-<h4 class=""><a name="%E5%85%B6%E4%BB%96%20JS" class="anchor" href="#%E5%85%B6%E4%BB%96%20JS"><span class="doc-link"></span></a>其他 JS</h4><p>在非 widget 目录下的 JS 资源，皆为非组件化资源。用户可以通过 script 标签、<a href="#require">require 插件</a>等方式进行调用.</p>
-<h5 class=""><a name="%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>页面模板静态资源</h5><p>对应页面模板的同名静态资源，FIS-Plus 会在页面自动进行加载，用户不需要在页面中声明加载。</p>
-<pre><code class="hljs lang-bash">tpl ：模板根目录 /page/ 页面名<span class="hljs-class">.tpl</span>
-js ：模板根目录 /page/ 页面名<span class="hljs-class">.js</span>
-css ：模板根目录 /page/ 页面名.css
-</code></pre>
-<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>模板组件静态资源</h4><p>与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载。</p>
+<h5 class=""><a name="%E5%85%B6%E4%BB%96%20JS" class="anchor" href="#%E5%85%B6%E4%BB%96%20JS"><span class="doc-link"></span></a>其他 JS</h5><p>在非 widget 目录下的 JS 资源，皆为非组件化资源。用户可以通过 script 标签、<a href="#require">require 插件</a>等方式进行调用.</p>
+<h5 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>模板组件静态资源</h5><p>与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载。</p>
 <pre><code class="hljs lang-bash">tpl ：模板根目录 /widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
 js ：模板根目录 /widget/widgetName/widgetName<span class="hljs-class">.js</span>
 css ：模板根目录 /widget/widgetName/widgetName.css
 </code></pre>
-<h3 class="" id="CSS 组件化"><a name="CSS%20%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#CSS%20%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="doc-link"></span></a>CSS 组件化</h3><blockquote>
+<h4 class=""><a name="CSS%20%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#CSS%20%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="doc-link"></span></a>CSS 组件化</h4><blockquote>
 <p>在前端开发中，CSS 资源占了很大一部分比例，在 FIS 中，我们将 CSS 资源分为组件和非组件类。CSS 组件会绑定到同名 JS 组件、模板组件上，进行加载管理，用户不需要关心加载方式；非组件类 CSS 资源通过 link 标签、require 插件方式进行加载。</p>
 </blockquote>
 <p>在 <strong> 模块根目录 /widget</strong> 目录下的 CSS 资源，皆为组件。在模板组件中以及 JS 组件中对应同名的 CSS 组件会自动与模板组件、JS 组件添加依赖关系，进行加载管理，用户不需要显示进行调用加载。</p>
-<h4 class=""><a name="%E5%85%B6%E4%BB%96%20CSS" class="anchor" href="#%E5%85%B6%E4%BB%96%20CSS"><span class="doc-link"></span></a>其他 CSS</h4><p>在非 widget 目录下的 CSS 资源，皆为非组件化资源。用户可以通过 link 标签、<a href="#require">require 插件</a>等方式进行调用.</p>
-<h4 class=""><a name="%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>页面模板静态资源</h4><p><code>对应页面模板的同名静态资源，FIS 会在页面自动进行加载</code>，用户不需要在页面中声明加载。</p>
-<pre><code class="hljs lang-bash">tpl ：模板根目录 /page/ 页面名<span class="hljs-class">.tpl</span>
-js ：模板根目录 /page/ 页面名<span class="hljs-class">.js</span>
-css ：模板根目录 /page/ 页面名.css
-</code></pre>
-<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>模板组件静态资源</h4><p><code>与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载</code>。</p>
+<h5 class=""><a name="%E5%85%B6%E4%BB%96%20CSS" class="anchor" href="#%E5%85%B6%E4%BB%96%20CSS"><span class="doc-link"></span></a>其他 CSS</h5><p>在非 widget 目录下的 CSS 资源，皆为非组件化资源。用户可以通过 link 标签、<a href="#require">require 插件</a>等方式进行调用.</p>
+<h5 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>模板组件静态资源</h5><p><code>与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载</code>。</p>
 <pre><code class="hljs lang-bash">tpl ：模板根目录 /widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
 js ：模板根目录 /widget/widgetName/widgetName<span class="hljs-class">.js</span>
 css ：模板根目录 /widget/widgetName/widgetName.css
 </code></pre>
-<h4 class=""><a name="Less%20%E8%B5%84%E6%BA%90" class="anchor" href="#Less%20%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>Less 资源</h4><p>在 FIS 中默认配置了对 less 资源处理插件，less 文件编译处理后变为 css 文件。</p>
+<h5 class=""><a name="Less%20%E8%B5%84%E6%BA%90" class="anchor" href="#Less%20%E8%B5%84%E6%BA%90"><span class="doc-link"></span></a>Less 资源</h5><p>在 FIS 中默认配置了对 less 资源处理插件，less 文件编译处理后变为 css 文件。</p>
 </div>
-<div class="bs-docs-section"><h3 class="" id="模板 XSS 修复工具"><a name="%E6%A8%A1%E6%9D%BF%20XSS%20%E4%BF%AE%E5%A4%8D%E5%B7%A5%E5%85%B7" class="anchor" href="#%E6%A8%A1%E6%9D%BF%20XSS%20%E4%BF%AE%E5%A4%8D%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>模板 XSS 修复工具</h3><ul>
+<div class="bs-docs-section"><h3 class="" id="编译优化工具"><a name="%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7" class="anchor" href="#%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>编译优化工具</h3><h4 class=""><a name="%E6%A8%A1%E6%9D%BF%20XSS%20%E4%BF%AE%E5%A4%8D%E5%B7%A5%E5%85%B7" class="anchor" href="#%E6%A8%A1%E6%9D%BF%20XSS%20%E4%BF%AE%E5%A4%8D%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>模板 XSS 修复工具</h4><ul>
 <li>功能：对 Smarty 模板进行 XSS 校验修复。</li>
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
@@ -655,7 +645,7 @@ fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'sett
     ]
 });
 </code></pre>
-<h3 class="" id="图片合并工具"><a name="%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6%E5%B7%A5%E5%85%B7" class="anchor" href="#%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>图片合并工具</h3><ul>
+<h4 class=""><a name="%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6%E5%B7%A5%E5%85%B7" class="anchor" href="#%E5%9B%BE%E7%89%87%E5%90%88%E5%B9%B6%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>图片合并工具</h4><ul>
 <li>功能：对</li>
 <li>环境要求：依赖 native 插件，<a href="https://github.com/xiangshouding/node-images">node-images</a> 环境需要符合个插件的要求。(OS X、Windows 提供了二进制包)</li>
 <li>默认开启：true</li>
@@ -667,7 +657,7 @@ fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'sett
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">10</span>
 });
 </code></pre>
-<h3 class="" id="模板压缩工具"><a name="%E6%A8%A1%E6%9D%BF%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>模板压缩工具</h3><ul>
+<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>模板压缩工具</h4><ul>
 <li>功能：对 Smarty 模板进行压缩。</li>
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
@@ -677,14 +667,14 @@ fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'sett
 <ul>
 <li>详细使用文档：<a href="https://github.com/wangcheng714/fis-optimizer-html-compress">用户文档</a></li>
 </ul>
-<h3 class="" id="JS 压缩工具"><a name="JS%20%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7" class="anchor" href="#JS%20%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>JS 压缩工具</h3><ul>
+<h4 class=""><a name="JS%20%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7" class="anchor" href="#JS%20%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>JS 压缩工具</h4><ul>
 <li>功能：通过 uglify-js 对 JS 文件进行压缩。</li>
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
 </ul>
 <pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-symbol">'modules</span>.optimizer.js', <span class="hljs-symbol">'uglify</span>-js');
 </code></pre>
-<h3 class="" id="CSS 压缩工具"><a name="CSS%20%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7" class="anchor" href="#CSS%20%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>CSS 压缩工具</h3><ul>
+<h4 class=""><a name="CSS%20%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7" class="anchor" href="#CSS%20%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7"><span class="doc-link"></span></a>CSS 压缩工具</h4><ul>
 <li>功能：通过 clean-css 对 CSS 文件进行压缩。</li>
 <li>默认开启：true(已默认配置)</li>
 <li>配置:</li>
@@ -692,10 +682,10 @@ fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'sett
 <pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-symbol">'modules</span>.optimizer.css', <span class="hljs-symbol">'clean</span>-css');
 </code></pre>
 </div>
-<div class="bs-docs-section"><blockquote>
+<div class="bs-docs-section"><h3 class="" id="打包合并"><a name="%E6%89%93%E5%8C%85%E5%90%88%E5%B9%B6" class="anchor" href="#%E6%89%93%E5%8C%85%E5%90%88%E5%B9%B6"><span class="doc-link"></span></a>打包合并</h3><blockquote>
 <p>FIS-Plus 提供静态资源管理系统，支持通过运行时计算静态资源使用情况来加载对应的静态资源。为了达到合理的高性能的加载方式，用户可以将静态资源进行合并。</p>
 </blockquote>
-<h3 class="" id="配置"><a name="%E9%85%8D%E7%BD%AE" class="anchor" href="#%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>配置</h3><p>用户可以在配置文件中，通过配置将静态资源进行合并处理，对 demo-home 模块增加打包配置：</p>
+<h4 class=""><a name="%E9%85%8D%E7%BD%AE" class="anchor" href="#%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>配置</h4><p>用户可以在配置文件中，通过配置将静态资源进行合并处理，对 demo-home 模块增加打包配置：</p>
 <pre><code class="hljs lang-javascript"><span class="xml">//fis-conf.js
 fis.config.set('pack', </span><span class="hljs-expression">{
         /<span class="hljs-end-block">/ </span>打包所有 <span class="hljs-variable">static</span> 目录下的 <span class="hljs-variable">JS</span> 文件
@@ -714,18 +704,18 @@ fis.config.set('pack', </span><span class="hljs-expression">{
 <li>使用正则配置时需要添加定界符，不然将会达不到用户配置预期</li>
 </ul>
 <p>输出结果：使用命令 fis release <strong>--pack</strong> --md5 --dest ./output 编译项目，然后到 output 目录下查看产出的 home-map.json 内容.fis 内置的 <a href="https://github.com/fis-dev/fis/wiki/ 运行原理 #----1">打包原理</a> 与传统的打包概念不同，fis 的打包实际上是在建立一个资源表，并将其描述并产出为一份 map.json 文件，用户应该围绕着这份描述文件来设计前后端运行框架，从而实现运行时判断打包输出策略的架构。</p>
-<h3 class="" id="打包策略"><a name="%E6%89%93%E5%8C%85%E7%AD%96%E7%95%A5" class="anchor" href="#%E6%89%93%E5%8C%85%E7%AD%96%E7%95%A5"><span class="doc-link"></span></a>打包策略</h3><ul>
+<h4 class=""><a name="%E6%89%93%E5%8C%85%E7%AD%96%E7%95%A5" class="anchor" href="#%E6%89%93%E5%8C%85%E7%AD%96%E7%95%A5"><span class="doc-link"></span></a>打包策略</h4><ul>
 <li>每个资源包之间不会有重复资源，合并处理包时会根据配置节点顺序，将资源合并至资源包中。</li>
 <li>根据资源包配置的匹配规则，进行资源顺序排序。</li>
 <li>每个资源包中的静态资源，会根据文件之间的依赖关系进行自动排序。</li>
 </ul>
-<h3 class="" id="基本打包原则"><a name="%E5%9F%BA%E6%9C%AC%E6%89%93%E5%8C%85%E5%8E%9F%E5%88%99" class="anchor" href="#%E5%9F%BA%E6%9C%AC%E6%89%93%E5%8C%85%E5%8E%9F%E5%88%99"><span class="doc-link"></span></a>基本打包原则</h3><ul>
+<h4 class=""><a name="%E5%9F%BA%E6%9C%AC%E6%89%93%E5%8C%85%E5%8E%9F%E5%88%99" class="anchor" href="#%E5%9F%BA%E6%9C%AC%E6%89%93%E5%8C%85%E5%8E%9F%E5%88%99"><span class="doc-link"></span></a>基本打包原则</h4><ul>
 <li>根据静态资源复用率情况，可将复用率较高的可合并在一起，复用率较低的可合并一起，同时可根据使用情况对静态资源不进行打包。</li>
 <li>在 common 模块中，可以根据其他业务模块使用 common 资源情况进行打包，将复用高的资源合并打包，将个别模块使用的资源独立打包。</li>
 <li>需要独立加载的 JS 组件资源，可不合并在包中，运行时会自动按需加载。</li>
 <li>对匹配成功的资源会合并进资源包中，同时其依赖的资源会记录在资源表中，如果需要加载资源包时，会先加载依赖的文件。</li>
 </ul>
-<h3 class="" id="自动打包"><a name="%E8%87%AA%E5%8A%A8%E6%89%93%E5%8C%85" class="anchor" href="#%E8%87%AA%E5%8A%A8%E6%89%93%E5%8C%85"><span class="doc-link"></span></a>自动打包</h3><p>手工维护资源打包工作存在未能及时排除废弃资源、需持续维护、成本大等缺陷。针对此问题，FIS 提供静态资源自动合并服务自动生成资源打包配置，根据网站页面 pv 以及页面静态资源使用情况，<code>自动计算静态资源合并方案，减少人工管理静态资源成本和风险</code>。</p>
+<h4 class=""><a name="%E8%87%AA%E5%8A%A8%E6%89%93%E5%8C%85" class="anchor" href="#%E8%87%AA%E5%8A%A8%E6%89%93%E5%8C%85"><span class="doc-link"></span></a>自动打包</h4><p>手工维护资源打包工作存在未能及时排除废弃资源、需持续维护、成本大等缺陷。针对此问题，FIS 提供静态资源自动合并服务自动生成资源打包配置，根据网站页面 pv 以及页面静态资源使用情况，<code>自动计算静态资源合并方案，减少人工管理静态资源成本和风险</code>。</p>
 <p>自动打包使用方式与现有一致，接入简单。提供简版和高端版两个版本：</p>
 <ul>
 <li>简版：只需安装一个插件便可使用自动打包。在编译过程中扫描模块代码分析资源依赖，提供页面级别的打包配置，支持重点页面权重等配置</li>
@@ -733,7 +723,7 @@ fis.config.set('pack', </span><span class="hljs-expression">{
 </ul>
 <p>具体使用可以进入官网查看 <a href="http://solar.baidu.com/autopack/doc">此文档</a></p>
 </div>
-<div class="bs-docs-section"><h3 class="" id="模块配置"><a name="%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE" class="anchor" href="#%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>模块配置</h3><p>每个模块都有对应的模块名，同时需要在配置文件中申明，配置如下。</p>
+<div class="bs-docs-section"><h3 class="" id="配置"><a name="%E9%85%8D%E7%BD%AE" class="anchor" href="#%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>配置</h3><h4 class=""><a name="%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE" class="anchor" href="#%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>模块配置</h4><p>每个模块都有对应的模块名，同时需要在配置文件中申明，配置如下。</p>
 <pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'namespace'</span>, <span class="hljs-string">'common'</span>);
 </code></pre>
 <p>模块编译输出时默认都为 utf8 编码，如果需要做修改，可以进行如下配置：</p>
@@ -742,7 +732,7 @@ fis.config.set('pack', </span><span class="hljs-expression">{
 <p>对静态资源进行 MD5 戳编译时，默认长度都为 7，当然你也可以进行修改：</p>
 <pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.md5Length'</span>, <span class="hljs-number">8</span>);
 </code></pre>
-<h3 class="" id="Smarty 配置"><a name="Smarty%20%E9%85%8D%E7%BD%AE" class="anchor" href="#Smarty%20%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>Smarty 配置</h3><p>在 fis-config.js 配置文件中，可在 setting 节点下配置 smarty 节点，修改定界符。</p>
+<h4 class=""><a name="Smarty%20%E9%85%8D%E7%BD%AE" class="anchor" href="#Smarty%20%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>Smarty 配置</h4><p>在 fis-config.js 配置文件中，可在 setting 节点下配置 smarty 节点，修改定界符。</p>
 <pre><code class="hljs lang-xml">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'settings.smarty'</span>, {
     <span class="hljs-string">'left_delimiter'</span>  : <span class="hljs-string">'&lt;{'</span>,
     <span class="hljs-string">'right_delimiter'</span> : <span class="hljs-string">'}&gt;'</span>
@@ -752,7 +742,7 @@ fis.config.set('pack', </span><span class="hljs-expression">{
 <pre><code>left_delimiter=<span class="hljs-string">'&lt;{'</span>
 right_delimiter=<span class="hljs-string">'}&gt;'</span>
 </code></pre><p><em>假设有多个模块，只需要在 common 模块根目录下放置 <code>smarty.conf</code></em></p>
-<h3 class="" id="domain 配置"><a name="domain%20%E9%85%8D%E7%BD%AE" class="anchor" href="#domain%20%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>domain 配置</h3><p>设置静态资源域名，domain 的值如果不是特殊需要，请不要以 &quot;/&quot; 结尾。</p>
+<h4 class=""><a name="domain%20%E9%85%8D%E7%BD%AE" class="anchor" href="#domain%20%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>domain 配置</h4><p>设置静态资源域名，domain 的值如果不是特殊需要，请不要以 &quot;/&quot; 结尾。</p>
 <pre><code class="hljs lang-xml"><span class="hljs-comment">//fis-conf.js</span>
 <span class="hljs-comment">// 用法一</span>
 fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'roadmap.domain'</span>, <span class="hljs-string">'http://s1.example.com, http://s2.example.com'</span>);
@@ -922,7 +912,7 @@ fis.config.set('deploy', </span><span class="hljs-expression">{
 </li>
 </ol>
 </div>
-<div class="bs-docs-section"><h3 class="" id="上传测试机"><a name="%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95%E6%9C%BA" class="anchor" href="#%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95%E6%9C%BA"><span class="doc-link"></span></a>上传测试机</h3><blockquote>
+<div class="bs-docs-section"><h3 class="" id="上线部署"><a name="%E4%B8%8A%E7%BA%BF%E9%83%A8%E7%BD%B2" class="anchor" href="#%E4%B8%8A%E7%BA%BF%E9%83%A8%E7%BD%B2"><span class="doc-link"></span></a>上线部署</h3><h4 class=""><a name="%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95%E6%9C%BA" class="anchor" href="#%E4%B8%8A%E4%BC%A0%E6%B5%8B%E8%AF%95%E6%9C%BA"><span class="doc-link"></span></a>上传测试机</h4><blockquote>
 <p>fis 通过简单的上传配置，把编译后文件上传到测试机, 方便联调。</p>
 </blockquote>
 <ul>
@@ -930,7 +920,7 @@ fis.config.set('deploy', </span><span class="hljs-expression">{
 <li><a href="# 上传配置">上传配置</a></li>
 <li><a href="# 上传常见问题">上传常见问题</a></li>
 </ul>
-<h3 class="" id="发布上线"><a name="%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF" class="anchor" href="#%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF"><span class="doc-link"></span></a>发布上线</h3><blockquote>
+<h4 class=""><a name="%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF" class="anchor" href="#%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF"><span class="doc-link"></span></a>发布上线</h4><blockquote>
 <p>提供基础的 build.sh 编译脚本，用于上线时候自动编译项目。</p>
 </blockquote>
 <pre><code class="hljs lang-bash"><span class="hljs-shebang">#!/bin/bash
@@ -965,7 +955,7 @@ mv <span class="hljs-variable">$TAR</span> output/
 </code></pre>
 </div>
 <div class="bs-docs-section"><h1 class="page-header"><a name="%E8%81%94%E8%B0%83%E6%B5%8B%E8%AF%95" class="anchor" href="#%E8%81%94%E8%B0%83%E6%B5%8B%E8%AF%95"><span class="doc-link"></span></a>联调测试</h1></div>
-<div class="bs-docs-section"><h3 class="" id="本地测试数据模拟"><a name="%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E6%A8%A1%E6%8B%9F" class="anchor" href="#%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E6%A8%A1%E6%8B%9F"><span class="doc-link"></span></a>本地测试数据模拟</h3><blockquote>
+<div class="bs-docs-section"><h3 class="" id="本地测试数据"><a name="%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE" class="anchor" href="#%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="doc-link"></span></a>本地测试数据</h3><blockquote>
 <p>FIS 提供了本地调试数据功能，本地预览模板时会根据选择的测试数据进行展现，默认的 smarty 版本为 3.1.13。</p>
 </blockquote>
 <h4 class=""><a name="%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE" class="anchor" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE"><span class="doc-link"></span></a>浏览器书签</h4><pre><code class="hljs lang-javascript">

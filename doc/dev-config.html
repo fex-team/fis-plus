@@ -1,4 +1,4 @@
-<h3 class="" id="模块配置"><a name="%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE" class="anchor" href="#%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>模块配置</h3><p>每个模块都有对应的模块名，同时需要在配置文件中申明，配置如下。</p>
+<h3 class="" id="配置"><a name="%E9%85%8D%E7%BD%AE" class="anchor" href="#%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>配置</h3><h4 class=""><a name="%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE" class="anchor" href="#%E6%A8%A1%E5%9D%97%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>模块配置</h4><p>每个模块都有对应的模块名，同时需要在配置文件中申明，配置如下。</p>
 <pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'namespace'</span>, <span class="hljs-string">'common'</span>);
 </code></pre>
 <p>模块编译输出时默认都为 utf8 编码，如果需要做修改，可以进行如下配置：</p>
@@ -7,7 +7,7 @@
 <p>对静态资源进行 MD5 戳编译时，默认长度都为 7，当然你也可以进行修改：</p>
 <pre><code class="hljs lang-javascript">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'project.md5Length'</span>, <span class="hljs-number">8</span>);
 </code></pre>
-<h3 class="" id="Smarty 配置"><a name="Smarty%20%E9%85%8D%E7%BD%AE" class="anchor" href="#Smarty%20%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>Smarty 配置</h3><p>在 fis-config.js 配置文件中，可在 setting 节点下配置 smarty 节点，修改定界符。</p>
+<h4 class=""><a name="Smarty%20%E9%85%8D%E7%BD%AE" class="anchor" href="#Smarty%20%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>Smarty 配置</h4><p>在 fis-config.js 配置文件中，可在 setting 节点下配置 smarty 节点，修改定界符。</p>
 <pre><code class="hljs lang-xml">fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'settings.smarty'</span>, {
     <span class="hljs-string">'left_delimiter'</span>  : <span class="hljs-string">'&lt;{'</span>,
     <span class="hljs-string">'right_delimiter'</span> : <span class="hljs-string">'}&gt;'</span>
@@ -17,7 +17,7 @@
 <pre><code>left_delimiter=<span class="hljs-string">'&lt;{'</span>
 right_delimiter=<span class="hljs-string">'}&gt;'</span>
 </code></pre><p><em>假设有多个模块，只需要在 common 模块根目录下放置 <code>smarty.conf</code></em></p>
-<h3 class="" id="domain 配置"><a name="domain%20%E9%85%8D%E7%BD%AE" class="anchor" href="#domain%20%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>domain 配置</h3><p>设置静态资源域名，domain 的值如果不是特殊需要，请不要以 &quot;/&quot; 结尾。</p>
+<h4 class=""><a name="domain%20%E9%85%8D%E7%BD%AE" class="anchor" href="#domain%20%E9%85%8D%E7%BD%AE"><span class="doc-link"></span></a>domain 配置</h4><p>设置静态资源域名，domain 的值如果不是特殊需要，请不要以 &quot;/&quot; 结尾。</p>
 <pre><code class="hljs lang-xml"><span class="hljs-comment">//fis-conf.js</span>
 <span class="hljs-comment">// 用法一</span>
 fis.config.<span class="hljs-keyword">set</span>(<span class="hljs-string">'roadmap.domain'</span>, <span class="hljs-string">'http://s1.example.com, http://s2.example.com'</span>);
