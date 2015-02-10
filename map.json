@@ -88,7 +88,7 @@
             "type": "css"
         },
         "static/fis-plus/css/document.scss": {
-            "uri": "/fis-plus/static/css/document_738e435.css",
+            "uri": "/fis-plus/static/css/document_e273d9a.css",
             "type": "css"
         },
         "static/fis-plus/css/index.scss": {
@@ -110,7 +110,7 @@
     },
     "pkg": {
         "auto_css_0": {
-            "uri": "/fis-plus/static/pkg/auto_combine_bc809_7561997.css",
+            "uri": "/fis-plus/static/pkg/auto_combine_bc809_268b3ee.css",
             "type": "css",
             "has": [
                 "lib/fontawesome/css/font-awesome.css",

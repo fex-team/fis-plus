@@ -1,14 +1,14 @@
-<h3 class="" id="本地测试数据"><a name="%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE" class="anchor" href="#%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="doc-link"></span></a>本地测试数据</h3><blockquote>
+<h3 class="" id="本地测试数据"><a name="%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE" class="anchor" href="#%E6%9C%AC%E5%9C%B0%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="octicon octicon-link"></span></a>本地测试数据</h3><blockquote>
 <p>FIS 提供了本地调试数据功能，本地预览模板时会根据选择的测试数据进行展现，默认的 smarty 版本为 3.1.13。</p>
 </blockquote>
-<h4 class=""><a name="%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE" class="anchor" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE"><span class="doc-link"></span></a>浏览器书签</h4><pre><code class="hljs lang-javascript">
+<h4 class=""><a name="%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE" class="anchor" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE"><span class="octicon octicon-link"></span></a>浏览器书签</h4><pre><code class="hljs lang-javascript">
 <span class="hljs-comment">// 新建浏览器书签，网址为以下内容</span>
 javascript: <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{<span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();d.setFullYear(d.getFullYear() + <span class="hljs-number">1</span>);<span class="hljs-built_in">document</span>.cookie=<span class="hljs-string">'FIS_DEBUG_DATA=4f10e208f47bfb4d35a5e6f115a6df1a;path=/;expires='</span> + d.toGMTString() + <span class="hljs-string">''</span>;location.reload(); }();
 </code></pre>
 <p>当模块进行编译发布后，在预览的时候点击书签，进入数据管理页面，修改数据后再进行渲染:
 <img src="http://c.hiphotos.bdimg.com/album/s%3D550%3Bq%3D90%3Bc%3Dxiangce%2C100%2C100/sign=83ad2515d1a20cf44290feda46323a0b/b3b7d0a20cf431ad11c0e1ab4a36acaf2edd9816.jpg?referer=e006ba57e1fe9925921b5c60d80c&amp;x=.jpg" alt="fisp test"></p>
 <p>修改保存的数据会临时保存在发布目录中，如果需要保存在 test 目录下还需要单独粘贴复制。</p>
-<h4 class=""><a name="%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE" class="anchor" href="#%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="doc-link"></span></a>测试数据</h4><p>测试数据存放在模块 test 目录下，模板文件和测试数据文件对应关系如下：</p>
+<h4 class=""><a name="%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE" class="anchor" href="#%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE"><span class="octicon octicon-link"></span></a>测试数据</h4><p>测试数据存放在模块 test 目录下，模板文件和测试数据文件对应关系如下：</p>
 <p>模板:
     <code>photo/page/index.tpl</code></p>
 <p>对应数据文件:</p>
