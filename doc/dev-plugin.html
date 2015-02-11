@@ -4,21 +4,23 @@
 <h3 class="" id="插件配置"><a name="%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE" class="anchor" href="#%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="octicon octicon-link"></span></a>插件配置</h3><p>fis 编译系统具有一个既简单又容易扩展的插件体系，在不做任何定制的情况下即可满足前端开发的基本需求，与此同时，系统也具有极强的可扩展性，fis 的两大编译流程一共提供了 10 项扩展点，再加上命令行扩展能力，fis 系统一共具有 11 项扩展点。在 FIS-PC 中，默认配置前端模板处理、XSS 修复等插件：</p>
 <pre><code class="hljs lang-javascript">fis.config.set(<span class="hljs-string">'modules'</span>, {
     <span class="hljs-string">parser :</span> {
-        <span class="hljs-string">less :</span> <span class="hljs-string">'less'</span>,  <span class="hljs-comment">// 对 less 文件处理的插件</span>
-<span class="hljs-label">        tmpl:</span> <span class="hljs-string">'bdtmpl'</span>  <span class="hljs-comment">// 对前端模板处理的插件</span>
+        <span class="hljs-string">less :</span> <span class="hljs-string">'less'</span>,  <span class="hljs-comment">//对less文件处理的插件</span>
+<span class="hljs-label">        tmpl:</span> <span class="hljs-string">'bdtmpl'</span>  <span class="hljs-comment">//对前端模板处理的插件</span>
     },
 <span class="hljs-label">    postprocessor:</span> {
-<span class="hljs-label">        tpl:</span> <span class="hljs-string">'require-async'</span>,  <span class="hljs-comment">// 对 tpl 文件新增标准后处理器插件</span>
-<span class="hljs-label">        js:</span> <span class="hljs-string">'jswrapper, require-async'</span> <span class="hljs-comment">// 对 js 文件新增标准后处理器插件</span>
+<span class="hljs-label">        tpl:</span> <span class="hljs-string">'require-async'</span>,  <span class="hljs-comment">//对tpl文件新增标准后处理器插件</span>
+<span class="hljs-label">        js:</span> <span class="hljs-string">'jswrapper, require-async'</span> <span class="hljs-comment">//对js文件新增标准后处理器插件</span>
     },
-    <span class="hljs-string">optimizer :</span> {<span class="hljs-string">tpl :</span> <span class="hljs-string">'smarty-xss,html-compress'</span> <span class="hljs-comment">// 对 tpl 文件新增 xss 修复以及压缩的代码优化器插件}</span>
+    <span class="hljs-string">optimizer :</span> {
+        <span class="hljs-string">tpl :</span> <span class="hljs-string">'smarty-xss,html-compress'</span> <span class="hljs-comment">//对tpl文件新增xss修复以及压缩的代码优化器插件</span>
+    }
 });
 
 fis.config.set(<span class="hljs-string">'settings.parser.bdtmpl'</span>, {
-    <span class="hljs-comment">// 对前端模板处理的插件中，初始化参数</span>
+    <span class="hljs-comment">//对前端模板处理的插件中，初始化参数</span>
         <span class="hljs-string">LEFT_DELIMITER :</span> <span class="hljs-string">'&lt;#'</span>,
         <span class="hljs-string">RIGHT_DELIMITER :</span> <span class="hljs-string">'#&gt;'</span>
 });
 </code></pre>
-<p>用户可以在 <a href="http://fis.baidu.com/docs/advance/plugin-list.html">插件扩展列表</a> 中，fis 系统更多插件扩展的方式。</p>
+<p>用户可以在 <a href="http://fis.baidu.com/docs/advance/plugin-list.html"> 插件扩展列表 </a> 中，fis 系统更多插件扩展的方式。</p>
 <h3 class="" id="插件部署"><a name="%E6%8F%92%E4%BB%B6%E9%83%A8%E7%BD%B2" class="anchor" href="#%E6%8F%92%E4%BB%B6%E9%83%A8%E7%BD%B2"><span class="octicon octicon-link"></span></a>插件部署</h3><p>插件开发完发布使用都为 npm 包的方式，本地使用时可直接进行本地 npm 包安装, 同时用户需要将使用的插件名称告诉 FIS 组成员进行编译机部署。</p>

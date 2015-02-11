@@ -2,7 +2,7 @@
 <p>FIS 提供了本地调试数据功能，本地预览模板时会根据选择的测试数据进行展现，默认的 smarty 版本为 3.1.13。</p>
 </blockquote>
 <h4 class=""><a name="%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE" class="anchor" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE"><span class="octicon octicon-link"></span></a>浏览器书签</h4><pre><code class="hljs lang-javascript">
-<span class="hljs-comment">// 新建浏览器书签，网址为以下内容</span>
+<span class="hljs-comment">//新建浏览器书签，网址为以下内容</span>
 javascript: <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{<span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();d.setFullYear(d.getFullYear() + <span class="hljs-number">1</span>);<span class="hljs-built_in">document</span>.cookie=<span class="hljs-string">'FIS_DEBUG_DATA=4f10e208f47bfb4d35a5e6f115a6df1a;path=/;expires='</span> + d.toGMTString() + <span class="hljs-string">''</span>;location.reload(); }();
 </code></pre>
 <p>当模块进行编译发布后，在预览的时候点击书签，进入数据管理页面，修改数据后再进行渲染:
@@ -12,8 +12,8 @@ javascript: <span class="hljs-keyword">void</span> <span class="hljs-function"><
 <p>模板:
     <code>photo/page/index.tpl</code></p>
 <p>对应数据文件:</p>
-<pre><code><span class="hljs-number">0</span>. photo/test/page/index<span class="hljs-class">.php</span> (php 格式)
-<span class="hljs-number">0</span>. photo/test/page/index<span class="hljs-class">.json</span> (json 格式)
+<pre><code><span class="hljs-number">0</span>. photo/test/page/index<span class="hljs-class">.php</span> (php格式)
+<span class="hljs-number">0</span>. photo/test/page/index<span class="hljs-class">.json</span> (json格式)
 </code></pre><p>也支持多份数据 (php 格式为例):</p>
 <pre><code><span class="hljs-number">0.</span> photo/test/page/index/index_1.php
 <span class="hljs-number">0.</span> photo/test/page/index/index_2.php

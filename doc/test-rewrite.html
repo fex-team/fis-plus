@@ -2,8 +2,8 @@
 <h4 class=""><a name="%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE" class="anchor" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="octicon octicon-link"></span></a>基础配置</h4><p>在模块目录下通过配置文件 server.conf 文件进行配置，配置方式是：</p>
 <p>rewrite 和 redirect 开头的会被翻译成一条匹配规则，自上而下的匹配。所有非 rewrite 和 redirect 开头的会被当做注释处理。</p>
 <pre><code class="hljs lang-ini">rewrite ： 匹配规则后转发到一个文件
-<span class="hljs-keyword">template</span> ： 匹配规则后转发到一个模板文件，但 url 不改变，只针对模板
-redirect ： 匹配规则后重定向到另一个 url
+<span class="hljs-keyword">template</span> ： 匹配规则后转发到一个模板文件，但url不改变，只针对模板
+redirect ： 匹配规则后重定向到另一个url
 
 rewrite ^\/news\?.*tn\=[a-zA-<span class="hljs-type">Z0</span>-<span class="hljs-number">9</span>]+.* app/data/news.php
 <span class="hljs-keyword">template</span> ^\/(.*)\?.*  /home/page/index.tpl
@@ -11,18 +11,18 @@ redirect ^\/index\?.* /home/page/index
 </code></pre>
 <h4 class=""><a name="%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E" class="anchor" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E"><span class="octicon octicon-link"></span></a>配置文件说明</h4><ol>
 <li>配置文件每一行为一条规则。</li>
-<li>格式为：匹配类型 (空格) 匹配 url 正则 (空格) 命中正则后的目的文件路径或者 url。
-rewrite、redirect 和 template 是 fis 默认的三种匹配类型。</li>
-<li><strong>rewrite</strong> ： 匹配规则后转发到一个文件，同时 url 修改为访问文件的 url 路径。
-目的文件路径的根目录 (root) 是 fis 本地调试目录(可以输入命令 $ fis server open 打开噢)，配置文件从根目录之后写即可。
-其中，转发到 php 文件，php 会执行。转发到其他文件，会返回文件内容。例如：可以用 rewrite 模拟 ajax 请求，返回 json 数据~</li>
-<li>rewrite 的目的文件，默认需要经过 fis release 之后投送到 fis 调试目录。直接转发到本地文件，该文件可能没有被 fis 处理，可能会出现诡异问题噢~</li>
-<li><strong>template</strong> :  为了完全模拟线上 url，可通过 template 配置对应的 url 规则对应相应的模板进行访问，访问 url 不变。</li>
-<li><strong>redirect</strong> ： 匹配规则后重定向到另一个 url。</li>
+<li>格式为：匹配类型 (空格) 匹配url正则 (空格) 命中正则后的目的文件路径或者url。
+rewrite、redirect和template是fis默认的三种匹配类型。</li>
+<li><strong>rewrite</strong> ： 匹配规则后转发到一个文件，同时url修改为访问文件的url路径。
+目的文件路径的根目录(root)是fis本地调试目录(可以输入命令 $ fis server open 打开噢)，配置文件从根目录之后写即可。
+其中，转发到php文件，php会执行。转发到其他文件，会返回文件内容。例如：可以用rewrite模拟ajax请求，返回json数据~</li>
+<li>rewrite的目的文件，默认需要经过fis release之后投送到fis调试目录。直接转发到本地文件，该文件可能没有被fis处理，可能会出现诡异问题噢~</li>
+<li><strong>template</strong> :  为了完全模拟线上url，可通过template配置对应的url规则对应相应的模板进行访问，访问url不变。</li>
+<li><strong>redirect</strong> ： 匹配规则后重定向到另一个url。</li>
 </ol>
 <p>注意:</p>
 <ol>
-<li>server.conf 专门配置转发规则，文件名不能改哦</li>
-<li>项目很大，多模块时，一个模块配置 server.conf 就可以啦，比如在 common 模块配置全站的转发规则，否则会覆盖</li>
-<li>所有非 rewrite、template 和 redirect 开头的会被当做注释处理。</li>
+<li>server.conf专门配置转发规则，文件名不能改哦</li>
+<li>项目很大，多模块时，一个模块配置server.conf就可以啦，比如在common模块配置全站的转发规则，否则会覆盖</li>
+<li>所有非rewrite、template和redirect开头的会被当做注释处理。</li>
 </ol>

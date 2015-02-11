@@ -1,17 +1,17 @@
-<h3 class="" id="CSS 组件化"><a name="CSS%20%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#CSS%20%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="octicon octicon-link"></span></a>CSS 组件化</h3><div class="bs-callout bs-callout-info">
-&gt; 在前端开发中，CSS 资源占了很大一部分比例，在 FIS 中，我们将 CSS 资源分为组件和非组件类。CSS 组件会绑定到同名 JS 组件、模板组件上，进行加载管理，用户不需要关心加载方式；非组件类 CSS 资源通过 link 标签、require 插件方式进行加载。
+<h3 class="" id="CSS组件化"><a name="CSS%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#CSS%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="octicon octicon-link"></span></a>CSS组件化</h3><div class="bs-callout bs-callout-info">
+&gt; 在前端开发中，CSS资源占了很大一部分比例，在FIS中，我们将CSS资源分为组件和非组件类。CSS组件会绑定到同名JS组件、模板组件上，进行加载管理，用户不需要关心加载方式；非组件类CSS资源通过link标签、require插件方式进行加载。
 </div>
 
 <p>在 <strong> 模块根目录 /widget</strong> 目录下的 CSS 资源，皆为组件。在模板组件中以及 JS 组件中对应同名的 CSS 组件会自动与模板组件、JS 组件添加依赖关系，进行加载管理，用户不需要显示进行调用加载。</p>
-<h4 class=""><a name="%E5%85%B6%E4%BB%96%20CSS" class="anchor" href="#%E5%85%B6%E4%BB%96%20CSS"><span class="octicon octicon-link"></span></a>其他 CSS</h4><p>在非 widget 目录下的 CSS 资源，皆为非组件化资源。用户可以通过 link 标签、<a href="#require">require 插件</a> 等方式进行调用.</p>
-<h4 class=""><a name="%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="octicon octicon-link"></span></a>页面模板静态资源</h4><p><code>对应页面模板的同名静态资源，FIS 会在页面自动进行加载</code>，用户不需要在页面中声明加载。</p>
-<pre><code class="hljs lang-bash">tpl ：模板根目录 /page/ 页面名<span class="hljs-class">.tpl</span>
-js ：模板根目录 /page/ 页面名<span class="hljs-class">.js</span>
-css ：模板根目录 /page/ 页面名.css
+<h4 class=""><a name="%E5%85%B6%E4%BB%96CSS" class="anchor" href="#%E5%85%B6%E4%BB%96CSS"><span class="octicon octicon-link"></span></a>其他CSS</h4><p>在非 widget 目录下的 CSS 资源，皆为非组件化资源。用户可以通过 link 标签、<a href="#require">require 插件 </a> 等方式进行调用.</p>
+<h4 class=""><a name="%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="octicon octicon-link"></span></a>页面模板静态资源</h4><p><code> 对应页面模板的同名静态资源，FIS 会在页面自动进行加载 </code>，用户不需要在页面中声明加载。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/page/页面名<span class="hljs-class">.tpl</span>
+js ：模板根目录/page/页面名<span class="hljs-class">.js</span>
+css ：模板根目录/page/页面名.css
 </code></pre>
-<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="octicon octicon-link"></span></a>模板组件静态资源</h4><p><code>与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载</code>。</p>
-<pre><code class="hljs lang-bash">tpl ：模板根目录 /widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
-js ：模板根目录 /widget/widgetName/widgetName<span class="hljs-class">.js</span>
-css ：模板根目录 /widget/widgetName/widgetName.css
+<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="octicon octicon-link"></span></a>模板组件静态资源</h4><p><code> 与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载 </code>。</p>
+<pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
+js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
+css ：模板根目录/widget/widgetName/widgetName.css
 </code></pre>
-<h4 class=""><a name="Less%20%E8%B5%84%E6%BA%90" class="anchor" href="#Less%20%E8%B5%84%E6%BA%90"><span class="octicon octicon-link"></span></a>Less 资源</h4><p>在 FIS 中默认配置了对 less 资源处理插件，less 文件编译处理后变为 css 文件。</p>
+<h4 class=""><a name="Less%E8%B5%84%E6%BA%90" class="anchor" href="#Less%E8%B5%84%E6%BA%90"><span class="octicon octicon-link"></span></a>Less资源</h4><p>在 FIS 中默认配置了对 less 资源处理插件，less 文件编译处理后变为 css 文件。</p>

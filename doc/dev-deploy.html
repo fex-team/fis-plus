@@ -2,9 +2,9 @@
 <p>fis 通过简单的上传配置，把编译后文件上传到测试机, 方便联调。</p>
 </blockquote>
 <ul>
-<li><a href="# 产出目录">产出目录</a></li>
-<li><a href="# 上传配置">上传配置</a></li>
-<li><a href="# 上传常见问题">上传常见问题</a></li>
+<li><a href="#%E4%BA%A7%E5%87%BA%E7%9B%AE%E5%BD%95">产出目录</a></li>
+<li><a href="#%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE">上传配置</a></li>
+<li><a href="#%E4%B8%8A%E4%BC%A0%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">上传常见问题</a></li>
 </ul>
 <h4 class=""><a name="%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF" class="anchor" href="#%E5%8F%91%E5%B8%83%E4%B8%8A%E7%BA%BF"><span class="octicon octicon-link"></span></a>发布上线</h4><blockquote>
 <p>提供基础的 build.sh 编译脚本，用于上线时候自动编译项目。</p>
@@ -19,14 +19,14 @@ TAR=<span class="hljs-string">"<span class="hljs-variable">$MOD_NAME</span>.tar.
 <span class="hljs-comment">#show fis-plus version</span>
 fisp --version --no-color
 
-<span class="hljs-comment">#通过 fis-plus release 命令进行模块编译 开启 optimize、md5、打包功能，同时需开启 -u 独立缓存编译方式，产出到同目录下 output 中</span>
+<span class="hljs-comment">#通过fis-plus release 命令进行模块编译 开启optimize、md5、打包功能，同时需开启-u 独立缓存编译方式，产出到同目录下output中</span>
 fisp release -cuompd output
-<span class="hljs-comment">#进入 output 目录</span>
+<span class="hljs-comment">#进入output目录</span>
 <span class="hljs-built_in">cd</span> output
-<span class="hljs-comment">#删除产出的 test 目录</span>
+<span class="hljs-comment">#删除产出的test目录</span>
 rm -rf <span class="hljs-built_in">test</span>
 
-<span class="hljs-comment">#将 output 目录进行打包</span>
+<span class="hljs-comment">#将output目录进行打包</span>
 tar zcf <span class="hljs-variable">$TAR</span> ./*
 mv <span class="hljs-variable">$TAR</span> ../
 

@@ -40,7 +40,7 @@
 <h4 class=""><a name="%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F" class="anchor" href="#%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F"><span class="octicon octicon-link"></span></a>时间日期</h4><ul>
 <li>时间的显示格式</li>
 <li>日期的显示格式</li>
-<li>是否有本土化的日期显示方式（如中文： 2012 年 12 月 30 日，泰语佛历显示等）</li>
+<li>是否有本土化的日期显示方式（如中文： 2012年12月30日，泰语佛历显示等）</li>
 <li>时区标示符，参考这里</li>
 </ul>
 <h4 class=""><a name="%E5%85%B6%E5%AE%83%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%86%85%E5%AE%B9" class="anchor" href="#%E5%85%B6%E5%AE%83%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%86%85%E5%AE%B9"><span class="octicon octicon-link"></span></a>其它格式化内容</h4><ul>
@@ -51,16 +51,16 @@
 <h4 class=""><a name="%E6%9C%AC%E5%9C%B0%E4%BC%98%E5%8C%96%E7%89%B9%E6%80%A7" class="anchor" href="#%E6%9C%AC%E5%9C%B0%E4%BC%98%E5%8C%96%E7%89%B9%E6%80%A7"><span class="octicon octicon-link"></span></a>本地优化特性</h4><ul>
 <li>虚拟键盘支持（阿语）</li>
 <li>输入法支持（越南语有输入法的支持）</li>
-<li>RTL 语言的自动识别</li>
+<li>RTL语言的自动识别</li>
 </ul>
-<h3 class="" id="FIS 国际化方案"><a name="FIS%20%E5%9B%BD%E9%99%85%E5%8C%96%E6%96%B9%E6%A1%88" class="anchor" href="#FIS%20%E5%9B%BD%E9%99%85%E5%8C%96%E6%96%B9%E6%A1%88"><span class="octicon octicon-link"></span></a>FIS 国际化方案</h3><ul>
+<h3 class="" id="FIS国际化方案"><a name="FIS%E5%9B%BD%E9%99%85%E5%8C%96%E6%96%B9%E6%A1%88" class="anchor" href="#FIS%E5%9B%BD%E9%99%85%E5%8C%96%E6%96%B9%E6%A1%88"><span class="octicon octicon-link"></span></a>FIS国际化方案</h3><ul>
 <li>自动抽取所有的词条</li>
-<li>css RTL 自动转换</li>
+<li>css RTL自动转换</li>
 <li>运行时展示不同语言</li>
 </ul>
 <p>根据 gettext 的思路，一份代码在不同语言环境下展示不同语言。</p>
 <h4 class=""><a name="%E4%BD%BF%E7%94%A8" class="anchor" href="#%E4%BD%BF%E7%94%A8"><span class="octicon octicon-link"></span></a>使用</h4><ol>
-<li>下载 <a href="http://git.baidu.com/fis-dev/fis-i18n-demo/repository/archive">demo</a></li>
+<li>下载<a href="http://git.baidu.com/fis-dev/fis-i18n-demo/repository/archive">demo</a></li>
 <li>编译发布项目<ul>
 <li>fisp release -r common</li>
 <li>fisp release -r i18n</li>
@@ -70,7 +70,8 @@
 </ol>
 <h4 class=""><a name="%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91" class="anchor" href="#%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91"><span class="octicon octicon-link"></span></a>如何开发</h4><p>按照上面说的使用方法，已经在本地模拟一个国际化项目。修改测试数据 <code>i18n</code> 字段，为 en_US、ja_JP 或其他分别看看效果。</p>
 <pre><code class="hljs lang-php"><span class="php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-variable">$fis_data</span> = <span class="hljs-keyword">array</span>(<span class="hljs-string">'i18n'</span> =&gt; <span class="hljs-string">'en_US'</span>
+<span class="hljs-variable">$fis_data</span> = <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'i18n'</span> =&gt; <span class="hljs-string">'en_US'</span>
 );
 <span class="hljs-preprocessor">?&gt;</span></span>
 </code></pre>
@@ -110,13 +111,13 @@
 <p>可以看到 config/lang 目录下是一些 JSON 翻译文件。翻译文件格式为;</p>
 <pre><code class="hljs lang-json">{
     "<span class="hljs-attribute">原文</span>": <span class="hljs-value"><span class="hljs-string">"译文"</span></span>,
-    "<span class="hljs-attribute">原文 1</span>": <span class="hljs-value"><span class="hljs-string">"译文 1"</span>
+    "<span class="hljs-attribute">原文1</span>": <span class="hljs-value"><span class="hljs-string">"译文1"</span>
 </span>}
 </code></pre>
 <p>这样当运行时调用了翻译函数，翻译函数读取对应的翻译文件展示译文。</p>
 <h5 class=""><a name="%E7%BF%BB%E8%AF%91%E5%87%BD%E6%95%B0" class="anchor" href="#%E7%BF%BB%E8%AF%91%E5%87%BD%E6%95%B0"><span class="octicon octicon-link"></span></a>翻译函数</h5><ul>
-<li>JS 中的语言</li>
-<li>Smarty 模板中的语言</li>
+<li>JS中的语言</li>
+<li>Smarty模板中的语言</li>
 </ul>
 <p>js 中的语言：</p>
 <pre><code class="hljs lang-javascript"><span class="hljs-keyword">var</span> str = __(<span class="hljs-string">'中文'</span>);
@@ -126,10 +127,10 @@
 </code></pre>
 <p>综述，开发过程；</p>
 <ol>
-<li>功能开发完成后，通过 <code>fisp xgettext</code> 抽取所有的词条，产出 <code>&lt;namespace&gt;.en_US.po</code> 等语言文件</li>
-<li>开发人员完善 <code>po</code> 文件</li>
-<li>编译项目 <code>fisp release -r project</code></li>
-<li>fis 在编译过程中，分析 <code>po</code> 文件，生成 <code>&lt;namespace&gt;.en_US.json</code> 语言翻译文件 <code>key=&gt;value</code></li>
-<li>运行时执行 <code>{%&#39;xxxx&#39;|gettext%}</code> 函数时，根据语言类型，读取对应的翻译文字并展示</li>
+<li>功能开发完成后，通过<code>fisp xgettext</code>抽取所有的词条，产出<code>&lt;namespace&gt;.en_US.po</code>等语言文件</li>
+<li>开发人员完善<code>po</code>文件</li>
+<li>编译项目<code>fisp release -r project</code></li>
+<li>fis在编译过程中，分析<code>po</code>文件，生成<code>&lt;namespace&gt;.en_US.json</code>语言翻译文件<code>key=&gt;value</code></li>
+<li>运行时执行<code>{%&#39;xxxx&#39;|gettext%}</code>函数时，根据语言类型，读取对应的翻译文字并展示</li>
 </ol>
 <h4 class=""><a name="%E6%9B%B4%E5%A4%9A%E8%B5%84%E6%96%99" class="anchor" href="#%E6%9B%B4%E5%A4%9A%E8%B5%84%E6%96%99"><span class="octicon octicon-link"></span></a>更多资料</h4><p>更多国际化资料 [<a href="http://fe.baidu.com/doc/i18n/">http://fe.baidu.com/doc/i18n/</a>]</p>
