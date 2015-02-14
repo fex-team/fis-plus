@@ -106,6 +106,10 @@
         "static/yog2/css/index.scss": {
             "uri": "/fis-plus/static/static/yog2/css/index_a2d902f.css",
             "type": "css"
+        },
+        "widget/scroll/scroll.js": {
+            "uri": "/fis-plus/static/widget/scroll/scroll_97b8460.js",
+            "type": "js"
         }
     },
     "pkg": {
