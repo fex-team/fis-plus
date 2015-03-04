@@ -14,9 +14,12 @@
 })
 </code></pre>
 <h4 class=""><a name="%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83smarty%E5%AE%9A%E7%95%8C%E7%AC%A6%E4%BF%AE%E6%94%B9" class="anchor" href="#%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95%E7%8E%AF%E5%A2%83smarty%E5%AE%9A%E7%95%8C%E7%AC%A6%E4%BF%AE%E6%94%B9"><span class="octicon octicon-link"></span></a>本地调试环境smarty定界符修改</h4><p>在模块根目录下放置 <code>smarty.conf</code> 将其内容设置为：</p>
-<pre><code>left_delimiter=<span class="hljs-string">'&lt;{'</span>
-right_delimiter=<span class="hljs-string">'}&gt;'</span>
-</code></pre><p><em> 假设有多个模块，只需要在 common 模块根目录下放置 <code>smarty.conf</code></em></p>
+<pre><code><span class="hljs-setting">left_delimiter=<span class="hljs-value"><span class="hljs-string">"&lt;{"</span></span></span>
+<span class="hljs-setting">right_delimiter=<span class="hljs-value"><span class="hljs-string">"}&gt;"</span></span></span>
+</code></pre><blockquote>
+<p>smarty.conf 文件为一个 <code>ini</code> 文件，需要保证 php <code>parse_ini_file</code> 能够解析它</p>
+</blockquote>
+<p><em> 假设有多个模块，只需要在 common 模块根目录下放置 <code>smarty.conf</code></em></p>
 <h4 class=""><a name="domain%E9%85%8D%E7%BD%AE" class="anchor" href="#domain%E9%85%8D%E7%BD%AE"><span class="octicon octicon-link"></span></a>domain配置</h4><p>设置静态资源域名，domain 的值如果不是特殊需要，请不要以 &quot;/&quot; 结尾。</p>
 <pre><code class="hljs lang-xml"><span class="hljs-comment">//fis-conf.js</span>
 <span class="hljs-comment">//用法一</span>
