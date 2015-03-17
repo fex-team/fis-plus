@@ -1,6 +1,6 @@
 ![[FIS](http://fis.baidu.com)](./doc/images/logo.png)
 
-The official site: http://fis.baidu.com
+The official site: http://oak.baidu.com/fis-plus
 
 [![NPM version](https://badge.fury.io/js/fis-plus.png)](http://badge.fury.io/js/fis-plus)
 

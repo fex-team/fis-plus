@@ -1,3 +1,7 @@
+## 0.8.1 / Tue Mar 17 2015
+
+> 升级 fis 至 [1.9.8](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#198--mon-mar-16-2015)
+
 ## 0.8.0 / Tue Feb 03 2015
 
 > 升级 fis 至 [1.9.4](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#194--mon-feb-02-2015)
