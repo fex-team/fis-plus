@@ -69,6 +69,15 @@
 <div class="bs-callout bs-callout-warning">
 FIS-PLUS 是基于 FIS，应用于后端是 PHP，模板是 Smarty 的场景。现在被大多数百度产品使用。
 </div>
+
+<hr>
+<p>fis-plus@0.8.2</p>
+<ul>
+<li><code>fisp install</code> 调整为 <code>fisp init</code></li>
+<li><code>fisp install</code> 被调整用作组件支持，可以方便安装组件</li>
+<li>支持 <code>node v0.12.0</code></li>
+</ul>
+<hr>
 </div>
 <div class="bs-docs-section"><h1 class="page-header"><a name="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8" class="anchor" href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="octicon octicon-link"></span></a>快速入门</h1><h3 class="" id="安装"><a name="%E5%AE%89%E8%A3%85" class="anchor" href="#%E5%AE%89%E8%A3%85"><span class="octicon octicon-link"></span></a>安装</h3><p>fis-plus 的 自动化 / 辅助开发工具 被发布为一套 npm 包，它对环境的要求是：</p>
 <ul>
@@ -280,7 +289,7 @@ require<span class="hljs-comment">('/widget/a.js')</span>;
 <li><code>业务模块</code>: 根据业务、URI等将站点进行划分的子系统站点模块。</li>
 </ul>
 <p>站点整体目录结构示意：</p>
-<pre><code class="hljs lang-bash"><span class="hljs-string">|---site</span>
+<pre><code><span class="hljs-string">|---site</span>
 <span class="hljs-string">|     |---common //通用子系统</span>
 <span class="hljs-string">|     |      |---config //smarty配置文件</span>
 <span class="hljs-string">|     |      |---page //模板页面文件目录，也包含用于继承的模板页面</span>
@@ -312,8 +321,7 @@ require<span class="hljs-comment">('/widget/a.js')</span>;
 <span class="hljs-string">|     |      |---fis-conf.js //fis配置文件</span>
 
         ......
-</code></pre>
-<p><strong> 为什么 FIS 要按照上述模块化方式定义规范呢？</strong></p>
+</code></pre><p><strong> 为什么 FIS 要按照上述模块化方式定义规范呢？</strong></p>
 <ul>
 <li><p>模块化是一种处理复杂系统分解成为更好的可管理模块的方式，它可以把系统代码划分为一系列职责单一，高度解耦且可替换的模块，系统中某一部分的变化将如何影响其它部分就会变得显而易见，系统的可维护性更加简单易得。</p>
 </li>
@@ -1014,7 +1022,7 @@ TAR=<span class="hljs-string">"<span class="hljs-variable">$MOD_NAME</span>.tar.
 fisp --version --no-color
 
 <span class="hljs-comment">#通过fis-plus release 命令进行模块编译 开启optimize、md5、打包功能，同时需开启-u 独立缓存编译方式，产出到同目录下output中</span>
-fisp release -cuompd output
+fisp release -uompd output --no-color
 <span class="hljs-comment">#进入output目录</span>
 <span class="hljs-built_in">cd</span> output
 <span class="hljs-comment">#删除产出的test目录</span>

@@ -18,7 +18,7 @@
 <li><code>业务模块</code>: 根据业务、URI等将站点进行划分的子系统站点模块。</li>
 </ul>
 <p>站点整体目录结构示意：</p>
-<pre><code class="hljs lang-bash"><span class="hljs-string">|---site</span>
+<pre><code><span class="hljs-string">|---site</span>
 <span class="hljs-string">|     |---common //通用子系统</span>
 <span class="hljs-string">|     |      |---config //smarty配置文件</span>
 <span class="hljs-string">|     |      |---page //模板页面文件目录，也包含用于继承的模板页面</span>
@@ -50,8 +50,7 @@
 <span class="hljs-string">|     |      |---fis-conf.js //fis配置文件</span>
 
         ......
-</code></pre>
-<p><strong> 为什么 FIS 要按照上述模块化方式定义规范呢？</strong></p>
+</code></pre><p><strong> 为什么 FIS 要按照上述模块化方式定义规范呢？</strong></p>
 <ul>
 <li><p>模块化是一种处理复杂系统分解成为更好的可管理模块的方式，它可以把系统代码划分为一系列职责单一，高度解耦且可替换的模块，系统中某一部分的变化将如何影响其它部分就会变得显而易见，系统的可维护性更加简单易得。</p>
 </li>
