@@ -289,39 +289,40 @@ require<span class="hljs-comment">('/widget/a.js')</span>;
 <li><code>业务模块</code>: 根据业务、URI等将站点进行划分的子系统站点模块。</li>
 </ul>
 <p>站点整体目录结构示意：</p>
-<pre><code><span class="hljs-string">|---site</span>
-<span class="hljs-string">|     |---common //通用子系统</span>
-<span class="hljs-string">|     |      |---config //smarty配置文件</span>
-<span class="hljs-string">|     |      |---page //模板页面文件目录，也包含用于继承的模板页面</span>
+<pre><code class="hljs lang-bash"><span class="hljs-string">|---site</span>
+<span class="hljs-string">|     |---common #通用子系统</span>
+<span class="hljs-string">|     |      |---config #smarty配置文件</span>
+<span class="hljs-string">|     |      |---page #模板页面文件目录，也包含用于继承的模板页面</span>
 <span class="hljs-string">|     |            └── layout.tpl</span>
-<span class="hljs-string">|     |      |---widget //组件的资源目录，包括模板组件,JS组件,CSS组件等</span>
-<span class="hljs-string">|     |      |     └── menu   //widget模板组件</span>
+<span class="hljs-string">|     |      |---widget #组件的资源目录，包括模板组件,JS组件,CSS组件等</span>
+<span class="hljs-string">|     |      |     └── menu   #widget模板组件</span>
 <span class="hljs-string">|     |      |     |    └── menu.tpl</span>
 <span class="hljs-string">|     |      |     |    └── menu.js</span>
 <span class="hljs-string">|     |      |     |    └── menu.css</span>
-<span class="hljs-string">|     |      |     └── ui   //UI组件</span>
-<span class="hljs-string">|     |      |          └── dialog  //JS组件</span>
+<span class="hljs-string">|     |      |     └── ui   #UI组件</span>
+<span class="hljs-string">|     |      |          └── dialog  #JS组件</span>
 <span class="hljs-string">|     |      |          |    └──dialog.js</span>
 <span class="hljs-string">|     |      |          |    └──dialog.css</span>
-<span class="hljs-string">|     |      |          └── reset //CSS组件</span>
+<span class="hljs-string">|     |      |          └── reset #CSS组件</span>
 <span class="hljs-string">|     |      |               └── reset.css</span>
-<span class="hljs-string">|     |      |---static //非组件静态资源目录，包括模板页面引用的静态资源和其他静态资源</span>
-<span class="hljs-string">|     |      |---plugin //模板插件目录(可选，对于特殊需要的产品线，可以独立维护)</span>
-<span class="hljs-string">|     |      |---fis-conf.js //fis配置文件</span>
-<span class="hljs-string">|     |---module1 //module1子系统</span>
+<span class="hljs-string">|     |      |---static #非组件静态资源目录，包括模板页面引用的静态资源和其他静态资源</span>
+<span class="hljs-string">|     |      |---plugin #模板插件目录(可选，对于特殊需要的产品线，可以独立维护)</span>
+<span class="hljs-string">|     |      |---fis-conf.js #fis配置文件</span>
+<span class="hljs-string">|     |---module1 #module1子系统</span>
 <span class="hljs-string">|     |      |---test</span>
 <span class="hljs-string">|     |      |---config</span>
 <span class="hljs-string">|     |      |---page</span>
 <span class="hljs-string">|     |            └── index.tpl</span>
 <span class="hljs-string">|     |      |---widget</span>
 <span class="hljs-string">|     |      |---static</span>
-<span class="hljs-string">|     |      |     └── index //index.tpl模板对应的静态资源</span>
+<span class="hljs-string">|     |      |     └── index #index.tpl模板对应的静态资源</span>
 <span class="hljs-string">|     |      |          └── index.js</span>
 <span class="hljs-string">|     |      |          └── index.css</span>
-<span class="hljs-string">|     |      |---fis-conf.js //fis配置文件</span>
+<span class="hljs-string">|     |      |---fis-conf.js #fis配置文件</span>
 
         ......
-</code></pre><p><strong> 为什么 FIS 要按照上述模块化方式定义规范呢？</strong></p>
+</code></pre>
+<p><strong> 为什么 FIS 要按照上述模块化方式定义规范呢？</strong></p>
 <ul>
 <li><p>模块化是一种处理复杂系统分解成为更好的可管理模块的方式，它可以把系统代码划分为一系列职责单一，高度解耦且可替换的模块，系统中某一部分的变化将如何影响其它部分就会变得显而易见，系统的可维护性更加简单易得。</p>
 </li>
