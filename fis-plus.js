@@ -148,3 +148,18 @@ fis.config.merge({
         skipRoadmapCheck: true
     }
 });
+
+var postpackager = fis.config.get('modules.postpackager', []);
+
+if (fis.util.is(postpackager, 'String')) {
+    postpackager = postpackager.split(',');
+}
+
+var argv = process.argv;
+var isPreview = !(~argv.indexOf('-d') || ~argv.indexOf('--dest'));
+// auto generate smarty.conf
+if (isPreview) {
+    postpackager.push(require('./lib/smarty-config.js'));
+}
+
+fis.config.set('modules.postpackager', postpackager);
