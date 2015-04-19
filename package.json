@@ -1,6 +1,6 @@
 {
   "name": "fis-plus",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Front End Integrated Solution for PC",
   "main": "fis-plus.js",
   "bin": {
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "fis": "1.9.10",
-    "fis-preprocessor-extlang": "0.0.8",
+    "fis-preprocessor-extlang": "0.0.9",
     "fis-prepackager-widget-inline": "0.0.9",
     "fis-postprocessor-require-async": "0.0.9",
     "fis-optimizer-smarty-xss": "0.1.3",

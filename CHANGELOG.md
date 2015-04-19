@@ -1,3 +1,7 @@
+## 0.8.5 / Tue Apr 07 2015
+
+> [升级 fis-preprocessor-extlang 到 0.0.9](https://github.com/xiangshouding/fis-preprocessor-extlang/pull/2).
+
 ## 0.8.4 / Tue Mar 19 2015
 
 > 升级 fis 至 [1.9.10](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#1910--mon-mar-19-2015)
