@@ -71,6 +71,10 @@
             "uri": "/fis-plus/lib/fontawesome/css/font-awesome_8e81f2d.css",
             "type": "css"
         },
+        "lib/highlight.js/dark.css": {
+            "uri": "/fis-plus/lib/highlight.js/dark_1f6b5e7.css",
+            "type": "css"
+        },
         "lib/highlight.js/github.css": {
             "uri": "/fis-plus/lib/highlight.js/github_93a844e.css",
             "type": "css"
@@ -122,11 +126,11 @@
             ]
         },
         "auto_css_1": {
-            "uri": "/fis-plus/static/pkg/auto_combine_bc809_ba477d6.css",
+            "uri": "/fis-plus/static/pkg/auto_combine_3e227_f5d2701.css",
             "type": "css",
             "has": [
                 "lib/fontawesome/css/font-awesome.css",
-                "lib/highlight.js/github.css",
+                "lib/highlight.js/dark.css",
                 "lib/bootstrap/docs.min.css",
                 "static/fis-plus/css/base.scss",
                 "static/fis-plus/css/document.scss",
