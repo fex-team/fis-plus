@@ -126,11 +126,11 @@
             ]
         },
         "auto_css_1": {
-            "uri": "/fis-plus/static/pkg/auto_combine_3e227_f5d2701.css",
+            "uri": "/fis-plus/static/pkg/auto_combine_c960f_a0ab4e3.css",
             "type": "css",
             "has": [
                 "lib/fontawesome/css/font-awesome.css",
-                "lib/highlight.js/dark.css",
+                "lib/highlight.js/monokai.css",
                 "lib/bootstrap/docs.min.css",
                 "static/fis-plus/css/base.scss",
                 "static/fis-plus/css/document.scss",
