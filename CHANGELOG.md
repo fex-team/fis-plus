@@ -1,3 +1,10 @@
+## 0.8.6 / Mon Apr 20 2015
+
+> [升级 fis 至 1.9.14](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#1913--fri-apr-10-2015)
+
+- 自动根据用户配置产出 smarty.conf
+- 自动添加 `<!--livereload-->` 注视，方便用户使用 livereload 功能
+
 ## 0.8.5 / Tue Apr 07 2015
 
 > [升级 fis-preprocessor-extlang 到 0.0.9](https://github.com/xiangshouding/fis-preprocessor-extlang/pull/2).
