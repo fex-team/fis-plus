@@ -1047,28 +1047,34 @@ mv <span class="hljs-variable">$TAR</span> output/
 <h3 class="" id="本地 Web 服务"><a name="%E6%9C%AC%E5%9C%B0%20Web%20%E6%9C%8D%E5%8A%A1" class="anchor" href="#%E6%9C%AC%E5%9C%B0%20Web%20%E6%9C%8D%E5%8A%A1"><span class="octicon octicon-link"></span></a>本地 Web 服务</h3><p>本地 Web 服务是通过 <code>fisp server</code> 命令操作的；它是一个完整的 Web 服务，可以解析 PHP；</p>
 <ul>
 <li><p>开启服务</p>
-<pre><code>fisp <span class="hljs-keyword">server</span> start
-</code></pre></li>
+<pre><code class="hljs lang-bash">fisp <span class="hljs-keyword">server</span> start
+</code></pre>
+</li>
 <li><p>关闭服务</p>
-<pre><code>fisp <span class="hljs-built_in">server</span> <span class="hljs-keyword">stop</span>
-</code></pre></li>
+<pre><code class="hljs lang-bash">fisp <span class="hljs-built_in">server</span> <span class="hljs-keyword">stop</span>
+</code></pre>
+</li>
 <li><p>重启服务</p>
-<pre><code>fisp <span class="hljs-keyword">server</span> restart
-</code></pre></li>
+<pre><code class="hljs lang-bash">fisp <span class="hljs-keyword">server</span> restart
+</code></pre>
+</li>
 <li><p>查看服务器信息</p>
-<pre><code><span class="hljs-title">fisp</span> server <span class="hljs-built_in">info</span>
-</code></pre></li>
+<pre><code class="hljs lang-bash"><span class="hljs-title">fisp</span> server <span class="hljs-built_in">info</span>
+</code></pre>
+</li>
 <li><p>打开服务器根目录</p>
-<pre><code>fisp <span class="hljs-keyword">server</span> open
-</code></pre></li>
+<pre><code class="hljs lang-bash">fisp <span class="hljs-keyword">server</span> open
+</code></pre>
+</li>
 </ul>
 <p>如果你在本地不想用 fisp 提供的 Web 服务，可以用其他服务替代，只是可能需要你自己开发一套 APP 套件或者直接把后端代码部署到你自己的机器上，方便开发。</p>
 <h3 class="" id="url 转发"><a name="url%20%E8%BD%AC%E5%8F%91" class="anchor" href="#url%20%E8%BD%AC%E5%8F%91"><span class="octicon octicon-link"></span></a>url 转发</h3><p>如果用户没有配置 URL 转发，是按照如下方式去匹配到一个页面的；</p>
 <p>比如我有代码路径</p>
-<pre><code>fis-conf<span class="hljs-class">.js</span>
+<pre><code class="hljs lang-bash">fis-conf<span class="hljs-class">.js</span>
 page/index<span class="hljs-class">.tpl</span>
 page/home.tpl
-</code></pre><p>假设项目的 <code>namespace = &#39;work&#39;</code></p>
+</code></pre>
+<p>假设项目的 <code>namespace = &#39;work&#39;</code></p>
 <p>那么 release 之后，可以通过如下方式来访问上面提到的两个页面；</p>
 <ul>
 <li><code>page/index.tpl</code> =&gt; <code>http://127.0.0.1:8080/work/page/index</code></li>
