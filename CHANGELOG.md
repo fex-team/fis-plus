@@ -8,8 +8,8 @@
 
 > [升级 fis 至 1.9.14](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#1913--fri-apr-10-2015)
 
-- 自动根据用户配置产出 smarty.conf
-- 自动添加 `<!--livereload-->` 注视，方便用户使用 livereload 功能
+- 自动根据用户配置产出 `smarty.conf`
+- 自动添加 `<!--livereload-->` 注释，方便用户使用 livereload 功能，用户直接加 `-L` 即可使用此功能；
 
 ## 0.8.5 / Tue Apr 07 2015
 
