@@ -1,3 +1,9 @@
+## 0.8.7 / Wed May 06 2015  
+
+> 降级fis-preprocessor-extlang至v0.0.8
+
+- 新版 extlang 处理上有bug，恢复原来的
+
 ## 0.8.6 / Mon Apr 20 2015
 
 > [升级 fis 至 1.9.14](https://github.com/fex-team/fis/blob/master/CHANGELOG.md#1913--fri-apr-10-2015)
