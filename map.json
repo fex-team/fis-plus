@@ -96,7 +96,7 @@
             "type": "css"
         },
         "static/fis-plus/css/index.scss": {
-            "uri": "/fis-plus/static/css/index_b7b14d4.css",
+            "uri": "/fis-plus/static/css/index_25939c4.css",
             "type": "css"
         },
         "static/yog2/css/base.scss": {
@@ -126,7 +126,7 @@
             ]
         },
         "auto_css_1": {
-            "uri": "/fis-plus/static/pkg/auto_combine_c960f_17dedb4.css",
+            "uri": "/fis-plus/static/pkg/auto_combine_c960f_05770f0.css",
             "type": "css",
             "has": [
                 "lib/fontawesome/css/font-awesome.css",
