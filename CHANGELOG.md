@@ -1,3 +1,9 @@
+## 0.8.10 / Wed May 13 2015 
+
+> 升级fis到1.9.21
+
+- 支持https本地调试
+
 ## 0.8.7 / Wed May 06 2015  
 
 > 降级fis-preprocessor-extlang至v0.0.8
