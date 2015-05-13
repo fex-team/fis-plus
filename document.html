@@ -379,6 +379,19 @@ require<span class="hljs-comment">('/widget/a.js')</span>;
 </li>
 </ul>
 <p>下面的文档会详细介绍组件的使用方式。</p>
+<h4 class=""><a name="%E8%87%AA%E5%AE%9A%E4%B9%89%E7%89%B9%E6%AE%8A%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83" class="anchor" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%89%B9%E6%AE%8A%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83"><span class="octicon octicon-link"></span></a>自定义特殊目录规范</h4><p>假设有自定义特殊目录规范的需求，比如某些图片需要挪动到自定义的目录下时，需要通过如下方式设置，<strong> 切记 </strong>。</p>
+<p>具体设置属性参考 <a href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#roadmappath">roadmap.path</a> 设置</p>
+<pre><code class="hljs lang-js">fis.config.<span class="hljs-built_in">set</span>(<span class="hljs-string">'roadmap.path'</span>, [
+    { <span class="hljs-comment">// 规则1</span>
+        reg: <span class="hljs-string">'匹配文件正则或者glob'</span>,
+        release: <span class="hljs-string">'文件想产出的路径'</span>
+    },
+    { <span class="hljs-comment">// 规则2</span>
+        reg: <span class="hljs-string">'匹配文件正则或者glob'</span>,
+        release: <span class="hljs-string">'文件想产出的路径'</span>
+    }
+].<span class="hljs-built_in">concat</span>(fis.config.<span class="hljs-built_in">get</span>(<span class="hljs-string">'roadmap.path'</span>, [])));
+</code></pre>
 </div>
 <div class="bs-docs-section"><h3 class="" id="三种语言能力"><a name="%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E8%83%BD%E5%8A%9B" class="anchor" href="#%E4%B8%89%E7%A7%8D%E8%AF%AD%E8%A8%80%E8%83%BD%E5%8A%9B"><span class="octicon octicon-link"></span></a>三种语言能力</h3><ul>
 <li>html、css、javascript扩展语言能力，请参见<a href="https://github.com/fex-team/fis/wiki#%E8%AF%AD%E8%A8%80%E8%83%BD%E5%8A%9B">三种语言能力</a></li>
