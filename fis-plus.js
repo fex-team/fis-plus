@@ -149,25 +149,27 @@ fis.config.merge({
     }
 });
 
-// postpackager {{{
+fis.emitter.on('fis-conf:loaded', function () {
+    // postpackager {{{
 
-var postpackager = fis.config.get('modules.postpackager', []);
+    var postpackager = fis.config.get('modules.postpackager', []);
 
-if (fis.util.is(postpackager, 'String')) {
-    postpackager = postpackager.split(',');
-} else if (fis.util.is(postpackager, 'Function')) {
-    postpackager = [postpackager];
-}
+    if (fis.util.is(postpackager, 'String')) {
+        postpackager = postpackager.split(',');
+    } else if (fis.util.is(postpackager, 'Function')) {
+        postpackager = [postpackager];
+    }
 
-var argv = process.argv;
-var isPreview = !(~argv.indexOf('-d') || ~argv.indexOf('--dest'));
-// auto generate smarty.conf
-if (isPreview) {
-    postpackager.push(require('./lib/smarty-config.js'));
-}
+    var argv = process.argv;
+    var isPreview = !(~argv.indexOf('-d') || ~argv.indexOf('--dest'));
+    // auto generate smarty.conf
+    if (isPreview) {
+        postpackager.push(require('./lib/smarty-config.js'));
+    }
 
-postpackager.push(require('./lib/livereload-target.js'));
+    postpackager.push(require('./lib/livereload-target.js'));
 
-fis.config.set('modules.postpackager', postpackager);
+    fis.config.set('modules.postpackager', postpackager);
 
-// }}}
+    // }}}
+});
