@@ -89,11 +89,11 @@ require(<span class="hljs-string">"common:static/lib/template.js"</span>)
 <pre><code>//在common的<span class="hljs-keyword">static</span>/lib目录下执行下面命令
 $ lights install <span class="hljs-keyword">template</span>
 </code></pre><h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E5%8C%96" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E5%8C%96">模板组件化</a></h4><p>模板组件是能独立提供功能且能够复用的页面片段，所在规范目录 <strong> 模块根目录 /widget/</strong> ，模板组件以模板、JS 组件、CSS 组件组成（默认必须有模板）。</p>
-<h4 class=""><a name="widget%E5%AE%9A%E4%B9%89" href="#widget%E5%AE%9A%E4%B9%89">widget定义</a></h4><p>只要在 widget 目录下的 Smarty 模板即为模板组件，<code> 目录下有与模板同名的 JS、CSS 文件 FIS 会自动添加依赖关系处理，在模板渲染时进行同步加载 </code>。</p>
-<h5 class=""><a name="widget%E8%B0%83%E7%94%A8" href="#widget%E8%B0%83%E7%94%A8">widget调用</a></h5><p>调用一个模板组件需要通过 widget 语法，如我们想调用 home 下的 section 模板组件，则语法为</p>
+<h4 class=""><a name="widget%20%E5%AE%9A%E4%B9%89" href="#widget%20%E5%AE%9A%E4%B9%89">widget 定义</a></h4><p>只要在 widget 目录下的 Smarty 模板即为模板组件，<code> 目录下有与模板同名的 JS、CSS 文件 FIS 会自动添加依赖关系处理，在模板渲染时进行同步加载 </code>。</p>
+<h5 class=""><a name="widget%20%E8%B0%83%E7%94%A8" href="#widget%20%E8%B0%83%E7%94%A8">widget 调用</a></h5><p>调用一个模板组件需要通过 widget 语法，如我们想调用 home 下的 section 模板组件，则语法为</p>
 <pre><code><span class="hljs-comment">//调用模板的路径为 modulename:模板在widget目录下路径</span>
 {<span class="hljs-variable">%widget</span> name=<span class="hljs-string">"home:widget/section/section.tpl"</span> <span class="hljs-variable">%}</span>
-</code></pre><h4 class=""><a name="widget%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F" href="#widget%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F">widget函数调用方式</a></h4><p>widget 插件可以直接调用某个 smarty 的 function 函数，使用方式为:</p>
+</code></pre><h4 class=""><a name="widget%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F" href="#widget%20%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F">widget 函数调用方式</a></h4><p>widget 插件可以直接调用某个 smarty 的 function 函数，使用方式为:</p>
 <pre><code><span class="hljs-comment">//在模板中定义function函数</span>
 {%function name="functionDemo"%}
 <span class="hljs-code">       .............</span>

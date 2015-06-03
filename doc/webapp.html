@@ -36,7 +36,7 @@
 </blockquote>
 <p>第六步，打开浏览器访问</p>
 <p>局部刷新: <a href="">http://127.0.0.1:8080/index/page/index</a></p>
-<h3 class="" id="使用文档"><a name="%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3">使用文档</a></h3><h4 class=""><a name="%3Cstrong%3E%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6%3C/strong%3E" href="#%3Cstrong%3E%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6%3C/strong%3E"><strong>引入插件</strong></a></h4><p>Webapp 插件主要包括：</p>
+<h3 class="" id="使用文档"><a name="%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3" href="#%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3">使用文档</a></h3><h4 class=""><a name="%3Cstrong%3E%20%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6%20%3C/strong%3E" href="#%3Cstrong%3E%20%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6%20%3C/strong%3E"><strong> 引入插件 </strong></a></h4><p>Webapp 插件主要包括：</p>
 <ul>
 <li>后端解决方案插件 <a href="https://github.com/xiangshouding/fis-smarty-bigpipe-plugin" title="quickling plugin">Webapp 解决方案的插件</a>。下载后放置到项目的plugin目录中。</li>
 <li>前端加载器<a href="https://github.com/xiangshouding/bigpipe.smarty/blob/master/lazyrender/static/BigPipe.js" title="loader">loader</a>，<a href="https://github.com/xiangshouding/bigpipe.smarty/blob/master/lazyrender/static/BigPipe.js" title="loader">前端 loader</a>依赖<a href="https://github.com/xiangshouding/bigpipe.smarty/blob/master/lazyrender/static/lazyload.js" title="lazyload.js">lazyload.js</a></li>
@@ -56,7 +56,7 @@
 {%/html%}
 </code></pre>
 <p>最后，发布这个项目；访问对应 URL 查看页面。</p>
-<h4 class=""><a name="%3Cstrong%3E%E6%94%AF%E6%8C%81localstorage%3C/strong%3E" href="#%3Cstrong%3E%E6%94%AF%E6%8C%81localstorage%3C/strong%3E"><strong>支持localstorage</strong></a></h4><blockquote>
+<h4 class=""><a name="%3Cstrong%3E%20%E6%94%AF%E6%8C%81%20localstorage%3C/strong%3E" href="#%3Cstrong%3E%20%E6%94%AF%E6%8C%81%20localstorage%3C/strong%3E"><strong> 支持 localstorage</strong></a></h4><blockquote>
 <p>无线端使用 localstorage 本地缓存，可以减少请求数目，提高性能。高性能 Webapp 解决方案也内置了 localstorage 本地缓存方案。</p>
 </blockquote>
 <p>只需要引入支持 localstorage 的 FIS 组件化库 <a href="https://github.com/xiangshouding/mod-store.js" title="mod-store.js">mod-store.js</a> 即可。</p>
@@ -73,7 +73,7 @@
     {%/body%}
 {%/html%}
 </code></pre>
-<h4 class=""><a name="%3Cstrong%3E%E5%89%8D%E7%AB%AFloader%3C/strong%3E" href="#%3Cstrong%3E%E5%89%8D%E7%AB%AFloader%3C/strong%3E"><strong>前端loader</strong></a></h4><p><code>局部刷新 </code> 中 FIS 提供了一个可被异步请求的<code> 后端框架 </code>(以<a href="https://github.com/xiangshouding/bigpipe.smarty" title="BigPipe.smarty">smarty 插件</a> 的方式)；
+<h4 class=""><a name="%3Cstrong%3E%20%E5%89%8D%E7%AB%AF%20loader%3C/strong%3E" href="#%3Cstrong%3E%20%E5%89%8D%E7%AB%AF%20loader%3C/strong%3E"><strong> 前端 loader</strong></a></h4><p><code>局部刷新 </code> 中 FIS 提供了一个可被异步请求的<code> 后端框架 </code>(以<a href="https://github.com/xiangshouding/bigpipe.smarty" title="BigPipe.smarty">smarty 插件</a> 的方式)；
 <a href="https://github.com/xiangshouding/bigpipe.smarty/blob/master/single/common/static/lib/js/BigPipe.js" title="loader">前端 loader</a>。</p>
 <p>前端 loader 提供接口 <code>fetch</code> 方法，来异步请求渲染一个 widget。</p>
 <pre><code class="hljs lang-javascript">BigPipe.fetch<span class="hljs-comment">(url, containerId)</span>;
@@ -95,7 +95,7 @@
 {<span class="hljs-variable">%/</span>widget_block<span class="hljs-variable">%}</span>
 </code></pre>
 <p>整个页面就这样切换起来了。</p>
-<h4 class=""><a name="%3Cstrong%3E%E9%A1%B5%E9%9D%A2%E7%AE%A1%E7%90%86%E5%BA%93page.js%3C/strong%3E" href="#%3Cstrong%3E%E9%A1%B5%E9%9D%A2%E7%AE%A1%E7%90%86%E5%BA%93page.js%3C/strong%3E"><strong>页面管理库page.js</strong></a></h4><p>以上接口在使用时需要考虑前端很多细节，为此提供了 page.js 这个页面管路口库。</p>
+<h4 class=""><a name="%3Cstrong%3E%20%E9%A1%B5%E9%9D%A2%E7%AE%A1%E7%90%86%E5%BA%93%20page.js%3C/strong%3E" href="#%3Cstrong%3E%20%E9%A1%B5%E9%9D%A2%E7%AE%A1%E7%90%86%E5%BA%93%20page.js%3C/strong%3E"><strong> 页面管理库 page.js</strong></a></h4><p>以上接口在使用时需要考虑前端很多细节，为此提供了 page.js 这个页面管路口库。</p>
 <p>page.js 是跟 <a href="https://github.com/doith">@donny</a> 同学合作写的页面管理的前端库 <a href="https://github.com/xiangshouding/bigpipe.smarty/blob/master/single/common/static/lib/js/spljs/page.js">page.js</a></p>
 <ul>
 <li>事件代理，代理需要局刷的URL, 绑定异步接口;</li>

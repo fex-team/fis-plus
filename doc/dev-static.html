@@ -1,9 +1,9 @@
-<h3 class="" id="JS &amp; CSS"><a name="JS%20&amp;%20CSS" href="#JS%20&amp;%20CSS">JS &amp; CSS</a></h3><h4 class=""><a name="JS%E7%BB%84%E4%BB%B6%E5%8C%96" href="#JS%E7%BB%84%E4%BB%B6%E5%8C%96">JS组件化</a></h4><div class="bs-callout bs-callout-info">
+<h3 class="" id="JS &amp; CSS"><a name="JS%20&amp;%20CSS" href="#JS%20&amp;%20CSS">JS &amp; CSS</a></h3><h4 class=""><a name="JS%20%E7%BB%84%E4%BB%B6%E5%8C%96" href="#JS%20%E7%BB%84%E4%BB%B6%E5%8C%96">JS 组件化</a></h4><div class="bs-callout bs-callout-info">
 &gt; 在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。
 </div>
 
 <p>在 <strong> 模块根目录 /widget/</strong> 下的 JS 资源皆为组件化资源，可以通过 require 和 require.async 进行调用，则在编译处理过程中会进行组件化封装。</p>
-<h5 class=""><a name="modjs%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6" href="#modjs%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6">modjs前端组件化框架</a></h5><p>modJS 是一套的前端模块加载解决方案。与传统的模块加载相比，modJS 会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
+<h5 class=""><a name="modjs%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6" href="#modjs%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6">modjs 前端组件化框架</a></h5><p>modJS 是一套的前端模块加载解决方案。与传统的模块加载相比，modJS 会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
 作为 FIS 前端组件化框架，完全遵循 AMD 规范，用户可以通过 lights 进行安装</p>
 <pre><code>lights <span class="hljs-keyword">install</span> modjs
 </code></pre><p>同时在开发中需要使用 modjs, 则需要通过 <a href="#html"> 模板插件语法 html</a>进行注册。</p>
@@ -67,20 +67,20 @@ exports.init = <span class="hljs-function"><span class="hljs-keyword">function</
 <li><p><a href="/userdoc/fis/modjs"> 了解更多 modjs</a></p>
 </li>
 </ul>
-<h5 class=""><a name="%E5%85%B6%E4%BB%96JS" href="#%E5%85%B6%E4%BB%96JS">其他JS</a></h5><p>在非 widget 目录下的 JS 资源，皆为非组件化资源。用户可以通过 script 标签、<a href="#require">require 插件 </a> 等方式进行调用.</p>
+<h5 class=""><a name="%E5%85%B6%E4%BB%96%20JS" href="#%E5%85%B6%E4%BB%96%20JS">其他 JS</a></h5><p>在非 widget 目录下的 JS 资源，皆为非组件化资源。用户可以通过 script 标签、<a href="#require">require 插件 </a> 等方式进行调用.</p>
 <h5 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">模板组件静态资源</a></h5><p>与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载。</p>
 <pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
 js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
 css ：模板根目录/widget/widgetName/widgetName.css
 </code></pre>
-<h4 class=""><a name="CSS%E7%BB%84%E4%BB%B6%E5%8C%96" href="#CSS%E7%BB%84%E4%BB%B6%E5%8C%96">CSS组件化</a></h4><blockquote>
+<h4 class=""><a name="CSS%20%E7%BB%84%E4%BB%B6%E5%8C%96" href="#CSS%20%E7%BB%84%E4%BB%B6%E5%8C%96">CSS 组件化</a></h4><blockquote>
 <p>在前端开发中，CSS 资源占了很大一部分比例，在 FIS 中，我们将 CSS 资源分为组件和非组件类。CSS 组件会绑定到同名 JS 组件、模板组件上，进行加载管理，用户不需要关心加载方式；非组件类 CSS 资源通过 link 标签、require 插件方式进行加载。</p>
 </blockquote>
 <p>在 <strong> 模块根目录 /widget</strong> 目录下的 CSS 资源，皆为组件。在模板组件中以及 JS 组件中对应同名的 CSS 组件会自动与模板组件、JS 组件添加依赖关系，进行加载管理，用户不需要显示进行调用加载。</p>
-<h5 class=""><a name="%E5%85%B6%E4%BB%96CSS" href="#%E5%85%B6%E4%BB%96CSS">其他CSS</a></h5><p>在非 widget 目录下的 CSS 资源，皆为非组件化资源。用户可以通过 link 标签、<a href="#require">require 插件 </a> 等方式进行调用.</p>
+<h5 class=""><a name="%E5%85%B6%E4%BB%96%20CSS" href="#%E5%85%B6%E4%BB%96%20CSS">其他 CSS</a></h5><p>在非 widget 目录下的 CSS 资源，皆为非组件化资源。用户可以通过 link 标签、<a href="#require">require 插件 </a> 等方式进行调用.</p>
 <h5 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">模板组件静态资源</a></h5><p><code> 与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载 </code>。</p>
 <pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
 js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
 css ：模板根目录/widget/widgetName/widgetName.css
 </code></pre>
-<h5 class=""><a name="Less%E8%B5%84%E6%BA%90" href="#Less%E8%B5%84%E6%BA%90">Less资源</a></h5><p>在 FIS 中默认配置了对 less 资源处理插件，less 文件编译处理后变为 css 文件。</p>
+<h5 class=""><a name="Less%20%E8%B5%84%E6%BA%90" href="#Less%20%E8%B5%84%E6%BA%90">Less 资源</a></h5><p>在 FIS 中默认配置了对 less 资源处理插件，less 文件编译处理后变为 css 文件。</p>
