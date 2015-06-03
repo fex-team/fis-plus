@@ -1,8 +1,8 @@
-<h3 class="" id="目录规范"><a name="%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83" class="anchor" href="#%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83"><span class="octicon octicon-link"></span></a>目录规范</h3><blockquote>
+<h3 class="" id="目录规范"><a name="%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83" class="anchor" href="#%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83">目录规范</a></h3><blockquote>
 <p>规范是辅助用户开发的利器，按照规范进行开发，可以极大的提升开发效率。
 在 FIS 中，定义了一套默认的模块化开发规范。</p>
 </blockquote>
-<h4 class=""><a name="%E7%AB%99%E7%82%B9%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84" class="anchor" href="#%E7%AB%99%E7%82%B9%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="octicon octicon-link"></span></a>站点目录结构</h4><p>业务功能模块化，针对常见的业务模型，抽象出以下层级关系：</p>
+<h4 class=""><a name="%E7%AB%99%E7%82%B9%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84" class="anchor" href="#%E7%AB%99%E7%82%B9%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84">站点目录结构</a></h4><p>业务功能模块化，针对常见的业务模型，抽象出以下层级关系：</p>
 <ul>
 <li><code>站点(site)</code>：一般指能独立提供服务，具有单独二级域名的产品线。如旅游产品线或者特大站点的子站点（lv.baidu.com）。</li>
 <li><code>模块(module)</code>：具有较清晰业务逻辑关系的功能业务集合，一般也叫系统子模块，多个子系统构成一个站点。</li>
@@ -58,7 +58,7 @@
 <li><p>想了解的更多，可以查看 <a href="http://fis.baidu.com/blog/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E4%B9%8B%E6%A8%A1%E5%9D%97%E5%8C%96">FIS 模块化 </a></p>
 </li>
 </ul>
-<h4 class=""><a name="%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E" class="anchor" href="#%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E"><span class="octicon octicon-link"></span></a>路径说明</h4><ol>
+<h4 class=""><a name="%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E" class="anchor" href="#%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E">路径说明</a></h4><ol>
 <li><p><code>页面 (page)</code>：存放在 <strong> 模块根目录 /page</strong> 下，url 访问路径为 <strong>/ 模块名 /page/ 页面名</strong>，例如 path_to_user_module/page/view.tpl，访问 url 为：/user/page/view。页面静态资源存储的位置为：</p>
 <pre><code class="hljs lang-bash"> tpl ：path_to_module/page/页面名<span class="hljs-class">.tpl</span>
   js ：path_to_module/page/页面名<span class="hljs-class">.js</span>
@@ -95,7 +95,7 @@
 </code></pre>
 </li>
 </ol>
-<h4 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%8C%96"><span class="octicon octicon-link"></span></a>组件化</h4><p>模块的 widget 目录默认为组件目录，组件化按照代码的组织方式，分为以下三种：</p>
+<h4 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%8C%96">组件化</a></h4><p>模块的 widget 目录默认为组件目录，组件化按照代码的组织方式，分为以下三种：</p>
 <ul>
 <li><p>CSS 组件：独立 css 代码片段。可以被其他 css，js，模板引用。</p>
 </li>
@@ -105,7 +105,7 @@
 </li>
 </ul>
 <p>下面的文档会详细介绍组件的使用方式。</p>
-<h4 class=""><a name="%E8%87%AA%E5%AE%9A%E4%B9%89%E7%89%B9%E6%AE%8A%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83" class="anchor" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%89%B9%E6%AE%8A%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83"><span class="octicon octicon-link"></span></a>自定义特殊目录规范</h4><p>假设有自定义特殊目录规范的需求，比如某些图片需要挪动到自定义的目录下时，需要通过如下方式设置，<strong> 切记 </strong>。</p>
+<h4 class=""><a name="%E8%87%AA%E5%AE%9A%E4%B9%89%E7%89%B9%E6%AE%8A%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83" class="anchor" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%89%B9%E6%AE%8A%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83">自定义特殊目录规范</a></h4><p>假设有自定义特殊目录规范的需求，比如某些图片需要挪动到自定义的目录下时，需要通过如下方式设置，<strong> 切记 </strong>。</p>
 <p>具体设置属性参考 <a href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#roadmappath">roadmap.path</a> 设置</p>
 <pre><code class="hljs lang-js">fis.config.<span class="hljs-built_in">set</span>(<span class="hljs-string">'roadmap.path'</span>, [
     { <span class="hljs-comment">// 规则1</span>
