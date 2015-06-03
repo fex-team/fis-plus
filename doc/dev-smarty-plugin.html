@@ -1,7 +1,7 @@
-<h3 class="" id="Smarty插件"><a name="Smarty%E6%8F%92%E4%BB%B6" class="anchor" href="#Smarty%E6%8F%92%E4%BB%B6">Smarty插件</a></h3><blockquote>
+<h3 class="" id="Smarty插件"><a name="Smarty%E6%8F%92%E4%BB%B6" href="#Smarty%E6%8F%92%E4%BB%B6">Smarty插件</a></h3><blockquote>
 <p>FIS-PLUS 提供一套基于 smarty(version &gt;= 3.1.13) 插件的后台运行框架，针对静态资源管理、模板模块化、pagelet 等功能。</p>
 </blockquote>
-<h4 class=""><a name="html" class="anchor" href="#html">html</a></h4><ul>
+<h4 class=""><a name="html" href="#html">html</a></h4><ul>
 <li>功能：代替\<html\>标签，设置页面运行的前端框架，以及控制整体页面输出。</li>
 <li>属性值：framework及html标签原生属性值</li>
 <li>是否必须：是</li>
@@ -12,7 +12,7 @@
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl1_fbad2c9.jpg" alt=""></p>
-<h4 class=""><a name="head" class="anchor" href="#head">head</a></h4><ul>
+<h4 class=""><a name="head" href="#head">head</a></h4><ul>
 <li>功能：代替\<head\>标签，控制CSS资源加载输出。</li>
 <li>属性值：head标签原生属性值</li>
 <li>是否必须：是</li>
@@ -25,7 +25,7 @@
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl2_2373cfb.jpg" alt="head"></p>
-<h4 class=""><a name="body" class="anchor" href="#body">body</a></h4><ul>
+<h4 class=""><a name="body" href="#body">body</a></h4><ul>
 <li>功能：代替\<body\>标签，控制JS资源加载输出。</li>
 <li>属性值：body标签原生属性值</li>
 <li>是否必须：是</li>
@@ -41,7 +41,7 @@
 {<span class="hljs-preprocessor">%</span>/html<span class="hljs-preprocessor">%</span>}
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl3_60b8620.jpg" alt="body"></p>
-<h4 class=""><a name="script" class="anchor" href="#script">script</a></h4><ul>
+<h4 class=""><a name="script" href="#script">script</a></h4><ul>
 <li>功能：代替<code>&lt;script&gt;</code>标签，收集使用JS组件的代码块，控制输出至页面底部。</li>
 <li>属性值：无</li>
 <li>是否必须：在模板中使用异步JS组件的JS代码块，必须通过插件包裹</li>
@@ -61,7 +61,7 @@
 {<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl4_14c6f6d.jpg" alt="script"></p>
-<h4 class=""><a name="require" class="anchor" href="#require">require</a></h4><ul>
+<h4 class=""><a name="require" href="#require">require</a></h4><ul>
 <li>功能：通过静态资源管理框架加载静态资源。</li>
 <li>插件类型：compiler</li>
 <li>属性值：name(调用文件目录路径，与src属性二选一) | src(调用线上资源，与name属性二选一)</li>
@@ -83,7 +83,7 @@
 {<span class="hljs-variable">%/</span>html<span class="hljs-variable">%}</span>
 </code></pre>
 <p><img src="/fis-plus/static/doc/img/tpl5_d82f332.jpg" alt="require"></p>
-<h4 class=""><a name="widget" class="anchor" href="#widget">widget</a></h4><ul>
+<h4 class=""><a name="widget" href="#widget">widget</a></h4><ul>
 <li>功能：调用模板组件，渲染输出模板片段。</li>
 <li>插件类型：compiler</li>
 <li>属性值：name(调用文件目录路径)</li>

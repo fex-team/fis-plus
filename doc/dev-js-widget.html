@@ -1,12 +1,12 @@
 <blockquote>
 <p>在前端开发中，JS 资源占了很大一部分比例，在 FIS 中，我们将 JS 资源分为组件和非组件类。组件类 JS 资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类 JS 资源，用户可以通过同步 script 标签加载方式或通过 require 插件方式加载。</p>
 </blockquote>
-<h4 class=""><a name="JS%E7%BB%84%E4%BB%B6%E5%8C%96" class="anchor" href="#JS%E7%BB%84%E4%BB%B6%E5%8C%96">JS组件化</a></h4><p>在 <strong> 模块根目录 /widget/</strong> 下的 JS 资源皆为组件化资源，可以通过 require 和 require.async 进行调用，则在编译处理过程中会进行组件化封装。</p>
-<h4 class=""><a name="modjs%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6" class="anchor" href="#modjs%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6">modjs前端组件化框架</a></h4><p>modJS 是一套的前端模块加载解决方案。与传统的模块加载相比，modJS 会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
+<h4 class=""><a name="JS%E7%BB%84%E4%BB%B6%E5%8C%96" href="#JS%E7%BB%84%E4%BB%B6%E5%8C%96">JS组件化</a></h4><p>在 <strong> 模块根目录 /widget/</strong> 下的 JS 资源皆为组件化资源，可以通过 require 和 require.async 进行调用，则在编译处理过程中会进行组件化封装。</p>
+<h4 class=""><a name="modjs%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6" href="#modjs%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6">modjs前端组件化框架</a></h4><p>modJS 是一套的前端模块加载解决方案。与传统的模块加载相比，modJS 会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
 作为 FIS 前端组件化框架，完全遵循 AMD 规范，用户可以通过 lights 进行安装</p>
 <pre><code>lights <span class="hljs-keyword">install</span> modjs
 </code></pre><p>同时在开发中需要使用 modjs, 则需要通过 <a href="#html"> 模板插件语法 html</a>进行注册。</p>
-<h4 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85" class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85">组件化封装</a></h4><p>modjs 使用 define 来定义一个模块：</p>
+<h4 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85">组件化封装</a></h4><p>modjs 使用 define 来定义一个模块：</p>
 <pre><code><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
 </code></pre><p><code> 在平常开发中，我们只需写 factory 中的代码即可，无需手动定义模块 </code>。发布工具会自动将模块代码嵌入 factory 的闭包里。</p>
 <p>factory 提供了 3 个参数：require, exports, module ，用于模块的引用和导出。</p>
@@ -41,7 +41,7 @@ exports.init = <span class="hljs-function"><span class="hljs-keyword">function</
     };
 });
 </code></pre>
-<h4 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E8%B0%83%E7%94%A8" class="anchor" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E8%B0%83%E7%94%A8">组件化调用</a></h4><ul>
+<h4 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E8%B0%83%E7%94%A8" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E8%B0%83%E7%94%A8">组件化调用</a></h4><ul>
 <li><p>modJS 的发布工具会保证你的程序在使用之前，所有依赖的模块都已加载。因此当我们需要一个模块时，只需提供一个模块名即可获取：</p>
 <p><strong>require</strong> (id)</p>
 <pre><code class="hljs lang-javascript">  <span class="hljs-comment">//id可为相对路径，或FIS中组件调用路径 模块名:文件所在widget中路径</span>
@@ -65,13 +65,13 @@ exports.init = <span class="hljs-function"><span class="hljs-keyword">function</
 <li><p><a href="https://github.com/fex-team/mod"> 了解更多 modjs</a></p>
 </li>
 </ul>
-<h4 class=""><a name="%E5%85%B6%E4%BB%96JS" class="anchor" href="#%E5%85%B6%E4%BB%96JS">其他JS</a></h4><p>在非 widget 目录下的 JS 资源，皆为非组件化资源。用户可以通过 script 标签、<a href="#require">require 插件 </a> 等方式进行调用.</p>
-<h5 class=""><a name="%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">页面模板静态资源</a></h5><p>对应页面模板的同名静态资源，FIS-Plus 会在页面自动进行加载，用户不需要在页面中声明加载。</p>
+<h4 class=""><a name="%E5%85%B6%E4%BB%96JS" href="#%E5%85%B6%E4%BB%96JS">其他JS</a></h4><p>在非 widget 目录下的 JS 资源，皆为非组件化资源。用户可以通过 script 标签、<a href="#require">require 插件 </a> 等方式进行调用.</p>
+<h5 class=""><a name="%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" href="#%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">页面模板静态资源</a></h5><p>对应页面模板的同名静态资源，FIS-Plus 会在页面自动进行加载，用户不需要在页面中声明加载。</p>
 <pre><code class="hljs lang-bash">tpl ：模板根目录/page/页面名<span class="hljs-class">.tpl</span>
 js ：模板根目录/page/页面名<span class="hljs-class">.js</span>
 css ：模板根目录/page/页面名.css
 </code></pre>
-<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">模板组件静态资源</a></h4><p>与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载。</p>
+<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" href="#%E6%A8%A1%E6%9D%BF%E7%BB%84%E4%BB%B6%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">模板组件静态资源</a></h4><p>与模板组件同名的静态资源，FIS 会自动添加依赖关系，同时会对 JS、CSS 进行同步加载。</p>
 <pre><code class="hljs lang-bash">tpl ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.tpl</span>
 js ：模板根目录/widget/widgetName/widgetName<span class="hljs-class">.js</span>
 css ：模板根目录/widget/widgetName/widgetName.css
