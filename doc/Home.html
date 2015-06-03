@@ -11,3 +11,14 @@ FIS-PLUS 是基于 FIS，应用于后端是 PHP，模板是 Smarty 的场景。�
 <li>支持 <code>node v0.12.0</code></li>
 </ul>
 <hr>
+<h3 class="" id="feature"><a name="feature" class="anchor" href="#feature"><span class="octicon octicon-link"></span></a>feature</h3><ul>
+<li>扩展自 <a href="https://github.com/fex-team/fis">fis</a>，包含 fis 的所有提供功能以及 fis 的<a href="https://www.npmjs.com/search?q=fis">插件</a>都可使用</li>
+<li>Smarty 模板压缩</li>
+<li>XSS 自动转义</li>
+<li>内置 <a href="https://www.npmjs.com/package/fis-parser-less">less 解析插件</a>，使用 less 无需任何设置</li>
+<li>内置 <a href="https://www.npmjs.com/package/fis-parser-bdtmpl">baiduTemplate 解析插件</a></li>
+<li>指定 <a href="dev-directory-structure">目录规范</a>，建议遵循此目录规范；</li>
+<li>内置脚手架，执行 <code>fisp init -h</code> 命令可查看详细信息</li>
+<li>内置 <code>.po</code> 文件解析成 <code>.json</code> 的<a href="https://github.com/xiangshouding/fis-parser-po">插件</a>，方便国际化支持</li>
+<li>本地环境模拟套件，使用命令 <code>fisp server init</code> 安装，提供 Smarty 模板的解析，<a href="test-data">数据模拟</a>，以及 <a href="test-rewrite">URL 转发功能</a>；</li>
+</ul>
