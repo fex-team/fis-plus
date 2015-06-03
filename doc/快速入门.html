@@ -82,6 +82,9 @@ $ <span class="hljs-built_in">source</span> ~/.bashrc
 <li><p><a href="https://github.com/fouber/install-php-cgi-1">linux 安装 </a></p>
 </li>
 </ul>
+<blockquote>
+<p>安装 JAVA 和 php-cgi 是由于 fis-plus 内置了 jetty 服务框架来解析 php 脚本，如果你自己有本地 Web 服务，可以用你自己的，<a href=""> 详见 </a>；</p>
+</blockquote>
 <h3 class="" id="示例"><a name="%E7%A4%BA%E4%BE%8B" href="#%E7%A4%BA%E4%BE%8B">示例</a></h3><p><em>以下示例都是在命令行下操作的，如果你是 windows 用户，请打命令的时候忽略命令前的 <code>$</code>，而且请打开<code>cmd</code> 来执行这些操作</em></p>
 <p>已经准备好了一个 fis-plus 的前端项目，只需要经过以下四步，就可以完整运行这个项目，并看到结果。</p>
 <ul>
@@ -98,15 +101,18 @@ $ <span class="hljs-built_in">source</span> ~/.bashrc
 </code></pre>
 <p>其实 fisp 已经集成了 <code>lights</code> 的客户端。</p>
 <p>和上面等值的用法；</p>
-<pre><code class="hljs lang-bash">$ fisp <span class="hljs-keyword">install</span> pc-demo
+<pre><code class="hljs lang-bash"><span class="hljs-variable">$ </span>fisp init pc-demo
 </code></pre>
 <div class="bs-callout bs-callout-danger">
-<strong>fisp &gt;= 0.7.5</strong> <br>
+<strong>fisp &lt;= 0.7.5</strong> <br>
 <pre><code class="hljs lang-bash">
-$ fisp init pc-demo
+$ fisp install pc-demo
 </code></pre>
 </div>
 
+<blockquote>
+<p>如果下载失败，可直接从 GitHub 下载，<a href="https://github.com/fex-team/fis-plus-pc-demo">https://github.com/fex-team/fis-plus-pc-demo</a></p>
+</blockquote>
 <h4 class=""><a name="%E5%8F%91%E5%B8%83" href="#%E5%8F%91%E5%B8%83">发布</a></h4><pre><code class="hljs lang-bash"><span class="hljs-variable">$ </span>cd pc-demo
 <span class="hljs-variable">$ </span>fisp release -r common
 <span class="hljs-variable">$ </span>fisp release -r home
