@@ -664,14 +664,14 @@ $ lights install <span class="hljs-keyword">template</span>
 <p><img src="/fis-plus/static/doc/img/tpl6_bd9d3ae.jpg" alt="widget"></p>
 </div>
 <div class="bs-docs-section"><h3 class="" id="JS &amp; CSS"><a name="JS%20&amp;%20CSS" href="#JS%20&amp;%20CSS">JS &amp; CSS</a></h3><h4 class=""><a name="JS%20%E7%BB%84%E4%BB%B6%E5%8C%96" href="#JS%20%E7%BB%84%E4%BB%B6%E5%8C%96">JS 组件化</a></h4><div class="bs-callout bs-callout-info">
-&gt; 在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过require插件方式加载。
+&gt; 在前端开发中，JS资源占了很大一部分比例，在FIS中，我们将JS资源分为组件和非组件类。组件类JS资源可以通过前端组件化框架进行资源加载，同时会进行组件化包装。非组件类JS资源，用户可以通过同步script标签加载方式或通过<code>require</code>插件方式加载。
 </div>
 
-<p>在 <strong> 模块根目录 /widget/</strong> 下的 JS 资源皆为组件化资源，可以通过 require 和 require.async 进行调用，则在编译处理过程中会进行组件化封装。</p>
-<h5 class=""><a name="modjs%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6" href="#modjs%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6">modjs 前端组件化框架</a></h5><p>modJS 是一套的前端模块加载解决方案。与传统的模块加载相比，modJS 会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。
-作为 FIS 前端组件化框架，完全遵循 AMD 规范，用户可以通过 lights 进行安装</p>
-<pre><code>lights <span class="hljs-keyword">install</span> modjs
-</code></pre><p>同时在开发中需要使用 modjs, 则需要通过 <a href="#html"> 模板插件语法 html</a>进行注册。</p>
+<p>在 <strong> 模块根目录 /widget/</strong> 下的 JS 资源皆为组件化资源，可以通过 <code>require</code> 和 <code>require.async</code> 进行调用，则在编译处理过程中会进行组件化封装。</p>
+<h5 class=""><a name="mod.js%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6" href="#mod.js%20%E5%89%8D%E7%AB%AF%E7%BB%84%E4%BB%B6%E5%8C%96%E6%A1%86%E6%9E%B6">mod.js 前端组件化框架</a></h5><p>mod.js 是一套的前端模块加载解决方案。与传统的模块加载相比，ModJS 会根据产品实际使用场景，自动选择一种相应的方案，使最终的实现非常轻量简洁。</p>
+<p>作为 FIS-PLUS 前端组件化框架，mod.js 和 AMD (require.js) 或者 CMD (seajs) 等都是互斥的，<strong> 无法同时在同一个项目中使用 </strong>。</p>
+<p>我们可以到 <a href="https://github.com/fex-team/mod">https://github.com/fex-team/mod</a> 下载最新版本的 mod.js</p>
+<p>同时在开发中需要使用 mod.js, 则需要通过 <a href="#html"> 模板插件语法 html</a>进行注册。</p>
 <h5 class=""><a name="%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85" href="#%E7%BB%84%E4%BB%B6%E5%8C%96%E5%B0%81%E8%A3%85">组件化封装</a></h5><p>modjs 使用 define 来定义一个模块：</p>
 <pre><code class="hljs lang-javascript"><span class="hljs-class"><span class="hljs-keyword">define</span> </span>(id, factory)
 </code></pre>
