@@ -1,6 +1,6 @@
 {
   "name": "fis-plus",
-  "version": "0.8.15",
+  "version": "0.8.17",
   "description": "Front End Integrated Solution for PC",
   "main": "fis-plus.js",
   "bin": {
@@ -16,7 +16,7 @@
     "url": "https://github.com/fex-team/fis-plus.git"
   },
   "dependencies": {
-    "fis": "1.10.2",
+    "fis": "1.10.4",
     "fis-preprocessor-extlang": "0.0.8",
     "fis-prepackager-widget-inline": "0.0.9",
     "fis-postprocessor-require-async": "0.0.9",
