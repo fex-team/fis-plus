@@ -254,9 +254,9 @@ $ fisp install pc-demo
 <p><code>home:widget/header/header.tpl</code> 这个是 FIS 中 <a href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90id"> 静态资源 id</a></p>
 </li>
 </ul>
-<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" href="#%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">模板中如何使用 widget 目录下的静态资源</a></h4><p>根据目录规范 <code>widget</code> 目录下的 js 讲被进行 <a href=""> 组件化封装 </a>，根据<a href=""> 同名依赖 </a> 原则；</p>
+<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" href="#%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">模板中如何使用 widget 目录下的静态资源</a></h4><p>根据目录规范 <code>widget</code> 目录下的 js 将被进行 <a href=""> 组件化封装 </a>，根据<a href=""> 同名依赖 </a> 原则；</p>
 <ul>
-<li>当使用某个widget下模板是，同名js,css将会被加载。</li>
+<li>当使用某个widget下模板时，同名js,css将会被加载。</li>
 <li>当使用某个widget下的js时，其同名css会被加载。</li>
 </ul>
 <h5 class=""><a name="%E5%8A%A0%E8%BD%BD%20JS" href="#%E5%8A%A0%E8%BD%BD%20JS">加载 JS</a></h5><p>由于 js 进行了组件化封装，比如通过 <code>require</code> 或者 <code>require.async</code> 函数来执行其中逻辑。</p>
@@ -860,7 +860,7 @@ fis.config.set('pack', </span><span class="hljs-expression">{
 </code></pre>
 <p>打包配置支持正则、字符串以及通配符，用户可灵活根据自己需求进行资源打包，同时注意以下打包细节：</p>
 <ul>
-<li>每个包只对应js或css类型，请误将其他非同类文件配置合并至包内，特别是使用通配符配置时，请注意目录下是否有其他非同类型文件</li>
+<li>每个包只对应js或css类型，请勿将其他非同类文件配置合并至包内，特别是使用通配符配置时，请注意目录下是否有其他非同类型文件</li>
 <li>使用正则配置时需要添加定界符，不然将会达不到用户配置预期</li>
 </ul>
 <p>输出结果：使用命令 fis release <strong>--pack</strong> --md5 --dest ./output 编译项目，然后到 output 目录下查看产出的 home-map.json 内容.fis 内置的 <a href="https://github.com/fis-dev/fis/wiki/ 运行原理 #----1"> 打包原理 </a> 与传统的打包概念不同，fis 的打包实际上是在建立一个资源表，并将其描述并产出为一份 map.json 文件，用户应该围绕着这份描述文件来设计前后端运行框架，从而实现运行时判断打包输出策略的架构。</p>

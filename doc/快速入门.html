@@ -156,9 +156,9 @@ $ fisp install pc-demo
 <p><code>home:widget/header/header.tpl</code> 这个是 FIS 中 <a href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90id"> 静态资源 id</a></p>
 </li>
 </ul>
-<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" href="#%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">模板中如何使用 widget 目录下的静态资源</a></h4><p>根据目录规范 <code>widget</code> 目录下的 js 讲被进行 <a href=""> 组件化封装 </a>，根据<a href=""> 同名依赖 </a> 原则；</p>
+<h4 class=""><a name="%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90" href="#%E6%A8%A1%E6%9D%BF%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%20widget%20%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90">模板中如何使用 widget 目录下的静态资源</a></h4><p>根据目录规范 <code>widget</code> 目录下的 js 将被进行 <a href=""> 组件化封装 </a>，根据<a href=""> 同名依赖 </a> 原则；</p>
 <ul>
-<li>当使用某个widget下模板是，同名js,css将会被加载。</li>
+<li>当使用某个widget下模板时，同名js,css将会被加载。</li>
 <li>当使用某个widget下的js时，其同名css会被加载。</li>
 </ul>
 <h5 class=""><a name="%E5%8A%A0%E8%BD%BD%20JS" href="#%E5%8A%A0%E8%BD%BD%20JS">加载 JS</a></h5><p>由于 js 进行了组件化封装，比如通过 <code>require</code> 或者 <code>require.async</code> 函数来执行其中逻辑。</p>
